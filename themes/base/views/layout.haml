@@ -1,0 +1,31 @@
+!!!
+%html{html_attrs}
+  %head
+    %meta{ "http-equiv" => "content-type", "content" => "text/html; charset=utf-8" }
+    - if @description
+      %meta{ "name" => "description", "content" => @description }
+    - if @keywords
+      %meta{ "name" => "keywords", "content" => @keywords }
+    %title= @title
+    %link{ :href => "/base/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }
+    = haml :analytics, :layout => false
+  %body{ :class => @body_class }
+    %header(role="header" class="header")
+      %h1
+        %a{:href => "/", :rel => "home"}= @heading
+        :plain
+          <span class='trade-mark'>&trade;</span>
+      %h2= @subtitle
+    
+    %section(role="main")
+      = yield
+    
+    %footer(role="footer")
+      %p Copyright 2010 - 2011 RIZN Media, All Rights Reserved.
+
+    %script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js"}    
+    %script{:type => "text/javascript", :src => "https://raw.github.com/davatron5000/Lettering.js/master/jquery.lettering.js"}
+    %script{:type => "text/javascript", :src => "/base/javascripts/site.js"}
+
+    

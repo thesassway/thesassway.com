@@ -1,0 +1,71 @@
+Date: 30 June 2011
+Categories: intermediate
+Summary: An intro to referencing parent selectors using the ampersand
+
+# Referencing Parent Selectors using the ampersand (&) 
+
+<a href="http://twitter.com/thesassway"><img src="http://a0.twimg.com/profile_images/1418433540/album-art.png" alt="The Sass Way" class="alignright" /></a>
+
+This is the first in a series of posts in the works I'm calling "The Sass Way" ([#TheSassWay](http://adamstacoviak.com/posts/tag/thesassway/)). There are clear ways to do things using vanilla [CSS](http://www.w3.org/Style/CSS/), but there are significantly different ways for writing CSS stylesheets using [Sass](http://sass-lang.com/). With any luck, these posts will get broken out into its own blog, when, and if ever, I get around to doing that.
+
+Until then ...
+
+## Let's get started
+
+If you've been using Sass for any length of time, then you're likely to be familiar with being able to reference parent selectors using the `&` character. A simple example might be something like this:
+
+Sass:
+
+    h3
+      font-size: 20px
+      margin-bottom: 10px
+      &.some-selector
+        font-size: 24px
+        margin-bottom: 20px
+
+CSS (output):
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    h3.some-selector {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+Pretty neat huh, how we didn't have to write out the h3 again. With Sass all we have to do is nest the next ruleset and attach the `&` in place of the repeating selector and we're golden.
+
+## Wait. There's more.
+
+This is something I stumbled onto today while working with some Sass written by my bud [Wynn Netherland](http://wynnnetherland.com/). Though, I don't see this mentioned in [the Sass documentation](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#referencing_parent_selectors_). You do [read documentation](http://en.wikipedia.org/wiki/RTFM) don't you?
+
+So, what if I wanted to style all my `h3` headings a certain way, but for this one `h3`, that is also a child of a certain selector, I want to style it slightly different than the others? Well, with CSS we know how that goes, we'd have to write it all out. Verbose. Bah ...
+
+But with Sass ... what options do we have? Check this out ...
+
+Sass:
+
+    h3
+      font-size: 20px
+      margin-bottom: 10px  
+      .some-parent-selector &
+        font-size: 24px
+        margin-bottom: 20px
+
+CSS (output):
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .some-parent-selector h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+Based on this code, you can place an `&` at the end of your selector declaration in place of the repeating selector, and sit back and enjoy the awesomeness of Sass.
+
+My example, is very simplistic but [Joel Oliveira](https://twitter.com/jayroh) goes deeper on the subject with his post "[The ampersand &amp; a killer Sass feature](http://joeloliveira.com/2011/06/28/the-ampersand-a-killer-sass-feature/)". I highly recommend it.
+
+In the coming weeks I'll be covering more topics on writing CSS "The Sass Way". [Follow me](http://twitter.com/adamstac) as well as [The Sass Way](http://twitter.com/thesassway) on Twitter for updates.

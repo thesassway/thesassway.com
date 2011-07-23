@@ -1,0 +1,36 @@
+%nav.breadcrumbs
+  %ul
+    %li
+      %a{ :href => "/" } Home
+    - if @page.parent
+      %li
+        %a{ :href => @page.parent.abspath }= @page.parent.heading
+    %li= @page.heading
+
+.page-content
+
+  = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
+
+  .page-single
+    - if @page.date
+      .page-date= format_date(@page.date)
+    ~ @page.to_html(self)
+
+  - unless @page.articles.empty?
+    %section.page-articles
+      %header
+        %h2= "Articles on #{@page.heading}"
+      = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
+
+  - unless @page.categories.empty?
+    %section.page-categories
+      %header
+        %h3 Categories
+      %ul
+        - @page.categories.each do |category|
+          %li
+            %a{ :href => category.abspath }= category.heading
+
+  = haml :comments, :layout => false
+
+= haml :sidebar, :layout => false
