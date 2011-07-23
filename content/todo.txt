@@ -1,0 +1,9 @@
+Adam
+* Rework template:
+  - focus on good template for article pages
+  - big typography/headlines
+  - homepage: single article -- list of articles
+  - minimize logo on article pages?
+
+John
+* Including code samples into Nesta documents
