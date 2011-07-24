@@ -146,6 +146,249 @@ a:focus, a:active {
   outline: none;
 }
 
+pre {
+  font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
+  background: #002b36;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  color: #93a1a1;
+  padding: 1em;
+  margin: 1em 0;
+  /* Comment */
+  /* Comment.Multiline */
+  /* Comment.Preproc */
+  /* Comment.Single */
+  /* Comment.Special */
+  /* Error */
+  /* Keyword */
+  /* Operator */
+  /* Operator */
+  /* Operator.Word */
+  /* Generic.Deleted */
+  /* Generic.Deleted.Specific */
+  /* Generic.Emph */
+  /* Generic.Error */
+  /* Generic.Heading */
+  /* Generic.Inserted */
+  /* Generic.Inserted.Specific */
+  /* Generic.Output */
+  /* Generic.Prompt */
+  /* Generic.Strong */
+  /* Generic.Subheading */
+  /* Generic.Traceback */
+  /* Keyword.Constant */
+  /* Keyword.Declaration */
+  /* Keyword.Pseudo */
+  /* Keyword.Reserved */
+  /* Keyword.Type */
+  /* Name.Attribute */
+  /* Name.Builtin */
+  /* Name.Class */
+  /* Name.Constant */
+  /* Name.Entity */
+  /* Name.Exception */
+  /* Name.Function */
+  /* Name.Namespace */
+  /* Name.Tag */
+  /* Name.Builtin.Pseudo */
+  /* Name.Variable.Class */
+  /* Name.Variable.Global */
+  /* Name.Variable.Instance */
+  /* Name.Variable */
+  /* Text.Whitespace */
+  /* Literal.Number.Float */
+  /* Literal.Number */
+  /* Literal.Number.Hex */
+  /* Literal.Number.Integer */
+  /* Literal.Number.Oct */
+  /* Literal.String */
+  /* Literal.String.Backtick */
+  /* Literal.String.Char */
+  /* Literal.String.Doc */
+  /* Literal.String.Double */
+  /* Literal.String.Escape */
+  /* Literal.String.Heredoc */
+  /* Literal.String.Interpol */
+  /* Literal.String.Other */
+  /* Literal.String.Regex */
+  /* Literal.String.Single */
+  /* Literal.String.Symbol */
+  /* Literal.Number.Integer.Long */
+}
+pre .c {
+  color: #586e75 !important;
+  font-style: italic !important;
+}
+pre .cm {
+  color: #586e75 !important;
+  font-style: italic !important;
+}
+pre .cp {
+  color: #586e75 !important;
+  font-style: italic !important;
+}
+pre .c1 {
+  color: #586e75 !important;
+  font-style: italic !important;
+}
+pre .cs {
+  color: #586e75 !important;
+  font-weight: bold !important;
+  font-style: italic !important;
+}
+pre .err {
+  color: #dc322f !important;
+  background: none !important;
+}
+pre .k {
+  color: #cb4b16 !important;
+}
+pre .o {
+  color: #93a1a1 !important;
+  font-weight: bold !important;
+}
+pre .p {
+  color: #93a1a1 !important;
+}
+pre .ow {
+  color: #2aa198 !important;
+  font-weight: bold !important;
+}
+pre .gd {
+  color: #93a1a1 !important;
+  background-color: #372c34 !important;
+  display: inline-block;
+}
+pre .gd .x {
+  color: #93a1a1 !important;
+  background-color: #4d2d33 !important;
+  display: inline-block;
+}
+pre .ge {
+  color: #93a1a1 !important;
+  font-style: italic !important;
+}
+pre .gh {
+  color: #586e75 !important;
+}
+pre .gi {
+  color: #93a1a1 !important;
+  background-color: #1a412b !important;
+  display: inline-block;
+}
+pre .gi .x {
+  color: #93a1a1 !important;
+  background-color: #355720 !important;
+  display: inline-block;
+}
+pre .gs {
+  color: #93a1a1 !important;
+  font-weight: bold !important;
+}
+pre .gu {
+  color: #6c71c4 !important;
+}
+pre .kc {
+  color: #859900 !important;
+  font-weight: bold !important;
+}
+pre .kd {
+  color: #268bd2 !important;
+}
+pre .kp {
+  color: #cb4b16 !important;
+  font-weight: bold !important;
+}
+pre .kr {
+  color: #d33682 !important;
+  font-weight: bold !important;
+}
+pre .kt {
+  color: #2aa198 !important;
+}
+pre .n {
+  color: #268bd2 !important;
+}
+pre .na {
+  color: #268bd2 !important;
+}
+pre .nb {
+  color: #859900 !important;
+}
+pre .no {
+  color: #b58900 !important;
+}
+pre .ne {
+  color: #268bd2 !important;
+  font-weight: bold !important;
+}
+pre .nf {
+  color: #268bd2 !important;
+  font-weight: bold !important;
+}
+pre .nn {
+  color: #b58900 !important;
+}
+pre .nt {
+  color: #268bd2 !important;
+  font-weight: bold !important;
+}
+pre .nx {
+  color: #b58900 !important;
+}
+pre .vg {
+  color: #268bd2 !important;
+}
+pre .vi {
+  color: #268bd2 !important;
+}
+pre .nv {
+  color: #268bd2 !important;
+}
+pre .w {
+  color: #bbbbbb;
+}
+pre .mf {
+  color: #2aa198 !important;
+}
+pre .m {
+  color: #2aa198 !important;
+}
+pre .mh {
+  color: #2aa198 !important;
+}
+pre .mi {
+  color: #2aa198 !important;
+}
+pre .s {
+  color: #2aa198 !important;
+}
+pre .sd {
+  color: #2aa198 !important;
+}
+pre .s2 {
+  color: #2aa198 !important;
+}
+pre .se {
+  color: #dc322f !important;
+}
+pre .si {
+  color: #268bd2 !important;
+}
+pre .sr {
+  color: #2aa198 !important;
+}
+pre .s1 {
+  color: #2aa198 !important;
+}
+pre div .gd, pre div .gd .x, pre div .gi, pre div .gi .x {
+  display: block;
+}
+
 body {
   border-top: 4px solid #a728ae;
 }
@@ -157,7 +400,7 @@ body > header {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: url('../images/sass.gif?1311351727');
+  background-image: url('../images/sass.gif?1311449942');
   background-repeat: no-repeat;
   background-position: 90px 14px;
   background-size: 170px;

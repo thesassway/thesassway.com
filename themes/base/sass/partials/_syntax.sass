@@ -1,0 +1,316 @@
+$base03: #002b36
+
+//darkest blue
+$base02: #073642
+
+//dark blue
+$base01: #586e75
+
+//darkest gray
+$base00: #657b83
+
+//dark gray
+$base0: #839496
+
+//medium gray
+$base1: #93a1a1
+
+//medium light gray
+$base2: #eee8d5
+
+//cream
+$base3: #fdf6e3
+
+//white
+$yellow: #b58900
+$orange: #cb4b16
+$red: #dc322f
+$magenta: #d33682
+$violet: #6c71c4
+$blue: #268bd2
+$cyan: #2aa198
+$green: #859900
+
+$pre-bg: $base03 !default
+
+pre
+  font-family: $fixed-font-family
+  background: $pre-bg
+  +border-radius
+  color: $base1
+  padding: 1em
+  margin: 1em 0
+
+  /* Comment
+  .c
+    color: $base01 !important
+    font-style: italic !important
+
+  /* Comment.Multiline
+  .cm
+    color: $base01 !important
+    font-style: italic !important
+
+  /* Comment.Preproc
+  .cp
+    color: $base01 !important
+    font-style: italic !important
+
+  /* Comment.Single
+  .c1
+    color: $base01 !important
+    font-style: italic !important
+
+  /* Comment.Special
+  .cs
+    color: $base01 !important
+    font-weight: bold !important
+    font-style: italic !important
+
+  /* Error
+  .err
+    color: $red !important
+    background: none !important
+
+  /* Keyword
+  .k
+    color: $orange !important
+
+  /* Operator
+  .o
+    color: $base1 !important
+    font-weight: bold !important
+
+  /* Operator
+  .p
+    color: $base1 !important
+
+  /* Operator.Word
+  .ow
+    color: $cyan !important
+    font-weight: bold !important
+
+  /* Generic.Deleted
+  .gd
+    color: $base1 !important
+    background-color: mix($red, $base03, 25%) !important
+    display: inline-block
+
+  /* Generic.Deleted.Specific
+  .gd .x
+    color: $base1 !important
+    background-color: mix($red, $base03, 35%) !important
+    display: inline-block
+
+  /* Generic.Emph
+  .ge
+    color: $base1 !important
+    font-style: italic !important
+
+  /* Generic.Error
+  //.gr
+  //  color: #aa0000
+
+  /* Generic.Heading
+  .gh
+    color: $base01 !important
+
+  /* Generic.Inserted
+  .gi
+    color: $base1 !important
+    background-color: mix($green, $base03, 20%) !important
+    display: inline-block
+
+  /* Generic.Inserted.Specific
+  .gi .x
+    color: $base1 !important
+    background-color: mix($green, $base03, 40%) !important
+    display: inline-block
+
+  /* Generic.Output
+  //.go
+  //  color: #888
+
+  /* Generic.Prompt
+  //.gp
+  //  color: #555
+
+  /* Generic.Strong
+  .gs
+    color: $base1 !important
+    font-weight: bold !important
+
+  /* Generic.Subheading
+  .gu
+    color: $violet !important
+
+  /* Generic.Traceback
+  //.gt
+  //  color: #a00
+
+  /* Keyword.Constant
+  .kc
+    color: $green !important
+    font-weight: bold !important
+
+  /* Keyword.Declaration
+  .kd
+    color: $blue !important
+
+  /* Keyword.Pseudo
+  .kp
+    color: $orange !important
+    font-weight: bold !important
+
+  /* Keyword.Reserved
+  .kr
+    color: $magenta !important
+    font-weight: bold !important
+
+  /* Keyword.Type
+  .kt
+    color: $cyan !important
+  .n
+    color: $blue !important
+
+  /* Name.Attribute
+  .na
+    color: $blue !important
+
+  /* Name.Builtin
+  .nb
+    color: $green !important
+
+  /* Name.Class
+  //.nc
+  //  color: #445588
+  //  font-weight: bold
+
+  /* Name.Constant
+  .no
+    color: $yellow !important
+
+  /* Name.Entity
+  //.ni
+  //  color: #800080
+
+  /* Name.Exception
+  .ne
+    color: $blue !important
+    font-weight: bold !important
+
+  /* Name.Function
+  .nf
+    color: $blue !important
+    font-weight: bold !important
+
+  /* Name.Namespace
+  .nn
+    color: $yellow !important
+
+  /* Name.Tag
+  .nt
+    color: $blue !important
+    font-weight: bold !important
+  .nx
+    color: $yellow !important
+
+  /* Name.Builtin.Pseudo
+  //.bp
+  //  color: #999
+
+  /* Name.Variable.Class
+  //.vc
+  //  color: #008080
+
+  /* Name.Variable.Global
+  .vg
+    color: $blue !important
+
+  /* Name.Variable.Instance
+  .vi
+    color: $blue !important
+
+  /* Name.Variable
+  .nv
+    color: $blue !important
+
+  /* Text.Whitespace
+  .w
+    color: #bbb
+
+  /* Literal.Number.Float
+  .mf
+    color: $cyan !important
+
+  /* Literal.Number
+  .m
+    color: $cyan !important
+
+  /* Literal.Number.Hex
+  .mh
+    color: $cyan !important
+
+  /* Literal.Number.Integer
+  .mi
+    color: $cyan !important
+
+  /* Literal.Number.Oct
+  //.mo
+  //  color: #099
+
+  /* Literal.String
+  .s
+    color: $cyan !important
+
+  /* Literal.String.Backtick
+  //.sb
+  //  color: #d14
+
+  /* Literal.String.Char
+  //.sc
+  //  color: #d14
+
+  /* Literal.String.Doc
+  .sd
+    color: $cyan !important
+
+  /* Literal.String.Double
+  .s2
+    color: $cyan !important
+
+  /* Literal.String.Escape
+  .se
+    color: $red !important
+
+  /* Literal.String.Heredoc
+  //.sh
+  //  color: #d14
+
+  /* Literal.String.Interpol
+  .si
+    color: $blue !important
+
+  /* Literal.String.Other
+  //.sx
+  //  color: #d14
+
+  /* Literal.String.Regex
+  .sr
+    color: $cyan !important
+
+  /* Literal.String.Single
+  .s1
+    color: $cyan !important
+
+  /* Literal.String.Symbol
+  //.ss
+  //  color: #990073
+
+  /* Literal.Number.Integer.Long
+  //.il
+  //  color: #099
+
+  div
+    .gd, .gd .x, .gi, .gi .x
+      display: block
