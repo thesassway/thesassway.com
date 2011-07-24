@@ -6,4 +6,4 @@ Adam
   - minimize logo on article pages?
 
 John
-* Including code samples into Nesta documents
+* Look at /articles.xml issue
