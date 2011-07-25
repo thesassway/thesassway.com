@@ -147,184 +147,182 @@ a:focus, a:active {
 }
 
 pre {
+  border-top: 1px dotted #dddddd;
+  border-bottom: 1px dotted #dddddd;
+  color: #333333;
+  font-size: 15px;
   font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-  padding: 1em 0;
-  margin: 1em 0;
+  line-height: 20px;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 pre .hll {
-  background-color: #ffffcc;
+  background-color: #333333;
 }
 pre .c {
-  color: #888888;
+  color: #b3b3b3;
 }
 pre .err {
-  color: #a61717;
-  background-color: #e3d2d2;
+  color: red;
+  background: pink;
 }
 pre .k {
-  color: #008800;
+  color: #ba2dc3;
 }
 pre .cm {
-  color: #888888;
+  color: #b3b3b3;
 }
 pre .cp {
-  color: #cc0000;
+  color: #ba2dc3;
 }
 pre .c1 {
-  color: #888888;
+  color: #b3b3b3;
 }
 pre .cs {
-  color: #cc0000;
-  background-color: #fff0f0;
+  color: #b3b3b3;
 }
 pre .gd {
-  color: black;
-  background-color: #ffdddd;
+  color: #b3b3b3;
 }
 pre .ge {
   font-style: italic;
 }
 pre .gr {
-  color: #aa0000;
+  color: red;
 }
 pre .gh {
-  color: #303030;
+  color: #333333;
 }
 pre .gi {
-  color: black;
+  color: #333333;
   background-color: #ddffdd;
 }
 pre .go {
-  color: #888888;
+  color: #333333;
 }
 pre .gp {
-  color: #555555;
+  color: #333333;
 }
 pre .gs {
   font-weight: bold;
 }
 pre .gu {
-  color: #606060;
+  color: #333333;
 }
 pre .gt {
-  color: #aa0000;
+  color: #b3b3b3;
 }
 pre .kc, pre .kd, pre .kn {
-  color: #008800;
+  color: #ba2dc3;
 }
 pre .kp {
-  color: #008800;
+  color: #333333;
 }
 pre .kr {
-  color: #008800;
+  color: #333333;
 }
 pre .kt {
-  color: #888888;
+  color: #333333;
 }
 pre .m {
-  color: #0000dd;
+  color: #333333;
 }
 pre .s {
-  color: #dd2200;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .n {
-  color: #008800;
+  color: #333333;
 }
 pre .na {
-  color: #336699;
+  color: #ba2dc3;
 }
 pre .nb {
-  color: #003388;
+  color: #333333;
 }
 pre .nc {
-  color: #bb0066;
+  color: #ba2dc3;
 }
 pre .no {
-  color: #003366;
+  color: #333333;
 }
 pre .nd {
-  color: #555555;
+  color: #ba2dc3;
 }
 pre .ne {
-  color: #bb0066;
+  color: #333333;
 }
 pre .nf {
-  color: #0066bb;
+  color: #ba2dc3;
 }
 pre .nl {
-  color: #336699;
+  color: #333333;
   font-style: italic;
 }
 pre .nn {
-  color: #bb0066;
+  color: #333333;
+}
+pre .nx {
+  color: #333333;
 }
 pre .py {
-  color: #336699;
+  color: #333333;
 }
 pre .nt {
-  color: #bb0066;
+  color: #ba2dc3;
 }
 pre .nv {
-  color: #336699;
+  color: #333333;
+}
+pre .o {
+  color: #333333;
 }
 pre .ow {
-  color: #008800;
+  color: #333333;
 }
 pre .w {
   color: #bbbbbb;
 }
 pre .mf, pre .mh, pre .mi, pre .mo {
-  color: #0000dd;
+  color: #333333;
 }
 pre .sb, pre .sc, pre .sd, pre .s2 {
-  color: #dd2200;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .se {
-  color: #0044dd;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .sh {
-  color: #dd2200;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .si {
-  color: #3333bb;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .sx {
-  color: #22bb22;
-  background-color: #f0fff0;
+  color: #2dc3ba;
 }
 pre .sr {
-  color: #008800;
-  background-color: #fff0ff;
+  color: #2dc3ba;
 }
 pre .s1 {
-  color: #dd2200;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .ss {
-  color: #aa6600;
-  background-color: #fff0f0;
+  color: #2dc3ba;
 }
 pre .bp {
-  color: #003388;
+  color: #333333;
 }
 pre .vc {
-  color: #336699;
+  color: #333333;
 }
 pre .vg {
-  color: #dd7700;
+  color: #333333;
 }
 pre .vi {
-  color: #3333bb;
+  color: #333333;
 }
 pre .il {
-  color: #0000dd;
+  color: #333333;
 }
 
 body {
