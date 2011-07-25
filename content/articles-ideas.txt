@@ -17,6 +17,7 @@ How To / Insightful
 * Media-bubbling: How it works
 * Little used and understood Sass Functions
 * Contributing to Compass
+* Avoiding Nestitis: Writing Good Sass
 
 Tools
 * Interactive Sass: Having Fun with the Terminal
@@ -25,12 +26,13 @@ Tools
 * Choosing a Grid Framework
 
 Controversial
+* Sass Flavors: Classic and SCSS
 * Alternatives to Sass: Less, Stylus, etc...
 * Why Sass CSS Frameworks are Better than Vanilla CSS Frameworks
 * Which is better: Mixin or Extend?
 
 Sass Exhibitions
-* How Compass makes it easy to use new CSS3 features 
+* How Compass makes it easy to use new CSS3 features
 * Multi-line buttons with Sass
 * Double-Rainbow with Sass and Compass
 * Styling Buttons with Sass and Compass
