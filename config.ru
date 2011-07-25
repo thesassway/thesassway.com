@@ -23,7 +23,7 @@ end
 # Code highlighting
 require 'pygments'
 require 'rack/codehighlighter'
-use Rack::Codehighlighter, :pygments, :element => "pre", :pattern => /\A:::(\w+)\s*\n/, :logging => false
+use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
 
 # Nice looking 404s and other messages
 use Rack::ShowStatus

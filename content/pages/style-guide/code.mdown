@@ -1,0 +1,45 @@
+# Code
+
+## CSS
+
+    :::css
+    a.button {
+      background: black;
+      color: white;
+      padding: 3px;
+      @include border-radius(5px);
+    }
+
+## HTML
+
+    :::html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>An HTML Document</title>
+      </head>
+      <body>
+        <h1>Example</h1>
+        <p>This is an example HTML document.
+      </body>
+    </html>
+
+## Ruby
+
+    :::ruby
+    puts 'hello world' #=> "hello world"
+
+## Bash
+
+    :::bash
+    $ serve create --t blank my-project
+
+
+## SQL
+
+    :::sql
+    SELECT sql FROM 
+       (SELECT * FROM sqlite_master UNION ALL
+        SELECT * FROM sqlite_temp_master)
+    WHERE type!='meta'
+    ORDER BY tbl_name, type DESC, name
