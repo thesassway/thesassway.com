@@ -1,316 +1,243 @@
-$base03: #002b36
-
-//darkest blue
-$base02: #073642
-
-//dark blue
-$base01: #586e75
-
-//darkest gray
-$base00: #657b83
-
-//dark gray
-$base0: #839496
-
-//medium gray
-$base1: #93a1a1
-
-//medium light gray
-$base2: #eee8d5
-
-//cream
-$base3: #fdf6e3
-
-//white
-$yellow: #b58900
-$orange: #cb4b16
-$red: #dc322f
-$magenta: #d33682
-$violet: #6c71c4
-$blue: #268bd2
-$cyan: #2aa198
-$green: #859900
-
-$pre-bg: $base03 !default
-
 pre
   font-family: $fixed-font-family
-  background: $pre-bg
-  +border-radius
-  color: $base1
-  padding: 1em
+  border-top: 1px solid $tsw-border-color
+  border-bottom: 1px solid $tsw-border-color
+  padding: 1em 0
   margin: 1em 0
+
+  .hll
+    background-color: #ffffcc
 
   /* Comment
   .c
-    color: $base01 !important
-    font-style: italic !important
-
-  /* Comment.Multiline
-  .cm
-    color: $base01 !important
-    font-style: italic !important
-
-  /* Comment.Preproc
-  .cp
-    color: $base01 !important
-    font-style: italic !important
-
-  /* Comment.Single
-  .c1
-    color: $base01 !important
-    font-style: italic !important
-
-  /* Comment.Special
-  .cs
-    color: $base01 !important
-    font-weight: bold !important
-    font-style: italic !important
+    color: #888888
 
   /* Error
   .err
-    color: $red !important
-    background: none !important
+    color: #a61717
+    background-color: #e3d2d2
 
   /* Keyword
   .k
-    color: $orange !important
+    color: #008800
+    font-weight: bold
 
-  /* Operator
-  .o
-    color: $base1 !important
-    font-weight: bold !important
+  /* Comment.Multiline
+  .cm
+    color: #888888
 
-  /* Operator
-  .p
-    color: $base1 !important
+  /* Comment.Preproc
+  .cp
+    color: #cc0000
+    font-weight: bold
 
-  /* Operator.Word
-  .ow
-    color: $cyan !important
-    font-weight: bold !important
+  /* Comment.Single
+  .c1
+    color: #888888
+
+  /* Comment.Special
+  .cs
+    color: #cc0000
+    font-weight: bold
+    background-color: #fff0f0
 
   /* Generic.Deleted
   .gd
-    color: $base1 !important
-    background-color: mix($red, $base03, 25%) !important
-    display: inline-block
-
-  /* Generic.Deleted.Specific
-  .gd .x
-    color: $base1 !important
-    background-color: mix($red, $base03, 35%) !important
-    display: inline-block
+    color: #000000
+    background-color: #ffdddd
 
   /* Generic.Emph
   .ge
-    color: $base1 !important
-    font-style: italic !important
+    font-style: italic
 
   /* Generic.Error
-  //.gr
-  //  color: #aa0000
+  .gr
+    color: #aa0000
 
   /* Generic.Heading
   .gh
-    color: $base01 !important
+    color: #303030
 
   /* Generic.Inserted
   .gi
-    color: $base1 !important
-    background-color: mix($green, $base03, 20%) !important
-    display: inline-block
-
-  /* Generic.Inserted.Specific
-  .gi .x
-    color: $base1 !important
-    background-color: mix($green, $base03, 40%) !important
-    display: inline-block
+    color: #000000
+    background-color: #ddffdd
 
   /* Generic.Output
-  //.go
-  //  color: #888
+  .go
+    color: #888888
 
   /* Generic.Prompt
-  //.gp
-  //  color: #555
+  .gp
+    color: #555555
 
   /* Generic.Strong
   .gs
-    color: $base1 !important
-    font-weight: bold !important
+    font-weight: bold
 
   /* Generic.Subheading
   .gu
-    color: $violet !important
+    color: #606060
 
   /* Generic.Traceback
-  //.gt
-  //  color: #a00
+  .gt
+    color: #aa0000
 
-  /* Keyword.Constant
-  .kc
-    color: $green !important
-    font-weight: bold !important
-
-  /* Keyword.Declaration
-  .kd
-    color: $blue !important
+  /* Keyword.Constant, Keyword.Declaration, Keyword.Namespace
+  .kc, .kd, .kn
+    color: #008800
+    font-weight: bold
 
   /* Keyword.Pseudo
   .kp
-    color: $orange !important
-    font-weight: bold !important
+    color: #008800
 
   /* Keyword.Reserved
   .kr
-    color: $magenta !important
-    font-weight: bold !important
+    color: #008800
+    font-weight: bold
 
   /* Keyword.Type
   .kt
-    color: $cyan !important
-  .n
-    color: $blue !important
-
-  /* Name.Attribute
-  .na
-    color: $blue !important
-
-  /* Name.Builtin
-  .nb
-    color: $green !important
-
-  /* Name.Class
-  //.nc
-  //  color: #445588
-  //  font-weight: bold
-
-  /* Name.Constant
-  .no
-    color: $yellow !important
-
-  /* Name.Entity
-  //.ni
-  //  color: #800080
-
-  /* Name.Exception
-  .ne
-    color: $blue !important
-    font-weight: bold !important
-
-  /* Name.Function
-  .nf
-    color: $blue !important
-    font-weight: bold !important
-
-  /* Name.Namespace
-  .nn
-    color: $yellow !important
-
-  /* Name.Tag
-  .nt
-    color: $blue !important
-    font-weight: bold !important
-  .nx
-    color: $yellow !important
-
-  /* Name.Builtin.Pseudo
-  //.bp
-  //  color: #999
-
-  /* Name.Variable.Class
-  //.vc
-  //  color: #008080
-
-  /* Name.Variable.Global
-  .vg
-    color: $blue !important
-
-  /* Name.Variable.Instance
-  .vi
-    color: $blue !important
-
-  /* Name.Variable
-  .nv
-    color: $blue !important
-
-  /* Text.Whitespace
-  .w
-    color: #bbb
-
-  /* Literal.Number.Float
-  .mf
-    color: $cyan !important
+    color: #888888
+    font-weight: bold
 
   /* Literal.Number
   .m
-    color: $cyan !important
-
-  /* Literal.Number.Hex
-  .mh
-    color: $cyan !important
-
-  /* Literal.Number.Integer
-  .mi
-    color: $cyan !important
-
-  /* Literal.Number.Oct
-  //.mo
-  //  color: #099
+    color: #0000DD
+    font-weight: bold
 
   /* Literal.String
   .s
-    color: $cyan !important
+    color: #dd2200
+    background-color: #fff0f0
 
-  /* Literal.String.Backtick
-  //.sb
-  //  color: #d14
+  /* Name.Attribute
+  .na
+    color: #336699
 
-  /* Literal.String.Char
-  //.sc
-  //  color: #d14
+  /* Name.Builtin
+  .nb
+    color: #003388
 
-  /* Literal.String.Doc
-  .sd
-    color: $cyan !important
+  /* Name.Class
+  .nc
+    color: #bb0066
+    font-weight: bold
 
-  /* Literal.String.Double
-  .s2
-    color: $cyan !important
+  /* Name.Constant
+  .no
+    color: #003366
+    font-weight: bold
+
+  /* Name.Decorator
+  .nd
+    color: #555555
+
+  /* Name.Exception
+  .ne
+    color: #bb0066
+    font-weight: bold
+
+  /* Name.Function
+  .nf
+    color: #0066bb
+    font-weight: bold
+
+  /* Name.Label
+  .nl
+    color: #336699
+    font-style: italic
+
+  /* Name.Namespace
+  .nn
+    color: #bb0066
+    font-weight: bold
+
+  /* Name.Property
+  .py
+    color: #336699
+    font-weight: bold
+
+  /* Name.Tag
+  .nt
+    color: #bb0066
+    font-weight: bold
+
+  /* Name.Variable
+  .nv
+    color: #336699
+
+  /* Operator.Word
+  .ow
+    color: #008800
+
+  /* Text.Whitespace
+  .w
+    color: #bbbbbb
+
+  /* Literal.Number.Float, Literal.Number.Hex, Literal.Number.Integer, Literal.Number.Oct
+  .mf, .mh, .mi, .mo
+    color: #0000DD
+    font-weight: bold
+
+  /* Literal.String.Backtick, Literal.String.Char, Literal.String.Doc, Literal.String.Double, Literal.String.Escape
+  .sb, .sc, .sd, .s2
+    color: #dd2200
+    background-color: #fff0f0
 
   /* Literal.String.Escape
   .se
-    color: $red !important
+    color: #0044dd
+    background-color: #fff0f0
 
-  /* Literal.String.Heredoc
-  //.sh
-  //  color: #d14
+  /* Literal.String.HereDoc
+  .sh
+    color: #dd2200
+    background-color: #fff0f0
 
   /* Literal.String.Interpol
   .si
-    color: $blue !important
+    color: #3333bb
+    background-color: #fff0f0
 
   /* Literal.String.Other
-  //.sx
-  //  color: #d14
+  .sx
+    color: #22bb22
+    background-color: #f0fff0
 
   /* Literal.String.Regex
   .sr
-    color: $cyan !important
+    color: #008800
+    background-color: #fff0ff
 
   /* Literal.String.Single
   .s1
-    color: $cyan !important
+    color: #dd2200
+    background-color: #fff0f0
 
   /* Literal.String.Symbol
-  //.ss
-  //  color: #990073
+  .ss
+    color: #aa6600
+    background-color: #fff0f0
+
+  /* Name.Builtin.Pseudo
+  .bp
+    color: #003388
+
+  /* Name.Variable.Class
+  .vc
+    color: #336699
+
+  /* Name.Variable.Global
+  .vg
+    color: #dd7700
+
+  /* Name.Variable.Instance
+  .vi
+    color: #3333bb
 
   /* Literal.Number.Integer.Long
-  //.il
-  //  color: #099
-
-  div
-    .gd, .gd .x, .gi, .gi .x
-      display: block
+  .il
+    color: #0000DD
+    font-weight: bold

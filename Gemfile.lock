@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/jlong/rack-codehighlighter.git
-  revision: a6882034e55395e4f4bbb9b457acd1566fc009a8
+  revision: 6c5dcb784d14d113abf7c3a0458cdf1223adf26a
   specs:
     rack-codehighlighter (0.4.7)
       nokogiri (>= 1.4.1)
