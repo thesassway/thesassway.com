@@ -51,7 +51,7 @@ Sass:
     :::sass
     h3
       font-size: 20px
-      margin-bottom: 10px  
+      margin-bottom: 10px
       .some-parent-selector &
         font-size: 24px
         margin-bottom: 20px

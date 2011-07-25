@@ -5,7 +5,7 @@
     :::css
     /* Button link */
     a.button {
-      font-family: Helvetica, "MS Sans Serif", Arial, sanserif;
+      font-family: Helvetica, "MS Sans Serif", Arial, san-serif;
       background: black;
       color: white;
       padding: 3px;
@@ -116,7 +116,7 @@
 ## SQL
 
     :::sql
-    SELECT sql FROM 
+    SELECT sql FROM
        (SELECT * FROM sqlite_master UNION ALL
         SELECT * FROM sqlite_temp_master)
     WHERE type!='meta'
