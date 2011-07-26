@@ -3,9 +3,9 @@ Categories: intermediate
 Author: Adam Stacoviak
 Summary: An intro to referencing parent selectors using the ampersand
 
-# Referencing Parent Selectors using the ampersand (&)
+# Referencing Parent Selectors using &
 
-<a href="http://twitter.com/thesassway"><img src="http://a0.twimg.com/profile_images/1418433540/album-art.png" alt="The Sass Way" class="alignright" /></a>
+<a href="http://twitter.com/thesassway"><img class="right" src="/base/images/sass.gif" alt="The Sass Way" /></a>
 
 This is the first in a series of posts in the works I'm calling _The Sass Way_. There are clear ways to do things using vanilla [CSS](http://www.w3.org/Style/CSS/), but there are significantly different ways for writing CSS stylesheets using [Sass](http://sass-lang.com/).
 
@@ -70,6 +70,6 @@ CSS (output):
 
 Based on this code, you can place an `&` at the end of your selector declaration in place of the repeating selector, and sit back and enjoy the awesomeness of Sass.
 
-My example, is very simplistic but [Joel Oliveira](https://twitter.com/jayroh) goes deeper on the subject with his post "[The ampersand &amp; a killer Sass feature](http://joeloliveira.com/2011/06/28/the-ampersand-a-killer-sass-feature/)". I highly recommend it.
+My example, is very simplistic but [Joel Oliveira](https://twitter.com/jayroh) goes deeper on the subject with his post, [_The ampersand &amp; a killer Sass feature_](http://joeloliveira.com/2011/06/28/the-ampersand-a-killer-sass-feature/). I highly recommend it.
 
 In the coming weeks I'll be covering more topics on writing CSS "The Sass Way". [Follow me](http://twitter.com/adamstac) as well as [The Sass Way](http://twitter.com/thesassway) on Twitter for updates.

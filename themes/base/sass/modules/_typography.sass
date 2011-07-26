@@ -1,8 +1,8 @@
 // This should be applied to the body of the document:
-// <pre class="source-code sass">
-// body
-//   +base-font
-// </pre>
+//
+//     body
+//       +base-font
+//
 =base-font
   color: $text-color
   font-family: $base-font-family
@@ -10,16 +10,15 @@
   line-height: $base-line-height
 
 // Typically this should be applied to content portion of the document:
-// <pre class="source-code sass">
-// #content
-//   +basic-typography
-// </pre>
+//
+//     #content
+//       +basic-typography
 //
 // Pass true if you would like to use indented instead of block level paragraphs:
-// <pre class="source-code sass">
-// #content
-//   +basic-typography(true)
-// </pre>
+//
+//     #content
+//       +basic-typography(true)
+//
 =basic-typography($indented: false)
   +inline-elements
   +headings
@@ -49,7 +48,7 @@
     font-style: italic
 
 =misc-inline-elements($color: $text-color)
-  big
+  span.big
     font-size: 115%
 
   abbr, acronym
@@ -72,8 +71,11 @@
     margin-bottom: 0.5em
   h1
     font-weight: bold
-    font-size: 210%
-    line-height: 0.785 * $line-height
+    font-size: 400%
+    line-height: 0.7 * $line-height
+    margin-top: 0
+    padding-top: 0.45em
+    letter-spacing: -4px
   h2
     font-weight: bold
     font-size: 160%
@@ -92,11 +94,11 @@
 
 =heading-decorations($color: $quiet-color)
   h1, h2, h3, h4, h5, h6
-    small
+    span.small
       color: $color
       font-weight: normal
       font-size: 90%
-  h2 small
+  h2 span.small
     font-style: italic
 
 =block-paragraphs

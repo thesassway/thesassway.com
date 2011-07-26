@@ -1,66 +1,93 @@
 body
   border-top: 4px solid darken($tsw-pink,15)
 
-body > header
+[role=banner]
   position: relative
   top: -4px
   +box-sizing(border-box)
-  background:
-    image: image-url("sass.gif")
-    repeat: no-repeat
-    position: 90px 14px
-    size: 170px
   border-top: 4px solid $tsw-pink
-  border-bottom: 1px solid $lightest-grey
-  margin: 0 auto
-  margin-bottom: 50px
+  margin: 0 auto 30px
   width: 960px
-  padding: 50px 0
-  padding-left: 320px
+  padding-left: 130px
+  hgroup
+    position: absolute
+    top: 30px
+    padding-top: 0.25em
   h1
     @extend .PFCentroSerifPro-Medium
-    font-size: 70px
-    letter-spacing: -5px
-    margin-bottom: 20px
+    font-size: 120%
     a
       color: #000
+      text-decoration: none
       &:hover
-        color: #000
-        text-decoration: none
-    span
-      &.trade-mark
-        position: relative
-        top: -40px
-        left: -12px
-        font-family: "Helvetica Neue", Arial, sans-serif
-        font-size: 12px
-      &.char1
-        letter-spacing: 0
-      &.char2
-        letter-spacing: -6px
-      &.char3
-      &.char4
-      &.char5
-        letter-spacing: -2px
-      &.char6
-        letter-spacing: -4px
-      &.char7
-        letter-spacing: -3px
-      &.char8
-      &.char9
-      &.char10
-        letter-spacing: -9px
-      &.char11
-        letter-spacing: -5px
-      &.char12
+        color: $link-color
+        text-decoration: underline
+  span.trade-mark
+    position: relative
+    top: -4px
+    left: -2px
+    font-family: "Helvetica Neue", Arial, sans-serif
+    font-size: 12px
   h2
-    @extend .PFCentroSerifPro-Italic
-    font-size: 16px
+    display: none
 
-[role="main"]
+[role=article], [role=page]
+  [role=sidebar]
+    display: none
+
+[role=homepage]
+  [role=banner]
+    background:
+      image: image-url("sass.gif")
+      repeat: no-repeat
+      position: 82px 20px
+      size: 170px
+    padding: 50px 0
+    padding-left: 290px
+    hgroup
+      position: relative
+      top: 0
+      padding-top: 0
+    h1
+      font-size: 70px
+      letter-spacing: -5px
+      span
+        &.trade-mark
+          top: -40px
+          left: -10px
+        &.char1
+          letter-spacing: 0
+        &.char2
+          letter-spacing: -6px
+        &.char3
+        &.char4
+        &.char5
+          letter-spacing: -2px
+        &.char6
+          letter-spacing: -4px
+        &.char7
+          letter-spacing: -3px
+        &.char8
+        &.char9
+        &.char10
+          letter-spacing: -9px
+        &.char11
+          letter-spacing: -5px
+        &.char12
+    h2
+      @extend .PFCentroSerifPro-Italic
+      display: block
+      font-size: 16px
+  [role=sidebar]
+    display: block
+
+[role=page], [role=article]
+  [role=banner]
+
+[role=main]
   position: relative
 
-[role="sidebar"]
+[role=sidebar]
   @extend .links
   position: absolute
   top: 0
@@ -78,16 +105,16 @@ body > header
       ul
         padding: 15px 0
 
-[role="main"], [role="footer"]
+[role=main], [role=footer]
   margin: 0 auto
   width: 700px
 
-[role="footer"]
+[role=footer]
   @extend .PFCentroSerifPro-Italic
   color: $darkest-grey
   font-size: 13px
   padding: 40px 0
-  padding-top: 300px
+  padding-top: 100px
 
 .breadcrumbs
   clear: both
