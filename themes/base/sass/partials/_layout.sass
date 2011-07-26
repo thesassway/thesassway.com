@@ -6,21 +6,27 @@ body
   top: -4px
   +box-sizing(border-box)
   border-top: 4px solid $tsw-pink
-  margin: 0 auto 30px
+  margin: 0 auto 40px
   width: 960px
   padding-left: 130px
   hgroup
     position: absolute
     top: 30px
     padding-top: 0.25em
+    z-index: 2
   h1
     @extend .PFCentroSerifPro-Medium
-    font-size: 120%
+    font-size: 180%
+    letter-spacing: -1px
+    &:before
+      content: "←"
+      position: absolute
+      margin-left: -1.25em
+      color: #666
     a
       color: #000
       text-decoration: none
       &:hover
-        color: $link-color
         text-decoration: underline
   span.trade-mark
     position: relative
@@ -51,6 +57,8 @@ body
     h1
       font-size: 70px
       letter-spacing: -5px
+      &:before
+        content: ""
       span
         &.trade-mark
           top: -40px
@@ -58,7 +66,7 @@ body
         &.char1
           letter-spacing: 0
         &.char2
-          letter-spacing: -6px
+          letter-spacing: -4px
         &.char3
         &.char4
         &.char5
