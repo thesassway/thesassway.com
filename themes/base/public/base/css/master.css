@@ -264,7 +264,7 @@ body {
   margin-bottom: 1em;
 }
 .typography code, .content code, .typography kbd, .content kbd, .typography tt, .content tt, .typography pre, .content pre {
-  font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
+  font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", monospace;
   font-size: 85%;
 }
 .typography pre, .content pre {
@@ -291,7 +291,7 @@ body {
   -khtml-border-radius: 5px;
   border-radius: 5px;
   font-size: 90%;
-  font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
+  font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", monospace;
   line-height: 1.3;
   padding: 1.5em;
   margin: 1em 0;
@@ -521,7 +521,7 @@ body {
 }
 
 [role=homepage] [role=banner] {
-  background-image: url('../images/sass.gif?1311449942');
+  background-image: url('../images/sass.gif?1311351727');
   background-repeat: no-repeat;
   background-position: 82px 20px;
   background-size: 170px;
