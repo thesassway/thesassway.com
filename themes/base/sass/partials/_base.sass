@@ -1,0 +1,38 @@
+@import "compass"
+
++global-reset
+
+// Base Font
+$base-font-family: "Helvetica Neue", Arial, Clean, sans-serif
+$base-font-size: 100%
+$base-line-height: 1.4
+
+// Fixed Font
+$fixed-font-family: Monaco, 'Andale Mono', 'Lucida Console', monospace
+$fixed-font-size: 85%
+$fixed-line-height: $base-line-height
+
+// Brand colors
+$tsw-pink: #ce4dd6
+$tsw-light-pink: #ffeeff
+
+// Greyscale
+$light-grey: #c7c7c7
+$lighter-grey: lighten($light-grey,10)
+$lightest-grey: lighten($light-grey,20)
+$dark-grey: #878787
+$darker-grey: darken($dark-grey,10)
+$darkest-grey: darken($dark-grey,20)
+
+// Named Colors
+$text-color: #333
+$loud-color: $text-color - #333
+$quiet-color: $text-color + #666
+$header-color: $text-color - #222
+$background-color: white
+$border-color: #ddd
+$link-color: $tsw-pink
+$link-hover-color: lighten($link-color, 10)
+$webkit-tap-highlight-color: $tsw-pink
+
+@import "modules/all"

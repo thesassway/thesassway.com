@@ -54,6 +54,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+body {
+  color: #333333;
+  font-family: "Helvetica Neue", Arial, Clean, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+}
+
 @font-face {
   font-family: "PFCentroSerifPro-Regular";
   src: url(/base/webfonts/pfcentroserifpro/eot/style_173799.eot);
@@ -134,19 +141,118 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "PFCentroSerifPro-BlackItalic", "Georgia", serif;
 }
 
-a {
+.links a, .content a, [role="sidebar"] a {
   color: #ce4dd6;
   text-decoration: none;
 }
-a:hover {
+.links a:hover, .content a:hover, [role="sidebar"] a:hover {
   color: #d976e0;
   text-decoration: underline;
 }
-a:focus, a:active {
+.links a:focus, .content a:focus, [role="sidebar"] a:focus, .links a:active, .content a:active, [role="sidebar"] a:active {
   outline: none;
 }
 
-pre {
+.typography strong, .content strong, .typography b, .content b {
+  color: black;
+  font-weight: bold;
+}
+.typography em, .content em, .typography i, .content i {
+  font-style: italic;
+}
+.typography big, .content big {
+  font-size: 115%;
+}
+.typography abbr, .content abbr, .typography acronym, .content acronym {
+  border-bottom: 1px dotted #999999;
+}
+.typography sub, .content sub, .typography sup, .content sup {
+  font-size: 85%;
+}
+.typography sub, .content sub {
+  vertical-align: sub;
+}
+.typography sup, .content sup {
+  vertical-align: super;
+}
+.typography span.caps, .content span.caps {
+  font-size: 95%;
+}
+.typography h1, .content h1, .typography h2, .content h2, .typography h3, .content h3, .typography h4, .content h4, .typography h5, .content h5, .typography h6, .content h6 {
+  color: #111111;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.typography h1, .content h1 {
+  font-weight: bold;
+  font-size: 210%;
+  line-height: 1.099;
+}
+.typography h2, .content h2 {
+  font-weight: bold;
+  font-size: 160%;
+  line-height: 1.099;
+}
+.typography h3, .content h3 {
+  font-size: 160%;
+  line-height: 1.169;
+}
+.typography h4, .content h4 {
+  font-weight: bold;
+  font-size: 110%;
+  line-height: 1.26;
+}
+.typography h5, .content h5 {
+  font-style: italic;
+  font-size: 110%;
+  line-height: 1.4;
+}
+.typography h1 small, .content h1 small, .typography h2 small, .content h2 small, .typography h3 small, .content h3 small, .typography h4 small, .content h4 small, .typography h5 small, .content h5 small, .typography h6 small, .content h6 small {
+  color: #999999;
+  font-weight: normal;
+  font-size: 90%;
+}
+.typography h2 small, .content h2 small {
+  font-style: italic;
+}
+.typography p, .content p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+.typography ul, .content ul, .typography ol, .content ol, .typography dl, .content dl {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.typography ul, .content ul, .typography ol, .content ol, .typography dd, .content dd {
+  padding-left: 2.25em;
+}
+.typography ul, .content ul {
+  list-style: disc;
+}
+.typography ol, .content ol {
+  list-style: decimal;
+}
+.typography li, .content li {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+.typography dt, .content dt {
+  margin-top: 1em;
+}
+.typography dd, .content dd {
+  margin-bottom: 1em;
+}
+.typography code, .content code, .typography kbd, .content kbd, .typography tt, .content tt, .typography pre, .content pre {
+  font-family: Monaco, "Andale Mono", "Lucida Console", monospace;
+  font-size: 85%;
+}
+.typography pre, .content pre {
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.syntax pre, .content pre {
   border-top: 1px dotted #dddddd;
   border-bottom: 1px dotted #dddddd;
   color: #333333;
@@ -156,172 +262,172 @@ pre {
   padding: 20px 0;
   margin: 20px 0;
 }
-pre .hll {
+.syntax pre .hll, .content pre .hll {
   background-color: #333333;
 }
-pre .c {
+.syntax pre .c, .content pre .c {
   color: #b3b3b3;
 }
-pre .err {
+.syntax pre .err, .content pre .err {
   color: red;
   background: pink;
 }
-pre .k {
+.syntax pre .k, .content pre .k {
   color: #ba2dc3;
 }
-pre .cm {
+.syntax pre .cm, .content pre .cm {
   color: #b3b3b3;
 }
-pre .cp {
+.syntax pre .cp, .content pre .cp {
   color: #ba2dc3;
 }
-pre .c1 {
+.syntax pre .c1, .content pre .c1 {
   color: #b3b3b3;
 }
-pre .cs {
+.syntax pre .cs, .content pre .cs {
   color: #b3b3b3;
 }
-pre .gd {
+.syntax pre .gd, .content pre .gd {
   color: #b3b3b3;
 }
-pre .ge {
+.syntax pre .ge, .content pre .ge {
   font-style: italic;
 }
-pre .gr {
+.syntax pre .gr, .content pre .gr {
   color: red;
 }
-pre .gh {
+.syntax pre .gh, .content pre .gh {
   color: #333333;
 }
-pre .gi {
+.syntax pre .gi, .content pre .gi {
   color: #333333;
   background-color: #ddffdd;
 }
-pre .go {
+.syntax pre .go, .content pre .go {
   color: #333333;
 }
-pre .gp {
+.syntax pre .gp, .content pre .gp {
   color: #333333;
 }
-pre .gs {
+.syntax pre .gs, .content pre .gs {
   font-weight: bold;
 }
-pre .gu {
+.syntax pre .gu, .content pre .gu {
   color: #333333;
 }
-pre .gt {
+.syntax pre .gt, .content pre .gt {
   color: #b3b3b3;
 }
-pre .kc, pre .kd, pre .kn {
+.syntax pre .kc, .content pre .kc, .syntax pre .kd, .content pre .kd, .syntax pre .kn, .content pre .kn {
   color: #ba2dc3;
 }
-pre .kp {
+.syntax pre .kp, .content pre .kp {
   color: #333333;
 }
-pre .kr {
+.syntax pre .kr, .content pre .kr {
   color: #333333;
 }
-pre .kt {
+.syntax pre .kt, .content pre .kt {
   color: #333333;
 }
-pre .m {
+.syntax pre .m, .content pre .m {
   color: #333333;
 }
-pre .s {
+.syntax pre .s, .content pre .s {
   color: #2dc3ba;
 }
-pre .n {
+.syntax pre .n, .content pre .n {
   color: #333333;
 }
-pre .na {
+.syntax pre .na, .content pre .na {
   color: #ba2dc3;
 }
-pre .nb {
+.syntax pre .nb, .content pre .nb {
   color: #333333;
 }
-pre .nc {
+.syntax pre .nc, .content pre .nc {
   color: #ba2dc3;
 }
-pre .no {
+.syntax pre .no, .content pre .no {
   color: #333333;
 }
-pre .nd {
+.syntax pre .nd, .content pre .nd {
   color: #ba2dc3;
 }
-pre .ne {
+.syntax pre .ne, .content pre .ne {
   color: #333333;
 }
-pre .nf {
+.syntax pre .nf, .content pre .nf {
   color: #ba2dc3;
 }
-pre .nl {
+.syntax pre .nl, .content pre .nl {
   color: #333333;
   font-style: italic;
 }
-pre .nn {
+.syntax pre .nn, .content pre .nn {
   color: #333333;
 }
-pre .nx {
+.syntax pre .nx, .content pre .nx {
   color: #333333;
 }
-pre .py {
+.syntax pre .py, .content pre .py {
   color: #333333;
 }
-pre .nt {
+.syntax pre .nt, .content pre .nt {
   color: #ba2dc3;
 }
-pre .nv {
+.syntax pre .nv, .content pre .nv {
   color: #333333;
 }
-pre .o {
+.syntax pre .o, .content pre .o {
   color: #333333;
 }
-pre .ow {
+.syntax pre .ow, .content pre .ow {
   color: #333333;
 }
-pre .w {
+.syntax pre .w, .content pre .w {
   color: #bbbbbb;
 }
-pre .mf, pre .mh, pre .mi, pre .mo {
+.syntax pre .mf, .content pre .mf, .syntax pre .mh, .content pre .mh, .syntax pre .mi, .content pre .mi, .syntax pre .mo, .content pre .mo {
   color: #333333;
 }
-pre .sb, pre .sc, pre .sd, pre .s2 {
+.syntax pre .sb, .content pre .sb, .syntax pre .sc, .content pre .sc, .syntax pre .sd, .content pre .sd, .syntax pre .s2, .content pre .s2 {
   color: #2dc3ba;
 }
-pre .se {
+.syntax pre .se, .content pre .se {
   color: #2dc3ba;
 }
-pre .sh {
+.syntax pre .sh, .content pre .sh {
   color: #2dc3ba;
 }
-pre .si {
+.syntax pre .si, .content pre .si {
   color: #2dc3ba;
 }
-pre .sx {
+.syntax pre .sx, .content pre .sx {
   color: #2dc3ba;
 }
-pre .sr {
+.syntax pre .sr, .content pre .sr {
   color: #2dc3ba;
 }
-pre .s1 {
+.syntax pre .s1, .content pre .s1 {
   color: #2dc3ba;
 }
-pre .ss {
+.syntax pre .ss, .content pre .ss {
   color: #2dc3ba;
 }
-pre .bp {
+.syntax pre .bp, .content pre .bp {
   color: #333333;
 }
-pre .vc {
+.syntax pre .vc, .content pre .vc {
   color: #333333;
 }
-pre .vg {
+.syntax pre .vg, .content pre .vg {
   color: #333333;
 }
-pre .vi {
+.syntax pre .vi, .content pre .vi {
   color: #333333;
 }
-pre .il {
+.syntax pre .il, .content pre .il {
   color: #333333;
 }
 
@@ -458,16 +564,4 @@ body > header h2 {
 }
 .pages .page-date {
   display: none;
-}
-
-.page-single {
-  margin-top: 20px;
-}
-.page-single h1 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-.page-single p {
-  font-size: 14px;
-  line-height: 1.5;
 }

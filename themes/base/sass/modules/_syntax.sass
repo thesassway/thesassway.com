@@ -1,69 +1,58 @@
+$hi-base-1: adjust-color($tsw-pink, $lightness: -10%)
+$hi-base-2: adjust-hue($hi-base-1, 120deg)
+$hi-base-3: adjust-hue($hi-base-1, -120deg)
 
+$hi-code: #333
+$hi-comment: lighten($hi-code, 50%)
+$hi-keyword: $hi-base-1
+$hi-operator: $hi-code
+$hi-tag: $hi-base-1
+$hi-class: $hi-base-1
+$hi-function: $hi-base-1
+$hi-name: $hi-code
+$hi-value: $hi-code
+$hi-error: red
+$hi-error-bg: pink
+$hi-number: #333
+$hi-string: $hi-base-3
+$hi-attribute: $hi-base-1
 
-$base-1: adjust-color($tsw-pink, $lightness: -10%)
-$base-2: adjust-hue($base-1, 120deg)
-$base-3: adjust-hue($base-1, -120deg)
-
-$code: #333
-$comment: lighten($code, 50%)
-$keyword: $base-1
-$operator: $code
-$tag: $base-1
-$class: $base-1
-$function: $base-1
-$name: $code
-$value: $code
-$error: red
-$error-bg: pink
-$number: #333
-$string: $base-3
-$attribute: $base-1
-
-pre
-  border-top: 1px dotted $tsw-border-color
-  border-bottom: 1px dotted $tsw-border-color
-  color: $code
-  font-size: 15px
-  font-family: $fixed-font-family
-  line-height: 20px
-  padding: 20px 0
-  margin: 20px 0
-
+=syntax-highlight
   .hll
-    background-color: $code
+    background-color: $hi-code
 
   // Comment
   .c
-    color: $comment
+    color: $hi-comment
 
   // Error
   .err
-    color: $error
-    background: $error-bg
+    color: $hi-error
+    background: $hi-error-bg
 
   // Keyword
   .k
-    color: $keyword
+    color: $hi-keyword
 
   // Comment.Multiline
   .cm
-    color: $comment
+    color: $hi-comment
 
   // Comment.Preproc
   .cp
-    color: $tag
+    color: $hi-tag
 
   // Comment.Single
   .c1
-    color: $comment
+    color: $hi-comment
 
   // Comment.Special
   .cs
-    color: $comment
+    color: $hi-comment
 
   // Generic.Deleted
   .gd
-    color: $comment
+    color: $hi-comment
 
   // Generic.Emph
   .ge
@@ -71,24 +60,24 @@ pre
 
   // Generic.Error
   .gr
-    color: $error
+    color: $hi-error
 
   // Generic.Heading
   .gh
-    color: $code
+    color: $hi-code
 
   // Generic.Inserted
   .gi
-    color: $code
+    color: $hi-code
     background-color: #ddffdd
 
   // Generic.Output
   .go
-    color: $code
+    color: $hi-code
 
   // Generic.Prompt
   .gp
-    color: $code
+    color: $hi-code
 
   // Generic.Strong
   .gs
@@ -96,100 +85,100 @@ pre
 
   // Generic.Subheading
   .gu
-    color: $code
+    color: $hi-code
 
   // Generic.Traceback
   .gt
-    color: $comment
+    color: $hi-comment
 
   // Keyword.Constant, Keyword.Declaration, Keyword.Namespace
   .kc, .kd, .kn
-    color: $keyword
+    color: $hi-keyword
 
   // Keyword.Pseudo
   .kp
-    color: $code
+    color: $hi-code
 
   // Keyword.Reserved
   .kr
-    color: $code
+    color: $hi-code
 
   // Keyword.Type
   .kt
-    color: $code
+    color: $hi-code
 
   // Literal.Number
   .m
-    color: $number
+    color: $hi-number
 
   // Literal.String
   .s
-    color: $string
+    color: $hi-string
 
   // Name?
   .n
-    color: $name
+    color: $hi-name
 
   // Name.Attribute
   .na
-    color: $attribute
+    color: $hi-attribute
 
   // Name.Builtin
   .nb
-    color: $code
+    color: $hi-code
 
   // Name.Class
   .nc
-    color: $class
+    color: $hi-class
 
   // Name.Constant
   .no
-    color: $code
+    color: $hi-code
 
   // Name.Decorator
   .nd
-    color: $function
+    color: $hi-function
 
   // Name.Exception
   .ne
-    color: $code
+    color: $hi-code
 
   // Name.Function
   .nf
-    color: $function
+    color: $hi-function
 
   // Name.Label
   .nl
-    color: $code
+    color: $hi-code
     font-style: italic
 
   // Name.Namespace
   .nn
-    color: $code
+    color: $hi-code
 
   // Name ???
   .nx
-    color: $code
+    color: $hi-code
 
   // Name.Property
   .py
-    color: $code
+    color: $hi-code
 
   // Name.Tag
   .nt
-    color: $tag
+    color: $hi-tag
 
   // Name.Variable
   .nv
-    color: $value
+    color: $hi-value
 
   // Operator?
   .o
-    color: $operator
+    color: $hi-operator
 
   // Operator.Word
   .ow
-    color: $operator
+    color: $hi-operator
 
   // Text.Whitespace
   .w
@@ -197,56 +186,56 @@ pre
 
   // Literal.Number.Float, Literal.Number.Hex, Literal.Number.Integer, Literal.Number.Oct
   .mf, .mh, .mi, .mo
-    color: $number
+    color: $hi-number
 
   // Literal.String.Backtick, Literal.String.Char, Literal.String.Doc, Literal.String.Double, Literal.String.Escape
   .sb, .sc, .sd, .s2
-    color: $string
+    color: $hi-string
 
   // Literal.String.Escape
   .se
-    color: $string
+    color: $hi-string
 
   // Literal.String.HereDoc
   .sh
-    color: $string
+    color: $hi-string
 
   // Literal.String.Interpol
   .si
-    color: $string
+    color: $hi-string
 
   // Literal.String.Other
   .sx
-    color: $string
+    color: $hi-string
 
   // Literal.String.Regex
   .sr
-    color: $string
+    color: $hi-string
 
   // Literal.String.Single
   .s1
-    color: $string
+    color: $hi-string
 
   // Literal.String.Symbol
   .ss
-    color: $string
+    color: $hi-string
 
   // Name.Builtin.Pseudo
   .bp
-    color: $code
+    color: $hi-code
 
   // Name.Variable.Class
   .vc
-    color: $code
+    color: $hi-code
 
   // Name.Variable.Global
   .vg
-    color: $code
+    color: $hi-code
 
   // Name.Variable.Instance
   .vi
-    color: $code
+    color: $hi-code
 
   // Literal.Number.Integer.Long
   .il
-    color: $number
+    color: $hi-number

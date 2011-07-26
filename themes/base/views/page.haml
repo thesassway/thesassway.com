@@ -7,7 +7,7 @@
         %a{ :href => @page.parent.abspath }= @page.parent.heading
     %li= @page.heading
 
-.page-content
+.content
 
   = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 

@@ -1,0 +1,29 @@
+.links
+  a
+    color: $link-color
+    text-decoration: none
+    &:hover
+      color: $link-hover-color
+      text-decoration: underline
+    &:focus, &:active
+      outline: none
+
+.typography
+  +basic-typography
+
+.syntax
+  pre
+    border-top: 1px dotted $border-color
+    border-bottom: 1px dotted $border-color
+    color: $hi-code
+    font-size: 15px
+    font-family: $fixed-font-family
+    line-height: 20px
+    padding: 20px 0
+    margin: 20px 0
+    +syntax-highlight
+
+.content
+  @extend .links
+  @extend .typography
+  @extend .syntax
