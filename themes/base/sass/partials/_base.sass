@@ -30,9 +30,9 @@ $loud-color: $text-color - #333
 $quiet-color: $text-color + #666
 $header-color: $text-color - #222
 $background-color: white
-$border-color: #ccc
+$border-color: #999
 $link-color: $tsw-pink
-$link-visited-color: desaturate($link-color, 50%)
+$link-visited-color: adjust-color($link-color, $saturation: -30%, $lightness: -20%)
 $webkit-tap-highlight-color: $tsw-pink
 
 @import "modules/all"

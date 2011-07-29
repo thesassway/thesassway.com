@@ -5,7 +5,7 @@ Summary: This is the first article
 
 # Getting started with Sass and Compass
 
-<a href="http://twitter.com/thesassway"><img src="http://a0.twimg.com/profile_images/1418433540/album-art.png" alt="The Sass Way" class="alignright" /></a>
+<a href="http://twitter.com/thesassway"><img class="right" src="/base/images/sass.gif" alt="The Sass Way" /></a>
 
 Now for the second installment in a series of posts I'm calling _The Sass Way_. There are clear ways to do things using vanilla [CSS](http://www.w3.org/Style/CSS/), but there are significantly different ways for writing CSS stylesheets using [Sass](http://sass-lang.com/).
 
@@ -31,7 +31,7 @@ Ok, I know what you're thinking. I just said that we are going to install Sass, 
 
 If that's not what you saw when you ran that command, you may not have Ruby or Ruby Gems on your machine. Also, depending on your setup, you may need to install gems under `sudo`. Covering this in detail is a bit beyond where I want to go in this post, so seek help at [the mailing list](http://groups.google.com/group/sass-lang) if you encounter any issues.
 
-If you are intimidated by [the command line](http://en.wikipedia.org/wiki/Command-line_interface), dont' be. There is [Compass.app](http://compass.handlino.com/), but I won't be covering that in this post.
+If you are intimidated by [the command line](http://en.wikipedia.org/wiki/Command-line_interface), don't be. [John Long](http://twitter.com/johnwlong) has written an [excellent post](http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/) on his site that will get you up and running fast. There is also [Compass.app](http://compass.handlino.com/) from Handlino if you want a GUI on the Mac, but I won't be covering that in this post.
 
 I also like to install [css_parser](http://rubygems.org/gems/css_parser) to take advantage of all the features of `compass stats` which outputs statistics of my Sass stylesheets. It outputs a report that gives a count of the Sass rules, properties, mixins defined and mixins used as well as the CSS rules and properties that get output from your Sass-stylesheets.
 
@@ -51,7 +51,7 @@ The easiest way to get started with something new is to just jump right in. On t
 
 Alternatively you can pull down [the test project from GitHub](https://github.com/thesassway/sass-test), but that would completely defeat the purpose of learning how to do this on your own.
 
-Moving on ... change directory ([cd](http://en.wikipedia.org/wiki/Cd_(command))) into the newly created `/sass-test` directory and open it up in your favorite editor. I use [TextMate](http://macromates.com/), but I've been contemplating trying out [Vim](http://www.vim.org/) or [Sublime Text 2](http://www.sublimetext.com/2). We've covered Vim quite a bit on The Changelog, so take a peek at [the search results for Vim on The Changelog](http://www.google.com/search?q=site%3Athechangelog.com+Vim) and dig in.
+Moving on ... change directory (<a href="http://en.wikipedia.org/wiki/Cd_(command)">cd</a>) into the newly created `/sass-test` directory and open it up in your favorite editor. I use [TextMate](http://macromates.com/), but I've been contemplating trying out [Vim](http://www.vim.org/) or [Sublime Text 2](http://www.sublimetext.com/2). We've covered Vim quite a bit on The Changelog, so take a peek at [the search results for Vim on The Changelog](http://www.google.com/search?q=site%3Athechangelog.com+Vim) and dig in.
 
 ## Compile Sass to CSS
 
