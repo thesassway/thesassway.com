@@ -278,6 +278,15 @@ body {
   margin-bottom: 1em;
 }
 
+.article .by-line, .content .by-line {
+  font-size: 120%;
+  margin: -1em 0 1em;
+  color: #ce4dd6;
+}
+.article .page-date, .content .page-date {
+  color: #999999;
+}
+
 .images img.right, .content img.right {
   float: right;
   margin: 0 0 1em 1em;

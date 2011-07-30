@@ -20,6 +20,14 @@
 .typography
   +basic-typography
 
+.article
+  .by-line
+    font-size: 120%
+    margin: -1em 0 1em
+    color: $tsw-pink
+  .page-date
+    +quiet
+
 .images
   img.right
     float: right
@@ -42,5 +50,6 @@
 .content
   @extend .links
   @extend .typography
+  @extend .article
   @extend .images
   @extend .syntax

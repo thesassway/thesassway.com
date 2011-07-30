@@ -5,6 +5,8 @@ Summary: This is the first article
 
 # Getting started with Sass and Compass
 
+<div class="by-line">by Adam Stacoviak</div>
+
 <a href="http://twitter.com/thesassway"><img class="right" src="/base/images/sass.gif" alt="The Sass Way" /></a>
 
 Now for the second installment in a series of posts I'm calling _The Sass Way_. There are clear ways to do things using vanilla [CSS](http://www.w3.org/Style/CSS/), but there are significantly different ways for writing CSS stylesheets using [Sass](http://sass-lang.com/).
