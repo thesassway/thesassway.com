@@ -55,6 +55,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
 body {
   color: #333333;
   font-family: "Helvetica Neue", Arial, Clean, sans-serif;
@@ -142,17 +146,17 @@ body {
   font-family: "PFCentroSerifPro-BlackItalic", "Georgia", serif;
 }
 
-.links a, .content a, [role=sidebar] a {
+.links a, .content a, [role=offsite] a, [role=sidebar] a {
   color: #ce4dd6;
   font-weight: bold;
   margin: 0 -3px;
   padding: 3px 4px;
   text-decoration: none;
 }
-.links a:visited, .content a:visited, [role=sidebar] a:visited {
+.links a:visited, .content a:visited, [role=offsite] a:visited, [role=sidebar] a:visited {
   color: #7a407d;
 }
-.links a:hover, .content a:hover, [role=sidebar] a:hover {
+.links a:hover, .content a:hover, [role=offsite] a:hover, [role=sidebar] a:hover {
   background: #ce4dd6;
   border: 1px solid #ba2dc3;
   -moz-border-radius: 3px;
@@ -168,7 +172,7 @@ body {
   color: white;
   padding: 2px 3px;
 }
-.links a:focus, .content a:focus, [role=sidebar] a:focus, .links a:active, .content a:active, [role=sidebar] a:active {
+.links a:focus, .content a:focus, [role=offsite] a:focus, [role=sidebar] a:focus, .links a:active, .content a:active, [role=offsite] a:active, [role=sidebar] a:active {
   outline: none;
 }
 
@@ -470,23 +474,39 @@ body {
   border-top: 4px solid #a728ae;
 }
 
-[role=banner] {
-  position: relative;
-  top: -4px;
+.full-width, [role=offsite], [role=banner] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  border-top: 4px solid #ce4dd6;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   width: 960px;
+}
+
+[role=offsite] {
+  border-top: 4px solid #ce4dd6;
+  position: relative;
+  top: -4px;
+}
+[role=offsite] ul {
+  text-align: right;
+  padding: 1em 0;
+}
+[role=offsite] li {
+  display: inline;
+  margin-left: 1em;
+}
+[role=offsite] a:after {
+  content: " ⇢";
+}
+
+[role=banner] {
+  margin-bottom: 10px;
   padding-left: 130px;
 }
 [role=banner] hgroup {
-  position: absolute;
-  top: 30px;
-  padding-top: 0.25em;
   z-index: 2;
+  position: absolute;
 }
 [role=banner] h1 {
   font-size: 180%;
@@ -523,9 +543,10 @@ body {
 [role=homepage] [role=banner] {
   background-image: url('../images/sass.gif?1311449942');
   background-repeat: no-repeat;
-  background-position: 82px 20px;
+  background-position: 82px 0;
   background-size: 170px;
-  padding: 50px 0;
+  margin-bottom: 40px;
+  padding: 20px 0 40px;
   padding-left: 290px;
 }
 [role=homepage] [role=banner] hgroup {

@@ -11,6 +11,15 @@
     %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }
     = haml :analytics, :layout => false
   %body{ :role => @page_role || 'page' }
+    %nav(role="offsite")
+      %ul
+        %li
+          %a{:href=>"http://twitter.com/thesassway"} Twitter
+        %li
+          %a{:href=>"http://convore.com/the-sass-way/"} Community
+        %li
+          %a{:href=>"http://github.com/thesassway/"} GitHub
+
     %header(role="banner")
       %hgroup
         %h1

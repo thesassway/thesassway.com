@@ -1,19 +1,40 @@
 body
-  border-top: 4px solid darken($tsw-pink,15)
+  border-top: 4px solid darken($tsw-pink, 15)
 
-[role=banner]
+.full-width
+  +box-sizing(border-box)
+  margin: 0 auto
+  width: 960px
+
+[role=offsite]
+  @extend .links
+  @extend .full-width
+
+  border-top: 4px solid $tsw-pink
   position: relative
   top: -4px
-  +box-sizing(border-box)
-  border-top: 4px solid $tsw-pink
-  margin: 0 auto 40px
-  width: 960px
+
+  ul
+    text-align: right
+    padding: 1em 0
+
+  li
+    display: inline
+    margin-left: 1em
+
+  a:after
+    content: " ⇢"
+
+[role=banner]
+  @extend .full-width
+
+  margin-bottom: 10px
   padding-left: 130px
+
   hgroup
-    position: absolute
-    top: 30px
-    padding-top: 0.25em
     z-index: 2
+    position: absolute
+
   h1
     @extend .PFCentroSerifPro-Medium
     font-size: 180%
@@ -28,12 +49,14 @@ body
       text-decoration: none
       &:hover
         text-decoration: underline
+
   span.trade-mark
     position: relative
     top: -4px
     left: -2px
     font-family: "Helvetica Neue", Arial, sans-serif
     font-size: 12px
+
   h2
     display: none
 
@@ -46,14 +69,17 @@ body
     background:
       image: image-url("sass.gif")
       repeat: no-repeat
-      position: 82px 20px
+      position: 82px 0
       size: 170px
-    padding: 50px 0
+    margin-bottom: 40px
+    padding: 20px 0 40px
     padding-left: 290px
+
     hgroup
       position: relative
       top: 0
       padding-top: 0
+
     h1
       font-size: 70px
       letter-spacing: -5px
@@ -82,10 +108,12 @@ body
         &.char11
           letter-spacing: -5px
         &.char12
+
     h2
       @extend .PFCentroSerifPro-Italic
       display: block
       font-size: 16px
+
   [role=sidebar]
     display: block
 
