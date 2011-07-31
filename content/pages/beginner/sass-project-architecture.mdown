@@ -1,0 +1,36 @@
+Date: 30 July 2013
+Categories: beginner
+Author: Adam Stacoviak
+Summary: Sass project architecture with public and admin as well as shared resources.
+
+# Setting up your Sass project's architecture
+
+Sass project architecture with public and admin as well as shared resources.
+
+    :::text
+    |-- sass
+    |   |-- screen.sass
+    |   |-- admin.sass
+    |   `-- partials
+    |   |   `-- public
+    |   |   |   `-- _base.sass
+    |   |   `-- admin
+    |   |   |   `-- _base.sass
+    |   |   `-- shared
+    |   |   |   `-- _vars.sass
+    |   |-- modules
+    |   `-- vendor
+
+## Partials
+
+Compartmentalized code for the project
+
+## Base
+
+## Modules
+
+Custom project level extensions
+
+## Vendor
+
+Sourced extensions added to the project
