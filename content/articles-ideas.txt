@@ -9,6 +9,9 @@ Beginner
 * The Difference Between Sass and Compass
 * Why Compass?
 
+Advanced
+* Object Oriented Sass
+
 How To / Insightful
 * Writing your first Compass Extension
 * Dynamic Color Palettes with Sass

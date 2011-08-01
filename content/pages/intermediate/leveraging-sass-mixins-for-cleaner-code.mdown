@@ -1,0 +1,90 @@
+Date: 8 August 2011
+Categories: intermediate
+Author: John W. Long
+Summary: A brief introduction to Sass mixins
+
+
+# Leveraging Sass Mixins for Cleaner Code
+
+<div class="by-line">by John W. Long</div>
+
+<a href="http://twitter.com/thesassway"><img class="right" src="/base/images/sass.gif" alt="The Sass Way" /></a>
+
+Without question, one of the most powerful and valuable features of Sass
+is the ability to package up existing code into reusesable chunks called
+_mixins_.
+
+Mixins are the Sass equivalent of macros in other programming languages.
+If you've programmed before you could think of them as functions, procedures, or
+methods, but they aren't technically any of these concepts because their function is
+to _generate_ code at compile time not _execute_ code at run time.
+
+
+## How Mixins Work
+
+The Compass project is chock full of mixins to make your life easier.
+From CSS3, to typography, to layout, to image manipulation, Compass makes it
+easy to write bullet-proof CSS that works across browsers. You could think of
+Compass as the Standard Library for Sass.
+
+The CSS3 support in Compass is perhaps the most rocking aspect of the project.
+Compass provides an assortment of CSS3 mixins that make it easy to take advantage
+of these new features in a way that works across browsers.
+
+For instance. The _border-radius_ mixin lets you use the new border-radius attribute
+in a sucient way:
+
+    :::scss
+    a.button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      @include border-radius(5px);
+    }
+
+This would output:
+
+    :::css
+    a.button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -o-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -khtml-border-radius: 5px;
+      border-radius: 5px;
+    }
+
+Looking at the output you can see that the border-radius mixin outputs _six lines of code_.
+These six lines allow you to use border radius across all of the modern web browsers.
+(The cool part is that if you wrote this code on your own, you probably would not have
+included support for Opera (-o) or Konquerer (-khtml), but Compass includes this support
+automatically.
+
+I started using CSS3 before I had a great understanding of Sass mixins.
+Writing this kind of code on your own is error prone. I can't tell you how many times I
+would change the value for one browser's prefixed version of the border-radius attribute
+and forgot to change it for another.
+
+
+## Writing Your Own
+
+Let's look at the source for the border-radius mixin above. For the purpose of illustration
+I'm going to show you a smiplified version of the mixin. The actual version from Compass
+is a bit more complicated (and featureful), but this will give you a good idea of how
+to write your own:
+
+    @mixin border-radius($value) {
+      -moz-border-radius: $value;
+      -webkit-border-radius: $value;
+      -o-border-radius: $value;
+      -ms-border-radius: $value;
+      -khtml-border-radius: $value;
+      border-radius: $value;
+    }
+
+
+
+## Key Word Parameters
