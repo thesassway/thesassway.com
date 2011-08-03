@@ -9,6 +9,7 @@ body
 [role=offsite]
   @extend .links
   @extend .full-width
+  display: none
 
   border-top: 4px solid $tsw-pink
   position: relative
@@ -24,96 +25,114 @@ body
 
   a:after
     content: " ⇢"
+    
+[role=blog]
+  +smashing-layout
+  .primary
+    +box-sizing(border-box)
+    padding-right: $smashing-cushion
+    .post
+      margin-bottom: 30px
+      h2
+        @extend .PFCentroSerifPro-Regular
+        font-size: 26px
+        font-weight: bold
+        line-height: 1.3
+        margin-bottom: 5px
+        a
+          +transition-property(background)
+          +transition-duration(.5s)
+          color: #171717
+          text-decoration: none
+          &:hover
+            background: $tsw-light-pink
+      p
+        font-size: 16px
+        line-height: 1.5
+  .secondary
+    .find-us
+      +border-radius(3px)
+      +clearfix
+      +transition-property(background)
+      +transition-duration(.5s)
+      background: lighten($tsw-light-pink,2)
+      padding: 20px
+      padding-right: 0
+      &:hover
+        background: $tsw-light-pink
+      img
+        +float-left
+        margin-right: 15px
+      h3
+        background: image-url("find-us-on.png") no-repeat
+        height: 24px
+        margin-bottom: 8px
+        text-indent: -9999px
+        width: 108px
+      h3, ul
+        margin-left: 100px
+      ul
+        li
+          font-size: 12px
+          line-height: 1.5
+    .about-us
+      font-size: 14px
+      line-height: 1.5
+      margin-top: 30px
+      p
+        margin-bottom: 15px
+        
 
 [role=banner]
-  @extend .full-width
-
-  margin-bottom: 10px
-  padding-left: 130px
-
-  hgroup
-    z-index: 2
-    position: absolute
-
+  +smashing-width
+  .max-width
+    padding-top: 50px
+    padding-bottom: 50px
   h1
     @extend .PFCentroSerifPro-Medium
-    font-size: 180%
-    letter-spacing: -1px
-    &:before
-      content: "←"
-      position: absolute
-      margin-left: -1.25em
-      color: #666
+    font-size: 70px
+    letter-spacing: -5px
+    line-height: 1
+    margin-bottom: 10px
     a
       color: #000
       text-decoration: none
-      &:hover
-        text-decoration: underline
-
-  span.trade-mark
-    position: relative
-    top: -9px
-    left: -2px
-    font-family: "Helvetica Neue", Arial, sans-serif
-    font-size: 12px
-
+    span
+      &.trade-mark
+        position: relative
+        top: -40px
+        left: -10px
+        font:
+          family: "Helvetica Neue", Arial, sans-serif
+          size: 12px
+      &.char1
+        letter-spacing: -1px
+      &.char2
+        letter-spacing: -6px
+      &.char3
+      &.char4
+      &.char5
+        letter-spacing: -3px
+      &.char6
+        letter-spacing: -4px
+      &.char7
+        letter-spacing: -3px
+      &.char8
+      &.char9
+      &.char10
+        letter-spacing: -9px
+      &.char11
+        letter-spacing: -5px
+      &.char12
   h2
-    display: none
+    @extend .PFCentroSerifPro-Italic
+    font-size: 18px
 
 [role=article], [role=page]
   [role=sidebar]
     display: none
 
 [role=homepage]
-  [role=banner]
-    background:
-      image: image-url("sass.gif")
-      repeat: no-repeat
-      position: 82px 0
-      size: 170px
-    margin-bottom: 40px
-    padding: 20px 0 40px
-    padding-left: 290px
-
-    hgroup
-      position: relative
-      top: 0
-      padding-top: 0
-
-    h1
-      font-size: 70px
-      letter-spacing: -5px
-      &:before
-        content: ""
-      span
-        &.trade-mark
-          top: -40px
-          left: -10px
-        &.char1
-          letter-spacing: 0
-        &.char2
-          letter-spacing: -4px
-        &.char3
-        &.char4
-        &.char5
-          letter-spacing: -2px
-        &.char6
-          letter-spacing: -4px
-        &.char7
-          letter-spacing: -3px
-        &.char8
-        &.char9
-        &.char10
-          letter-spacing: -9px
-        &.char11
-          letter-spacing: -5px
-        &.char12
-
-    h2
-      @extend .PFCentroSerifPro-Italic
-      display: block
-      font-size: 16px
-
   [role=sidebar]
     display: block
 
@@ -122,6 +141,7 @@ body
 
 [role=main]
   position: relative
+  display: none
 
 [role=sidebar]
   @extend .links
@@ -141,16 +161,16 @@ body
       ul
         padding: 15px 0
 
-[role=main], [role=footer]
+[role=main]
   margin: 0 auto
   width: 700px
 
 [role=footer]
+  +smashing-width
   @extend .PFCentroSerifPro-Italic
   color: $darkest-grey
   font-size: 13px
-  padding: 40px 0
-  padding-top: 100px
+  @extend .links
 
 .breadcrumbs
   clear: both

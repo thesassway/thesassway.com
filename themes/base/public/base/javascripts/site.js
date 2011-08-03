@@ -1,5 +1,5 @@
 $(document).ready(function() {
 
-  $('.header h1 a').lettering();
+  $('body > header a').lettering();
 
 });

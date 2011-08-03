@@ -1,0 +1,51 @@
+@import "compass"
+
+// Configuration
+$smashing-direction: right !default
+$smashing-max-width: 900px !default
+$smashing-min-width: 700px !default
+$smashing-cushion: 30px !default
+$smashing-centered: true !default
+
+// Layout vars
+$smashing-divine-proportion: $smashing-min-width / 1.62
+$smashing-sidebar-width: floor($smashing-min-width - $smashing-divine-proportion)
+$smashing-negative-sidebar-width: -(ceil($smashing-sidebar-width))
+
+=smashing-layout($smashing-direction)
+  +smashing-width
+  +smashing-padding($smashing-direction)
+  +smashing-columns($smashing-direction)
+
+// Sets a div's width to behave like the width of +smashing-layout
+// Assumes 2 inner wrapping div's .max-width and .min-width
+=smashing-width
+  width: 100%
+  .max-width
+    +pie-clearfix
+    @if $smashing-centered
+      margin: 0 auto
+    min-width: $smashing-min-width
+    max-width: $smashing-max-width
+    padding: $smashing-cushion
+
+// Used only in +smashing-layout
+=smashing-padding($smashing-direction)
+  .padding
+    +pie-clearfix
+    padding-#{$smashing-direction}: $smashing-sidebar-width
+    width: auto
+
+// Used only in +smashing-layout
+=smashing-columns($smashing-direction)
+  .column
+    position: relative
+    @if $smashing-direction == right
+      +float-left
+    @else
+      +float-right
+    &.primary
+      width: 100%
+    &.secondary
+      margin-#{$smashing-direction}: $smashing-negative-sidebar-width
+      width: $smashing-sidebar-width
