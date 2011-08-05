@@ -1,5 +1,35 @@
-%aside(role="sidebar")
-  = haml :categories, :layout => false
-  = haml :authors, :layout => false
-  = haml :feed, :layout => false
-  -# haml :social, :layout => false
+%aside.secondary.column(role="sidebar")
+
+  .find-us
+    %img{:src => "/base/images/thesassway-avatar-90.png"}
+    %h3 Find us on
+    %ul
+      %li
+        %a{:href => "http://twitter.com/TheSassWay"} Twitter
+      %li
+        %a{:href => "https://github.com/thesassway"} GitHub
+      %li
+        %a{:href => "https://convore.com/the-sass-way/"} Convore
+
+  .about-us
+    :markdown
+      _The Sass Way_ covers the latest news and topics on crafting CSS [#TheSassWay](https://twitter.com/#!/search?q=%23TheSassWay) with Sass and Compass.
+      
+      Learn more [about us](/) ...
+    
+      ## Curated by
+    
+      * [Adam Stacoviak](http://adamstacoviak.com/) ~ _Editor in Chief_
+      * [John W. Long](http://wiseheartdesign.com/)
+
+      ## Contributors
+
+      * [Mario Kuroir Ricalde](http://kuroir.com/)
+      * [Charles Roper](http://charlesroper.com/)
+      * [Mason Wendell](http://thecodingdesigner.com/)
+
+  #influads_block
+    :plain
+      <div id="fusion_ad"><span class="fusionentire"><a href="http://ads.fusionads.net/click?creative_id=20&amp;amp;impression_id=873133035c62ce3efdfb86631ee9dc87&amp;amp;publisher_id=5" title="Harvest Time Tracking and Invoicing for Designers" target="_top"><img src="http://ads.fusionads.net:80/creatives/20/harvest.png?1312157164" class="fusionimg" alt="Harvest Time Tracking and Invoicing for Designers" border="0" height="100" width="130"></a><a href="http://ads.fusionads.net/click?creative_id=20&amp;amp;impression_id=873133035c62ce3efdfb86631ee9dc87&amp;amp;publisher_id=5" class="fusiontext" title="Harvest Time Tracking and Invoicing for Designers" target="_top">Harvest Time Tracking and Invoicing for Designers</a></span>
+                  	<a href="http://fusionads.net" class="powered-by-fusion link external" target="_blank"><span class="uppercase">Powered</span> by <span class="uppercase">Fusion</span></a>
+    </div>

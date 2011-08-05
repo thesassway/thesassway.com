@@ -24,42 +24,10 @@
             - if @subtitle
               %h2= @subtitle
 
-    %section(role="blog")
+    %section(role="main")
       .max-width
         .padding
-          .primary.column
-            .post
-              %h2
-                %a{:href => "/"} Leveraging Sass Mixins for Cleaner Code
-              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            .post
-              %h2
-                %a{:href => "/"} Setting up your Sass project's architecture
-              %p Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            .post
-              %h2
-                %a{:href => "/"} Referencing Parent Selectors using ampersand (&amp;)
-              %p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat. Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            .post
-              %h2
-                %a{:href => "/"} Getting started with Sass and Compass
-              %p Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          .secondary.column
-            .find-us
-              %img{:src => "/base/images/thesassway-avatar-90.png"}
-              %h3 Find us on
-              %ul
-                %li
-                  %a{:href => "http://twitter.com/TheSassWay"} Twitter
-                %li
-                  %a{:href => "https://github.com/thesassway"} GitHub
-                %li
-                  %a{:href => "https://convore.com/the-sass-way/"} Convore
-            .about-us
-              :markdown
-                The Sass Way is a blog covering the latest in crafting CSS "the Sass way" with Sass and Compass. Curated by [Adam Stacoviak](http://adamstacoviak.com/) and [John W. Long](http://wiseheartdesign.com/).
-                
-                Learn more [about us](/) ...
+          = yield
   
     %nav(role="offsite")
       %ul
@@ -69,9 +37,6 @@
           %a{:href=>"http://convore.com/the-sass-way/"} Community
         %li
           %a{:href=>"http://github.com/thesassway/"} GitHub
-
-    %section(role="main")
-      = yield
 
     %footer(role="footer")
       .max-width

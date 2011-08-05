@@ -7,3 +7,26 @@ body
 @import "partials/content"
 @import "partials/layout"
 
+#fusion_ad
+  margin-top: 50px
+  a.fusiontext, a.powered-by-fusion
+    position: relative
+    left: -4px
+    +transition-property(all)
+    +transition-duration(.5s)
+    color: #171717
+    display: inline-block
+    font-weight: normal
+    font-size: 13px
+    line-height: 1.5
+    padding: 1px 4px
+    text-decoration: none
+    &:hover
+      background: $tsw-light-pink
+      color: #000
+  a.fusiontext
+    width: 160px
+  a.powered-by-fusion
+    margin-top: 12px
+  .uppercase
+    text-transform: uppercase

@@ -1,6 +1,6 @@
 - unless pages.empty?
   - pages.each do |page|
-    %article
+    %article.post
       - haml_tag (defined?(heading) ? heading : :h2) do
         %a{ :href => page.abspath }= page.heading
       - if page.date
@@ -9,5 +9,3 @@
         ~ page.body
       - else
         ~ page.summary
-        %p.more
-          %a{ :href => page.abspath }= page.read_more

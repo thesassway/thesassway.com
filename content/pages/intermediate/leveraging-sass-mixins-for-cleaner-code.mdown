@@ -1,14 +1,10 @@
-Date: 8 August 2011
+Date: 3 August 2011
 Categories: intermediate
 Author: John W. Long
-Summary: A brief introduction to Sass mixins
+Summary: A brief introduction to Sass mixins. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 
 
 # Leveraging Sass Mixins for Cleaner Code
-
-<div class="by-line">by John W. Long</div>
-
-<a href="http://twitter.com/thesassway"><img class="right" src="/base/images/sass.gif" alt="The Sass Way" /></a>
 
 Without question, one of the most powerful and valuable features of Sass
 is the ability to package up existing code into reusesable chunks called
