@@ -72,6 +72,7 @@ I'm going to show you a smiplified version of the mixin. The actual version from
 is a bit more complicated (and featureful), but this will give you a good idea of how
 to write your own:
 
+    :::scss
     @mixin border-radius($value) {
       -moz-border-radius: $value;
       -webkit-border-radius: $value;
@@ -80,7 +81,5 @@ to write your own:
       -khtml-border-radius: $value;
       border-radius: $value;
     }
-
-
 
 ## Key Word Parameters

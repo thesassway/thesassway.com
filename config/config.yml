@@ -26,7 +26,7 @@ theme: base
 # site's short name here. A comment form will automatically be added to
 # the bottom of your pages.
 #
-# disqus_short_name: mysite
+disqus_short_name: thesassway
 
 # cache
 #     Set it to true if you'd like Nesta to cache your pages in ./public.

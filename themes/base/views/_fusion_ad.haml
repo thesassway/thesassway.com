@@ -1,0 +1,8 @@
+#fusion_ad
+  :javascript
+    (function(){
+      var fusion = document.createElement('script');
+      fusion.src = 'http://ads.fusionads.net/ad.js?publisher_id=5&rand=' + Math.floor(Math.random()*9999999);
+      fusion.async = true;
+      (document.head || document.getElementsByTagName('head')[0]).appendChild(fusion);
+    })();

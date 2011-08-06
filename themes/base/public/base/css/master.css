@@ -72,7 +72,7 @@ body {
   src: url(/base/webfonts/pfcentroserifpro/eot/style_173799.eot?iefix) format('eot'), url(/base/webfonts/pfcentroserifpro/woff/style_173799.woff) format('woff'), url(/base/webfonts/pfcentroserifpro/otf/style_173799.otf) format('"opentype"'), url(/base/webfonts/pfcentroserifpro/ttf/style_173799.ttf) format('truetype'), url(/base/webfonts/pfcentroserifpro/svg/style_173799.svg) format('svg');
 }
 
-.PFCentroSerifPro-Regular, [role=main] .secondary .about-us h2 {
+.PFCentroSerifPro-Regular, .secondary .about-us h2 {
   font-family: "PFCentroSerifPro-Regular", "Georgia", serif;
 }
 
@@ -92,7 +92,7 @@ body {
   src: url(/base/webfonts/pfcentroserifpro/eot/style_173689.eot?iefix) format('eot'), url(/base/webfonts/pfcentroserifpro/woff/style_173689.woff) format('woff'), url(/base/webfonts/pfcentroserifpro/otf/style_173689.otf) format('"opentype"'), url(/base/webfonts/pfcentroserifpro/ttf/style_173689.ttf) format('truetype'), url(/base/webfonts/pfcentroserifpro/svg/style_173689.svg) format('svg');
 }
 
-.PFCentroSerifPro-Medium, [role=banner] h1, [role=main] .primary .post h1, [role=main] .primary .post h2, [role=main] .primary .post h3, [role=main] .secondary .find-us h3 {
+.PFCentroSerifPro-Medium, .headings h1, .content h1, .headings h2, .content h2, .headings h3, .content h3, [role=banner] h1, .secondary .find-us h3 {
   font-family: "PFCentroSerifPro-Medium", "Georgia", serif;
 }
 
@@ -146,7 +146,51 @@ body {
   font-family: "PFCentroSerifPro-BlackItalic", "Georgia", serif;
 }
 
-.links a, .content a, [role=offsite] a, [role=footer] a {
+.headings h1, .content h1 {
+  font-size: 30px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+.headings h2, .content h2 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.headings h2:first-of-type, .content h2:first-of-type {
+  margin-top: 0;
+}
+.headings h3, .content h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+.headings h1 a, .content h1 a, .headings h2 a, .content h2 a, .headings h3 a, .content h3 a {
+  -moz-transition-property: background;
+  -webkit-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  color: #171717;
+  text-decoration: none;
+}
+.headings h1 a:hover, .content h1 a:hover, .headings h2 a:hover, .content h2 a:hover, .headings h3 a:hover, .content h3 a:hover {
+  background: #ffeeff;
+}
+.headings h1 a:focus, .content h1 a:focus, .headings h1 a:active, .content h1 a:active, .headings h2 a:focus, .content h2 a:focus, .headings h2 a:active, .content h2 a:active, .headings h3 a:focus, .content h3 a:focus, .headings h3 a:active, .content h3 a:active {
+  outline: none;
+}
+
+.content-typography p, .content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.links a, .content p a, .content ul a, .content ol a, .content blockquote a, [role=offsite] a, [role=footer] a {
   -moz-transition-property: background;
   -webkit-transition-property: background;
   -o-transition-property: background;
@@ -158,126 +202,15 @@ body {
   color: #ce4dd6;
   text-decoration: none;
 }
-.links a:visited, .content a:visited, [role=offsite] a:visited, [role=footer] a:visited {
+.links a:visited, .content p a:visited, .content ul a:visited, .content ol a:visited, .content blockquote a:visited, [role=offsite] a:visited, [role=footer] a:visited {
   color: #7a407d;
 }
-.links a:hover, .content a:hover, [role=offsite] a:hover, [role=footer] a:hover {
+.links a:hover, .content p a:hover, .content ul a:hover, .content ol a:hover, .content blockquote a:hover, [role=offsite] a:hover, [role=footer] a:hover {
   color: #171717;
   background: #ffeeff;
 }
-.links a:focus, .content a:focus, [role=offsite] a:focus, [role=footer] a:focus, .links a:active, .content a:active, [role=offsite] a:active, [role=footer] a:active {
+.links a:focus, .content p a:focus, .content ul a:focus, .content ol a:focus, .content blockquote a:focus, [role=offsite] a:focus, [role=footer] a:focus, .links a:active, .content p a:active, .content ul a:active, .content ol a:active, .content blockquote a:active, [role=offsite] a:active, [role=footer] a:active {
   outline: none;
-}
-
-.typography strong, .typography b {
-  color: black;
-  font-weight: bold;
-}
-.typography em, .typography i {
-  font-style: italic;
-}
-.typography span.big {
-  font-size: 115%;
-}
-.typography abbr, .typography acronym {
-  border-bottom: 1px dotted #999999;
-}
-.typography sub, .typography sup {
-  font-size: 85%;
-}
-.typography sub {
-  vertical-align: sub;
-}
-.typography sup {
-  vertical-align: super;
-}
-.typography span.caps {
-  font-size: 95%;
-}
-.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
-  color: #111111;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-}
-.typography h1 {
-  font-weight: bold;
-  font-size: 400%;
-  line-height: 0.98;
-  margin-top: 0;
-  padding-top: 0.45em;
-  letter-spacing: -4px;
-}
-.typography h2 {
-  font-weight: bold;
-  font-size: 160%;
-  line-height: 1.099;
-}
-.typography h3 {
-  font-size: 160%;
-  line-height: 1.169;
-}
-.typography h4 {
-  font-weight: bold;
-  font-size: 110%;
-  line-height: 1.26;
-}
-.typography h5 {
-  font-style: italic;
-  font-size: 110%;
-  line-height: 1.4;
-}
-.typography h1 span.small, .typography h2 span.small, .typography h3 span.small, .typography h4 span.small, .typography h5 span.small, .typography h6 span.small {
-  color: #999999;
-  font-weight: normal;
-  font-size: 90%;
-}
-.typography h2 span.small {
-  font-style: italic;
-}
-.typography p {
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-}
-.typography ul, .typography ol, .typography dl {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-.typography ul, .typography ol, .typography dd {
-  padding-left: 2.25em;
-}
-.typography ul {
-  list-style: disc;
-}
-.typography ol {
-  list-style: decimal;
-}
-.typography li {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-}
-.typography dt {
-  margin-top: 1em;
-}
-.typography dd {
-  margin-bottom: 1em;
-}
-.typography code, .typography kbd, .typography tt, .typography pre {
-  font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", monospace;
-  font-size: 85%;
-}
-.typography pre {
-  line-height: 1.4;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.article .by-line {
-  font-size: 120%;
-  margin: -1em 0 1em;
-  color: #ce4dd6;
-}
-.article .page-date {
-  color: #999999;
 }
 
 .images img.right, .content img.right {
@@ -289,9 +222,6 @@ body {
   margin: 0 1em 1em 0;
 }
 
-.syntax .highlight, .content .highlight {
-  margin-bottom: 1em;
-}
 .syntax pre, .content pre {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -301,9 +231,10 @@ body {
   border-radius: 3px;
   color: #333333;
   border: 1px solid #e7e7e7;
-  font-size: 14px;
   font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", monospace;
+  font-size: 14px;
   line-height: 1.2;
+  margin-bottom: 1em;
   padding: 1em;
 }
 .syntax pre .hll, .content pre .hll {
@@ -474,6 +405,11 @@ body {
   color: #0000dd;
 }
 
+.content .page-articles > header h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
 body {
   border-top: 4px solid #a728ae;
 }
@@ -610,70 +546,27 @@ body {
   box-sizing: border-box;
   padding-right: 30px;
 }
-[role=main] .primary .post {
-  margin-bottom: 30px;
-}
-[role=main] .primary .post .page-date {
+
+.page-date {
   display: none;
 }
-[role=main] .primary .post h1 {
-  font-size: 30px;
-  line-height: 1.1;
+
+[role=page] .page-articles, [role=page] .page-categories {
+  margin-top: 50px;
+}
+
+[role=article] .page-categories {
+  margin-top: 50px;
+}
+[role=article] .page-categories header, [role=article] .page-categories h2, [role=article] .page-categories ul, [role=article] .page-categories li {
+  display: inline;
+}
+
+[role=homepage] .post {
   margin-bottom: 30px;
 }
-[role=main] .primary .post h1 a {
-  -moz-transition-property: background;
-  -webkit-transition-property: background;
-  -o-transition-property: background;
-  transition-property: background;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  color: #171717;
-  text-decoration: none;
-}
-[role=main] .primary .post h1 a:hover {
-  background: #ffeeff;
-}
-[role=main] .primary .post h2 {
-  font-size: 22px;
-  line-height: 1.3;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-[role=main] .primary .post h2:first-of-type {
-  margin-top: 0;
-}
-[role=main] .primary .post h2 a {
-  -moz-transition-property: background;
-  -webkit-transition-property: background;
-  -o-transition-property: background;
-  transition-property: background;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  color: #171717;
-  text-decoration: none;
-}
-[role=main] .primary .post h2 a:hover {
-  background: #ffeeff;
-}
-[role=main] .primary .post h3 {
-  font-size: 18px;
-  line-height: 1.3;
-  margin-bottom: 5px;
-}
-[role=main] .primary .post p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 25px;
-}
-[role=main] .primary .post p:last-of-type {
-  margin-bottom: 0;
-}
-[role=main] .secondary .find-us {
+
+.secondary .find-us {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
@@ -694,27 +587,27 @@ body {
   padding: 20px;
   padding-right: 0;
 }
-[role=main] .secondary .find-us:hover {
+.secondary .find-us:hover {
   background: #ffeeff;
 }
-[role=main] .secondary .find-us img {
+.secondary .find-us img {
   display: inline;
   float: left;
   margin-right: 15px;
 }
-[role=main] .secondary .find-us h3 {
+.secondary .find-us h3 {
   font-size: 18px;
   letter-spacing: -0.5px;
   margin-bottom: 2px;
 }
-[role=main] .secondary .find-us h3, [role=main] .secondary .find-us ul {
+.secondary .find-us h3, .secondary .find-us ul {
   margin-left: 100px;
 }
-[role=main] .secondary .find-us ul li {
+.secondary .find-us ul li {
   font-size: 13px;
   margin-bottom: 2px;
 }
-[role=main] .secondary .find-us ul li a {
+.secondary .find-us ul li a {
   position: relative;
   left: -2px;
   -moz-transition-property: all;
@@ -730,36 +623,36 @@ body {
   padding: 1px 4px;
   text-decoration: none;
 }
-[role=main] .secondary .find-us ul li a:hover {
+.secondary .find-us ul li a:hover {
   background: white;
   color: #ce4dd6;
 }
-[role=main] .secondary .about-us {
+.secondary .about-us {
   font-size: 14px;
   line-height: 1.5;
   margin-top: 15px;
 }
-[role=main] .secondary .about-us p, [role=main] .secondary .about-us ol, [role=main] .secondary .about-us ul {
+.secondary .about-us p, .secondary .about-us ol, .secondary .about-us ul {
   margin-bottom: 8px;
 }
-[role=main] .secondary .about-us p:last-child, [role=main] .secondary .about-us ol:last-child, [role=main] .secondary .about-us ul:last-child {
+.secondary .about-us p:last-child, .secondary .about-us ol:last-child, .secondary .about-us ul:last-child {
   margin-bottom: 0;
 }
-[role=main] .secondary .about-us p em, [role=main] .secondary .about-us ol em, [role=main] .secondary .about-us ul em {
+.secondary .about-us p em, .secondary .about-us ol em, .secondary .about-us ul em {
   font-style: oblique;
 }
-[role=main] .secondary .about-us li {
+.secondary .about-us li {
   color: #878787;
 }
-[role=main] .secondary .about-us li em {
+.secondary .about-us li em {
   font-size: 11px;
 }
-[role=main] .secondary .about-us h2 {
+.secondary .about-us h2 {
   font-size: 16px;
   line-height: 1.2;
   margin-top: 25px;
 }
-[role=main] .secondary .about-us a {
+.secondary .about-us a {
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -773,7 +666,7 @@ body {
   padding: 1px;
   text-decoration: none;
 }
-[role=main] .secondary .about-us a:hover {
+.secondary .about-us a:hover {
   background: #ffeeff;
   color: #171717;
 }
@@ -796,39 +689,8 @@ body {
   clear: both;
 }
 
-.breadcrumbs {
-  clear: both;
-  display: none;
-}
-.breadcrumbs li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.pages {
-  margin-top: 20px;
-}
-.pages li {
-  margin-bottom: 40px;
-}
-.pages li:last-of-type {
-  margin-bottom: 0;
-}
-.pages li h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-.pages li p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 22px;
-}
-.pages .page-date {
-  display: none;
-}
-
 #fusion_ad {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 #fusion_ad a.fusiontext, #fusion_ad a.powered-by-fusion {
   position: relative;

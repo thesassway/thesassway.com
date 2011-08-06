@@ -13,6 +13,7 @@ Sass and Compass get installed as Ruby gems so you'll need to have Ruby on your 
 
 Ok, first thing's first. Let's install Sass. Open up your [Terminal.app](http://en.wikipedia.org/wiki/Apple_Terminal) and type:
 
+    :::bash
     gem install compass
 
 Ok, I know what you're thinking. I just said that we are going to install Sass, but I just told you to install Compass based on that directive. The truth is, Compass requires Sass and when you run that command you should see something like this:

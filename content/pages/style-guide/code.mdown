@@ -1,4 +1,4 @@
-# Code
+# Style Guide: Code
 
 ## CSS
 

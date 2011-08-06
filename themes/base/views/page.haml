@@ -21,12 +21,13 @@
     - unless @page.categories.empty?
       %section.page-categories
         %header
-          %h3 Categories
+          %h2 Category
         %ul
           - @page.categories.each do |category|
             %li
               %a{ :href => category.abspath }= category.heading
 
-    = haml :comments, :layout => false
+    - if @page.date
+      = haml :comments, :layout => false
 
 = haml :sidebar, :layout => false

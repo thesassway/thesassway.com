@@ -1,3 +1,39 @@
+.headings
+  h1
+    @extend .PFCentroSerifPro-Medium
+    font-size: 30px
+    line-height: 1.1
+    margin-bottom: 30px
+  h2
+    @extend .PFCentroSerifPro-Medium
+    font-size: 22px
+    line-height: 1.3
+    margin-top: 40px
+    margin-bottom: 10px
+    &:first-of-type
+      margin-top: 0
+  h3
+    @extend .PFCentroSerifPro-Medium
+    font-size: 18px
+    line-height: 1.3
+    margin-bottom: 5px
+  #{headings(1,3)}
+    a
+      +transition-property(background)
+      +transition-duration(.5s)
+      color: #171717
+      text-decoration: none
+      &:hover
+        background: $tsw-light-pink
+      &:focus, &:active
+        outline: none
+
+.content-typography
+  p
+    font-size: 16px
+    line-height: 1.5
+    margin-bottom: 25px
+
 .links
   a
     +transition-property(background)
@@ -12,17 +48,6 @@
     &:focus, &:active
       outline: none
 
-.typography
-  +basic-typography
-
-.article
-  .by-line
-    font-size: 120%
-    margin: -1em 0 1em
-    color: $tsw-pink
-  .page-date
-    +quiet
-
 .images
   img.right
     float: right
@@ -32,20 +57,27 @@
     margin: 0 1em 1em 0
 
 .syntax
-  .highlight
-    margin-bottom: 1em
   pre
     +border-radius(3px)
     +syntax-highlight($text-color, $tsw-pink)
     border: 1px solid #e7e7e7
-    font-size: 14px
     font-family: $fixed-font-family
+    font-size: 14px
     line-height: 1.2
+    margin-bottom: 1em
     padding: 1em
 
 .content
-  @extend .links
-  // @extend .typography
-  // @extend .article
+  @extend .headings
+  @extend .content-typography
   @extend .images
   @extend .syntax
+
+  // Target these selectors
+  p, ul, ol, blockquote
+    @extend .links
+
+  // Execptions
+  .page-articles > header h2
+    font-size: 26px
+    margin-bottom: 30px
