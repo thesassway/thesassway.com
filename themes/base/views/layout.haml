@@ -17,7 +17,10 @@
       .max-width
         .padding
           %h1
-            %a{:href => "/", :rel => "home"}= @heading
+            %a{:href => "/", :rel => "home"}
+            :plain
+              <span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span>
+
             :plain
               <span class='trade-mark'>&trade;</span>
           - if @subtitle
@@ -46,6 +49,5 @@
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    %script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js"}    
-    %script{:type => "text/javascript", :src => "https://raw.github.com/davatron5000/Lettering.js/master/jquery.lettering.js"}
+    %script{:type => "text/javascript", :src => "http://cdnjs.cloudflare.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
     %script{:type => "text/javascript", :src => "/base/javascripts/site.js"}
