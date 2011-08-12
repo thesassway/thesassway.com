@@ -1,3 +1,4 @@
 # Style Guide
 
+* [Content](/style-guide/content)
 * [Code](/style-guide/code)
