@@ -26,7 +26,7 @@ require 'rack/codehighlighter'
 use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
 
 # Nice looking 404s and other messages
-# use Rack::ShowStatus
+use Rack::ShowStatus
 
 # Nice looking errors
 use Rack::ShowExceptions
