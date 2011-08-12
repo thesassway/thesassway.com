@@ -1,5 +1,6 @@
 source :rubygems
 
+gem "heroku"
 gem "nesta", "0.9.5"
 gem "compass", "~> 0.11.5"
 gem "css_parser", "~> 1.1.9"
