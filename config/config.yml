@@ -62,6 +62,6 @@ content: content
 # Don't forget to uncomment the "production:" line too...
 
 production:
-  cache: true    
+  cache: false    
   content: /var/apps/nesta/shared/content
   google_analytics_code: "UA-4556641-15"
