@@ -1,3 +1,6 @@
+Article Ideas
+==============
+
 Beginner
 * Getting started with Sass and Compass
 * Referencing Parent Selectors using `&`
@@ -46,3 +49,16 @@ Sass with non-Rails environments
 * Using Django with Sass
 * Using Drupal with Sass
 * Using Sass for Sencha Touch projects (Guest post?)
+
+Todo
+=====
+
+Adam
+* Rework template:
+  - focus on good template for article pages
+  - big typography/headlines
+  - homepage: single article -- list of articles
+  - minimize logo on article pages?
+
+John
+* Look at /articles.xml issue

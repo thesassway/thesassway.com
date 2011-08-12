@@ -1,5 +1,0 @@
-news
-beginner
-intermediate
-advanced
-expert
