@@ -14,15 +14,14 @@
   %body{ :role => @page_role || 'page' }
   
     %header(role="banner")
-      %hgroup
-        .max-width
-          .padding
-            %h1
-              %a{:href => "/", :rel => "home"}= @heading
-              :plain
-                <span class='trade-mark'>&trade;</span>
-            - if @subtitle
-              %h2= @subtitle
+      .max-width
+        .padding
+          %h1
+            %a{:href => "/", :rel => "home"}= @heading
+            :plain
+              <span class='trade-mark'>&trade;</span>
+          - if @subtitle
+            %h2= @subtitle
 
     %section(role="main")
       .max-width

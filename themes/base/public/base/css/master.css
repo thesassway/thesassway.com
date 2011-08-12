@@ -59,11 +59,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-body {
+html {
   color: #333333;
-  font-family: "Helvetica Neue", Arial, Clean, sans-serif;
-  font-size: 120%;
-  line-height: 1.4;
+  font-family: Clean, "Helvetica Neue", Arial, Clean, sans-serif;
+  font-size: 10px;
+  line-height: 1.4rem;
 }
 
 @font-face {
@@ -183,11 +183,26 @@ body {
 .headings h1 a:focus, .content h1 a:focus, .headings h1 a:active, .content h1 a:active, .headings h2 a:focus, .content h2 a:focus, .headings h2 a:active, .content h2 a:active, .headings h3 a:focus, .content h3 a:focus, .headings h3 a:active, .content h3 a:active {
   outline: none;
 }
+.headings h4, .content h4, .headings h5, .content h5, .headings h6, .content h6 {
+  font-size: 14px;
+  margin-bottom: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-.content-typography p, .content p {
+.content-typography p, .content p, .content-typography li, .content li {
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 25px;
+}
+.content-typography p, .content p, .content-typography ul, .content ul {
+  margin-bottom: 24px;
+}
+.content-typography ul li, .content ul li {
+  list-style: disc;
+}
+.content-typography blockquote, .content blockquote {
+  border-left: 5px solid #c7c7c7;
+  padding-left: 20px;
 }
 
 .links a, .content p a, .content ul a, .content ol a, .content blockquote a, [role=offsite] a, [role=footer] a {
@@ -234,7 +249,7 @@ body {
   font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", monospace;
   font-size: 14px;
   line-height: 1.2;
-  margin-bottom: 1em;
+  margin-bottom: 24px;
   padding: 1em;
 }
 .syntax pre .hll, .content pre .hll {

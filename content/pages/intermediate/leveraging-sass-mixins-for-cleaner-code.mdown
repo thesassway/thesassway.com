@@ -1,4 +1,4 @@
-Date: 3 August 2011
+Date: 3 August 2013
 Categories: intermediate
 Author: John W. Long
 Summary: A brief introduction to Sass mixins. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.

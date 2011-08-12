@@ -27,12 +27,24 @@
         background: $tsw-light-pink
       &:focus, &:active
         outline: none
+  #{headings(4,6)}
+    font-size: 14px
+    margin-bottom: 14px
+    font-weight: bold
+    text-transform: uppercase
+    
 
 .content-typography
-  p
+  p, li
     font-size: 16px
     line-height: 1.5
-    margin-bottom: 25px
+  p, ul
+    margin-bottom: 24px
+  ul li
+    list-style: disc
+  blockquote
+    border-left: 5px solid $light-grey
+    padding-left: 20px
 
 .links
   a
@@ -64,7 +76,7 @@
     font-family: $fixed-font-family
     font-size: 14px
     line-height: 1.2
-    margin-bottom: 1em
+    margin-bottom: 24px
     padding: 1em
 
 .content
