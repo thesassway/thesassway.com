@@ -1,13 +1,13 @@
 .headings
   h1
     @extend .PFCentroSerifPro-Medium
-    font-size: 30px
-    line-height: 1.1
+    font-size: 32px
+    line-height: 1.2
     margin-bottom: 30px
   h2
     @extend .PFCentroSerifPro-Medium
-    font-size: 22px
-    line-height: 1.3
+    font-size: 24px
+    line-height: 1.2
     margin-top: 40px
     margin-bottom: 10px
     &:first-of-type
@@ -70,14 +70,14 @@
 
 .syntax
   pre
-    +border-radius(3px)
     +syntax-highlight($text-color, $tsw-pink)
-    border: 1px solid #e7e7e7
+    background: #f7f7f7
+    border: 1px solid #f0f0f0
     font-family: $fixed-font-family
-    font-size: 14px
-    line-height: 1.2
+    font-size: 12px
+    line-height: 1.5
     margin-bottom: 24px
-    padding: 1em
+    padding: 10px
 
 .content
   @extend .headings

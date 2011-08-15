@@ -15,7 +15,7 @@
     - unless @page.articles.empty?
       %section.page-articles
         %header
-          %h2= "Articles on #{@page.heading}"
+          %h2= "Posts in '#{@page.heading}'"
         = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
 
     - unless @page.categories.empty?

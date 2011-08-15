@@ -1,32 +1,42 @@
-body
-  border-top: 4px solid darken($tsw-pink, 15)
-
-.full-width
-  +box-sizing(border-box)
-  margin: 0 auto
-  width: 960px
-
-[role=offsite]
-  @extend .links
-  @extend .full-width
-  display: none
-
-  border-top: 4px solid $tsw-pink
-  position: relative
-  top: -4px
-
+[role="top-bar"]
+  +smashing-width
+  .max-width
+    padding-top: 0
+    padding-bottom: 0
+  @extend .PFCentroSerifPro-Italic
+  background: lighten($tsw-light-pink,2)
+  border-top: 3px solid rgba($tsw-pink,.3)
+  border-bottom: 1px solid rgba($tsw-pink,.3)
+  color: #171717
+  font-size: 15px
+  .beginner
+    margin-left: 65px
+    &:before
+      color: $dark-grey
+      position: absolute
+      left: -65px
+      content: "Topicial:"
+  .tutorials
+    margin-left: 110px
+    &:before
+      color: $dark-grey
+      position: absolute
+      left: -70px
+      content: "Editorial:"
+  a
+    color: #171717
+    text-decoration: none
   ul
-    text-align: right
-    padding: 1em 0
+    +pie-clearfix
+    li
+      +float-left
+      position: relative
+      margin-right: 20px
+      padding: 11px 0
+      a:hover
+        border-bottom: 2px solid $lighter-grey
 
-  li
-    display: inline
-    margin-left: 1em
-
-  a:after
-    content: " ⇢"
-
-[role=banner]
+[role="banner"]
   +smashing-width
   .max-width
     padding-top: 50px
@@ -97,11 +107,11 @@ body
 
 .secondary
   .find-us
-    +border-radius(3px)
     +clearfix
     +transition-property(background)
     +transition-duration(.5s)
     background: lighten($tsw-light-pink,2)
+    border: 1px solid rgba($tsw-pink,.3)
     padding: 20px
     padding-right: 0
     &:hover
@@ -112,7 +122,7 @@ body
     h3
       // background: image-url("find-us-on.png") no-repeat
       // height: 24px
-      @extend .PFCentroSerifPro-Medium
+      @extend .PFCentroSerifPro-Italic
       font-size: 18px
       letter-spacing: -.5px
       margin-bottom: 2px
@@ -122,6 +132,7 @@ body
     ul
       li
         font-size: 13px
+        line-height: 1.5
         margin-bottom: 2px
         a
           position: relative

@@ -1,0 +1,21 @@
+Date: 15 August 2011
+Categories: beginner, articles
+Author: Adam Stacoviak
+Summary: "SCSS was my 'gateway drug.' I now prefer Sass to SCSS. Less typing, stricter indentation." ~ @nathansmith
+
+# SCSS, the Gateway Drug to Sass
+
+I learned from Jason Fried, Co-Founder of 37signals that [we need to "emulate drug dealers"](http://bigthink.com/ideas/18520) in our products. You might not think of Sass as "product", but it is. Sure it's an open source software, but at the same time we are trying to sell you on something. We want you to enjoy writing CSS again, and to do that we have to equip you with user-friendly tools (syntaxes and features) to feel comfortable enough to "give us a try."
+
+If you are reading this and haven't been hooked by Sass (the syntax) yet, read cautiously.
+
+## Nathan said it best
+
+[Nathan Smith](http://sonspring.com/) said on Twitter in a response to a number of us "Sass folk" going back and forth about our likes and dislikes of the two syntax options when using Sass (the language).
+
+He said,
+
+<blockquote cite="https://twitter.com/nathansmith/status/102814908864921600">
+<p>"SCSS was my 'gateway drug.' I now prefer Sass to SCSS. Less typing, stricter indentation."</p>
+<footer>— <a href="https://twitter.com/nathansmith/status/102814908864921600">Nathan Smith</a> on <cite><a href="https://twitter.com/">Aladdin</a></cite></footer>
+</blockquote>
