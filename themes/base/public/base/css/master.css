@@ -839,34 +839,53 @@ html {
   margin-top: 0;
 }
 
-[role=article] .page-categories {
+[role="article"] .post {
+  position: relative;
+}
+[role="article"] .page-categories {
+  list-style: none;
+  position: absolute;
+  top: 72px;
+  left: -120px;
+  text-align: right;
+}
+[role="article"] .page-categories li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0px;
+}
+[role="article"] .page-categories li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+[role="article"] .page-categories li:first-of-type {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+[role="article"] #disqus_thread {
   margin-top: 50px;
 }
-[role=article] .page-categories header, [role=article] .page-categories h2, [role=article] .page-categories ul, [role=article] .page-categories li {
-  display: inline;
-}
-[role=article] #disqus_thread {
-  margin-top: 50px;
-}
-[role=article] #disqus_thread h3, [role=article] #disqus_thread #dsq-account-dropdown {
+[role="article"] #disqus_thread h3, [role="article"] #disqus_thread #dsq-account-dropdown {
   font-family: Clean, "Helvetica Neue", Arial, Clean, sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
-[role=article] #disqus_thread h3 a, [role=article] #disqus_thread #dsq-account-dropdown a {
+[role="article"] #disqus_thread h3 a, [role="article"] #disqus_thread #dsq-account-dropdown a {
   color: #ce4dd6;
   text-decoration: none;
 }
-[role=article] #disqus_thread #dsq-footer li {
+[role="article"] #disqus_thread #dsq-footer li {
   font-size: 13px;
   margin-right: 25px;
 }
-[role=article] #disqus_thread #dsq-footer li a {
+[role="article"] #disqus_thread #dsq-footer li a {
   color: #171717;
   text-decoration: none;
 }
-[role=article] #disqus_thread #dsq-footer li a em {
+[role="article"] #disqus_thread #dsq-footer li a em {
   text-decoration: none;
 }
 
@@ -880,6 +899,12 @@ html {
 .secondary .cite {
   overflow: hidden;
   *zoom: 1;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
   background: #fff8ff;
   border: 1px solid rgba(206, 77, 214, 0.3);
   padding: 15px;
