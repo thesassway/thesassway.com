@@ -848,6 +848,27 @@ html {
 [role=article] #disqus_thread {
   margin-top: 50px;
 }
+[role=article] #disqus_thread h3, [role=article] #disqus_thread #dsq-account-dropdown {
+  font-family: Clean, "Helvetica Neue", Arial, Clean, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+[role=article] #disqus_thread h3 a, [role=article] #disqus_thread #dsq-account-dropdown a {
+  color: #ce4dd6;
+  text-decoration: none;
+}
+[role=article] #disqus_thread #dsq-footer li {
+  font-size: 13px;
+  margin-right: 25px;
+}
+[role=article] #disqus_thread #dsq-footer li a {
+  color: #171717;
+  text-decoration: none;
+}
+[role=article] #disqus_thread #dsq-footer li a em {
+  text-decoration: none;
+}
 
 [role=page] .post {
   margin-bottom: 40px;
@@ -956,28 +977,44 @@ html {
 
 #fusion_ad {
   margin-top: 30px;
+  *zoom: 1;
+  position: relative;
 }
-#fusion_ad .uppercase {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
+#fusion_ad:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-#fusion_ad a.fusiontext, #fusion_ad a.powered-by-fusion {
+#fusion_ad .fusionimg {
+  display: inline;
+  float: left;
+  margin-bottom: 8px;
+}
+#fusion_ad .fusiontext {
+  position: absolute;
+  top: 0;
+  left: 145px;
   color: #333333;
-  display: inline-block;
   font-weight: normal;
   font-size: 13px;
   line-height: 1.5;
   text-decoration: none;
 }
-#fusion_ad a.fusiontext:hover, #fusion_ad a.powered-by-fusion:hover {
+#fusion_ad .fusiontext:hover {
   color: black;
   text-decoration: underline;
 }
-#fusion_ad a.fusiontext {
-  margin-top: 8px;
-  width: 160px;
+#fusion_ad .fusionpowered {
+  clear: both;
+  color: #555555;
+  display: block;
+  font-size: 11px;
+  text-decoration: none;
 }
-#fusion_ad a.powered-by-fusion {
-  margin-top: 15px;
+#fusion_ad .fusionpowered:hover {
+  color: black;
+}
+#fusion_ad .fusionpowered span {
+  font-weight: bold;
+  text-transform: uppercase;
 }
