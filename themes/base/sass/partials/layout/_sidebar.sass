@@ -1,0 +1,62 @@
+.secondary
+  .cite
+    +clearfix
+    background: lighten($tsw-light-pink,2)
+    border: 1px solid rgba($tsw-pink,.3)
+    padding: 15px
+    img
+      +float-left
+      margin-right: 15px
+    h1
+      @extend .PFCentroSerifPro-Italic
+      font-size: 18px
+      letter-spacing: -.5px
+      margin-bottom: 5px
+      margin-top: 2px
+    h3, ul
+      margin-left: 100px
+    ul
+      li
+        font-size: 13px
+        line-height: 1.8
+    p
+      clear: both
+      font-size: 13px
+      line-height: 1.4
+      margin-top: 15px
+      &:last-of-type
+        margin-top: 10px
+    a
+      +transition-property(all)
+      +transition-duration(.5s)
+      color: $tsw-pink
+      text-decoration: none
+      &:hover
+        color: #171717
+
+  .people-list
+    margin-top: 25px
+    h1
+      @extend .PFCentroSerifPro-Regular
+      font-size: 16px
+      line-height: 1.1
+    ul
+      margin-bottom: 8px
+      &:last-child
+        margin-bottom: 0
+      li
+        color: $dark-grey
+        font-size: 14px
+        line-height: 1.5
+        em
+          font-size: 11px
+          font-style: oblique
+    a
+      +transition-property(all)
+      +transition-duration(.5s)
+      color: $tsw-pink
+      display: inline-block
+      text-decoration: none
+      &:hover
+        background: lighten($tsw-light-pink,2)
+        color: #171717

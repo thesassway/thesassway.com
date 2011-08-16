@@ -3,9 +3,26 @@
 html
   +base-font
 
-// @import "partials/grid-coordinates"
+// Hiding page dates for now
+.page-date
+  display: none
+
+// Grid layout
+@import "partials/grid"
+
+// Styles
 @import "partials/fonts"
 @import "partials/headings"
 @import "partials/content"
-@import "partials/layout"
-@import "partials/fusion"
+
+// Layout parts
+@import "partials/layout/top-bar"
+@import "partials/layout/banner"
+@import "partials/layout/homepage"
+@import "partials/layout/article"
+@import "partials/layout/page"
+@import "partials/layout/sidebar"
+@import "partials/layout/footer"
+
+// Fusion ads
+@import "partials/fusion-ads"

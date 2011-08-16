@@ -1,27 +1,6 @@
 %aside.secondary.column(role="sidebar")
 
-  .find-us
-    %img{:src => "/base/images/thesassway-avatar-90.png"}
-    :markdown
-      ### Find us on
-
-      * [Twitter](http://twitter.com/TheSassWay)
-      * [GitHub](https://github.com/thesassway)
-      * [Convore](https://convore.com/the-sass-way/)
-
-  .about-us
-    :markdown
-      _The Sass Way_ covers the latest news and topics on crafting CSS [#TheSassWay](https://twitter.com/#!/search?q=%23TheSassWay) with Sass and Compass.
-      
-      Learn more [about us](/) ...
-    
-    :markdown
-      ## Curated by
-    
-      * [Adam Stacoviak](http://adamstacoviak.com/) ~ _Editor in Chief_
-      * [John W. Long](http://wiseheartdesign.com/) ~ _Managing Editor_
-
-    -# haml :contributors, :layout => false
-
-  #fusion_ad
-    = haml :fusion_ad, :layout => false
+  = haml :cite, :layout => false
+  = haml :staff, :layout => false
+  = haml :contributors, :layout => false
+  = haml :fusion_ads, :layout => false

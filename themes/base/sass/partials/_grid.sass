@@ -1,0 +1,55 @@
+// Do it.
++grid-coordinates
+
+[role="main-nav"], [role="banner"], [role="main"], [role="footer"]
+  @extend .grid-container
+
+[role="main"] .primary
+  @extend .grid-8
+
+[role="main"] .secondary
+  @extend .grid-4
+  // Pulls the sidebar in half a grid
+  padding-left: 30px
+
+.max-width, [role="footer"] p
+  @extend .grid-full
+
+// Grid image settings
+$grid-background-column-color: rgba(red,.05)
+$grid-background-gutter-color: rgba(red,0)
+$grid-background-total-columns: 12
+$grid-background-column-width: 60px
+$grid-background-gutter-width: 20px
+$grid-background-offset: 10px
+@import "compass/layout/grid-background"
+
+#grid
+  +column-grid-background()
+  display: none
+  position: fixed
+  top: 0
+  left: 50%
+  height: 100%
+  margin: 0 auto
+  margin-left: -480px
+  width: 960px
+  z-index: -1
+#toggle-grid
+  +transition-property(color)
+  +transition-duration(.5s)
+  position: absolute
+  top: 13px
+  right: 10px
+  color: #fff
+  cursor: pointer
+  display: block
+  background: image-url("toggle-grid.png") no-repeat right 50%
+  font-size: 12px
+  line-height: 16px
+  padding-right: 22px
+  text-decoration: none
+  &:hover
+    color: #878787
+  .show
+    display: none

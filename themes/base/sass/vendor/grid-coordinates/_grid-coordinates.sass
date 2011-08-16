@@ -1,0 +1,122 @@
+// v1.1.5
+
+// Configure Grid Coordinates
+$grid-columns: 12 !default
+$grid-width: 60px !default
+$grid-gutter-width: 20px !default
+$overflow: true !default
+
+=grid-coordinates
+  @if $overflow
+    .grid-pie-clearfix
+      +pie-clearfix
+  @else
+    .grid-clearfix
+      +clearfix
+  .grid-container
+    +grid-container-base
+    @if $overflow
+      @extend .grid-pie-clearfix
+    @else
+      @extend .grid-clearfix
+  .nested-grid-container
+    +nested-grid-container-base
+    @if $overflow
+      @extend .grid-pie-clearfix
+    @else
+      @extend .grid-clearfix
+  .grid-block
+    +grid-block-base
+    @if $overflow
+      @extend .grid-pie-clearfix
+    @else
+      @extend .grid-clearfix
+  .grid-full
+    +grid-base($grid-columns)
+    @extend .grid-block
+
+  // Loops
+  @for $i from 1 through $grid-columns
+    .grid-#{$i}
+      +grid-base($i)
+      @extend .grid-block
+  @for $i from 1 through $grid-columns - 1
+    .grid-prefix-#{$i}
+      +grid-prefix($i)
+  @for $i from 1 through $grid-columns - 1
+    .grid-suffix-#{$i}
+      +grid-suffix($i)
+  @for $i from 1 through $grid-columns - 1
+    .grid-push-#{$i}
+      +grid-push($i)
+  @for $i from 1 through $grid-columns - 1
+    .grid-pull-#{$i}
+      +grid-pull($i)
+
+=overflow
+  @if $overflow
+    +pie-clearfix
+  @else
+    +clearfix
+
+// Grid Container
+=grid-container-base
+  margin: 0 auto
+  width: ($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)
+
+=grid-container
+  +overflow
+  +grid-container-base
+
+// Nested Container
+=nested-grid-container-base
+  display: inline-block
+  margin:
+    left: -($grid-gutter-width / 2)
+    right: -($grid-gutter-width / 2)
+  width: auto
+
+=nested-grid-container
+  +overflow
+  +nested-grid-container-base
+
+// Grid Block
+=grid-block-base
+  +box-sizing(border-box)
+  +float-left
+  position: relative
+  margin: 0 ($grid-gutter-width / 2)
+
+=grid-block
+  +grid-block-base
+  +overflow
+
+// Grid
+=grid-base($grid-columns)
+  +grid-width($grid-columns)
+
+=grid($grid-columns)
+  +grid-base($grid-columns)
+  +grid-block
+
+=grid-full
+  +grid($grid-columns)
+
+// Grid logic
+=grid-width($grid-columns)
+  @if $grid-columns == 1
+    width: $grid-width
+  @else
+    width: (($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)) - $grid-gutter-width
+
+=grid-prefix($grid-columns)
+  margin-left: (($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)) + ($grid-gutter-width / 2)
+
+=grid-suffix($grid-columns)
+  margin-right: (($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)) + ($grid-gutter-width / 2)
+
+=grid-push($grid-columns)
+  left: ($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)
+
+=grid-pull($grid-columns)
+  left: -($grid-columns * $grid-width) + ($grid-columns * $grid-gutter-width)

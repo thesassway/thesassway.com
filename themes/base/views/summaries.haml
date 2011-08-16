@@ -9,3 +9,5 @@
         ~ page.body
       - else
         ~ page.summary
+        %p.read-more
+          %a{ :href => page.abspath }= page.read_more

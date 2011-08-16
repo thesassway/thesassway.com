@@ -20,8 +20,6 @@ GEM
     css_parser (1.1.9)
     ffi (1.0.9)
     fssm (0.2.7)
-    grid-coordinates (1.1.5)
-      compass (>= 0.11.5)
     haml (3.1.2)
     heroku (2.4.1)
       launchy (>= 0.3.2)
@@ -64,7 +62,6 @@ PLATFORMS
 DEPENDENCIES
   compass (~> 0.11.5)
   css_parser (~> 1.1.9)
-  grid-coordinates (~> 1.1.5)
   heroku
   nesta (= 0.9.5)
   pygments.rb (~> 0.1.2)

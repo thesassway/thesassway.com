@@ -1,14 +1,21 @@
 - @page_role = 'article' if @page.date
 
 .primary.column
-
   .content
-
     = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
     - if @page.date
       %article.post
         ~ @page.to_html(self)
+        - unless @page.categories.empty?
+          %footer.page-categories
+            %ul
+              %li Categories
+              - @page.categories.each do |category|
+                %li
+                  %a{ :href => category.abspath }= category.heading
+          = haml :comments, :layout => false
+        
     - else
       ~ @page.to_html(self)
 
@@ -17,17 +24,5 @@
         %header
           %h2= "Posts in '#{@page.heading}'"
         = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
-
-    - unless @page.categories.empty?
-      %section.page-categories
-        %header
-          %h2 Category
-        %ul
-          - @page.categories.each do |category|
-            %li
-              %a{ :href => category.abspath }= category.heading
-
-    - if @page.date
-      = haml :comments, :layout => false
 
 = haml :sidebar, :layout => false

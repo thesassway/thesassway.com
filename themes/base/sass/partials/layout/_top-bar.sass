@@ -1,0 +1,37 @@
+[role="top-bar"]
+  // +smashing-width
+  .max-width
+    padding-top: 0
+    padding-bottom: 0
+  @extend .PFCentroSerifPro-Italic
+  background: lighten($tsw-light-pink,2)
+  border-top: 3px solid rgba($tsw-pink,.3)
+  border-bottom: 1px solid rgba($tsw-pink,.3)
+  color: #171717
+  font-size: 15px
+  .beginner
+    margin-left: 75px
+    &:before
+      color: $dark-grey
+      position: absolute
+      left: -65px
+      content: "Topicial:"
+  .tutorials
+    margin-left: 110px
+    &:before
+      color: $dark-grey
+      position: absolute
+      left: -70px
+      content: "Editorial:"
+  a
+    color: #171717
+    text-decoration: none
+  ul
+    +pie-clearfix
+    li
+      +float-left
+      position: relative
+      margin-right: 20px
+      padding: 11px 0
+      a:hover
+        border-bottom: 2px solid $lighter-grey
