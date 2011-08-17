@@ -1,3 +1,5 @@
 # Articles
 
-The Articles category is where we will post more subjective, opinionated content.
+# Articles on Sass and Compass
+
+Our Articles editorial section is where we will post more subjective, opinionated content. Expect us to ruffle feathers, state opinions, "rebound" someone else's blog post, and everything in between.

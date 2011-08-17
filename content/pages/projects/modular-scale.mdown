@@ -1,5 +1,5 @@
 Date: 15 August 2011
-Categories: intermediate, projects
+Categories: projects
 Author: Adam Stacoviak
 Summary: Modular Scale is a Sass based mixin that calculates the incremental values of the modular scale in proportion to a set size and ratio. So put down the calculator and let Sass do the work!
 

@@ -349,7 +349,6 @@ html {
   margin: 0 auto;
   margin-left: -480px;
   width: 960px;
-  z-index: -1;
 }
 
 #toggle-grid {
@@ -366,7 +365,7 @@ html {
   right: 10px;
   color: white;
   cursor: pointer;
-  display: block;
+  display: none;
   background: url('../images/toggle-grid.png?1313303422') no-repeat right 50%;
   font-size: 12px;
   line-height: 16px;
@@ -468,7 +467,7 @@ html {
 .headings h1 + p, .content h1 + p {
   font-size: 18px;
   font-style: oblique;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 .headings h2, .content h2 {
   font-size: 24px;
@@ -759,12 +758,12 @@ html {
   color: #878787;
   position: absolute;
   left: -65px;
-  content: "Topicial:";
+  content: "Guides:";
 }
-[role="top-bar"] .tutorials {
+[role="top-bar"] .articles {
   margin-left: 110px;
 }
-[role="top-bar"] .tutorials:before {
+[role="top-bar"] .articles:before {
   color: #878787;
   position: absolute;
   left: -70px;
@@ -907,6 +906,16 @@ html {
 }
 [role=page] .page-articles, [role=page] .page-categories {
   margin-top: 50px;
+}
+[role=page] .page-articles > header {
+  display: none;
+}
+[role=page] .content h1:first-of-type {
+  display: none;
+}
+[role=page] h3 {
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 .secondary .cite {

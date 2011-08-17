@@ -1,3 +1,5 @@
-# Beginner Topics
+# Beginner
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Beginner Guides &amp; Tutorials
+
+Our beginner guides and tutorials have been written for those who are just getting started with Sass and Compass. In these guides and tutorials, we take into account that you might be just getting started so we do our best to be clear about the subject matter and the tools required to follow along. We do our best to not alienate anyone. If you have questions, please let us know!

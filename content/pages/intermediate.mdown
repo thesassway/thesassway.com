@@ -1,3 +1,5 @@
-# Intermediate Topics
+# Intermediate
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Intermediate Guides &amp; Tutorials
+
+Our intermediate guides and tutorials have been written for those who are venturing further into the world of Sass and Compass. In these guides and tutorials, we will bring you up-close and personal with Sass and the depths of Compass, both project's documentation, advanced usages and more. We do our best to not alienate anyone. If you have questions, please let us know!
