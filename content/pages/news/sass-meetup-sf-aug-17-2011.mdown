@@ -9,7 +9,7 @@ Summary: There's a Sass Meetup hitting San Francisco this Wednesday (Aug 17) at 
 
 ## The details
 
-Like most breaking tech events, it's in San Francisco! So if you're in the SF area and would like to enjoy some free beer and meet other people using Sass, get there.
+Like most tech events, this one is in San Francisco! So, if you are in the SF area and would like to enjoy some free beer and meet other people using Sass, get there.
 
 * When: Wednesday - August 17th @ 6pm
 * Where: [212 Sutter Street, 2nd Floor](http://maps.google.com/maps?q=212+Sutter+Street,+SF&hl=en&z=16&vpsrc=0)
