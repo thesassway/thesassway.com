@@ -23,6 +23,13 @@
       position: absolute
       left: -70px
       content: "Editorial:"
+  .subscribe
+    margin-left: 110px
+    &:before
+      color: $dark-grey
+      position: absolute
+      left: -75px
+      content: "Subscribe:"
   a
     color: #171717
     text-decoration: none
@@ -39,16 +46,17 @@
       &:first-of-type
         margin-right: 35px
       &:last-of-type
-        text-indent: -99999px
         margin-right: 0
-        margin-left: 50px
         a
           +transition-property(all)
           +transition-duration(.25s)
-          +opacity(.5)
+          +opacity(.8)
+          position: relative
+          top: -2px
           background: image-url("helveticons-16/rss.png") no-repeat
           display: block
           height: 16px
+          text-indent: -99999px
           width: 16px
           &:hover
             +opacity(1)
