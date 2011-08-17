@@ -47,8 +47,17 @@
   ul li
     list-style: disc
   blockquote
-    border-left: 5px solid $light-grey
-    padding-left: 20px
+    +transition-property(all)
+    +transition-duration(.5s)
+    +box-shadow(rgba(#000,.5) 0 0 5px)
+    +border-radius(3px)
+    margin: 30px 0
+    padding: 20px
+    &:hover
+      +box-shadow(rgba(#000,.8) 0 0 8px)
+    footer
+      font-size: 16px
+      line-height: 1.5
   .read-more
     margin-bottom: 0
 
