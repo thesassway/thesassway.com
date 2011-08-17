@@ -1,0 +1,21 @@
+# Contact/Submit your Sass tips!
+
+# Contact us, or Submit a tip!
+
+Need to contact us, or have an awesome tip you'd like to share?
+
+Submit a message and let us know here. We'll either get back as needed or use your tip on the site or in [our Twitter feed](http://twitter.com/TheSassWay). If submitting a tip, please cite your sources if you learned about it from a blog post, article, meetup, talk, etc. so we can properly link to it.
+
+<script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+<script type="text/javascript">
+var z7x3k7 = new WufooForm();
+z7x3k7.initialize({
+'userName':'thesassway', 
+'formHash':'z7x3k7', 
+'autoResize':true,
+'height':'574',
+'header':'show', 
+'ssl':true});
+z7x3k7.display();
+</script>
