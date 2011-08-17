@@ -65,4 +65,3 @@ production:
   cache: false    
   content: content
   google_analytics_code: "UA-4556641-15"
-  woopra_domain: "thesassway.com"

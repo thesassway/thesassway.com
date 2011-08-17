@@ -1,9 +1,9 @@
-- if @woopra_domain
+- if ENV['RACK_ENV']== "production"
   :plain
     <!-- Start of Woopra Code -->
     <script type="text/javascript">
     function woopraReady(tracker) {
-        tracker.setDomain('#{@woopra_domain}');
+        tracker.setDomain('thesassway.com');
         tracker.setIdleTimeout(600000);
         tracker.track();
         return false;
