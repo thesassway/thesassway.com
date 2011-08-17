@@ -2,4 +2,4 @@
 
 # Advanced Guides &amp; Tutorials
 
-Our advanced guides and tutorials have been written for those who are or aim to be extreme Sass and Compass experts. In these guides and tutorials, we will talk about the most advanced features and usages of Sass and Compass, how to create mixins, "frameworks", extensions and more. We do our best to not alienate anyone. If you have questions, please let us know!
+Our advanced guides and tutorials have been written for those who are or aim to be extreme Sass and Compass experts. In these guides and tutorials, we will talk about the most advanced features and usages of Sass and Compass, how to create mixins, "frameworks", extensions and more. If you have questions or suggestions, please [contact us](/contact) to let us know!

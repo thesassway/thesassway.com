@@ -2,4 +2,4 @@
 
 # Intermediate Guides &amp; Tutorials
 
-Our intermediate guides and tutorials have been written for those who are venturing further into the world of Sass and Compass. In these guides and tutorials, we will bring you up-close and personal with Sass and the depths of Compass, both project's documentation, advanced usages and more. We do our best to not alienate anyone. If you have questions, please let us know!
+Our intermediate guides and tutorials have been written for those who are venturing further into the world of Sass and Compass. In these guides and tutorials, we will bring you up-close and personal with Sass and the depths of Compass, both project's documentation, advanced usages and more. If you have questions or suggestions, please [contact us](/contact) to let us know!

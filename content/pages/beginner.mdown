@@ -2,4 +2,4 @@
 
 # Beginner Guides &amp; Tutorials
 
-Our beginner guides and tutorials have been written for those who are just getting started with Sass and Compass. In these guides and tutorials, we take into account that you might be just getting started so we do our best to be clear about the subject matter and the tools required to follow along. We do our best to not alienate anyone. If you have questions, please let us know!
+Our beginner guides and tutorials have been written for those who are just getting started with Sass and Compass. In these guides and tutorials, we take into account that you might be just getting started so we do our best to be clear about the subject matter and the tools required to follow along. We do our best to not alienate anyone. If you have questions or suggestions, please [contact us](/contact) to let us know!
