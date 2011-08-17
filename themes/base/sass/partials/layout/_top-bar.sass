@@ -28,6 +28,7 @@
     text-decoration: none
   ul
     +pie-clearfix
+    position: relative
     li
       +float-left
       position: relative
@@ -37,3 +38,18 @@
         border-bottom: 2px solid $lighter-grey
       &:first-of-type
         margin-right: 35px
+      &:last-of-type
+        text-indent: -99999px
+        margin-right: 0
+        margin-left: 40px
+        a
+          +transition-property(all)
+          +transition-duration(.25s)
+          +opacity(.5)
+          background: image-url("helveticons-16/rss.png") no-repeat
+          display: block
+          height: 16px
+          width: 16px
+          &:hover
+            +opacity(1)
+            border-bottom: none
