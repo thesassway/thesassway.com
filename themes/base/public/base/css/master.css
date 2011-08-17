@@ -352,20 +352,22 @@ html {
 }
 
 #toggle-grid {
-  -moz-transition-property: color;
-  -webkit-transition-property: color;
-  -o-transition-property: color;
-  transition-property: color;
-  -moz-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  opacity: 0.25;
   position: absolute;
   top: 13px;
   right: 10px;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   cursor: pointer;
-  display: none;
+  display: block;
   background: url('../images/toggle-grid.png?1313303422') no-repeat right 50%;
   font-size: 12px;
   line-height: 16px;
@@ -373,6 +375,8 @@ html {
   text-decoration: none;
 }
 #toggle-grid:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
   color: #878787;
 }
 #toggle-grid .show {

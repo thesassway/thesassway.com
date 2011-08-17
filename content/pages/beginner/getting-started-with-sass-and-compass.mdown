@@ -1,13 +1,13 @@
 Date: 29 June 2011
 Categories: beginner, guides
 Author: Adam Stacoviak
-Summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+Summary: So you're friend, co-worker, web-buddy or whomever told you about Sass, Compass ... or both. Great! Now what? In this beginner guide we take you through the first steps of getting started with Sass and Compass. We walk you through installation, creating a test project, compiling your first lines Sass to CSS and we even "mixin" a little Sass history.
 
 # Getting started with Sass and Compass
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+So you're friend, co-worker, web-buddy or whomever told you about Sass, Compass ... or both. Great! Now what? In this beginner guide we take you through the first steps of getting started with Sass and Compass. We walk you through installation, creating a test project, compiling your first lines Sass to CSS and we even "mixin" a little Sass history.
 
-## Let's install Sass and Compass
+## Install Sass and Compass
 
 Sass and Compass get installed as Ruby gems so you'll need to have Ruby on your machine. I'd love to go into that here, but it's beyond the scope of this article. Hit up [the mailing list](http://groups.google.com/group/sass-lang) if you need help finding the right resources for getting Ruby on your machine.
 
@@ -41,7 +41,7 @@ Run this command to install `css_parser`
 
 Now you are ready for some hardcore Sass and Compass action!
 
-## Let's create a test project
+## Create a test project
 
 The easiest way to get started with something new is to just jump right in. On that note. Head to the place you store you codes (or where ever you'd like to store this test project) and run this command.
 
@@ -73,7 +73,7 @@ The `compass watch` command does exactly what you would think it would do &ndash
 
 In the meantime, take a look at [config.rb](https://github.com/thesassway/sass-test/blob/master/config.rb) located in the root of our sass-test project. The [Compass configuration](http://compass-style.org/help/tutorials/configuration-reference/) is essentially the brain of Compass and defines a number of variables letting Compass know where your Sass, CSS, images and JavaScript files are located, what extensions to require, what syntax you prefer, the output style and much more.
 
-## Let's write some Sass
+## Write some Sass
 
 Ok, before we actually write some Sass, it's important to know that Sass has some history to it. In fact, one of the hardest things to grasp is that Sass actually has two [syntaxes](http://en.wikipedia.org/wiki/Syntax) &ndash; and that's often what either confuses or intimidates people and deters them from even giving it a try. How do I know? Because that's exactly how I felt BEFORE I bit the bullet and took the proverbial plunge. But let's not get off track here.
 
@@ -86,5 +86,3 @@ Let's test out this "theory" and copy the contents of [my screen.css file](http:
 ## Conclusion and upcoming
 
 This example is obviously not the most practical example, and we technically didn't write any code. I just wanted to prove a point that there can be next to zero effort transitioning to Sass and Compass because you just did it. The next step is taking advantage of the features of Sass and Compass now available to you, when you choose to use them. That's the best part of this transition. You can incrementally step into what Sass and Compass have to offer. There's no reason to be intimidated or feel that it will "take weeks" to do. Do it. Do it now.
-
-In the coming weeks I'll be covering more topics on writing CSS "The Sass Way". [Follow me](http://twitter.com/adamstac) as well as [The Sass Way](http://twitter.com/thesassway) on Twitter for updates.

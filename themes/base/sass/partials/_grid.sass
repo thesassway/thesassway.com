@@ -36,21 +36,23 @@ $grid-background-offset: 10px
   width: 960px
   // z-index: -1
 #toggle-grid
-  +transition-property(color)
-  +transition-duration(.5s)
+  +transition-property(all)
+  +transition-duration(.25s)
+  +opacity(.25)
   position: absolute
   top: 13px
   right: 10px
-  color: #fff
+  color: rgba(#fff,0)
   cursor: pointer
-  // display: block
-  display: none
+  display: block
+  // display: none
   background: image-url("toggle-grid.png") no-repeat right 50%
   font-size: 12px
   line-height: 16px
   padding-right: 22px
   text-decoration: none
   &:hover
+    +opacity(1)
     color: #878787
   .show
     display: none
