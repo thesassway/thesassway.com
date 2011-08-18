@@ -62,3 +62,11 @@ Adam
 
 John
 * Look at /articles.xml issue
+
+Tech
+=====
+* Add https://github.com/tzuryby/jquery.hotkeys to expose the grid
+
+News
+=====
+http://smt.github.com/blog/2011/07/09/responsible-sass-authoring/
