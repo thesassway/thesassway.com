@@ -5,7 +5,7 @@ Summary: There's a Sass Meetup hitting San Francisco this Wednesday (Aug 17) at 
 
 # Sass Meetup / San Francisco (Aug 17th)
 
-[Hampton Catlin](http://hamptoncatlin.com/), the inventor of Sass, and [Moovweb]() are hosting what just might be the world's first Sass Meetup.
+[Hampton Catlin](http://hamptoncatlin.com/), the inventor of Sass, and [Moovweb](http://site.moovweb.com/) are hosting what just might be the world's first Sass Meetup.
 
 ## The details
 
