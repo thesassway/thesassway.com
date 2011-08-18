@@ -1,10 +1,43 @@
-Date: 15 August 2013
+Date: 18 August 2013
 Categories: projects
 Author: Adam Stacoviak
-Summary: Modular Scale is a Sass based mixin that calculates the incremental values of the modular scale in proportion to a set size and ratio. So put down the calculator and let Sass do the work!
+Summary: Have you been wanting to design with modular scales, but the math and static-ness of CSS has held you back? Modular Scale is a Sass mixin that does all the heavy lifting and math for you to calculate the values of the modular scale. So put down the calculator get excited about prearranged sets of harmonious proportions and let Sass do the work!
 
 # Modular Scale: Inspired by and adapted from Tim Brown's modularscale.com
 
-Sassy Modular Scale is a Sass based mixin that calculates the incremental values of the modular scale in proportion to a set size and ratio. It was inspired by and adapted from Tim Brown's modularscale.com.
+Have you been wanting to design with modular scales, but the math and static-ness of CSS has held you back? Well, put down the calculator down and get excited about "prearranged sets of harmonious proportions" and let Sass do the work!
+
+## Who is Tim Brown?
+
+Tim Brown is Type Manager for [Typekit](http://typekit.com/). He studies, promotes, and advances the craft of web typography on a daily basis, shares what he knows at [Nice Web Type](http://nicewebtype.com/), and helps web designers with tools like [Web Font Specimen](http://webfontspecimen.com/) and [Modular Scale](http://modularscale.com/). You can follow Tim on Twitter [@nicewebtype](http://twitter.com/nicewebtype) (we do).
+
+Just over 9 months ago, Tim gave his "first ever" talk in front of an audience at [Build](http://www.buildconference.com/) titled ["More Perfect Typography"](http://vimeo.com/17079380) where he talked about the history of The topic which has spawned a slue of new thoughts around the use real fonts on the web and creating a modular scale for web design.
+
+Almost 4 months ago Tim Brown wrote a game changing article on [A List Apart](http://www.alistapart.com/) titled ["More Meaningful Typography"](http://www.alistapart.com/articles/more-meaningful-typography/).
+
+and 
+
+## What is Modular Scale?
+
+Modular Scale is a fresh new Sass project inspired by [Tim Brown's](http://twitter.com/nicewebtype) [modularscale.com](http://modularscale.com/) that does all the heavy lifting and math for you to calculate the values of a modular scale. It can be used as a Compass extension, installed as a [Ruby gem](https://rubygems.org/gems/modular-scale), or as vanilla Sass mixin.
+
+### No calculator? I don't believe it.
+
+I'm serious. There's no calculator needed. The math is all done for you (Sass knows math).
+
+Tim also wrote a favorite'd article at [A List Apart](http://www.alistapart.com/) titled ["More Meaningful Typography"](http://www.alistapart.com/articles/more-meaningful-typography/) and gave a talk at [Build](http://www.buildconference.com/) titled ["More Perfect Typography"](http://vimeo.com/17079380) which has spawned a slue of new thoughts around the use real fonts on the web and creating a modular scale for web design.
+
+<blockquote cite="http://vimeo.com/17079380">
+<p>Typography is an ancient art and craft; we are merely its latest practitioners. By looking to our tradition for guidance, we might once more attain our finest typographic achievements in this new medium.</p>
+<footer>— <a href="http://nicewebtype.com/">Tim Brown</a> in <cite><a href="http://vimeo.com/17079380">More Perfect Typography</a></cite></footer>
+</blockquote>
+
+
+
+---
+
+Additional inspiration goes to [Robert Bringhurst](http://en.wikipedia.org/wiki/Robert_Bringhurst), author of ["The Elements of Typographic Style"](http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style) - specifically Chapter 8 titled "Shaping the Page"
+
+that got started from inspiration [with an answer to a Tweet](http://twitter.theinfo.org/100305459914874880).mixin that does all the math for you to calculate the values of the modular scale. So put down the calculator and let Sass do the work! It was inspired by and adapted from Tim Brown's modularscale.com.
 
 Sassy Modular Scale can be used as a Compass extension and can be installed as a [Ruby gem](https://rubygems.org/gems/modular-scale) or copied into your project as a simple mixin. Either way, it works just the same.
