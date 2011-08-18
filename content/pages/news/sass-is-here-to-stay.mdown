@@ -15,7 +15,7 @@ When SCSS was released early last year, Nathan Weizenbaum posted ["The Indented 
 
 So, rest assured that [if you get hopped up on SCSS](/articles/sass-the-gateway-drug) and find that Sass (the indented syntax) is better for you in the end, you can take that leap with faith! The [sass-convert command](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#syntax) is always there at your disposal, and you are never locked into a choice of one or the other.
 
-A _slight_ off topic, but you can even mix the two in a project. You can just can mix them in the same file.
+A _slight_ off topic, but you can even mix the two in a project. You can just can't mix Sass with SCSS in the same file.
 
 ## Share your Thoughts!
 
