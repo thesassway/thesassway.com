@@ -13,12 +13,14 @@ Tim Brown is Type Manager for [Typekit](http://typekit.com/). He studies, promot
 
 ## What is Modular Scale?
 
-Just over 9 months ago, Tim gave his "first ever" talk in front of an audience at [Build](http://www.buildconference.com/) titled ["More Perfect Typography"](http://vimeo.com/17079380) where he talked about the history and craft of typesetting and how it is the center-piece of design. 5 months later, Tim wrote an *eye opening* article on A List Apart titled ["More Meaningful Typography"](http://www.alistapart.com/articles/more-meaningful-typography/) that expanded that talk even further to bring up the golden mean (also known as the [golden ratio](http://en.wikipedia.org/wiki/Golden_ratio) or golden section) and how meaningful ratios rooted in geometry, music, nature, and history can be expressed as modular scales and put to work on the web.
+Just over 9 months ago, Tim gave his "first ever" talk in front of an audience at [Build](http://www.buildconference.com/) titled ["More Perfect Typography"](http://vimeo.com/17079380) where he talked about the history and craft of typesetting and how it is the center-piece of design.
 
 <blockquote cite="http://vimeo.com/17079380">
 <p>Typography is an ancient art and craft; we are merely its latest practitioners. By looking to our tradition for guidance, we might once more attain our finest typographic achievements in this new medium.</p>
 <footer>— <a href="http://nicewebtype.com/">Tim Brown</a> in <cite><a href="http://vimeo.com/17079380">More Perfect Typography</a></cite></footer>
 </blockquote>
+
+5 months later, Tim wrote an *eye opening* article on A List Apart titled ["More Meaningful Typography"](http://www.alistapart.com/articles/more-meaningful-typography/) that expanded that talk even further to bring up the golden mean (also known as the [golden ratio](http://en.wikipedia.org/wiki/Golden_ratio) or golden section) and how meaningful ratios rooted in geometry, music, nature, and history can be expressed as modular scales and put to work on the web.
 
 ## Sassy Modular Scale
 
