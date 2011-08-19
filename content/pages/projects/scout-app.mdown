@@ -1,0 +1,2 @@
+http://mhs.github.com/scout-app/
+https://github.com/mhs/scout-app
