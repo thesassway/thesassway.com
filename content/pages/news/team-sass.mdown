@@ -29,7 +29,7 @@ To be honest, we're not 100% sure. Even the likes of [David Kaneda](http://9-bit
 
 <a href="https://twitter.com/#!/davidkaneda/status/104648570073915392"><img src="/attachments/team-sass-davidkaneda.png" class="full" /></a>
 
-### A moment in time
+### A hashtag in time
 
 At its most basic level, #teamSass is a Twitter hashtag.
 
