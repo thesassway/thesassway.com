@@ -71,6 +71,20 @@
       line-height: 1.5
   .read-more
     margin-bottom: 0
+  img
+    &.full
+      +transition-property(box-shadow)
+      +transition-duration(.5s)
+      +box-shadow(rgba(#000,.5) 0 0 5px)
+      +box-sizing(border-box)
+      +border-radius(3px)
+      background: #fff
+      display: block
+      margin: 30px auto
+      padding: 2px
+      width: 100%
+      &:hover
+        +box-shadow(rgba(#000,.9) 0 0 5px)
 
 .links
   a
