@@ -25,7 +25,7 @@ And then [Jina Bolton](http://about.me/jina) [confesses](https://twitter.com/#!/
 
 ## So, what is #teamSass?
 
-To be honest, we're not 100% sure. Even the likes of [David Kaneda](http://9-bits.com/), Creative director at [Sencha](http://www.sencha.com/) isn't sure, but he wants in. Side note: Sencha is a HUGE advocate and user of [Sass and Compass](http://www.sencha.com/blog/search/3c2d65615710259a0f341e13fa841ac4/).
+To be honest, we're not 100% sure. Even the likes of [David Kaneda](http://9-bits.com/), Creative director at [Sencha](http://www.sencha.com/), isn't sure, but he wants in. Side note: Sencha is a HUGE advocate and user of [Sass and Compass](http://www.sencha.com/blog/search/3c2d65615710259a0f341e13fa841ac4/).
 
 <a href="https://twitter.com/#!/davidkaneda/status/104648570073915392"><img src="/attachments/team-sass-davidkaneda.png" class="full" /></a>
 
