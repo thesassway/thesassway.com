@@ -19,7 +19,7 @@ Moments later, [Nathan Smith](http://sonspring.com/) joined in on the fun.
 
 <a href="https://twitter.com/#!/nathansmith/status/104641148575940609"><img src="/attachments/team-sass-nathansmith.png" class="full" /></a>
 
-And then [Jina Bolton](http://about.me/jina) [confesses](https://twitter.com/#!/jina/status/104641295779237888) that she's to blame. If you're going to be at [Madison Ruby Conference](http://madisonruby.org/), you will also get to enjoy Jina's [#teamSass slide](https://twitter.com/#!/jina/status/104644063445270529) first hand in her talk ["CSS Workflow with Sass"](http://madisonruby.org/speakers#jina_bolton).
+And then [Jina Bolton](http://about.me/jina) [confesses](https://twitter.com/#!/jina/status/104641295779237888) that she's to blame. If you're going to be at [Madison Ruby Conference](http://madisonruby.org/), you will also get to enjoy Jina's [#teamSass slide](https://twitter.com/#!/jina/status/104644063445270529) ([slide image](http://twitpic.com/68kjzb)) first hand in her talk ["CSS Workflow with Sass"](http://madisonruby.org/speakers#jina_bolton).
 
 <a href="https://twitter.com/#!/jina/status/104641295779237888"><img src="/attachments/team-sass-jina.png" class="full" /></a>
 
