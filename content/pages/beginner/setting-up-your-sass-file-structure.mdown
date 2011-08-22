@@ -1,5 +1,5 @@
 Date: 3 August 2013
-Categories: beginner, guides
+Categories: beginner, guides, adam-stacoviak
 Author: Adam Stacoviak
 Summary: One of the coolest features of crafting CSS with Sass is that you can build out a file structure that puts all your components in their right place. BUT the question is ... where is the right place? Is there a standard? If there is a standard, are even coming close to that standard? In this post we cover the in's and out's of best practices in Sass project file structure.
 
