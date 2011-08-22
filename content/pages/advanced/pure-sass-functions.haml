@@ -20,22 +20,24 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   The following mixin can accept arguments and do calculations. The output of this mixin (in this case) is a CSS rule and will be unfurled where ever you `@include` it.
 
+      :::scss
       @mixin my-padding-mixin($some-number) {
         padding: $some-number;
       }
 
   Now we use the `@include` directive to insert our mixin's code.
-  
+
+      :::scss
       .my-module {
         @include my-padding-mixin(10px);
       }
   
   And here is the output CSS code.
 
-       .my-module {
-         padding: 10px;
-       } 
-    
+      :::css
+      .my-module {
+        padding: 10px;
+      }
 
   ### Exhibit B: Function
 
@@ -43,18 +45,21 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
   
   The following function can accept 2 arguements, `$some-number` and `$another-number`. The value returned are those two variables added together.
 
+      :::scss
       @function my-calculation-function($some-number, $another-number){
         @return $some-number + $another-number
       }
 
   This time around we replace the common value of the `padding` property with what a snippet of [SassScript](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#sassscript) to call our function, pass it the arguments and include in our output CSS code.
 
+      :::scss
       .my-module {
         padding: my-calculation-function(10px, 5px);
       }
 
   And here is the output CSS code.
 
+      :::css
       .my-module {
         padding: 15px;
       }
@@ -71,7 +76,6 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   In Ethan Marcotte's lovely new book [*Responsive Web Design*](http://www.abookapart.com/products/responsive-web-design), he stresses the formula for calculating the percent value for a width so you can achieve a fluid layout based on a reference design made using pixels.
 
-
       target / context = result
 
 
@@ -83,7 +87,7 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   That's as clear a case for a function as I can imagine. It would be overkill to work that logic into each mixin for a site, and even worse to do those calculations in line. So in a recent project I just created a little function, like so:
 
-
+      :::scss
       @function calc-percent($target, $container) {
         @return ($target / $container) * 100%;
       }
@@ -92,26 +96,28 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
   
   For example, for the above function, I created the short-name below. It simply collects the needed arguments, and passes it along to its sister with the longer name, and then returns the value.
 
+      :::scss
       @function cp($target, $container) {
         @return calc-percent($target, $container);
       }
 
   With that in place, I can easily remove the mechanics of that process out of my view, and focus on writing my Sass using the values I already know.
 
-
+      :::scss
       .my-module {
         width: calc-percent(650px, 1000px);
       }
 
   or     
 
+      :::scss
       .my-module {
         width: cp(650px, 1000px);
       }
 
-
   Either of which simply output this CSS.
 
+      :::css
       .my-module {
         width: 65%;
       }
