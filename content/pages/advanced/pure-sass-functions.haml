@@ -1,9 +1,9 @@
-Date: 22 August 2013
+Date: 22 August 2011
 Categories: advanced, guides, mason-wendell
 Author: Mason Wendell
 Summary: Sass gladly lets you add calculations and logic in a way that CSS would never abide. But does that mean you should go around adding and dividing just anywhere? Find out how you can use pure Sass functions to make reusable logic more useful and your working Sass file more readable.
 
-%h1 Using pure Sass Functions to make reusable logic more useful
+%h1 Using pure Sass functions to make reusable logic more useful
 
 :markdown
   Sass gladly lets you add calculations and logic in a way that CSS would never abide. But does that mean you should go around adding and dividing just anywhere? Find out how you can use pure Sass functions to make reusable logic more useful and your working Sass file more readable.
@@ -12,9 +12,9 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   Sass has [mixins](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixins), we all know that. And because they accept arguments I always thought of them as Sass's version of functions. Pretty sweet. But when [Sass 3.1.0](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#310) came out it added a feature that blew that notion apart. Yeah, you guessed it ... actual [functions](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#sassbased_functions). Instead of outputting lines of Sass the way mixins do, functions return a value. This makes them a super powerful behind-the-scenes player in a lot of my favorite Sass recipes. 
 
-  ## Functons and Mixins: Kissin' Cousins
+  ## Mixins and Functions: Kissing Cousins
   
-  [INSERT A PRELUDE - Explain how they are kissing cousins before showing any code.]
+  Functions and mixins are very similar in nature. Because they can both accept variables, you might end up creating mixin when what you really need is a function. In the following examples, we review the creation, usage and output of both a mixin and a function.
 
   ### Exhibit A: Mixin
 
@@ -66,7 +66,7 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   ### Readable, DRY Sass
 
-  As you can see, functions help you write more readable and DRY Sass, by letting you move your reusable logic out of specific declarations and even out of your mixins. This can make all the difference in the world when you are working on something that's even a little bit complex.
+  As you can see, functions help you write more readable and DRY Sass by letting you move your reusable logic out of specific declarations and even out of your mixins. This can make all the difference in the world when you're working on something that's even a little bit complex.
 
   ## Using Functions
 
@@ -124,7 +124,7 @@ Summary: Sass gladly lets you add calculations and logic in a way that CSS would
 
   This is a simple example, but I think it's a pretty useful one, especially if you'd rather have Sass do the math for you. Once you start pulling a few calculations into Sass functions, you'll start to see how they open up new ways to write lighter, cleaner Sass that's more readable.
 
-  ## Homework: Dig Deeper, read the source code
+  ## Homework: Dig Deeper by reading the source code
 
   Sass functions have become an indispensable tool for me in all my latest projects. I've heard from many others that is the case for them as well. If you dig into [the](http://compass-style.org/reference/blueprint/grid/) [source](http://compass-style.org/reference/compass/layout/grid_background/) [code](http://compass-style.org/reference/compass/typography/vertical_rhythm/) of [Compass](http://www.abookapart.com/products/responsive-web-design) you will see that a lot of real heavy lifting is done by some well-placed functions.
 
