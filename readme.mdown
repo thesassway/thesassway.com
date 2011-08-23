@@ -52,16 +52,7 @@ Sass with non-Rails environments
 
 Todo
 =====
-
-Adam
-* Rework template:
-  - focus on good template for article pages
-  - big typography/headlines
-  - homepage: single article -- list of articles
-  - minimize logo on article pages?
-
-John
-* Look at /articles.xml issue
+n/a
 
 Tech
 =====

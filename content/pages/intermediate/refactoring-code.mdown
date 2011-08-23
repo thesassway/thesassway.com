@@ -10,8 +10,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ## Re-factor your code to a simple readable version
 
 This is a snippet of code share with me by Allan Branch. Allan is a n awesome designer, and like most awesome designers he wants to enjoy the CSS authoring experience more. So he's been learning more and more advanced features, giving them a try and sharing the code with me so I can help him learn best practices and new features. It's kinda like Dribbble, but with Sass instead of pixels.
+
+* CSS-tricks: [css-tricks.com/snippets/css/css-triangle](http://css-tricks.com/snippets/css/css-triangle/)
   
     :::sass
+    // http://pastie.org/2401738
+    
     =triangle($direction :right, $size :12px, $tri_color :#888)
       width: 0
       height: 0
@@ -37,7 +41,8 @@ This is a snippet of code share with me by Allan Branch. Allan is a n awesome de
 These can also be set inline like they were, but they are bit more readable like this. Defaults set to this value unless set elsewhere
 
     :::sass
-    // http://css-tricks.com/snippets/css/css-triangle/
+    // http://pastie.org/pastes/2402479
+    
     // Defaults
     $direction: top !default
     $size: 12px !default
