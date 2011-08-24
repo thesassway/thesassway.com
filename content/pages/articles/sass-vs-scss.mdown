@@ -1,4 +1,4 @@
-Date: 23 August 2011 12:00
+Date: 23 August 2013
 Categories: articles, john-w-long
 Author: John W. Long
 Summary: Since the creation of Sass (the language), it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added features such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented coding syntax as well as a brand new perspective on CSS authoring. Then the SCSS (Sassy CSS) syntax was introduced.
