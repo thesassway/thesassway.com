@@ -1,8 +1,7 @@
 Date: 3 August 2013
 Categories: intermediate, guides
 Author: John W. Long
-Summary: A brief introduction to Sass mixins. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-
+Summary: Without question, one of the most powerful and valuable features of Sass is the ability to package up existing code into reusesable chunks called _mixins_.
 
 # Leveraging Sass Mixins for Cleaner Code
 
@@ -27,7 +26,7 @@ The CSS3 support in Compass is perhaps the most rocking aspect of the project.
 Compass provides an assortment of CSS3 mixins that make it easy to take advantage
 of these new features in a way that works across browsers.
 
-For instance. The _border-radius_ mixin lets you use the new border-radius attribute
+For instance. The `border-radius` mixin lets you use the new border-radius attribute
 in a sucient way:
 
     :::scss
@@ -47,39 +46,134 @@ This would output:
       padding: 10px 20px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      -o-border-radius: 5px;
       -ms-border-radius: 5px;
-      -khtml-border-radius: 5px;
       border-radius: 5px;
     }
 
-Looking at the output you can see that the border-radius mixin outputs _six lines of code_.
+Looking at the output you can see that the `border-radius` mixin outputs _six lines of code_.
 These six lines allow you to use border radius across all of the modern web browsers.
 (The cool part is that if you wrote this code on your own, you probably would not have
 included support for Opera (-o) or Konquerer (-khtml), but Compass includes this support
-automatically.
+automatically.)
 
-I started using CSS3 before I had a great understanding of Sass mixins.
-Writing this kind of code on your own is error prone. I can't tell you how many times I
-would change the value for one browser's prefixed version of the border-radius attribute
-and forgot to change it for another.
+Above, I used the `@include` directive to tell Sass that I wanted to call out to a mixin.
+This was followed by the name of the mixin, `border-radius`. Followed by parentheses
+enclosing the arguments to pass the mixin. The `border-radius` mixin only has one
+argument. In this case `5px` is passed as the value of the first argument.
 
 
 ## Writing Your Own
 
 Let's look at the source for the border-radius mixin above. For the purpose of illustration
 I'm going to show you a smiplified version of the mixin. The actual version from Compass
-is a bit more complicated (and featureful), but this will give you a good idea of how
-to write your own:
+is a bit more complicated, but this will give you a good idea of how to write your own:
 
     :::scss
-    @mixin border-radius($value) {
-      -moz-border-radius: $value;
-      -webkit-border-radius: $value;
-      -o-border-radius: $value;
-      -ms-border-radius: $value;
-      -khtml-border-radius: $value;
-      border-radius: $value;
+    @mixin border-radius($radius) {
+      -moz-border-radius: $radius;
+      -webkit-border-radius: $radius;
+      -ms-border-radius: $radius;
+      border-radius: $radius;
     }
 
-## Key Word Parameters
+The declaration begins with the directive `@mixin` and is followed by the name of the mixin.
+In this case `border-radius`. The name of the mixin can contain any combination of alpha
+and numeric characters without spaces. Then comes the list of arguments that the mixin
+accepts enclosed in parentheses `( ... )`. The mixin above only has one argument
+`$radius`. Multiple arguments can be used as long as they are separated by commas.
+
+Next comes the definition of the mixin enclosed in braces `{ ... }`. The definition of
+the mixin can contain any combination of CSS attributes. You can even declare additional
+rules (with selectors) that will be mixed into your CSS along with the attributes.
+
+In this case, the `border-radius` mixin includes a series of CSS attributes to set the
+value of the `border-radius` attribute for all of the major browsers who have implemented
+it with browser-specific prefixes and the final `border-radius` attribute to future-proof
+the attribute because it has been officially accepted as part of the CSS3 spec.
+
+The `$radius` argument, or _variable_ is used to set the value of each of the CSS
+attributes. Using this technique you can pass one value to the mixin and it will be
+repeated four times in the output. This reduces the likelyhood that you will miss-type the
+value for one or more of the browser-specific attributes (if you were to type this out
+by hand instead of using the mixin) and also saves a lot of typing.
+
+
+## Default Arguments
+
+You could improve this mixin just a tad by adding a default value for the `$radius`
+argument, like this:
+
+    :::scss
+    @mixin border-radius($radius: 5px) {
+      ...
+    }
+
+This makes the `$radius` argument optional. So you can call the mixin without it
+like this:
+
+    :::scss
+    @include border-radius;
+
+Which would output the attributes with the default value in the argument list of the
+declaration. In this case `5px` because that's what we declared above.
+
+Another trick that can be quite useful is to declare a variable beforehand and use
+that as the default value for the mixin:
+
+   :::scss
+   $default-border-radius: 5px;
+   @mixin border-radius($radius: $default-border-radius) {
+     ...
+   }
+
+This is especially useful for code that you share between projects. Set the default
+by modifying the global variable, and override the value as needed.
+
+## Keyword Arguments
+
+One final mixin feature that's new as of Sass 3.1 is _keyword arguments_. Keyword
+arguments are especially useful when a mixin accepts multiple arguments. If the
+arguments are defaulted, you can use the name of the argument to set the specific
+value for an argument, without passing the values of the other arguments.
+
+Used with `@if` conditionals, we can make an even better version of the
+`border-radius` mixin:
+
+    ::scss
+    @mixin border-radius($radius: 5px, $moz: true, $webkit: true, $ms: true) {
+      @if $moz    { -moz-border-radius:    $radius; }
+      @if $webkit { -webkit-border-radius: $radius; }
+      @if $ms     { -ms-border-radius: $radius;     }
+      border-radius: $radius;
+    }
+
+The code above conditionally outputs the code for Firefox, Safari, and Internet
+Explorer based on the values of `$moz`, `$webkit`, and `$ms`, respectively. Since
+all of the arguments have default values, you could turn off support for just
+Internet Explorer by calling the mixin like this:
+
+    :::scss
+    @include border-radius($ms: false);
+
+This is much simpler than calling the mixin with each of the arguments without
+names:
+
+    :::scss
+    @include border-radius(5px, true, true, true);
+
+With keyword arguments, you don't even have to call out to the mixin with
+the arguments in the same order that they were declared:
+
+    :::scss
+    @include border-radius($ms: false, $radius: 10px);
+
+
+## Conclusion
+
+That about wraps up this brief overview of Sass mixins. To get a better idea of
+how you can use them in your code, I'd recommend taking a look at the source
+code for a mature Sass project like Compass. Compass includes over 200 mixins
+and you can learn a lot of techniques by studying the source. The compass docs
+actually include "View Source" links that make it easy to check out the code
+for any mixin to see what it does. You can start by checking out the actual
+implementation of `border-radius` (here)[http://compass-style.org/reference/compass/css3/border_radius/#mixin-border-radius-source]. Have fun!
