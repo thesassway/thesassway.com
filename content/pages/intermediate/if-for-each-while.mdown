@@ -5,7 +5,7 @@ Summary: To write mixins and functions you Sass's control directives, @if @for @
 
 # Sass control directives: @if, @for, @each and @while
 
-To write mixins or a library of mixins similar to what Compass offers, Sass's control directives, @if @for @each and @while, need to be among the first items on your list to learn about Sass. Control directives give your mixins flow and logic and can give you a finite level of decision making required by mixins.
+Sass control directives are the cornerstone of creating libraries. @if @for @each and @while, need to be among the first items on your list to learn about Sass. Control directives give your mixins flow and logic and can give you a finite level of decision making required by mixins.
 
 ## Heading 2
 
