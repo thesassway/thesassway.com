@@ -1,0 +1,59 @@
+Date: 29 August 2013
+Categories: beginner, guides, mario-kuroir-ricalde
+Author: Mario "Kuroir" Ricalde
+Summary: When you begin working with Sass you will immediately notice that there are two points of reference of the same name. The first being the name of the language, Sass and the other one being the name of one two syntax styles available.So lets get going with the disambiguation!
+
+# Disambiguation: Sass, SASS and SCSS?
+
+When you begin working with Sass you will immediately notice that there are two points of reference of the same name. The first being the name of the language, Sass and the other one being the name of one two syntax styles available.
+
+## How to differentiate?
+
+To some, it may be pretty obvious how to differentiate them; however, you'll see new users using expressions like these:
+
+* I'm using SCSS and it's awesome!
+* What version of SASS do you use?
+* Sass Syntax all the way!
+
+Yes, they all make sense (kind of):
+
+* SCSS: Sassy CSS?
+* SASS: Syntactically Awesome Style-Sheets
+* Sass Syntax: Just no.
+
+But ... that's not the proper way to refer to the language and things start to become confusing. If there's no centralized concept for all of us to use we can get all over the map on this and, well, that's just confusing.
+
+So lets get going with the disambiguation:
+
+## Sass
+
+Sass is used to refer the language, which englobes the two syntax styles, hence Sass includes SASS.
+
+You'll usually, for instance: 
+
+* Did you install **Sass**?
+* I love **Sass**! I use it on every project!
+
+Note that when you're referring to the language the first letter is capitalized, denoting a proper name.
+
+## SASS
+
+Name of the original syntax style that was provided with Sass. One of its characteristics is the significant whitespace and all caps punctuation. SASS is an acronym for Syntactically Awesome Style-Sheets and therefore is represented as SASS, respectively.
+
+Example:
+
+* **SASS** allows you to use `+` instead of the SCSS method `@include`
+* When I began working with Sass I fell in love with **SASS**
+
+## SCSS
+
+Name of the second syntax style which was implemented in Sass as "[the Gateway Drug](/articles/sass-the-gateway-drug)" for new developers. The main characteristic is that it's a superset of CSS, which means that it's valid CSS!
+
+Example:
+
+* Did you commit the SCSS file?
+* SCSS is the gateway drug to Sass.
+
+## In summary
+
+When you began using Sass you may have started with SCSS. However, after a few projects you may have been lured to try SASS and fell in love with the lack of punctuation noise! Or, maybe not. Maybe you felt that SCSS was the perfect fit for you and you said no to SASS. Either way you can convert your Sass with `sass-convert` to easily move in and out of SASS or SCSS as you see fit.
