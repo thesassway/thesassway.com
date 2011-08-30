@@ -39,10 +39,12 @@ Summary: Without question, one of the most powerful and valuable features of Sas
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        -khtml-border-radius: 5px;
         border-radius: 5px;
       }
 
-  Looking at the output you can see that the `border-radius` mixin outputs _six lines of code_. These six lines allow you to use [border-radius](http://www.w3.org/TR/css3-background/#corners) across all of the modern web browsers. (The cool part is that if you wrote this code on your own, you probably would not have included support for Opera (-o) or Konquerer (-khtml), but Compass includes this support automatically.)
+  Looking at the output you can see that the `border-radius` mixin outputs _six lines of code_. These six lines allow you to use [border-radius](http://www.w3.org/TR/css3-background/#corners) across all of the modern web browsers. (The cool part is that if you wrote this code on your own, you probably would not have included support for Opera (-o) or Konquerer (-khtml), but Compass gives you all this for free!)
 
   Above, I used the `@include` directive to tell Sass that I wanted to call out to a mixin. This was followed by the name of the mixin, `border-radius`. Followed by parentheses enclosing the arguments to pass the mixin. The `border-radius` mixin only has one argument. In this case `5px` is passed as the value of the first argument.
 
@@ -104,7 +106,7 @@ Summary: Without question, one of the most powerful and valuable features of Sas
       @mixin border-radius($radius: 5px, $moz: true, $webkit: true, $ms: true) {
         @if $moz    { -moz-border-radius:    $radius; }
         @if $webkit { -webkit-border-radius: $radius; }
-        @if $ms     { -ms-border-radius: $radius;     }
+        @if $ms     { -ms-border-radius:     $radius; }
         border-radius: $radius;
       }
 
