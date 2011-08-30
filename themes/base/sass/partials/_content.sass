@@ -71,20 +71,6 @@
       line-height: 1.5
   .read-more
     margin-bottom: 0
-  img
-    &.full
-      +transition-property(box-shadow)
-      +transition-duration(.5s)
-      +box-shadow(rgba(#000,.5) 0 0 5px)
-      +box-sizing(border-box)
-      +border-radius(3px)
-      background: #fff
-      display: block
-      margin: 30px auto
-      padding: 2px
-      width: 100%
-      &:hover
-        +box-shadow(rgba(#000,.9) 0 0 5px)
 
 .links
   a
@@ -99,13 +85,31 @@
     &:focus, &:active
       outline: none
 
+.img-border
+  +transition-property(box-shadow)
+  +transition-duration(.5s)
+  +box-shadow(rgba(#000,.5) 0 0 5px)
+  +box-sizing(border-box)
+  +border-radius(3px)
+  background: #fff
+  display: block
+  padding: 2px
+  &:hover
+    +box-shadow(rgba(#000,.9) 0 0 5px)
+
 .images
   img.right
+    @extend .img-border
     float: right
     margin: 0 0 1em 1em
   img.left
+    @extend .img-border
     float: left
     margin: 0 1em 1em 0
+  img.full
+    @extend .img-border
+    margin: 30px auto
+    width: 100%
 
 .syntax
   pre
