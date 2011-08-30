@@ -11,15 +11,19 @@ When you begin working with Sass you will immediately notice that there are two 
 
 To some, it may be pretty obvious how to differentiate them; however, you'll see new users using expressions like these:
 
-* I'm using SCSS and it's awesome!
-* What version of SASS do you use?
-* Sass Syntax all the way!
+> I'm using SCSS and it's awesome!
+
+> What version of SASS do you use?
+
+> Sass Syntax all the way!
 
 Yes, they all make sense (kind of):
 
-* SCSS: Sassy CSS?
-* SASS: Syntactically Awesome Style-Sheets
-* Sass Syntax: Just no.
+> SCSS: Sassy CSS?
+
+> SASS: Syntactically Awesome Style-Sheets
+
+> Sass Syntax: Just no.
 
 But ... that's not the proper way to refer to the language and things start to become confusing. If there's no centralized concept for all of us to use we can get all over the map on this and, well, that's just confusing.
 
@@ -31,8 +35,9 @@ Sass is used to refer the language, which englobes the two syntax styles, hence 
 
 You'll usually, for instance: 
 
-* Did you install **Sass**?
-* I love **Sass**! I use it on every project!
+> Did you install **Sass**?
+
+> I love **Sass**! I use it on every project!
 
 Note that when you're referring to the language the first letter is capitalized, denoting a proper name.
 
@@ -42,8 +47,9 @@ Name of the original syntax style that was provided with Sass. One of its charac
 
 Example:
 
-* **SASS** allows you to use `+` instead of the SCSS method `@include`
-* When I began working with Sass I fell in love with **SASS**
+> **SASS** allows you to use `+` instead of the SCSS method `@include`
+
+> When I began working with Sass I fell in love with **SASS**
 
 ## SCSS
 
@@ -51,9 +57,10 @@ Name of the second syntax style which was implemented in Sass as "[the Gateway D
 
 Example:
 
-* Did you commit the SCSS file?
-* SCSS is the gateway drug to Sass.
+> Did you commit the SCSS file?
 
-## In summary
+> SCSS is the gateway drug to Sass.
 
-When you began using Sass you may have started with SCSS. However, after a few projects you may have been lured to try SASS and fell in love with the lack of punctuation noise! Or, maybe not. Maybe you felt that SCSS was the perfect fit for you and you said no to SASS. Either way you can convert your Sass with `sass-convert` to easily move in and out of SASS or SCSS as you see fit.
+## Summary
+
+When you began using **Sass** you may have started with **SCSS**. However, after a few projects you may have been lured to try **SASS** and fell in love with the lack of punctuation noise! Or, maybe not. Maybe you felt that **SCSS** was the perfect fit for you and you said no to **SASS**. Either way you can convert your Sass with `sass-convert` to easily move in and out of **SASS** or **SCSS** as you see fit.
