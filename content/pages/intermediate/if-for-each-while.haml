@@ -1,4 +1,4 @@
-Date: 31 August 2011
+Date: 31 August 2013
 Categories: intermediate, guides, adam-stacoviak
 Author: Adam Stacoviak
 Summary: Sass control directives are the cornerstone of creating libraries for reuse and distribution, and need to be among the very first items on your list of things to learn when taking your Sass skills to the next level. They provide flow and logic and give you a finite level of decision making required by mixins and functions.
@@ -11,6 +11,8 @@ Summary: Sass control directives are the cornerstone of creating libraries for r
   ## A crash course to Sass control directives
   
   [Sass control directives](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#control_directives) provide flow and logic and give you a finite level of decision making required by mixins and functions.
+  
+  In this guide, we will be covering: [@if](#if), [@for](#for), [@each](#each) and [@while](#while).
   
   ### Working Code
   
@@ -44,7 +46,7 @@ Summary: Sass control directives are the cornerstone of creating libraries for r
         display: block;
       }
   
-  Also notice that I've added `@debug` followed by a string in each flow option. This isn't core to this guide, but I've add this to show you how you can output a message to the command-line output log to let users know about certain events such as a `@warn` or a `@debug` as your code gets executed. For complex mixins and functions, this could come in handy to provide a better user experience and make it easier to spot and track down issues.
+  Also notice that I've added `@debug` followed by a string in each flow option. This isn't core to this guide, but I've added this to show you how you can output a message to the command-line output log to let users know about certain events such as a [@warn](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id9) or a [@debug](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id8) as your code gets executed. For complex mixins and functions, this could come in handy to provide a better user experience and make it easier to spot and track down issues.
   
   For example, if you ran this code this is what you would see in the command-line output.
 
@@ -152,9 +154,9 @@ Summary: Sass control directives are the cornerstone of creating libraries for r
   
   ### @while
 
-  The `@while` directive takes a SassScript expression (just like the other control directives) and repeatedly emits the nested block of styles until the statement evaluates to `false`. Much like the `@for` control directive, you are able to create very complex looping statements. Thus far, I have yet to use a `@while` control directive as they are rarely necessary.
+  The `@while` directive takes a SassScript expression (just like the other control directives) and repeatedly emits the nested block of styles until the statement evaluates to `false`. Much like the `@for` control directive, you are able to create very complex looping statements "while" a specific condition evaluates to `true`.
   
-  Here's a fairly simple example of an `@while` control directive.
+  Here's a fairly simple example of a `@while` control directive.
 
       :::sass
       $types: 4
