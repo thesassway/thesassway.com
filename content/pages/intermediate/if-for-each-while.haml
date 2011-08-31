@@ -28,21 +28,21 @@ Summary: Sass control directives are the cornerstone of creating libraries for r
       // Set a variable to run the if statement against
       $boolean: true !default
 
-      =if
+      =simple-mixin
         @if $boolean
           @debug "$boolean is \#{$boolean}"
           display: block
         @else
           @debug "$boolean is \#{$boolean}"
           display: none
-      
-      .if
-        +if
+
+      .some-selector
+        +simple-mixin
 
   Which emits this CSS:
 
       :::css
-      .if {
+      .some-selector {
         display: block;
       }
   
