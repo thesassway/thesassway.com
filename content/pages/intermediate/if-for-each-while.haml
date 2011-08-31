@@ -1,16 +1,16 @@
 Date: 23 August 2013
 Categories: intermediate, guides, adam-stacoviak
 Author: Adam Stacoviak
-Summary: To write mixins and functions you Sass's control directives, @if @for @each and @while need to be among the first items on your list to learn about Sass. Control directives give your mixins flow and logic and can give you a finite level of decision making required by mixins.
+Summary: Sass control directives are the cornerstone of creating libraries for reuse and distribution. Sass control directives @if, @for, @each and @while need to be among the first items on your list of things to learn when taking your Sass skills to the next level. They provide flow and logic and give you a finite level of decision making required by mixins and functions.
 
 %h1 Sass control directives: @if, @for, @each and @while
 
 :markdown
-  [Sass control directives](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#control_directives) are the cornerstone of creating libraries for reuse and distribution. Sass control directives @if, @for, @each and @while need to be among the first items on your list of things to learn when taking your Sass skills to the next level.
+  Sass control directives are the cornerstone of creating libraries for reuse and distribution. Sass control directives @if, @for, @each and @while need to be among the first items on your list of things to learn when taking your Sass skills to the next level.
 
   ## Crash course to Sass control directives
   
-  Sass control directives provide flow and logic and give you a finite level of decision making required by mixins and functions.
+  [Sass control directives](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#control_directives) provide flow and logic and give you a finite level of decision making required by mixins and functions.
   
   ### @if
 
@@ -148,9 +148,11 @@ Summary: To write mixins and functions you Sass's control directives, @if @for @
   
   ### @while
 
-  `@while` - Wui officia deserunt mollit anim id est laborum.
+  The `@while` directive takes a SassScript expression (just like the other control directives) and repeatedly emits the nested block of styles until the statement evaluates to `false`. Much like the `@for` control directive, you are able to create very complex looping statements. Thus far, I have yet to use a `@while` control directive as they are rarely necessary.
+  
+  Here's a fairly simple example of an `@while` control directive.
 
-      :sass
+      :::sass
       $types: 4
       $type-width: 20px
 
@@ -178,4 +180,8 @@ Summary: To write mixins and functions you Sass's control directives, @if @for @
         width: 21px;
       }
 
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  ## Conclussion
+
+  As you can see, Sass control directives super-charge your mixins and functions to give you all the tools you need to make decisions, loop through and to, and provide the flow control required to create mixins and functions.
+
+= haml :adam_stacoviak, :layout => false
