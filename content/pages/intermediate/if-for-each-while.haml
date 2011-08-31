@@ -14,7 +14,7 @@ Summary: To write mixins and functions you Sass's control directives, @if @for @
   
   ### @if
 
-  The `@if` control directive takes a [SassScript](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#sassscript) expression and processes its nested block of styles if the expression returns anything other than `false`.
+  The `@if` control directive takes a [SassScript](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#sassscript) expression and processes its block of styles if the expression returns anything other than `false`.
   
   Here's a fairly simple example of an `@if` control directive. I've simplified this example to be more readable, rather than usable.
 
@@ -110,7 +110,11 @@ Summary: To write mixins and functions you Sass's control directives, @if @for @
   
   ### @each
 
-  `@each` - Wui officia deserunt mollit anim id est laborum.
+  The `@each` directive takes the form `@each $var in <list>`. If you haven't played with lists yet, get ready because this has just turned into a 2 in 1 lesson.
+  
+  As you can see in the example below, `$var` can be any variable name, and `<list>` is a SassScript expression that returns a list. When processed, `$var` is set to each item in the list, and processes its block of styles using that value of `$var`.
+  
+  Here's a fairly simple example of an `@each` control directive.
 
       :::sass
       $list: adam john wynn mason kuroir
