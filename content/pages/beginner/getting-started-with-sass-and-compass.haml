@@ -10,17 +10,32 @@ Summary: So your friend, co-worker, web-buddy or whomever told you about Sass, C
 
   ## Install Sass and Compass
 
-  Sass and Compass get installed as Ruby gems so you'll need to have Ruby on your machine. I'd love to go into that here, but it's beyond the scope of this article. Hit up [the mailing list](http://groups.google.com/group/sass-lang) if you need help finding the right resources for getting Ruby on your machine.
+  Sass and Compass get installed as Ruby gems so you'll need to have Ruby on your machine.
+  
+  If you're on Windows, you can run the [Ruby Installer](http://rubyinstaller.org/). On Linux, [Rails Ready](https://github.com/joshfng/railsready) provides several Ruby essentials. On OS X, Ruby is already installed by default so Ruby just works.
 
-  Ok, first thing's first. Let's install Sass. Also, depending on your setup, you may need to install gems under `sudo`. Open up your [Terminal.app](http://en.wikipedia.org/wiki/Apple_Terminal) and type:
+  Getting Ruby in place is beyond the scope of this article, so, if you hit any snags hit up [the mailing list](http://groups.google.com/group/sass-lang) if you need help finding the right resources for getting Ruby on your machine.
+
+  ### Install Sass
+
+  Ok, let's install Sass! Open up your [Terminal.app](http://en.wikipedia.org/wiki/Apple_Terminal) and type:
+  
+  #### Windows:
+
+      :::bash
+      gem install compass
+
+  #### Linux / OS X:
 
       :::bash
       sudo gem install compass
+  
+  For Linux and OS X folks, depending on your setup, you may or may not need to install gems under the `sudo` user. For example, if you are using [RVM](http://beginrescueend.com/), you won't need to install your gems under the `sudo` user.
 
   Ok, I know what you're thinking. I just said that we are going to install Sass, but I just told you to install Compass based on that directive. The truth is, Compass requires Sass and when you run that command you should see something like this:
 
       :::bash
-      $ gem install compass
+      $ sudo gem install compass
       Fetching: sass-3.1.3.gem (100%)
       Fetching: compass-0.11.3.gem (100%)
       Successfully installed sass-3.1.3
@@ -31,7 +46,14 @@ Summary: So your friend, co-worker, web-buddy or whomever told you about Sass, C
 
   If that's not what you saw when you ran that command, you may not have Ruby or Ruby Gems on your machine. Covering this in detail is a bit beyond where I want to go in this post, so seek help at [the mailing list](http://groups.google.com/group/sass-lang) if you encounter any issues.
 
-  If you are intimidated by [the command line](http://en.wikipedia.org/wiki/Command-line_interface), don't be. [John Long](http://twitter.com/johnwlong) has written an [excellent post](http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/) on his site that will get you up and running fast. There is also [Compass.app](http://compass.handlino.com/) from Handlino if you want a GUI on the Mac, but I won't be covering that in this post.
+  If you are intimidated by [the command line](http://en.wikipedia.org/wiki/Command-line_interface), don't be. [John Long](http://twitter.com/johnwlong) has written an awesome guide titled, ["The Designer’s Guide to the OSX Command Prompt"](http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/), that should get you up to speed on the subject.
+  
+  Also, there are 2 GUI apps for Sass/Compass, but we'll be assuming command-line usage for this guide.
+  
+  * [Scout](http://mhs.github.com/scout-app/) (cross-platform) from [Mutually Human](http://mutuallyhuman.com/)
+  * [Compass.app](http://compass.handlino.com/) (Windows/Linux/Mac OS X) from Handlino.
+  
+  ### CSS Parser
 
   I also like to install [css_parser](http://rubygems.org/gems/css_parser) to take advantage of all the features of `compass stats` which outputs statistics of my Sass stylesheets. It outputs a report that gives a count of the Sass rules, properties, mixins defined and mixins used as well as the CSS rules and properties that get output from your Sass-stylesheets.
 
