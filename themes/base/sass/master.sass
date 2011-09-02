@@ -49,14 +49,14 @@ html
       img
         +transition-property(box-shadow)
         +transition-duration(.5s)
-        +border-radius(5px)
-        +box-shadow(rgba(#000,.8) 0 0 5px)
+        +border-radius(3px)
+        +box-shadow(rgba(#000,.8) 0 0 4px)
         background: #fff
         cursor: pointer
         padding: 2px
         width: 63px
         &:hover
-          +box-shadow(rgba(#000,.4) 0 0 5px)
+          +box-shadow(rgba(#000,.8) 0 0 8px)
       p
         padding-right: 10px
 
@@ -66,6 +66,7 @@ html
 
 #footer
   background: #171717
+  // +background(linear-gradient(#333333, #171717 75%))
   border:
     top: 5px solid #aaa
     bottom: 5px solid $shadow-black
@@ -96,6 +97,15 @@ html
       margin-bottom: 10px
       &:last-child
         margin-bottom: 0
+      &.book a
+        +border-radius(3px)
+        +box-shadow(rgba(#000,1) 0 0 4px)
+        background: image-url("sass-compass-in-action-80.png") no-repeat
+        cursor: pointer
+        display: block
+        height: 100px
+        text-indent: -99999px
+        width: 80px
     a
       +transition-property(all)
       +transition-duration(.5s)
