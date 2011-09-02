@@ -46,6 +46,9 @@ html
         a
           color: inherit
           text-decoration: none
+        span
+          font-size: 12px
+          font-weight: normal
       img
         +transition-property(box-shadow)
         +transition-duration(.5s)
@@ -98,14 +101,19 @@ html
       &:last-child
         margin-bottom: 0
       &.book a
+        +transition-property(box-shadow)
+        +transition-duration(.5s)
         +border-radius(3px)
-        +box-shadow(rgba(#000,1) 0 0 4px)
+        +box-shadow(rgba(#000, 1) 0 0 6px)
         background: image-url("sass-compass-in-action-80.png") no-repeat
         cursor: pointer
         display: block
         height: 100px
+        padding: 0
         text-indent: -99999px
         width: 80px
+        &:hover
+          +box-shadow(rgba(#000, 1) 0 0 12px)
     a
       +transition-property(all)
       +transition-duration(.5s)
@@ -137,12 +145,9 @@ html
   .site
     @extend .grid-container
     padding: 50px 0 0 0
-    p
-      @extend .grid-8
-      font-size: 12px
     a.credit
-      @extend .grid-4 
-      background: url(/base/images/rizn-media-production.png) no-repeat 0 50%
+      @extend .grid-full
+      background: image-url("rizn-media-production.png") no-repeat
       display: inline-block
       line-height: 22px
       text-indent: -99999px
