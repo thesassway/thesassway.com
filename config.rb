@@ -1,7 +1,7 @@
 # Compass Configuration
 
 require 'grid-coordinates'
-require 'zocial-toolkit'
+# require 'zocial-toolkit'
 
 # HTTP paths
 http_path             = '/'

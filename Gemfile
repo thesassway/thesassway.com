@@ -5,7 +5,7 @@ gem "nesta", "0.9.5"
 gem "compass", "~> 0.11.5"
 gem "css_parser", "~> 1.1.9"
 gem 'grid-coordinates', "~> 1.1.5"
-gem "zocial-toolkit", :path => "~/Dropbox/Code/OS/sass/zocial-toolkit"
+# gem "zocial-toolkit", :path => "~/Dropbox/Code/OS/sass/zocial-toolkit"
 gem "pygments.rb", "~> 0.1.2"
 gem "rack-codehighlighter", :git => "git://github.com/jlong/rack-codehighlighter.git"
 
