@@ -1,5 +1,0 @@
-# Mason Wendell
-
-# Mason Wendell
-
-Mason Wendell is Creative Director at [Zivtech](http://zivtech.com) where he enjoys blurring the line between design and front-end development. He developed [The Coding Designer's Survival Kit](https://github.com/canarymason/The-Coding-Designers-Survival-Kit) and hosts a video podcast about designing in the browser using Sass at [TheCodingDesigner.com](http://thecodingdesigner.com). He blogs at [Birds and Monkeys](http://birdsandmonkeys.com) when he runs out of room everywhere else. Follow Mason on Twitter at [@canarymason](http://twitter.com/canarymason).

@@ -1,6 +1,8 @@
-# Contact us, or Submit a tip!
+title: Contact us, Submit a tip or just say hello
 
-# Contact us, or Submit a tip!
+# Contact us
+
+## Contact us, Submit a tip or just say hello
 
 Need to contact us, or have an awesome tip you'd like to share?
 

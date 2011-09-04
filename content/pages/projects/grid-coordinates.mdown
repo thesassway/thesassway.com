@@ -1,6 +1,7 @@
 Date: 14 August 2014
 Categories: projects
 Author: Adam Stacoviak
+about_author: adam_stacoviak
 Summary: Grid Coordinates is a highly configurable Sass based CSS Grid Framework Generator, inspired by 960 Grid System and 1kb CSS Grid. Grid Coordinates takes the "coordinates" (total columns, grid width, gutter width) and generates the styles required for your CSS grid.
 
 # Grid Coordinates: A highly configurable Sass based CSS Grid Framework

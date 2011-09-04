@@ -1,12 +1,48 @@
 [role=page]
+  // Overide the cascade
+  .author-bio
+    border-bottom: 2px solid $light-grey
+    margin-bottom: 30px
+    padding-bottom: 30px
+    border-top: none
+    margin-top: 30px
+    padding-top: 0
+    h2
+      display: none
+    p
+      font-size: 16px
+      margin-left: 160px
+    img
+      +transition-property(box-shadow)
+      +transition-duration(.5s)
+      +border-radius(3px)
+      +box-shadow(rgba(#000,.8) 0 0 4px)
+      background: #fff
+      cursor: pointer
+      margin:
+        top: 5px
+        right: 25px
+      padding: 2px
+      width: 125px
+      &:hover
+        +box-shadow(rgba(#000,.8) 0 0 8px)
   .post
     margin-bottom: 40px
   .page-articles, .page-categories
     margin-top: 50px
   .page-articles > header
     display: none
-  .content h1:first-of-type
-    display: none
-  h3
-    font-size: 24px
-    line-height: 1.2
+  .content
+    h1
+      +reset-box-model
+    h2
+      @extend .PFCentroSerifPro-Italic
+      color: $darkest-grey
+      font-size: 16px
+      margin-top: 15px
+      margin-bottom: 30px
+      & + p
+        font-size: 18px
+    h3
+      font-size: 24px
+      line-height: 1.2

@@ -14,23 +14,6 @@
         content: ", "
       &:last-of-type:after
         content: ""
-  .author-bio
-    +clearfix
-    border-top: 2px solid $light-grey
-    margin-top: 30px
-    padding-top: 30px
-    h2
-      margin-top: 0
-      margin-bottom: 10px
-    img
-      +float-left
-      margin-right: 12px
-      width: 65px
-    p
-      font-style: normal
-      font-size: 14px
-      &:last-of-type
-        margin-bottom: 0
   #disqus_thread
     margin-top: 50px
     h3, #dsq-account-dropdown
@@ -49,3 +32,21 @@
         text-decoration: none
         em
           text-decoration: none
+
+.author-bio
+  +pie-clearfix
+  border-top: 2px solid $light-grey
+  margin-top: 30px
+  padding-top: 30px
+  h2
+    margin-top: 0
+    margin-bottom: 10px
+  img
+    +float-left
+    margin-right: 12px
+    width: 65px
+  p
+    font-style: normal
+    font-size: 14px
+    &:last-of-type
+      margin-bottom: 0
