@@ -7,16 +7,18 @@
     - if @page.date
       %article.post
         ~ @page.to_html(self)
+        - if author_block = @page.metadata('about_author')
+          = haml author_block.to_sym, :layout => false
         - unless @page.categories.empty?
           .page-categories
             %p
               - unless @page.date.nil?
                 = "<em>#{format_date(@page.date)}</em> ~ "
-              Editorial indexes: 
+              Editorial indexes:
               - @page.categories.each do |category|
                 %a{ :href => category.abspath }= category.heading
           = haml :comments, :layout => false
-        
+
     - else
       ~ @page.to_html(self)
 
