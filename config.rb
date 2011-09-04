@@ -1,5 +1,8 @@
 # Compass Configuration
 
+require 'grid-coordinates'
+require 'zocial-toolkit'
+
 # HTTP paths
 http_path             = '/'
 http_stylesheets_path = '/base/css'
@@ -12,12 +15,16 @@ css_dir               = 'themes/base/public/base/css'
 images_dir            = 'themes/base/public/base/images'
 javascripts_dir       = 'themes/base/public/base/javascripts'
 
+# Fonts
+http_fonts_path       = '/base/fonts'
+http_fonts_dir        = 'themes/base/public/base/fonts'
+
 # Set to true for easier debugging
 line_comments         = false
 preferred_syntax      = :sass
 
 # CSS output style - :nested, :expanded, :compact, or :compressed
-output_style          = :compressed
+output_style          = :expanded
 
 # Determine whether Compass asset helper functions generate relative
 # or absolute paths

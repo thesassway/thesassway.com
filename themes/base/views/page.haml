@@ -8,10 +8,10 @@
       %article.post
         ~ @page.to_html(self)
         - unless @page.categories.empty?
-          %ul.page-categories
-            %li Categories
-            - @page.categories.each do |category|
-              %li
+          .page-categories
+            %p
+              Editorial indexes: 
+              - @page.categories.each do |category|
                 %a{ :href => category.abspath }= category.heading
           = haml :comments, :layout => false
         
