@@ -14,7 +14,6 @@
             %p
               - unless @page.date.nil?
                 = "<em>#{format_date(@page.date)}</em> ~ "
-              Editorial indexes:
               - @page.categories.each do |category|
                 %a{ :href => category.abspath }= category.heading
         :plain
