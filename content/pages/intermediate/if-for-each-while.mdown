@@ -30,10 +30,10 @@ Here's a fairly simple example of an `@if` control directive. I've simplified th
 
     =simple-mixin
       @if $boolean
-        @debug "$boolean is \#{$boolean}"
+        @debug "$boolean is #{$boolean}"
         display: block
       @else
-        @debug "$boolean is \#{$boolean}"
+        @debug "$boolean is #{$boolean}"
         display: none
 
     .some-selector
@@ -69,7 +69,7 @@ Here's a fairly simple example of a `@for` control directive.
     $class-slug: for !default
 
     @for $i from 1 through 4
-      .\#{$class-slug}-\#{$i}
+      .#{$class-slug}-#{$i}
         width: 60px + $i
 
 Which emits this CSS:
@@ -98,20 +98,20 @@ Here's a sample of the code you'll see in that file.
     :::sass
     // Loops
     @for $i from 1 through $grid-columns
-      .grid-\#{$i}
+      .grid-#{$i}
         +grid-base($i)
         @extend .grid-block
     @for $i from 1 through $grid-columns - 1
-      .grid-prefix-\#{$i}
+      .grid-prefix-#{$i}
         +grid-prefix($i)
     @for $i from 1 through $grid-columns - 1
-      .grid-suffix-\#{$i}
+      .grid-suffix-#{$i}
         +grid-suffix($i)
     @for $i from 1 through $grid-columns - 1
-      .grid-push-\#{$i}
+      .grid-push-#{$i}
         +grid-push($i)
     @for $i from 1 through $grid-columns - 1
-      .grid-pull-\#{$i}
+      .grid-pull-#{$i}
       +grid-pull($i)
 
 ### @each
@@ -127,8 +127,8 @@ Here's a fairly simple example of an `@each` control directive.
 
     =author-images
       @each $author in $list
-        .photo-\#{$author}
-          background: image-url("avatars/\#{$author}.png") no-repeat
+        .photo-#{$author}
+          background: image-url("avatars/#{$author}.png") no-repeat
 
     .author-bio
       +author-images
