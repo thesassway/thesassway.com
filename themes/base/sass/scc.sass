@@ -1,0 +1,52 @@
+// Compass
+@import "compass"
+
+// Reset
+@import "compass/reset"
+
+// Grid
+@import "grid-coordinates"
++grid-coordinates
+
+// Type layout
+$base-font-size: 14px
+$base-line-height: 18px
+
++establish-baseline
+
+h1
+  +adjust-font-size-to(26px)
+h2
+  +adjust-font-size-to(20px)
+h3
+  +adjust-font-size-to(18px)
+
+h1, h2, h3
+  font-family: "GraublauWeb"
+
+h4
+  +adjust-font-size-to(16px)
+h5
+  +adjust-font-size-to(14px)
+h6
+  +adjust-font-size-to(12px)
+
+p
+  font-family: Verdana, Arial, sans-serif
+  +trailer
+
+@import "scc/fonts"
+  
+body > header
+  +trailer(2)
+  background: #888
+  padding: 1.5em 0
+  h1
+    +adjust-font-size-to(90px)
+    +trailer(0)
+    color: #151515
+    font-family: "GraublauWeb-Bold"
+    font-weight: bold
+    letter-spacing: 2px
+    text-align: center
+    text-transform: uppercase
