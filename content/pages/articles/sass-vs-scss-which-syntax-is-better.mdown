@@ -1,11 +1,12 @@
-Date: 23 August 2013
+Date: 8 September 2013
 Categories: articles, john-w-long
 Author: John W. Long
-Summary: Since the creation of Sass (the language), it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added features such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented coding syntax as well as a brand new perspective on CSS authoring. Then the SCSS (Sassy CSS) syntax was introduced.
+about_author: john_w_long
+Summary: Since the creation of Sass, it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added highly sought after features such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented coding syntax as well as a brand new perspective on CSS authoring. Then the SCSS (Sassy CSS) syntax was introduced.
 
 # Sass vs. SCSS: Which Syntax is Better?
 
-Since the creation of Sass (the language) nearly [5 years ago](http://adamstac.com/99xW), it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added features such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented coding syntax as well as a brand new perspective on CSS authoring.
+Since the creation of Sass (the language) nearly [5 years ago](http://adamstac.com/99xW), it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added highly sought after features such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented coding syntax as well as a brand new perspective on CSS authoring.
 
 ## The Sass syntax
 
@@ -17,191 +18,102 @@ And the objections trail on ...
 
 ## SCSS to the rescue!
 
-In [version 3 of Sass](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0) the SCSS (Sassy CSS) syntax was introduced as "the new main syntax" for Sass and builds on the existing syntax of CSS. It uses brackets and semi-colons just like CSS and it doesn't care about indentation levels or white-space. In fact, you could call SCSS a superset of CSS. Or, to put it another way, any valid CSS is valid SCSS. SCSS has the same features of Sass, but without the opinionated syntax.
+In [version 3 of Sass](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0) the SCSS (Sassy CSS) syntax was introduced as "the new main syntax" for Sass and builds on the existing syntax of CSS. It uses brackets and semi-colons just like CSS and it doesn't care about indentation levels or white-space. In fact, Sass's SCSS syntax is a superset of CSS. Or, to put it another way, any valid CSS is valid SCSS. To connect the dots even more on this note, if you've ever written a blog post, comment or any other text document in Markdown, you were using a superset of HTML. In the end, SCSS has the same features of Sass, but without the opinionated syntax.
 
-Those who are new to Sass have less to learn. And as for Sass detractors, well, now they can't complated about the syntax. As far as we're concerned, SCSS is the new CSS.
+Those who are new to Sass have less to learn. And as for Sass detractors, well, they can no longer complain about the syntax. As far as I'm concerned, SCSS is the new CSS.
 
 ## Which syntax is better?
 
-If you are an old hat at Sass, chances are you've got an opinion about which syntax is better. And there are a lot of good people on both sides of the isle. Some prefer the old, original syntax. Others are fans of SCSS.
+If you are an old hat at Sass, chances are you've got an opinion about which syntax is better. And there are a lot of good people on both sides of the isle. Some prefer Sass, the original syntax - while others prefer SCSS.
 
 I'm not going to pretend to be unbiased in this debate. I myself am a huge fan of SCSS. A recent convert, actually. I was once a die-hard fan of the indented syntax, but I've changed my mind on the matter. In this article I'd like to share why.
 
 Before I get to that, let me talk about the reasons that I loved Sass, and why I almost didn't give SCSS a chance.
 
-1. The Sass syntax is more concise
-  
-  It's true. The indented syntax doesn't have the semi-colons or braces. It doesn't require
-  that you use the awefulness of "@include" for your mixins. Instead it
-  introduces the "+" operator. It's so much simpler.
+### Pros for Sass
 
-2. The Sass syntax is easier to read
+#### Reason 1: The Sass syntax is more concise
 
-  Because of it's rules about indentation, it's kind of hard to write unreadable
-  Sass. Sass forces you to put to write your code the same way every time. On
-  large teams or in situations where you haven't written all of the code,
-  this could be a huge plus.
+It's true. The indented syntax doesn't have the semi-colons or braces. It doesn't require that you use the verbose "@include" for your mixins, and instead uses the `+` operator. That's less typing and is so much simpler.
 
-3. The Sass syntax doesn't complain about missing semi-colons
+#### Reason #2: The Sass syntax is easier to read
 
-  Ok, I know this probably belongs with point (1). But I've listed it separately,
-  because it was one of the major reasons I loved the original syntax. Not only
-  did I not have to type semi-colons at the end of every attribute/value pair,
-  but Sass ensured that the output always had the correct semi-colon placement.
-  This is a huge win over writing pure CSS which doesn't complain about
-  semi-colons. When writing straight CSS I'm surprised by how many times a
-  misplaced semi-colon is the reason a rule isn't being applied.
+Because of it's rules about indentation, it's kind of hard to write unreadable Sass. Sass forces you to write your code the same way every time. There's no option for venturing off and making your own style of commenting and formatting. It's very strict on how things can be done. On large teams or in situations where you aren't the sole author of all the code, this could be a huge plus. It forces the team into more strict coding practices (much like what XHTML did for HTML) and leaves little room for deviation from the beaten path.
 
-Now before I get too far, I just want to say that this isn't a 3 points for Sass,
-80 points for SCSS argument. There are going to be more points for SCSS when I'm
-done, but your feelings on each of the points are going to vary. For some the 3
-points above are going to be persuasive enough to keep you using Sass. Switching
-back to something more like CSS after using Sass is going to seem like lunacy.
+#### Reason #3: The Sass syntax doesn't complain about missing semi-colons
 
-For me that's exactly what it felt like the first time I tried to do a project in
-SCSS. The brackets and semi-colons were back. A lot of what I hated about CSS was
-back.
+Ok, I know this probably belongs with reason #1, but I'm listing it separately because it was one of the major reasons I loved the original syntax. Not only did I not have to type semi-colons at the end of every attribute/value pair, but Sass ensured that the output always had the correct semi-colon placement. This is a huge win over writing pure CSS which doesn't complain about semi-colons. When writing straight CSS I'm surprised by how many times a misplaced semi-colon is the reason a rule isn't being applied.
 
-In fact, I like any good citizen of the Internet, I tweeted my hatred for the
-new syntax. I had dipped my toes in the water and found it too chilly for my
-taste. So I hung up my curley brackets and semi-colons and went on my way. Sass
-was good enough for me just as it was, thank you. No need to revert back to the
-dark ages of CSS just to get a more familiar syntax.
+### This isn't a points war
 
-What changed my heart? To tell you the truth I'm not really sure. A lot of it for
-sure had to do with the fact that my good friend Brandon Mathis had recently
-switched over to the SCSS syntax, and felt that it was better. He didn't offer a
-lot of reasons. He just said that he had found that he liked it better. It took
-him a while, he said, but he had gotten to the point where he really liked it. In
-fact, he prefered it over the Sass syntax.
+Now, before I get too far ahead of myself, I just want to say that this isn't a 3 points for Sass, 80 points for SCSS argument. There are going to be more points for SCSS when I'm done, but your feelings on each of the points are going to vary. For some, the three points I've stated above will be persuasive enough to keep you using Sass. Switching back to something more like CSS after using Sass is going to seem like lunacy. For me that's exactly what it felt like the first time I tried to do a project in SCSS. The brackets and semi-colons were back. A lot of what I hated about CSS was back. Needless to say, it was like taking a step backwards vs continuing to push forward. In fact, like any good citizen of the Internet, I tweeted my hatred for the new syntax. I had dipped my toes in the water and found it too chilly for my taste. So I hung up my curly-braces and semi-colons and went on my way. Sass was good enough for me just as it was, thank you very much. No need to revert back to the dark ages of CSS just to get a more familiar syntax.
 
-Now Brandon has probably written more Sass than almost anyone I know. He's on the
-Compass core team and has used Sass exclusively for his projects for 3 or 4 years
-now. His opinion holds a lot of weight on these things for me.
+So, what changed my heart? To tell you the truth I'm not really sure. A lot of it for sure had to do with the fact that my good friend Brandon Mathis had recently switched over to the SCSS syntax, and felt that it was better. He didn't offer a lot of reasons. He just said that he had found that he liked it better. It took him a while, he said, but he had gotten to the point where he really liked it. *In fact*, he preferred it over the Sass syntax.
 
-Add to that the fact that Chris Eppstien (the author of Compass) also seemed to
-prefer the SCSS syntax -- he rewrote all of Compass in it -- and I began to question
-my resolve.
+Now Brandon has probably written more Sass than almost anyone I know. He's on the Compass core team and has used Sass exclusively in his projects for ~3 years now. His opinion holds a lot of weight on these things for me.
 
-So on another project, instead of giving it a half-hearted try for a day, I decided to
-code the whole project in SCSS. And compare the difference.
+Add to that the fact that Chris Eppstein (the author of Compass) also seemed to prefer the SCSS syntax - he rewrote all of Compass in it - and I began to question my resolve.
 
-What did I find? I found that it took some getting used to, but I actually began
-to prefer the new SCSS syntax to the original Sass syntax.
+On my very next project, instead of giving it a half-hearted try for a day, I decided to go all in and code the whole project in SCSS to justifiably compare the difference.
 
-Here's why:
+What did I find? I found that it took some getting used to, but I actually began to prefer the new SCSS syntax to the original Sass syntax. Here's why ...
 
-1. SCSS is more expressive
+### Pros for SCSS
 
-  No really! I know I argued above that Sass is easier to read because of the way
-  it forces you to write your rules and attributes with indentation, but after
-  coding for a while in SCSS I've realized that I really like having the option to
-  put a couple of attribute/value pairs on the same line. I don't always write it
-  this way. Normally, I write in expanded format with an attribute/value pair per
-  line. But the compressed syntax is helpful when I only have an attribute/value
-  pair or two. I especially like it for changing the color of a font for a hover
-  state or adding an underline to a link.
+#### Reason #1: SCSS is more expressive
 
-  For me SCSS ends up being more logically grouped than Sass. I can compress code
-  that would take several lines in the Sass syntax into just a couple of lines
-  of SCSS. Typically rules are grouped anyway. And when reading code the number of
-  lines that a bit of code takes tends to indicate it's importance.
+No really! I know I argued above that Sass is easier to read because of the way it forces you to write your rules and attributes with indentation, but after coding for a while in SCSS I've realized that I really like having the option to put a couple of attribute/value pairs on the same line. I don't always write it this way. Normally, I write in expanded format with an attribute/value pair per line. But the compressed syntax is helpful when I only have an attribute/value pair or two. I especially like it for changing the color of a font for a hover state or adding an underline to a link.
 
-  In SCSS I can compress lines that are fairly standard. And expand across several
-  lines when I'm doing something complicated.
+For me SCSS ends up being more logically grouped than Sass. I can compress code that would take several lines in the Sass syntax into just a couple of lines of SCSS. Typically rules are grouped anyway. And when reading code the number of lines that a bit of code takes tends to indicate it's importance.
 
-2. SCSS encourages proper nesting of rules
+In SCSS I can compress lines that are fairly standard. And expand across several lines when I'm doing something complicated.
 
-  One of the huge advantages of Sass in general is that it allows you to nest 
-  selectors within selectors. This is awesome because when you change the "name" of
-  an element, you only need to change it in one place (the outer selector) instead
-  of in numerous places like you would in CSS.
+#### Reason #2: SCSS encourages proper nesting of rules
 
-  But to quote Spiderman, with great power comes great responsibility.
+One of the huge advantages of Sass in general is that it allows you to nest selectors within selectors. This is awesome because when you change the "name" of an element, you only need to change it in one place (the outer selector) instead of in numerous places like you would in CSS.
 
-  And with the Sass syntax it really is true. It is too much power. At least for
-  someone like me. Sass code I write tends to get too deeply nested. Why? Because it's
-  so easy. Everytime you nest something in Sass you need to be concious of the impact
-  that it is having on your output code.
+But to quote Spiderman, with great power comes great responsibility.
 
-  Deeply nested Sass produces CSS with *really* long selectors. Especially if you use
-  the comma operator at a high level (which is probably the most dangerous aspect of
-  nesting). Not only is this bad because it increases the file size of the final CSS,
-  it's also bad because too much specificity is hard to override in other rules.
-  Importantitice is the result. You find yourself using !important in anger just to
-  get a rule to interpreted correctly.
+And with the Sass syntax it really is true. It is too much power. At least for someone like me. Sass code I write tends to get too deeply nested. Why? Because it's so easy. Every-time you nest something in Sass you need to be conscious of the impact that it is having on your output code.
 
-3. SCSS encourages more modular code with @extends
+Deeply nested Sass produces CSS with *really* long selectors. Especially if you use the comma operator at a high level (which is probably the most dangerous aspect of nesting). Not only is this bad because it increases the file size of the final CSS, it's also bad because too much specificity is hard to override in other rules. Importance is the result. You find yourself using !important in anger just to get a rule to interpreted correctly.
 
-  Because nesting is harder in SCSS I find myself using @extends a lot more frequently.
-  I tend to write code that is nested 1 - 2 levels deep underneath an abstract or
-  virtual class name that is then extended by other selectors. Again the brackets,
-  which are "ugly", help me recognize when code too deeply nested and force me down the
-  path of writing more modular code.
+#### Reason #3: SCSS encourages more modular code with @extends
 
-  Oh, and if you are not using @extends in your code, you are not doing it correctly.
-  Experts agree. :)
+Because nesting is harder in SCSS I find myself using @extends a lot more frequently. I tend to write code that is nested 1 - 2 levels deep underneath an abstract or virtual class name that is then extended by other selectors. Again the brackets, which are "ugly", help me recognize when code too deeply nested and force me down the path of writing more modular code.
 
-4. SCSS allows me to write better inline documentation
+Oh, and if you are not using @extends in your code, you are not doing it correctly. Experts agree. :)
 
-  It's true that the Sass syntax allows a certain amount of flexibility with comments,
-  but I find myself writing more inline-documentation directly in SCSS than
-  Sass. A lot of this has to do with the way the code hangs together and the flexibility
-  in syntax that SCSS provides. Brackets help me group my code and comments in a way
-  that makes more sense to me. I know we are talking asthetics here, but it more
-  flexibility makes a difference when writing documentation.
+#### Reason #4: SCSS allows me to write better inline documentation
+
+It's true that the Sass syntax allows a certain amount of flexibility with comments, but I find myself writing more inline-documentation directly in SCSS than Sass. A lot of this has to do with the way the code hangs together and the flexibility in syntax that SCSS provides. Brackets help me group my code and comments in a way that makes more sense to me. I know we are talking aesthetics here, but it more flexibility makes a difference when writing documentation.
  
-5. Existing CSS tools often work with SCSS
+#### Reason #5: Existing CSS tools often work with SCSS
 
-  I don't actually use a lot of other tools with my CSS, but one area where this is
-  particularly helpful is syntax highlighting. Depending on your editor preference,
-  it may or may not have support for Sass. But most editors already have builtin support
-  for CSS and tend to work well with SCSS. Also, if you do any blogging, almost all code 
-  highlighters support CSS, but only a handful support the Sass syntax.
+I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for Sass. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, almost all code highlighters support CSS, but only a handful support the Sass syntax.
 
-6. Integration with an existing CSS codebase is much easier
+#### Reason #6: Integration with an existing CSS codebase is much easier
 
-  I've often had to integrate with other CSS code when building a web site. It's either
-  code from some jQuery library I'm using, or a pre-existing CSS codebase. In the past
-  I've often converted that code to Sass and lost valuable hours in the conversion process.
+I've often had to integrate with other CSS code when building a web site. It's either code from some jQuery library I'm using, or a pre-existing CSS codebase. In the past I've often converted that code to Sass and lost valuable hours in the conversion process.
 
-  For a library, the downside is that it's not code that you really want to maintain. When
-  upgrading the library, the last thing you want to do is to go through the conversion
-  process again. If it's an existing codebase, it's often much better to make smaller
-  changes, than to jump into a megalythic refactoring process right away.
-  
-  SCSS lets you use the existing code as is, and make small refactorings as you go along.
+For a library, the downside is that it's not code that you really want to maintain. When upgrading the library, the last thing you want to do is to go through the conversion process again. If it's an existing codebase, it's often much better to make smaller changes, than to jump into a megalithic refactoring process right away.
 
-  It's true that with the indented syntax the `sass-convert` tool can get you most of the
-  way there, but it's never a completely clean conversion.
+SCSS lets you use the existing code as is, and make incrementally re-factor as you go along.
 
-7. It's much easier to convince someone to use SCSS than Sass
+It's true that with the indented syntax the `sass-convert` tool can get you most of the way there, but it's never a completely clean conversion.
 
-  From a Sass advocacy perspective, it's much easier to introduce someone to a couple of
-  new concepts (SCSS) than it is to introduce them to an entirely new syntax. Designers
-  are caggy people. They are opinionated, and warry of change. They tend to do what they
-  know well and while they do experiment with new things, experimentation with new
-  technology is not built into the design community like it is the programming community.
+#### Reason #7: It's much easier to convince someone to use SCSS than Sass
 
-  And don't forget the other barriers to getting started with Sass. Right now you
-  need to be familiar with the command prompt. At least enough to run a couple of commands.
-  The command prompt is a scary to the mouse-driven designer.
+From a Sass advocacy perspective, it's much easier to introduce someone to a couple of new concepts (SCSS) than it is to introduce them to an entirely new syntax. Designers are caggy people. They are opinionated, and wary of change. They tend to do what they know well and while they do experiment with new things, experimentation with new technology is not built into the design community like it is the programming community.
 
-8. SCSS could become the next version of CSS
+And don't forget the other barriers to getting started with Sass. Right now you need to be familiar with the command prompt. At least enough to run a couple of commands. The command prompt is a scary to the mouse-driven designer.
 
-  Since it's creation Sass and languages like it have attracted the attention of a lot of
-  smart people. Some of those people are already thinking about adding some of the features
-  that Sass introduced to CSS. It's possible that the syntax introduced in SCSS could
-  become CSS4!
+#### Reason #8: SCSS could become the next version of CSS
+
+Since it's creation Sass and languages like it have attracted the attention of a lot of smart people. Some of those people are already thinking about adding some of the features that Sass introduced to CSS. It's possible that the syntax introduced in SCSS could become CSS4!
 
 ## Conclusion
 
-I hope I've challenged you a little in your own perspective on both syntaxes. While I'm
-clearly arguing the advantages of the SCSS syntax, I'd also like to encourage you to
-go outside of your comfort zone and experiment a little more. If you've only been exposed
-to the SCSS syntax, perhaps you'd enjoy spending some time with the indented Sass syntax.
-And if you're an original-flavor-only, you may benifit from giving the SCSS syntax a
-serious try.
+I hope I've challenged you a little in your own perspective on both syntaxes. While I'm clearly arguing the advantages of the SCSS syntax, I'd also like to encourage you to go outside of your comfort zone and experiment a little more. If you've only been exposed to the SCSS syntax, perhaps you'd enjoy spending some time with the indented Sass syntax. And if you're an original-flavor-only, you may benefit from giving the SCSS syntax a serious try.
 
-As I said before, there are a lot of good people on both sides of the isle in this
-arguement. Feel free to express your own opinion in the comments below.
+As I said before, there are a lot of good people on both sides of the isle in this argument. Feel free to express your own opinion in the comments below.
