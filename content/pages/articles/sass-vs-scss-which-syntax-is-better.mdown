@@ -10,9 +10,9 @@ Since the creation of Sass nearly [5 years ago](http://adamstac.com/99xW), it ha
 
 ## The Sass syntax
 
-The Sass syntax was inherited from its first-born brother [Haml](http://haml-lang.com/). While the two languages have shared a common ancestry and once shared the same Gem, [they are now split](http://nex-3.com/posts/103-haml-and-sass-are-split) and have gone their separate ways, respectively. Each seeking its own fame and fortune in the land of Open Source opportunity.
+The indented syntax of Sass was inherited from its first-born brother [Haml](http://haml-lang.com/). And while Sass and Haml once got along -- Hey, they even shared the same [Ruby Gem]:http://rubygems.org/! -- disention in the family caused the two languages to split and [go their separate ways](http://nex-3.com/posts/103-haml-and-sass-are-split). Each seeking its own fame and fortune in the land of Open Source opportunity.
 
-One common objection among Sass detractors is that the indentation-oriented syntax is so foreign to CSS. Why spend the time learning a language that is nice, but radically different from CSS? This difference, they fear, will make it hard for them to continue to remain fluent in a language with as many [nuances](http://mattwilcox.net/archive/entry/id/1043/) and [subtleties](http://www.thomasknierim.com/154/web-development/selector-subtleties/) as CSS. What if Sass is just a fad? What if it doesn't last? What if it doesn't gain traction among the masses? What if all their code and newly formed best practices fall by the wayside should the "downfalls" of Sass become a reality? What if ... ah, you get the point.
+One common objection among Sass detractors is that the indented syntax is so foreign to CSS. Why spend the time learning a language that is radically different from CSS? This difference, they fear, will make it hard for them to continue to remain fluent in a language with as many [nuances](http://mattwilcox.net/archive/entry/id/1043/) and [subtleties](http://www.thomasknierim.com/154/web-development/selector-subtleties/) as CSS. What if Sass is just a fad? What if it doesn't last? What if it doesn't gain traction among the masses? What if all their code and newly formed best practices fall by the wayside should the "downfalls" of Sass become a reality? What if ... ah, you get the point.
 
 And the objections trail on ...
 
@@ -26,7 +26,7 @@ Those who are new to Sass have less to learn. And as for Sass detractors, well, 
 
 If you are an old hat at Sass, chances are you've got an opinion about which syntax is better. And there are a lot of good people on both sides of the isle. Some prefer Sass, the original syntax - while others prefer SCSS.
 
-I doubt this debate will ever truly end, and I'm not even going to pretend to be unbiased. I myself am a huge fan of SCSS. A recent convert, actually. I was once a die-hard fan of the indented syntax, but I've changed my mind on the matter and I wrote this article to share why.
+I'm not even going to pretend to be unbiased in this debate. I myself am a huge fan of SCSS. A recent convert, actually. I was once a die-hard fan of the indented syntax, but I've changed my mind on the matter and I wrote this article to share why.
 
 Before I get to that, let me explain the reasons I loved Sass, and why I *almost* didn't give SCSS a chance.
 
@@ -46,7 +46,7 @@ Ok, I know this probably belongs with reason #1, but I'm listing it separately b
 
 ## This isn't a points war
 
-Now, before I get too far ahead of myself, I just want to say that this article isn't a 3 points for Sass, 8 points for SCSS argument. Sure, I list more points for SCSS, but your feelings on each of the points are going to vary. For some, the three points I've stated above as pros for Sass will be persuasive enough to keep you using it. For many, switching back to something more like CSS after using Sass will seem like lunacy. For me that's exactly what it felt like the first time I tried to do a project in SCSS. The brackets and semi-colons were back. A lot of what I hated about CSS was back. Needless to say, it was like taking a step backwards vs continuing to push forward (that's the point right?). In fact, like any good citizen of the Internet, I tweeted my hatred of SCSS. I had dipped my toes in the water and found it too chilly for my taste. So I hung up my curly-braces and semi-colons and went on my way. Sass was good enough for me just as it was, *thank you very much*. No need to revert back to the dark ages of CSS just to get a more familiar syntax.
+Now, before I get too far ahead of myself, I just want to say that this article isn't a 3 points for Sass, 8 points for SCSS argument. Sure, I list more points for SCSS, but your feelings on each of the points are going to vary. For some, the three points I've stated above as pros for Sass will be persuasive enough to keep you using it. For many, switching back to something more like CSS after using Sass will seem like lunacy. For me that's exactly what it felt like the first time I tried to do a project in SCSS. The brackets and semi-colons were back. A lot of what I hated about CSS was back. It was like taking a step backwards instead of continuing to push forward (that's the point right?). In fact, like any good citizen of the Internet, I tweeted my hatred of SCSS. I had dipped my toes in the water and found it too chilly for my taste. So I hung up my curly-braces and semi-colons and went on my way. Sass was good enough for me just as it was, *thank you very much*. No need to revert back to the dark ages of CSS just to get a more familiar syntax.
 
 ## A changed heart?
 
@@ -54,7 +54,7 @@ So, what changed my heart? To tell you the truth I'm not really sure. A lot of i
 
 Now Brandon has probably written more Sass than almost anyone I know. He's on the Compass core team and has been using Sass exclusively in his projects for ~3 years now. Needless to say, his opinion on the matter holds a lot of weight for me. Add to that the fact that [Chris Eppstein](http://chriseppstein.github.com/) (the author of [Compass](http://compass-style.org/)) also seemed to prefer the SCSS syntax. He even rewrote all of Compass in it.
 
-I was beginning to question my resolve. So on my very next project, instead of giving it a half-hearted try for a day, I decided to go all in and code the whole project in SCSS to justifiably compare the difference. The outcome? I found that it took some getting used to (as expected), but I actually began to prefer the new SCSS syntax to the original Sass syntax.
+I was beginning to question my resolve. So on my next project, instead of giving it a half-hearted try for a day, I decided to go all in and code the whole project in SCSS to compare the difference. The outcome? I found that it took some getting used to (as expected), but I actually began to prefer the new SCSS syntax to the original Sass syntax.
 
 Here's why ...
 
@@ -86,11 +86,11 @@ Oh, and if you're not using the `@extend` directive, you are really missing out 
 
 ### Reason #4: SCSS allows me to write better inline documentation
 
-It's true that the Sass syntax allows a certain amount of flexibility with comments, but I find myself writing more inline-documentation directly in SCSS than Sass. A lot of this has to do with the way the code hangs together and the flexibility in syntax that SCSS provides. Braces help me group my code and comments in a way that makes more sense to me. I know we are talking aesthetics here, but it more flexibility makes a difference when writing documentation.
+It's true that the Sass syntax allows a certain amount of flexibility with comments, but I find myself writing more inline-documentation directly in SCSS than Sass. A lot of this has to do with the way the code hangs together and the flexibility in syntax that SCSS provides. Braces help me group my code and comments in a way that makes more sense to me. I know we are talking aesthetics here, but more flexibility makes a difference when writing documentation.
  
 ### Reason #5: Existing CSS tools often work with SCSS
 
-I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for Sass. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, almost all code highlighters support CSS, but only a handful support the Sass syntax.
+I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for the indended Sass syntax. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, most code highlighters support CSS, but only a handful support the Sass syntax.
 
 ### Reason #6: Integration with an existing CSS codebase is much easier
 
@@ -114,6 +114,6 @@ Since it's creation Sass and languages like it have attracted the attention of [
 
 ## Conclusion
 
-I hope I've challenged you a little in your own perspective on both syntaxes. While I'm clearly arguing the advantages of the SCSS syntax, I'd also like to encourage you to go outside of your comfort zone and experiment a little more. If you've only been exposed to the SCSS syntax, perhaps you'd enjoy spending some time with the indented Sass syntax. And if you're an original-flavor-only kinda person, or even a purist, you may benefit from giving the SCSS syntax a serious try.
+I hope I've challenged you a little in your own perspective on both syntaxes. While I'm clearly arguing the advantages of the SCSS syntax, I'd also like to encourage you to go outside of your comfort zone and experiment a little more. If you've only been exposed to the SCSS syntax, perhaps you'd enjoy spending some time with the indented Sass syntax. And if you're an original-flavor-only kinda person -- a purist -- you may benefit from giving the SCSS syntax a serious try.
 
 As I said before, there are a lot of good people on both sides of the line in this debate. Feel free to express your own opinion in the comments below.
