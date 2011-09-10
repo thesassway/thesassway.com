@@ -10,7 +10,7 @@ Since the creation of Sass nearly [5 years ago](http://adamstac.com/99xW), it ha
 
 ## The Sass syntax
 
-The indented syntax of Sass was inherited from its first-born brother [Haml](http://haml-lang.com/). And while Sass and Haml once got along -- Hey, they even shared the same [Ruby Gem]:http://rubygems.org/! -- disention in the family caused the two languages to split and [go their separate ways](http://nex-3.com/posts/103-haml-and-sass-are-split). Each seeking its own fame and fortune in the land of Open Source opportunity.
+The indented syntax of Sass was inherited from its first-born brother [Haml](http://haml-lang.com/). And while Sass and Haml once got along -- Hey, they even shared the same [Ruby Gem](http://rubygems.org/)! -- dissension in the family caused the two languages to split and [go their separate ways](http://nex-3.com/posts/103-haml-and-sass-are-split). Each seeking its own fame and fortune in the land of Open Source opportunity.
 
 One common objection among Sass detractors is that the indented syntax is so foreign to CSS. Why spend the time learning a language that is radically different from CSS? This difference, they fear, will make it hard for them to continue to remain fluent in a language with as many [nuances](http://mattwilcox.net/archive/entry/id/1043/) and [subtleties](http://www.thomasknierim.com/154/web-development/selector-subtleties/) as CSS. What if Sass is just a fad? What if it doesn't last? What if it doesn't gain traction among the masses? What if all their code and newly formed best practices fall by the wayside should the "downfalls" of Sass become a reality? What if ... ah, you get the point.
 
@@ -18,7 +18,7 @@ And the objections trail on ...
 
 ## SCSS to the rescue!
 
-In [version 3 of Sass](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0), the SCSS (Sassy CSS) syntax was introduced as "the new main syntax" for Sass and builds on the existing syntax of CSS. It uses brackets and semi-colons just like CSS. It doesn't care about indentation levels or white-space. In fact, Sass's SCSS syntax is a [superset](http://encyclopedia2.thefreedictionary.com/superset) of CSS. In layman's terms, what I mean to say is any valid CSS is valid SCSS. To connect the dots even further on this note, if you've ever used [Markdown](http://daringfireball.net/projects/markdown/) to write a blog post, comment or any other text document, you've used a superset of HTML. In the end, SCSS has the exact same features as the Sass syntax, but without the opinionated syntax.
+In [version 3 of Sass](http://sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0), the SCSS (Sassy CSS) syntax was introduced as "the new main syntax" for Sass and builds on the existing syntax of CSS. It uses brackets and semi-colons just like CSS. It doesn't care about indentation levels or white-space. In fact, Sass's SCSS syntax is a [superset](http://encyclopedia2.thefreedictionary.com/superset) of CSS -- which means SCSS contains all the features of CSS, but has been expanded to include the features of Sass as well. In layman's terms, any valid CSS is valid SCSS. And in the end, SCSS has the exact same features as the Sass syntax, minus the opinionated syntax.
 
 Those who are new to Sass have less to learn. And as for Sass detractors, well, they can no longer complain about the syntax. As far as I'm concerned, SCSS is the new CSS.
 
@@ -80,7 +80,7 @@ Deeply nested Sass produces CSS with *really* long selectors. Especially if you 
 
 ### Reason #3: SCSS encourages more modular code with @extend
 
-Because nesting is harder in SCSS I find myself using @extend a lot more frequently. I tend to write code that is nested 1 - 2 levels deep underneath an abstract or virtual class name that is then extended by other selectors. Again, the curly braces, which are "ugly", help me recognize when my code is too deeply nested and force me down the path of writing more modular code.
+Because nesting is harder in SCSS I find myself using `@extend` a lot more frequently. I tend to write code that is nested 1 - 2 levels deep underneath an abstract or virtual class name that is then extended by other selectors. Again, the curly braces, which are "ugly", help me recognize when my code is too deeply nested and force me down the path of writing more modular code.
 
 Oh, and if you're not using the `@extend` directive, you are really missing out on the awesome-sauce of Sass! [Experts](http://chriseppstein.github.com/blog/2010/08/02/sass-extend-challenge/) [agree](http://awardwinningfjords.com/2010/07/27/sass-extend-introduction.html). :)
 
@@ -90,7 +90,7 @@ It's true that the Sass syntax allows a certain amount of flexibility with comme
  
 ### Reason #5: Existing CSS tools often work with SCSS
 
-I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for the indended Sass syntax. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, most code highlighters support CSS, but only a handful support the Sass syntax.
+I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for the indented Sass syntax. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, most code highlighters support CSS, but only a handful support the Sass syntax.
 
 ### Reason #6: Integration with an existing CSS codebase is much easier
 
