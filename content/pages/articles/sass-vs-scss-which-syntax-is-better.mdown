@@ -24,7 +24,7 @@ Those who are new to Sass have less to learn. And as for Sass detractors, well, 
 
 ## Which syntax is better?
 
-If you are an old hat at Sass, chances are you've got an opinion about which syntax is better. And there are a lot of good people on both sides of the isle. Some prefer Sass, the original syntax - while others prefer SCSS.
+If you are an old hat at Sass, chances are you've got an opinion about which syntax is better. And there are a lot of good people on both sides of the aisle. Some prefer Sass, the original syntax - while others prefer SCSS.
 
 I'm not even going to pretend to be unbiased in this debate. I myself am a huge fan of SCSS. A recent convert, actually. I was once a die-hard fan of the indented syntax, but I've changed my mind on the matter and I wrote this article to share why.
 
