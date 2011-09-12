@@ -1,4 +1,4 @@
-Date: 8 September 2014 2:00pm
+Date: 12 September 2011 7:00am
 Categories: articles, john-w-long
 Author: John W. Long
 about_author: john_w_long
@@ -7,6 +7,10 @@ Summary: Since the creation of Sass, it has been plagued by many levels of contr
 # Sass vs. SCSS: Which Syntax is Better?
 
 Since the creation of Sass nearly [5 years ago](http://adamstac.com/99xW), it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added brand new features unheard of to CSS authors such as variables, nesting and mixins. Sass also introduced an *entirely different* indentation-oriented syntax and a brand new perspective on how to author CSS.
+
+#### EDITOR'S NOTE
+
+Please read this article in its entirely *BEFORE* sharing your comments. We ask that you keep things civilized. If you plan to share this on Twitter, we encourage you to use the hashtag [#SassvsSCSS](http://twitter.com/#!/search/%23SassvsSCSS). Thank you.
 
 ## The Sass syntax
 
@@ -117,3 +121,7 @@ Since it's creation Sass and languages like it have attracted the attention of [
 I hope I've challenged you a little in your own perspective on both syntaxes. While I'm clearly arguing the advantages of the SCSS syntax, I'd also like to encourage you to go outside of your comfort zone and experiment a little more. If you've only been exposed to the SCSS syntax, perhaps you'd enjoy spending some time with the indented Sass syntax. And if you're an original-flavor-only kinda person -- a purist -- you may benefit from giving the SCSS syntax a serious try.
 
 As I said before, there are a lot of good people on both sides of the line in this debate. Feel free to express your own opinion in the comments below.
+
+#### Editor's Note
+
+We've also setup [a Wrangl](http://wrangl.com/sassvsscss) to make sense of both sides of the argument.
