@@ -42,7 +42,7 @@ It's true. The indented syntax removes the need for semi-colons and braces. It d
 
 ### Reason #2: The Sass syntax is easier to read
 
-Because of it's rules about indentation, it's kind of hard to write unreadable Sass. Sass forces you to write your code the same way every time. There's no option for venturing off and making your own style of commenting and formatting. It's very strict on how things can be done. On large teams or in situations where you aren't the sole author of all the code, this could be a huge plus. It forces the team into more strict coding practices (much like what XHTML did for HTML) and leaves little room for deviation from the beaten path.
+Because of its rules about indentation, it's kind of hard to write unreadable Sass. Sass forces you to write your code the same way every time. There's no option for venturing off and making your own style of commenting and formatting. It's very strict on how things can be done. On large teams or in situations where you aren't the sole author of all the code, this could be a huge plus. It forces the team into more strict coding practices (much like what XHTML did for HTML) and leaves little room for deviation from the beaten path.
 
 ### Reason #3: The Sass syntax doesn't complain about missing semi-colons
 
@@ -68,7 +68,7 @@ Here's why ...
 
 No really! I know I argued above that Sass is easier to read because of the way it forces you to write your rules and attributes with indentation, but after coding for a while in SCSS I've realized that I really like having the option to put a couple of attribute/value pairs on the same line. I don't always write it this way. Normally, I write in expanded format with an attribute/value pair per line. But the compressed syntax is helpful when I only have an attribute/value pair or two. I especially like it for changing the color of a font for a hover state or adding an underline to a link.
 
-For me SCSS ends up being more logically grouped than Sass. I can compress code that would take several lines in the Sass syntax into just a couple of lines of SCSS. Typically rules are grouped anyway. And when reading code, the number of lines of code that a bit of code uses tends to indicate it's importance.
+For me SCSS ends up being more logically grouped than Sass. I can compress code that would take several lines in the Sass syntax into just a couple of lines of SCSS. Typically rules are grouped anyway. And when reading code, the number of lines of code that a bit of code uses tends to indicate its importance.
 
 In SCSS I can compress lines that are fairly standard. And expand across several lines when I'm doing something complicated.
 
@@ -114,7 +114,7 @@ And don't forget the other barriers to getting started with Sass. Right now you 
 
 ### Reason #8: SCSS could become the next version of CSS
 
-Since it's creation Sass and languages like it have attracted the attention of [a lot of smart people](http://www.xanthir.com/blog/b49w0). Some of those people are already thinking about adding some of the features that Sass introduced to CSS. It's possible that the syntax introduced in SCSS could become CSS4!
+Since its creation Sass and languages like it have attracted the attention of [a lot of smart people](http://www.xanthir.com/blog/b49w0). Some of those people are already thinking about adding some of the features that Sass introduced to CSS. It's possible that the syntax introduced in SCSS could become CSS4!
 
 ## Conclusion
 
