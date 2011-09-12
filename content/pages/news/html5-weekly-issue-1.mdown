@@ -5,7 +5,7 @@ Summary: We get linked to not once, but twice in the VERY FIRST issue of HTML5 W
 
 # HTML5 Weekly links to check out!
 
-We get linked to not once, but twice (technicaly) from the inaugural issue of [HTML5 Weekly](http://html5weekly.com/) from [Peter Cooper](http://peterc.org/).
+We get linked to not once, but twice (technically) from the inaugural issue of [HTML5 Weekly](http://html5weekly.com/) from [Peter Cooper](http://peterc.org/).
 
 <a href="http://html5weekly.com/archive/1.html">
   <img src="/attachments/html5-weekly-header.jpeg" class="full" alt="HTML5 Weekly Header" />
