@@ -36,7 +36,7 @@ Before I get to that, let me explain the reasons I loved Sass, and why I *almost
 
 ## Pros for Sass
 
-### Reason 1: The Sass syntax is more concise
+### Reason #1: The Sass syntax is more concise
 
 It's true. The indented syntax removes the need for semi-colons and braces. It doesn't require that you use the verbose `@include` to mixin your mixins. Instead it uses the `+` operator which requires less typing and makes your code simpler, and easier to read.
 
