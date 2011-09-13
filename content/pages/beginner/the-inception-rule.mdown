@@ -1,0 +1,181 @@
+Date: 29 August 2013
+Categories: beginner, guides, mario-kuroir-ricalde
+Author: Mario "Kuroir" Ricalde
+Summary: We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS funa nd less of a pain to work with; however with great power comes **responsibility**.
+
+# The Inception Rule
+
+We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS funa nd less of a pain to work with; however with great power comes **responsibility**.
+
+Today we're going to dive into the most basic rule in the Sass universe, which will help you surive the most common mistake that many Sass developers, beginners and advanced, [still make](http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade).
+
+## The Problem
+
+We have all been there, in the CSS realm, where all code lives at a "top level" and writing nested selectors means writing a lot of code for each CSS declaration.
+
+    .post {
+      border-radius: 3px;
+      background: #FFF8FF;
+      border: 1px solid #EFC6F3;
+      padding: 15px;
+      color: #333333;
+    }
+    .post .title, .post .alt-title  {
+      color: #000000;
+      font-size:20px;
+    }
+    .post .alt-title {
+      border-bottom:1px solid #EFC6F3;
+    }
+
+Odds are that while you were stuck in the CSS realm you began taking the approach of making loads of classes and then stuffing them in your HTML like no tomorrow, remember writing 5 classes on one single DOM element?
+
+    <div class="post complete highlight rounded clearfix">...</div>
+
+That's the everyday bread and we all thought we wouldn't be able to enjoy writing CSS, right? But then we meet a new wonderful realm, where everything is wonderful and easy: Sass, solves all our problems with CSS and the best of all: It's a easy jump to the world of CSS Compilers with the .scss syntax!
+
+It's easy to get going with Sass and .sass, but it's also easy to screw up.
+
+When you begin, the first thing that you'll love a lot is: **nested selectors**, that wonderful feature which will save you from the Carpal tunnel syndrome:
+
+    $border: 1px solid #EFC6F3;
+    .post {
+      border-radius: 3px;
+      background: #FFF8FF;
+      border: 1px solid $border;
+      padding: 15px;
+      color: #333333;
+     .title {
+        color: #000000;
+        font-size:20px;
+      }
+      .alt-title {
+        @extend .title;
+        border-bottom:1px solid $border;
+      }
+    }
+
+Which will output the exact same code as the code you didn't like to write because all of the typing! And so, like a child with a new toy, we begin searching where we can use this to -what we think- its "max postential", what you'll later know as:
+
+## CSS Selector Nightmare
+
+The so called **nightmare** between front-end engineers where the code is bloated and tightly coupled to the DOM to a point where modifying anything about the structure ends up breaking the front-end.
+
+Lets say you have this not-so-pretty piece of HTML:
+
+    <body>
+      <div class="container">
+        <div class="content">
+          <div class="articles">
+            <div class="post">
+              <div class="title">
+                <h1><a href="#">Hello World</a>
+              </div>
+              <div class="content">
+                <p></p>
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="author">
+                <a href="#" class="display"><img src="#" alt="" /></a>
+                <h4><a href="#"></a></h4>
+                <p>
+                  <a href="#"></a>
+                  <ul>
+                    <li></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </body>
+
+Since now you can use nesting, and you know that having your code encapsulated is the "good way to avoid collissions with other styles", you decide to begin mimicking the DOM with SCSS. (READ: DON'T DO IT!):
+
+    body  {
+      div.container {
+        div.content {
+          div.articles {
+            & > div.post {
+              div.title {
+                h1 {
+                  a {
+                  }
+                }
+              }
+              div.content {
+                p {
+                }
+                ul {
+                  li {
+                  }
+                }
+              }
+              div.author {
+                a.display {
+                  img {}
+                }
+                h4 {
+                  a {}
+                }
+                p {
+                  a {}
+                }
+                ul {
+                  li {}
+                }}}}}}}
+
+It's all good right? with this way you can predict 100% of the time what's going to happen with your stylesheet, there's no cascading that can beat our [specificity](http://www.htmldog.com/guides/cssadvanced/specificity/)...
+
+And then we look at our generated CSS (oh, the horror):
+
+    body
+    body div.content div.container
+    body div.content div.container div.articles
+    body div.content div.container div.articles > div.post
+    body div.content div.container div.articles > div.post div.title
+    body div.content div.container div.articles > div.post div.title h1
+    body div.content div.container div.articles > div.post div.title h1 a
+    body div.content div.container div.articles > div.post div.content
+    body div.content div.container div.articles > div.post div.content p
+    body div.content div.container div.articles > div.post div.content ul
+    body div.content div.container div.articles > div.post div.content ul li
+    body div.content div.container div.articles > div.post div.author
+    body div.content div.container div.articles > div.post div.author a.display
+    body div.content div.container div.articles > div.post div.author a.display img
+    body div.content div.container div.articles > div.post div.author h4
+    body div.content div.container div.articles > div.post div.author h4 a
+    body div.content div.container div.articles > div.post div.author p
+    body div.content div.container div.articles > div.post div.author p a
+    body div.content div.container div.articles > div.post div.author ul
+    body div.content div.container div.articles > div.post div.author ul li
+
+There are many reasons why this is just **wrong**: from [rendering performance](http://code.google.com/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors) to file-size performance (think about how many bytes that add!).
+
+But the odds are you may say: "Hey, computers are faster now! and also the internet download speeds are better!", but that's not the only problem!
+
+Since your code is so specific to the DOM, any change you make to it will need to be reflected into your SCSS file and vice versa. It also means that the styles are bounded for life to the those elements, and it completely defeats the idea of using CSS at all. I mean, you may as well go into writing CSS right inside the HTML.
+
+## Meet The Inception Rule
+
+To prevent you from falling into this nightmare, I created a simple rule. Which by the time was unwritten but many followed; The Inception Rule which says...
+
+ > **Don’t go more than four levels deep.**
+
+This basically means that you shouldn't be too specific or mimicking the DOM at any point. If you're more than four levels deep, that's a red flag. Of course there are times when you'll be forced to go there, but it's not something you should be doing too much.
+
+Also:
+
+**Be Smart.** Think how the compiler will build your code and ask yourself if all the code that it's generating is really needed: Can't this be done with less selectors?
+
+**Be crafty.** Use everything the compiler provides you. With Sass you can use the awesome `@extend`.
+
+**Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason! Try to express what's going on, be it with `.comment`/`#post-author`/`/* All Articles! */`.
+
+And the most valuable advice:
+
+**Don't over do it.** Just because you can doesn't mean you should.
