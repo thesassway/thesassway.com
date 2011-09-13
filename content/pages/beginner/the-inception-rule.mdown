@@ -3,7 +3,7 @@ Categories: beginner, guides, mario-kuroir-ricalde
 Author: Mario "Kuroir" Ricalde
 Summary: We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS funa nd less of a pain to work with; however with great power comes **responsibility**.
 
-# The Inception Rule
+# Nested Selectors: The Inception Rule
 
 We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS funa nd less of a pain to work with; however with great power comes **responsibility**.
 
