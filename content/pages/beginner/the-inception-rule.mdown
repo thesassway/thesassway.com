@@ -158,7 +158,9 @@ There are many reasons why this is just **wrong**: from [rendering performance](
 
 But the odds are you may say: "Hey, computers are faster now! and also the internet download speeds are better!", but that's not the only problem!
 
-Since your code is so specific to the DOM, any change you make to it will need to be reflected into your SCSS file and vice versa. It also means that the styles are bounded for life to the those elements, and it completely defeats the idea of using CSS at all. I mean, you may as well go into writing CSS right inside the HTML.
+Since your code is so specific to the DOM **maintainability** becomes a problem too!
+
+Any change you make to it will need to be reflected into your SCSS file and vice versa. It also means that the styles are bounded for life to the those elements, and it completely defeats the idea of using CSS at all. I mean, you may as well go into writing CSS right inside the HTML.
 
 ## Meet The Inception Rule
 
@@ -168,14 +170,23 @@ To prevent you from falling into this nightmare, I created a simple rule. Which 
 
 This basically means that you shouldn't be too specific or mimicking the DOM at any point. If you're more than four levels deep, that's a red flag. Of course there are times when you'll be forced to go there, but it's not something you should be doing too much.
 
-Also:
-
 **Be Smart.** Think how the compiler will build your code and ask yourself if all the code that it's generating is really needed: Can't this be done with less selectors?
 
 **Be crafty.** Use everything the compiler provides you. With Sass you can use the awesome `@extend`.
 
 **Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason! Try to express what's going on, be it with `.comment`/`#post-author`/`/* All Articles! */`.
 
-And the most valuable advice:
+## Fitting the world in four or less indentation levels
 
-**Don't over do it.** Just because you can doesn't mean you should.
+TODO: Teach the people how to identify good use cases:
+
+(site context) - body class or id
+
+(page context) - layouts, sidebar widths, heights,
+
+(object) -  (stuff that never changes) across the site.
+
+I just don't think of things like that. #section is an object. #sidebar is an object. #sidebar #section is composition of the two.
+
+(interaction state) - very nested styles. Can't imagine needing more than 3 levels plus a fourth for interaction state.
+
