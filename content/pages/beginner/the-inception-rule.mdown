@@ -55,7 +55,7 @@ When you begin, the first thing that you'll love a lot is: **nested selectors**,
       }
     }
 
-Which will output the exact same code as the code you didn't like to write because all of the typing! And so, like a child with a new toy, we begin searching where we can use this to -what we think- its "max postential", what you'll later know as:
+Which will output the exact same code as the code you didn't like to write because all of the typing! And so, like a child with a new toy, we begin searching where we can use this to -what we think- its "max potential", what you'll later know as:
 
 ## CSS Selector Nightmare
 
