@@ -1,5 +1,6 @@
 source :rubygems
 
+gem "rack-contrib"
 gem "rake"
 gem "heroku"
 gem "nesta", "0.9.5"
