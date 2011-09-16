@@ -36,6 +36,7 @@ require 'rack/contrib'
 use Rack::ResponseHeaders do |headers|
   headers['Cache-Control'] = 'public, max-age=1501'
 end
+use Rack::ETag
 
 # Nesta
 require 'nesta/app'
