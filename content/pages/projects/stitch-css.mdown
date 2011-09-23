@@ -5,7 +5,7 @@ summary: Stitch is a nice companion to Compass that gives you access to CSS desi
 
 # Stitch: A CSS pattern framework
 
-<a href="#"><img src="/attachments/stitch-css.png" /></a>
+<a href="http://stitchcss.com/"><img src="/attachments/stitch-css.png" /></a>
 
 ## Common CSS patterns as mixins and classes
 
