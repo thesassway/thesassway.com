@@ -19,7 +19,7 @@ Mason is the first to admit that the practical uses of this technique are probab
 
 On his [Sassy Mother Effing Text Shadows](http://sassymothereffingtextshadow.com/) site, he shows how you can use Sass to generate a string of text shadow variables that can be manipulated in many ways to create waves and shapes.
 
-**The basic concept is fairly simple:**
+The basic concept is fairly simple:
 
 * Loop thru a series iterations on a variable
 * Create a new text-shadow string on each iteration
@@ -42,14 +42,14 @@ See [the readme](https://github.com/canarymason/sassytextshadow#readme) for inst
       @include text-shadow(sassy-text-shadow(#b80000, 100, 80, 120, 90, -45, 0.09));
     }
     
-**The arguments are, in order:**
+The arguments are (in order):
 
-`$color`: the starting color of the shadow $iterations: how many shadows to generate  
-`$rad`: the radius of the curve   
-`$deg`: how far around the curve to go  
-`$cos-i`: the multiplier for cos()   
-`$sin-i`: the multiplier for sin() 
-`$color-multiplier`: an amount to shift the hue of the color as it iterates
+* `$color` -- the starting color of the shadow $iterations: how many shadows to generate  
+* `$rad` -- the radius of the curve   
+* `$deg` -- how far around the curve to go  
+* `$cos-i` -- the multiplier for cos()   
+* `$sin-i` -- the multiplier for sin() 
+* `$color-multiplier` -- an amount to shift the hue of the color as it iterates
 
 
 ## A Lorenz Attractor Text Shadow
