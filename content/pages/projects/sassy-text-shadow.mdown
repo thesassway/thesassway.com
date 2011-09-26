@@ -1,21 +1,35 @@
-Date: 2099-09-26 08:30:00 -0500
+Date: 2012-09-26 08:30:00 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
-summary: How far is too far when it comes to CSS text shadows? Be prepared to cross that line and then some. Sassy Text Shadows a response to the call put forth by Paul Irish's Mother Effing Text Shadow, and an answer to the burning question of why would you want to use trigonometry in CSS?
+summary: How far is too far when it comes to CSS text shadows? Be prepared to cross that line and then some with Mason Wendell in his project Sassy Text Shadows -- the response to the call put forth by Paul Irish's Mother Effing Text Shadow, and an answer to the burning question, "Why would you want to use trigonometry in CSS?"
 
 # Sassy Text Shadows
 
-How far is too far when it comes to CSS text shadows? Be prepared to cross that line and then some. Sassy Text Shadows a response to the call put forth by Paul Irish's [Mother Effing Text Shadow](http://mothereffingtextshadow.com/), and an answer to the burning question of why would you want to use trigonometry in CSS?
+How far is too far when it comes to CSS text shadows? Be prepared to cross that line and then some with [Mason Wendell](/mason-wendell) in his project [Sassy Text Shadows](http://sassymothereffingtextshadow.com/).
 
-<a href="http://sassymothereffingtextshadow.com/"><img src="/attachments/sassy-text-shadow.png" /></a>
+<a href="http://sassymothereffingtextshadow.com/"><img src="/attachments/sassy-text-shadow.png" class="full" /></a>
+
+## What is Sassy Text Shadows?
+
+Sassy Text Shadows is a response to the call put forth by Paul Irish's [Mother Effing Text Shadow](http://mothereffingtextshadow.com/). It's also an answer to the burning question, "Why would you want to use trigonometry in CSS?"
 
 ## Shadows in a Circle
 
-Developer [Mason Wendell](http://twitter.com/#!/canarymason) is the first to admit that the practical uses of this technique are probably limited. Most of the time when CSS shadows are piled more than a few levels deep it's so that we can explore and test what is possible. That's no different here, and Mason has some fun playing with that. 
+Mason is the first to admit that the practical uses of this technique are probably limited. Most of the time when CSS shadows are piled more than a few levels deep it's likely so that we can explore and test what's possible. That's no different here, and Mason has some fun playing with that concept.
 
-On his [Sassy Mother Effing Text Shadows](http://sassymothereffingtextshadow.com/) site, he shows how you can use Sass to generate a string of text shadow variables that can be manipulated in many ways to create waves and shapes. That basic concept is fairly simple: Loop thru a series iterations on a variable, create a new text-shadow string on each iteration, and then add those together as the final, long, text shadow. 
+On his [Sassy Mother Effing Text Shadows](http://sassymothereffingtextshadow.com/) site, he shows how you can use Sass to generate a string of text shadow variables that can be manipulated in many ways to create waves and shapes.
 
-The [Sassy Text Shadows gem] allows you to do this yourself, and adds trigonometry into the mix. Out of the box you get a pretty nice circular text shadow (shown above). You can pass different arguments to the function to get some very interesting results. 
+**The basic concept is fairly simple:**
+
+* Loop thru a series iterations on a variable
+* Create a new text-shadow string on each iteration
+* Then add those together as the final, long, text shadow
+
+### Sassy Text Shadows gem
+
+The [gem](https://rubygems.org/gems/sassy-text-shadow) allows you to do this yourself, and adds trigonometry into the mix. Out of the box you get a pretty nice circular text shadow (as shown above). You can also pass various arguments to the function for some very interesting results.
+
+See [the readme](https://github.com/canarymason/sassytextshadow#readme) for install details
 
     :::scss
     // Basic Red Circle
@@ -28,7 +42,7 @@ The [Sassy Text Shadows gem] allows you to do this yourself, and adds trigonomet
       @include text-shadow(sassy-text-shadow(#b80000, 100, 80, 120, 90, -45, 0.09));
     }
     
-The arguments are, in order:
+**The arguments are, in order:**
 
 `$color`: the starting color of the shadow $iterations: how many shadows to generate  
 `$rad`: the radius of the curve   
@@ -40,13 +54,14 @@ The arguments are, in order:
 
 ## A Lorenz Attractor Text Shadow
 
-<a href="http://sassymothereffingtextshadow.com/"><img src="/attachments/sassy-text-shadow.png" /></a>
+<a href="http://sassymothereffingtextshadow.com/"><img src="/attachments/sassy-text-shadow-lorenz.png" class="full" /></a>
 
-Just for fun (and view-source to see how long and impractical this really is) he also wrote a [Lorenz Attractor](http://en.wikipedia.org/wiki/Lorenz_Attractor) in Sass. Perhaps generating 5000 text shadows is a bit off the deep end, but the results are pretty interesting. 
+Mason also wrote a [Lorenz Attractor](http://en.wikipedia.org/wiki/Lorenz_Attractor) in Sass. Just for fun, and to see how long and impractical this really is, [view the final CSS code of lmao.css](http://sassymothereffingtextshadow.com/stylesheets/lmao.css). It's quite possible that generating 5000 text shadows is a bit off the deep end, but the results are pretty interesting.
 
 
 ### Links
 
 * [Sassy Mother Effing Text Shadows](http://sassymothereffingtextshadow.com/)
+* Paul Irish's [Mother Effing Text Shadow](http://mothereffingtextshadow.com/), also mentioned on [The Changelog 0.6.7](http://thechangelog.com/post/9123518427/episode-0-6-7-html5-boilerplate-modernizr-and-more-with)
 * [Source on GitHub](https://github.com/canarymason/sassytextshadow)
 * [Ruby Gem](https://rubygems.org/gems/sassy-text-shadow)
