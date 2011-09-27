@@ -58,6 +58,8 @@ The arguments are (in order):
 
 Mason also wrote a [Lorenz Attractor](http://en.wikipedia.org/wiki/Lorenz_Attractor) in Sass. Just for fun, and to see how long and impractical this really is, [view the final CSS code of lmao.css](http://sassymothereffingtextshadow.com/stylesheets/lmao.css). It's quite possible that generating 5000 text shadows is a bit off the deep end, but the results are pretty interesting.
 
+### Sassy Lorenz Attractor
+
     :::scss
     // Sassy Lorenz Attractor
     @function lmao($orig-color, $iterations, $sx, $sy, $sz) {
