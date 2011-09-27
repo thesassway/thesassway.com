@@ -1,0 +1,39 @@
+Date: 2012-09-27 06:20:28 -0500
+Categories: projects, adam-stacoviak
+author: Adam Stacoviak
+summary: Zocial makes buttons that say; Follow me on Twitter, Like us on Facebook, Subscribe to our Feed, Fork this on GitHub too easy.
+
+# Zocial ~ CSS3 Buttons, Sass Framework.
+
+Zocial makes buttons that say; Follow me on Twitter, Like us on Facebook, Subscribe to our Feed, Fork this on GitHub too easy.
+
+<a href="http://zocialbuttons.com/"><img src="http://zocialbuttons.com/images/zocial-lite-preview.jpg" class="full"/></a>
+
+## Vector Icon Font + CSS3 + Sass and Compass
+
+I can't tell you how much time I've wasted in the past creating these buttons in Photoshop and creating sprites for the various states. Now there's no need to waste that time anymore. It's frameworks like this that REALLY make me appreciate Sass and Compass together.
+
+## Compass FTW!
+
+By far, one of the coolest features of Compass for extension developers (and extension users) is the ability to package up other assets for the framework such as HTML, images, fonts or even starter Sass stylesheets -- they then can be installed via the Compass command-line.
+
+For example, once you've installed Zocial and have required it in your Compass config, most often `config.rb` you can run the Compass install command to install the fonts.
+
+    :::bash
+    compass install zocial/fonts
+    
+When you run this, Compass will install the Zocial lite fonts into your project.
+
+    :::bash
+    -> % compass install zocial/fonts
+    directory fonts/zocial/ 
+      create fonts/zocial/zocial-lite-regular-webfont.eot
+      create fonts/zocial/zocial-lite-regular-webfont.svg
+      create fonts/zocial/zocial-lite-regular-webfont.ttf
+      create fonts/zocial/zocial-lite-regular-webfont.woff
+
+## Links
+
+* [Source on GitHub](https://github.com/adamstac/zocial)
+* [Homepage](http://zocialbuttons.com/)
+* [Buy the full Zocial font](http://zocial.smcllns.com/)
