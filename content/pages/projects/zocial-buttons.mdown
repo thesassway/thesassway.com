@@ -1,23 +1,23 @@
-Date: 2012-09-27 06:20:28 -0500
+Date: 2011-10-14 09:00:00 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
-summary: Zocial makes buttons that say; Follow me on Twitter, Like us on Facebook, Subscribe to our Feed, Fork this on GitHub too easy.
+summary: Zocial Buttons is a CSS3 buttons Sass framework that lets you add "Follow me on Twitter", "Find us on Facebook" and "Fork this on GitHub" buttons TOO EASY.
 
-# Zocial ~ CSS3 Buttons, Sass Framework.
+# Zocial: CSS3 Buttons, Sass framework.
 
-Zocial makes buttons that say; Follow me on Twitter, Like us on Facebook, Subscribe to our Feed, Fork this on GitHub too easy.
+Zocial Buttons is a CSS3 buttons Sass framework that lets you add "Follow me on Twitter", "Find us on Facebook" and "Fork this on GitHub" buttons TOO EASY.
 
 <a href="http://zocialbuttons.com/"><img src="http://zocialbuttons.com/images/zocial-lite-preview.jpg" class="full"/></a>
 
 ## Vector Icon Font + CSS3 + Sass and Compass
 
-I can't tell you how much time I've wasted in the past creating these buttons in Photoshop and creating sprites for the various states. Now there's no need to waste that time anymore. It's frameworks like this that REALLY make me appreciate Sass and Compass together.
+I can't tell you how much time I've wasted in the past creating these buttons in Photoshop and creating sprites for the various states. Now there's no need to waste that time anymore! It's frameworks like this that REALLY make me appreciate the power of Sass and Compass.
 
 ## Compass FTW!
 
 By far, one of the coolest features of Compass for extension developers (and extension users) is the ability to package up other assets for the framework such as HTML, images, fonts or even starter Sass stylesheets -- they then can be installed via the Compass command-line.
 
-For example, once you've installed Zocial and have required it in your Compass config, most often `config.rb` you can run the Compass install command to install the fonts.
+For example, once you've installed Zocial and you've required it in your Compass config, most often `config.rb`, you can run the Compass install command to install the fonts.
 
     :::bash
     compass install zocial/fonts
