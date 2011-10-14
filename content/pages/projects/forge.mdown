@@ -11,7 +11,7 @@ Forge is a open source command-line toolkit for developing WordPress themes usin
 
 ## Build WordPress themes using Sass and CoffeeScript
 
-It's been possible all along to use Sass in your WordPress themes, but now Forge makes it even easier and adds support for CoffeeScript as well. Forge is brought to you by the fine folks at [The Theme Foundry](http://thethemefoundry.com/), the same people behind the awesome responsive WordPress theme [React](http://thethemefoundry.com/react/).
+It's been possible all along to use [Sass](http://sass-lang.com/) in your WordPress themes, but now Forge makes it even easier and adds support for [CoffeeScript](https://jashkenas.github.com/coffee-script/) as well. Forge is brought to you by the fine folks at [The Theme Foundry](http://thethemefoundry.com/), the same people behind the awesome responsive WordPress theme [React](http://thethemefoundry.com/react/).
 
 If you're a WordPress fan and have been looking for a way to work with Sass and CoffeeScript in your themes, Forge is your answer!
 
