@@ -34,7 +34,7 @@ When you run this, Compass will install the Zocial lite fonts into your project.
       
 ## Installation and Usage
       
-For full installation and usage details, please see the project's readme.
+For full installation and usage details, please see [the project's readme](https://github.com/adamstac/zocial/blob/master/README.mdown).
 
 ## Links
 
