@@ -9,6 +9,12 @@ Zocial Buttons is a CSS3 buttons Sass framework that makes adding "Follow me on 
 
 <a href="http://zocialbuttons.com/"><img src="http://zocialbuttons.com/images/zocial-lite-preview.jpg" class="full"/></a>
 
+## Credits
+
+HUGE thanks to [Sam Collins](http://twitter.com/smcllns) for all his hard work on the original CSS3 button set and the Zocial icons font! Without his work, this project would not exist. This free and open source version includes a now free subset of the font sold [here](http://zocial.smcllns.com/).
+
+Zocial Buttons as a Sass framework was developed by me, Adam Stacoviak. Sam and I are working together to make Zocial the awesomest "all CSS" social buttons set. Feedback is very much welcome!
+
 ## Vector Icon Font + CSS3 + Sass and Compass
 
 I can't tell you how much time I've wasted in the past creating these buttons in Photoshop and creating sprites for the various states. Now there's no need to waste that time anymore! It's frameworks like this that REALLY make me appreciate the power of Sass and Compass.
