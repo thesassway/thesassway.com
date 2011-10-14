@@ -31,6 +31,10 @@ When you run this, Compass will install the Zocial lite fonts into your project.
       create fonts/zocial/zocial-lite-regular-webfont.svg
       create fonts/zocial/zocial-lite-regular-webfont.ttf
       create fonts/zocial/zocial-lite-regular-webfont.woff
+      
+## Installation and Usage
+      
+For full installation and usage details, please see the project's readme.
 
 ## Links
 
