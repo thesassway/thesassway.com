@@ -60,13 +60,15 @@ We can run `compass frameworks` in our project to see a list of frameworks we ha
 
 ### Installable Frameworks & Patterns?
 
-By far one of the coolest and most useful features of Compass is the ability to package up your coding best practices, frameworks, etc into extensions. But it doesn't end there.
+By far one of the coolest and most useful features of Compass is the ability to package up your coding best practices, frameworks, etc into extensions. But, it doesn't end there.
 
 What you may not know is that Compass allows you to package other assets for the framework such as images, fonts, text files, and more in your extension to provide installable patterns and templates.
 
 As you can see from the output of `compass frameworks` above, we have access to pictos-free and we can install the `pictos-free/icons` pattern.
 
 With Pictos Free, I've included a template that includes the `License.txt` file provided by Drew -- as well as 72px black and white .png versions of all 21 icons. It's quite possible that Drew and I will work together on this extension to make it more flexible as well as include other sizes, but for now, 72px black and white versions is what it ships with.
+
+For another framework example that ships with installable patterns, take a look at [Zocial Buttons](/projects/zocial-buttons).
 
 ### Install the icons pattern
 
