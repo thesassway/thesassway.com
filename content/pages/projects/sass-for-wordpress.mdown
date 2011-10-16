@@ -1,0 +1,18 @@
+Date: 16 October 2013
+Categories: projects, roy-tomeij
+Author: Roy Tomeij
+about_author: roy_tomeij
+Summary: Wordpress is a great tool for building a fully customizable blog. Make it even better by adding Sass support using this simple plugin.
+
+# Sass for Wordpress: a simple plugin
+
+Wordpress is a great tool for building a fully customizable blog. By creating custom themes you gain full control over almost all aspects of your blog, including markup and style. Wouldn't it be great if you could use Sass as well?
+
+I created a very straight forward "[Sass for Wordpress](https://github.com/roytomeij/sass-for-wordpress/)" plugin, which watches for changes to your Sass files and re-compiles your CSS when needed. All it requires is installing Sass and making sure you're not running PHP in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get send to the shell are properly escaped). Since you probably can't or don't want to install the Sass gem on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
+
+Adding Sass support to your theme is as easy as putting the plugin in your plugins folder, enable it in your plugins pane and include your stylesheet like this:
+
+    :::php
+    <link rel="stylesheet" href="<?= sass('style') ?>" type="text/css" media="screen" />
+
+The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.sass` or `style.scss` (the plugin handles either syntax).
