@@ -1,4 +1,4 @@
-Date: 16 October 2011
+Date: 16 October 2013
 Categories: projects, roy-tomeij
 Author: Roy Tomeij
 Summary: Wordpress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass support using this simple plugin.
