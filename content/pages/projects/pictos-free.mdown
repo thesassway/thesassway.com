@@ -1,31 +1,27 @@
-Date: 2011-10-04 19:24:12 -0500
+Date: 2011-10-16 10:00:00 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
-summary: Pictos is an awesome interface icon set from Drew Wilson. Pictos Free is, umm, free, and it's packaged as a simple Compass extension that leverages the Compass spriting module.
+summary: Pictos Free is a free version of Pictos-style Tumblr icons from Drew Wilson, thanks to his collaboration with WooThemes, that I've packaged it up as a simple Compass extension that leverages Compass's spriting feature.
 
 # Pictos Free + Spriting with Compass
 
-Pictos is awesome! And thanks to WooThemes, Drew Wilson released a free version of [Pictos](http://pictos.drewwilson.com/) for blogging called Pictos Free. Thanks Drew.
+Pictos is awesome! And thanks to WooThemes, Drew Wilson released a free version to compliment blog designs called Pictos Free. Thanks Drew.
 
 <a href="http://pictosfree.heroku.com/"><img src="/attachments/pictos-free.jpg" class="full"/></a>
 
 ## The Backstory.
 
-So, I have been wanting to play with [Compass Spriting](http://compass-style.org/reference/compass/utilities/sprites/) and I needed an excuse to play with something real world. Since, I'm a fan of Drew Wilson (see also Founders Talk episodes [#19](http://5by5.tv/founderstalk/19) and [#20](http://5by5.tv/founderstalk/20)) I decided to pull down a copy of the free version of Pictos and use that to play with Compass's spriting feature. A little while later, and with the help of my [Compass Extension Bootstrap](https://github.com/adamstac/compass-extension-bootstrap), [Pictos Free](https://github.com/adamstac/pictos-free) was born.
+So, I have been wanting to play with [Compass Spriting](http://compass-style.org/reference/compass/utilities/sprites/) and I needed an excuse to play with something real world. Since I'm a fan of Drew Wilson (see also Founders Talk episodes [#19](http://5by5.tv/founderstalk/19) and [#20](http://5by5.tv/founderstalk/20)) I decided to pull down a copy of the free version of Pictos and use that to play with Compass's spriting feature. A little while later, and with the help of my [Compass Extension Bootstrap](https://github.com/adamstac/compass-extension-bootstrap), [Pictos Free](https://github.com/adamstac/pictos-free) was born.
 
-### What is Pictos? Why is it free?
+### What is Pictos? What is Pictos Free, and why is it free?
 
-[Pictos](http://pictos.drewwilson.com/) is a very well done, royalty-free, icon set for interface designers by Drew Wilson. There's a [paid version](http://pictos.drewwilson.com/) as well as a [free version](http://www.woothemes.com/2010/05/pictos/), thanks to Drew's collaboration with [WooThemes](http://www.woothemes.com/).
+[Pictos](http://pictos.drewwilson.com/) is a very well done, royalty-free, icon set for interface designers by Drew Wilson. There's a [paid version](http://pictos.drewwilson.com/) as well as a [free version](http://www.woothemes.com/2010/05/pictos/) of Tumblr icons, thanks to Drew's collaboration with [WooThemes](http://www.woothemes.com/).
 
-After [WooThemes](http://www.woothemes.com/) discovered [Drew Wilson](http://www.drewwilson.com/) and his amazing work on [Dribbble](http://dribbble.com/shots/17846-Pictos-Free), they decided to contact him about working with the WooTeam to bring some of that Pictos awesomeness over there. The result is a free, vector icon set which contains 21 icons perfectly suited for your blogging needs.
+After [WooThemes](http://www.woothemes.com/) discovered [Drew Wilson](http://www.drewwilson.com/) and his amazing work on [Dribbble](http://dribbble.com/shots/17846-Pictos-Free), they decided to contact him about working with the WooTeam to bring some of that Pictos awesomeness over there. The result is a free, vector icon set which contains 21 icons perfectly suited for your blogging needs. By the way, you can [follow me](http://dribbble.com/adamstac) as well on Dribbble.
 
-## A simple Compass extension
+## Pictos Free + Demo + Code
 
-For those seasoned Compass experts, you are going to look at this extension and see the most simple example of spriting with Compass, and quite possibly the most simple Compass extension. That's by design (kinda). For those who are brand new to Sass and spriting with Compass, Compass has this awesome feature that helps you automate the math and does all the heavy lifting of creating sprite maps and using them in your stylesheets.
-
-### Crash course to spriting with Compass
-
-Spriting with Compass is very easy! First, we place all the images in a folder, import them with Compass and then use a few smart mixins provided by Compass to do all the heavy lifting as well as the math. I don't know about you, but maintaining an image map in Photoshop can be quite tedious. After learning this workflow with Compass, you are never going to want to go back to the "other way" again. It's a PITA.
+To show off Pictos Free, I've created a demo at [pictosfree.heroku.com](http://pictosfree.heroku.com/). Dive into [the demo code](https://github.com/adamstac/pictosfree.heroku.com) and follow along with how to use it in the next sections.
 
 ### Install Pictos Free
 
@@ -64,11 +60,15 @@ We can run `compass frameworks` in our project to see a list of frameworks we ha
 
 ### Installable Frameworks & Patterns?
 
-By far one of the coolest and most useful features of Compass is the ability to package up your coding best practices, frameworks, etc into extensions. But it doesn't end there. What you may not know is that Compass allows you to package images, fonts, text files, and more in your extension to provide installable patterns and templates. As you can see from the output of `compass frameworks` above, we have access to pictos-free and we can install the pictos-free/icons template.
+By far one of the coolest and most useful features of Compass is the ability to package up your coding best practices, frameworks, etc into extensions. But it doesn't end there.
 
-With Pictos Free, I've included a template that includes the License.txt file provided by Drew -- as well as 72px black and white .png versions of all 21 icons. It's possible that this extension will expand to include other sizes in the future, but for now, 72px black and white versions is what it ships with.
+What you may not know is that Compass allows you to package other assets for the framework such as images, fonts, text files, and more in your extension to provide installable patterns and templates.
 
-### Install the icons template
+As you can see from the output of `compass frameworks` above, we have access to pictos-free and we can install the `pictos-free/icons` pattern.
+
+With Pictos Free, I've included a template that includes the `License.txt` file provided by Drew -- as well as 72px black and white .png versions of all 21 icons. It's quite possible that Drew and I will work together on this extension to make it more flexible as well as include other sizes, but for now, 72px black and white versions is what it ships with.
+
+### Install the icons pattern
 
 So let's install the icons templates from the extension. Run this command from the root of the project you're installing Pictos Free to.
 
@@ -97,25 +97,30 @@ The next step is to `@import` Pictos Free with Compass, and here's how simple th
 
     :::sass
     // Pictos Free (white)
+    $pictos-free-white-spacing: 50px
     @import "pictos-free-white"
 
-If you look at the partial file [\_pictos-free-black.sass](https://github.com/adamstac/pictos-free/blob/master/stylesheets/_pictos-free-black.sass) in the extension, you will see that all I am doing is following the Compass way of importing all the images from a folder and using the "magic sprite mixin" to add the all the icons' required styles to our CSS stylesheet.
+If you look at the partial file [\_pictos-free-white.sass](https://github.com/adamstac/pictos-free/blob/master/stylesheets/_pictos-free-white.sass) in the extension, you will see that all I am doing is following the Compass way of importing all the images from a folder and using the "magic sprite mixin" to add the all the icons' required styles to our CSS stylesheet.
 
     :::sass
-    @import "pictos-free-black/*.png"
-    +all-pictos-free-black-sprites
+    @import "pictos-free-white/*.png"
+    +all-pictos-free-white-sprites
     
 Which compiles to this CSS. This code snippet has been truncated because this single line of Sass compiles to approximately 174 lines of CSS for us.
 
     :::css
-    .pictos-free-black-sprite, .pictos-free-black-icn1, .pictos-free-black-icn10... {
-      background: url('/images/pictos-free-black-s934aa129d3.png') no-repeat;
+    .pictos-free-white-sprite, .pictos-free-white-icn1, .pictos-free-white-icn10 ... {
+      background: url('/images/pictos-free-white-s0e3c56a72c.png') no-repeat;
     }
 
-    .pictos-free-black-icn1 {
+    .pictos-free-white-icn1 {
       background-position: 0 0;
     }
-    
+
+    .pictos-free-white-icn10 {
+      background-position: 0 -122px;
+    }
+
     ...
 
     .pictos-free-white-icn8 {
@@ -128,12 +133,13 @@ Which compiles to this CSS. This code snippet has been truncated because this si
 
 ## Conclusion
 
-Spriting with Compass can be pretty easy. It really does all the heavy lifting for you and all of the math as well. I also LOVE to package up code like this into reusable Compass extensions as well as provide the templates like I did here with the icons. It really makes adding a new feature or design asset to my projects that much easier. Plus, I can version that code and share it with others which is a HUGE win over the copy and paste scenario of vanilla CSS and using patterns like this.
+Spriting with Compass can be pretty easy. It really does all the heavy lifting for you and all of the math as well. I also LOVE to package up code like this into reusable Compass extensions as well as provide the templates like I did here with the icons. It really makes adding a new feature or design asset to my projects that much easier. Plus, I can version that code and share it with others which is a HUGE win over the copy and paste scenario of vanilla CSS and using frameworks and patterns like this.
 
 ## Links
 
 * [Picto Free (Compass extension)](https://github.com/adamstac/pictos-free)
-* [Picto Free (Demo)](http://pictosfree.heroku.com/)
-* [Picto Free (Demo code)](https://github.com/adamstac/pictosfree.heroku.com)
+* [pictosfree.heroku.com (demo)](http://pictosfree.heroku.com/)
+* [pictosfree.heroku.com (demo code)](https://github.com/adamstac/pictosfree.heroku.com)
 * [Picto Free (WooThemes)](http://www.woothemes.com/2010/05/pictos/)
 * [Spriting with Compass (docs)](http://compass-style.org/help/tutorials/spriting/)
+* [Compass Extension Bootstrap](https://github.com/adamstac/compass-extension-bootstrap)
