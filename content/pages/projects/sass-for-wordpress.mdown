@@ -1,19 +1,27 @@
 Date: 16 October 2013
 Categories: projects, roy-tomeij
 Author: Roy Tomeij
-Summary: Wordpress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass support using this simple plugin.
+Summary: Wordpress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass and Compass support using this simple plugin.
 
 # Sass for Wordpress Plugin
 
-Wordpress is a great tool for building a fully customizable blog. With custom themes, you gain full control over almost all aspects of your blog, including your markup and styles. Wouldn't it be great if you could use Sass as well?
+Wordpress is a great tool for building a fully customizable blog. With custom themes, you gain full control over almost all aspects of your blog, including your markup and styles. Wouldn't it be great if you could use Sass and Compass as well?
 
 ## Sass for WordPress
 
-I created a very straight forward plugin for WordPress called [Sass for Wordpress](https://github.com/roytomeij/sass-for-wordpress/) which watches for changes to your Sass files and re-compiles your CSS when needed. All it requires is installing Sass and making sure you're not running PHP in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get sent to the shell are properly escaped). Since you probably can't or don't want to install the Sass gem on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
+I created a very straight forward plugin for WordPress called [Sass for Wordpress](https://github.com/roytomeij/sass-for-wordpress/) which watches for changes to your Sass files and re-compiles your CSS when needed.
+
+Where for instance [Forge](/projects/forge) is great to develop and compile complete themes using Sass, the Sass for Wordpress plugin is a simple drop-in replacement when you only want to transform your CSS to Sass.
+
+## Installation and usage
+
+All the plugin requires is installing Sass & Compass and making sure you're not running PHP in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get sent to the shell are properly escaped). Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
 
 Adding Sass support to your theme is as easy as putting the plugin in your plugins folder, enable it in your plugins pane and include your stylesheet like this:
 
     :::php
-    <link rel="stylesheet" href="<?= sass('style') ?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?= sass('style.scss') ?>" type="text/css" />
 
-The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.sass` or `style.scss` (the plugin handles either syntax).
+The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.scss` (just use `.sass` for Original Sass syntax).
+
+Compass is used to compile your Sass to CSS, enabling you to use Compass goodness. Simply use `@import "compass";` in your Sass file, as you normally would, and make use of all Compass functionality. If a `config.rb` file doesn't exist it will be created on first run.
