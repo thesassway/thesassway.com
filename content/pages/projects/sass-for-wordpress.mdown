@@ -1,4 +1,4 @@
-Date: 16 October 2013
+Date: 2011-10-22 12:00:00 -0500
 Categories: projects, roy-tomeij
 Author: Roy Tomeij
 Summary: Wordpress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass and Compass support using this simple plugin.
@@ -6,6 +6,8 @@ Summary: Wordpress is a great tool for building a fully customizable blog. Now y
 # Sass for Wordpress Plugin
 
 Wordpress is a great tool for building a fully customizable blog. With custom themes, you gain full control over almost all aspects of your blog, including your markup and styles. Wouldn't it be great if you could use Sass and Compass as well?
+
+<a href="https://github.com/roytomeij/sass-for-wordpress/"><img src="/attachments/sass-plus-wordpress.png" class="full" /></a>
 
 ## Sass for WordPress
 
@@ -15,7 +17,7 @@ Where for instance [Forge](/projects/forge) is great to develop and compile comp
 
 ## Installation and usage
 
-All the plugin requires is installing Sass & Compass and making sure you're not running PHP in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get sent to the shell are properly escaped). Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
+All the Sass for Wordpress plugin requires is having Sass and Compass installed and making sure PHP isn't running in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get sent to the shell are properly escaped). Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
 
 Adding Sass support to your theme is as easy as putting the plugin in your plugins folder, enable it in your plugins pane and include your stylesheet like this:
 
@@ -25,3 +27,9 @@ Adding Sass support to your theme is as easy as putting the plugin in your plugi
 The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.scss` (just use `.sass` for Original Sass syntax).
 
 Compass is used to compile your Sass to CSS, enabling you to use Compass goodness. Simply use `@import "compass";` in your Sass file, as you normally would, and make use of all Compass functionality. If a `config.rb` file doesn't exist it will be created on first run.
+
+## Links
+
+* [Source on GitHub](https://github.com/roytomeij/sass-for-wordpress/)
+* [Forge, a WordPress theme development toolkit with Sass and CoffeeScript](/projects/forge)
+* [Getting started with Sass and Compass](/beginner/getting-started-with-sass-and-compass)
