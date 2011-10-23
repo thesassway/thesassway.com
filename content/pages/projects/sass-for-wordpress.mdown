@@ -28,7 +28,7 @@ Link to your stylesheet with this code.
     :::php
     <link rel="stylesheet" href="<?php sass('stylesheets/sass/screen.sass')" type="text/css" />
 
-The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.scss` (just use `.sass` for Original Sass syntax).
+The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is the path to your Sass file, in this case it will look for `style.scss`. To use the original Sass syntax replace `style.scss` with `style.sass`.
 
 ### The WordPress Theme Stylesheet
     
@@ -45,9 +45,9 @@ Here's a snapshot of the terminal output of `tree .` ran inside of a theme using
         |-- css
         |   |-- print.css
         |   `-- screen.css
-        `-- sass
-            |-- print.sass
-            `-- screen.sass
+        `-- scss
+            |-- print.scss
+            `-- screen.scss
 
 ### Compass
 
@@ -57,7 +57,7 @@ Simply use `@import "compass"` in your Sass file, as you normally would to add C
 
     :::ruby
     # Sass and CSS locations
-    sass_dir              = 'stylesheets/sass'
+    sass_dir              = 'stylesheets/scss'
     css_dir               = 'stylesheets/css'
 
 ## Links
