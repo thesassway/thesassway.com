@@ -19,7 +19,7 @@ Where for instance [Forge](/projects/forge) is great to develop and compile comp
 
 All the Sass for WordPress plugin requires is having Sass and Compass installed and making sure PHP isn't running in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler. Don't worry, all arguments that get sent to the shell from the plugin are properly escaped.
 
-Adding Sass support to your theme is as easy as installing the plugin to your plugins folder and enabling it in your plugins pane. Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, I recommend you to run the plugin locally when developing your theme(s) and upload the compiled CSS along with the reset of your theme. This way you can just link to a CSS file like normal.
+Adding Sass support to your theme is as easy as installing the plugin to your plugins folder and enabling it in your plugins pane. Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, I recommend you to run the plugin locally when developing your theme(s) and upload the compiled CSS along with the reset of your theme.
 
 ### Link to your stylesheet
 
