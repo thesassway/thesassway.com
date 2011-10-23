@@ -19,4 +19,4 @@ If you're a WordPress fan and have been looking for a way to work with Sass and 
 
 * [Forge Homepage](http://forge.thethemefoundry.com/)
 * [Source on GitHub](https://github.com/jestro/forge)
-* [The Theme Foundry](http://thethemefoundry.com/)
+* [Sass for WordPress Plugin](/projects/sass-for-wordpress)
