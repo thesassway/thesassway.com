@@ -26,7 +26,7 @@ Adding Sass support to your theme is as easy as installing the plugin to your pl
 Link to your stylesheet with this code.
 
     :::php
-    <link rel="stylesheet" href="<?php sass('stylesheets/sass/screen.sass')" type="text/css" />
+    <link rel="stylesheet" href="<?php sass('stylesheets/scss/screen.scss')" type="text/css" />
 
 The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is the path to your Sass file, in this case it will look for `style.scss`. To use the original Sass syntax replace `style.scss` with `style.sass`.
 
