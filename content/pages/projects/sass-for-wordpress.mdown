@@ -17,16 +17,48 @@ Where for instance [Forge](/projects/forge) is great to develop and compile comp
 
 ## Installation and usage
 
-All the Sass for WordPress plugin requires is having Sass and Compass installed and making sure PHP isn't running in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler (don't worry: all arguments that get sent to the shell are properly escaped). Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, its best to run the plugin locally when developing and upload the compiled CSS file with the rest of your theme.
+All the Sass for WordPress plugin requires is having Sass and Compass installed and making sure PHP isn't running in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler. Don't worry, all arguments that get sent to the shell from the plugin are properly escaped.
 
-Adding Sass support to your theme is as easy as putting the plugin in your plugins folder, enable it in your plugins pane and include your stylesheet like this:
+Adding Sass support to your theme is as easy as installing the plugin to your plugins folder and enabling it in your plugins pane. Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, I recommend you to run the plugin locally when developing your theme(s) and upload the compiled CSS along with the reset of your theme. This way you can just link to a CSS file like normal.
+
+### Link to your stylesheet
+
+Link to your stylesheet with this code.
 
     :::php
-    <link rel="stylesheet" href="<?= sass('style.scss') ?>" type="text/css" />
+    <link rel="stylesheet" href="<?php sass('stylesheets/sass/screen.sass')" type="text/css" />
 
 The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is your filename; in this case it looks for `style.scss` (just use `.sass` for Original Sass syntax).
 
-Compass is used to compile your Sass to CSS, enabling you to use Compass goodness. Simply use `@import "compass";` in your Sass file, as you normally would, and make use of all Compass functionality. If a `config.rb` file doesn't exist it will be created on first run.
+### The WordPress Theme Stylesheet
+    
+WordPress requires a file named `style.css`, aka the [theme stylesheet](http://codex.wordpress.org/Theme_Development#Theme_Stylesheet), located at the root of your theme used to identify your theme. You're going to want to keep that. :)
+
+### Sample Sass structure in WordPress
+
+Here's a snapshot of the terminal output of `tree .` ran inside of a theme using the Sass for WordPress plugin. I've omitted the mention of all the other theme files and just left what was needed to show off the hierarchy regarding adding Sass and Compass.
+
+    :::bash
+    |-- config.rb
+    |-- style.css
+    `-- stylesheets
+        |-- css
+        |   |-- print.css
+        |   `-- screen.css
+        `-- sass
+            |-- print.sass
+            `-- screen.sass
+
+### Compass
+
+[Compass](http://compass-style.org/) is the standard library of Sass and adds awesome [CSS3 mixins](http://compass-style.org/reference/compass/css3/), a number of [helper functions](http://compass-style.org/reference/compass/helpers/), [reset utilities](http://compass-style.org/reference/compass/reset/utilities/) and much more.
+
+Simply use `@import "compass"` in your Sass file, as you normally would to add Compass to your Sass stylesheet. If a `config.rb` file doesn't exist it will be created on first run. Likewise, if you're going the route of the stylesheet structure mentioned above, you'll need to set a few Compass variables.
+
+    :::ruby
+    # Sass and CSS locations
+    sass_dir              = 'stylesheets/sass'
+    css_dir               = 'stylesheets/css'
 
 ## Links
 
