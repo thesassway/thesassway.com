@@ -5,13 +5,13 @@ Summary: We all know that Sass is a **efficient**, **realiable** and **precise**
 
 # Nested Selectors: The Inception Rule
 
-We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS funa nd less of a pain to work with; however with great power comes **responsibility**.
+We all know that Sass is a **efficient**, **realiable** and **precise** tool which gives us great power and freedom to make CSS fun and less of a pain to work with; however with great power comes **responsibility**.
 
-Today we're going to dive into the most basic rule in the Sass universe, which will help you surive the most common mistake that many Sass developers, beginners and advanced, [still make](http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade).
+Today we're going to dive into the most basic rule in the Sass universe, which will help you survive the most common mistake that many Sass developers, beginners and advanced, [still make](http://37signals.com/svn/posts/3003-css-taking-control-of-the-cascade).
 
 ## The Problem
 
-We have all been there, in the CSS realm, where all code lives at a "top level" and writing nested selectors means writing a lot of code for each CSS declaration.
+We have all been there, in the CSS realm, where all code lives at a "root level" and writing nested selectors means writing a lot of code for each CSS declaration.
 
     .post {
       border-radius: 3px;
@@ -32,9 +32,9 @@ Odds are that while you were stuck in the CSS realm you began taking the approac
 
     <div class="post complete highlight rounded clearfix">...</div>
 
-That's the everyday bread and we all thought we wouldn't be able to enjoy writing CSS, right? But then we meet a new wonderful realm, where everything is wonderful and easy: Sass, solves all our problems with CSS and the best of all: It's a easy jump to the world of CSS Compilers with the .scss syntax!
+That was the everyday bread and butter. We all thought we wouldn't be able to enjoy writing CSS. However, as soon as Sass appeared in your life, you discovered this was **the way** to go when working with CSS. 
 
-It's easy to get going with Sass and .sass, but it's also easy to screw up.
+And just as easy as it is to get going with Sass, it's also easy to screw up.
 
 When you begin, the first thing that you'll love a lot is: **nested selectors**, that wonderful feature which will save you from the Carpal tunnel syndrome:
 
@@ -55,7 +55,7 @@ When you begin, the first thing that you'll love a lot is: **nested selectors**,
       }
     }
 
-Which will output the exact same code as the code you didn't like to write because all of the typing! And so, like a child with a new toy, we begin searching where we can use this to -what we think- its "max potential", what you'll later know as:
+Which will output the exact same code as the code you didn't like to write because all the repeatitive typing! And so, like a child with a new toy, we begin searching where we can use this to *-what we think-* its "max potential", what you'll later know as:
 
 ## CSS Selector Nightmare
 
@@ -94,7 +94,7 @@ Lets say you have this not-so-pretty piece of HTML:
       </div>
     </body>
 
-Since now you can use nesting, and you know that having your code encapsulated is the "good way to avoid collissions with other styles", you decide to begin mimicking the DOM with SCSS. (READ: DON'T DO IT!):
+Since now you can use nesting, and you know that having your code encapsulated is the "good way to avoid collissions with other styles", you decide to begin mimicking the DOM with SCSS. (bad idea).
 
     body  {
       div.container {
@@ -131,7 +131,7 @@ Since now you can use nesting, and you know that having your code encapsulated i
 
 It's all good right? with this way you can predict 100% of the time what's going to happen with your stylesheet, there's no cascading that can beat our [specificity](http://www.htmldog.com/guides/cssadvanced/specificity/)...
 
-And then we look at our generated CSS (oh, the horror):
+After compiling we take a look at the result, and we discover that we have created a monster:
 
     body
     body div.content div.container
@@ -156,11 +156,15 @@ And then we look at our generated CSS (oh, the horror):
 
 There are many reasons why this is just **wrong**: from [rendering performance](http://code.google.com/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors) to file-size performance (think about how many bytes that add!).
 
-But the odds are you may say: "Hey, computers are faster now! and also the internet download speeds are better!", but that's not the only problem!
+**But** the odds are you may say: 
 
-Since your code is so specific to the DOM **maintainability** becomes a problem too!
+> "Hey, computers are faster now! and also the internet download speeds are better!" - User who hates Front-End Engineering.
 
-Any change you make to it will need to be reflected into your SCSS file and vice versa. It also means that the styles are bounded for life to the those elements, and it completely defeats the idea of using CSS at all. I mean, you may as well go into writing CSS right inside the HTML.
+But that's not the only problem!
+
+Since your code is so specific to the DOM **maintainability becomes a problem**.
+
+Any change you make to it will need to be reflected into your Sass file and vice versa. It also means that the styles are bounded for life to the those elements and HTML structure; completely defeating the idea of Cascading Style Sheets. You may as well go into writing CSS right inside the HTML if you follow this path (**Don't**).
 
 ## Meet The Inception Rule
 
@@ -170,13 +174,17 @@ To prevent you from falling into this nightmare, I created a simple rule. Which 
 
 This basically means that you shouldn't be too specific or mimicking the DOM at any point. If you're more than four levels deep, that's a red flag. Of course there are times when you'll be forced to go there, but it's not something you should be doing too much.
 
-**Be Smart.** Think how the compiler will build your code and ask yourself if all the code that it's generating is really needed: Can't this be done with less selectors?
+## Making it fit in the Four or Less principle.
 
-**Be crafty.** Use everything the compiler provides you. With Sass you can use the awesome `@extend`.
+Once you understand the problem behind being too specific with selectors, you need to understand how to make your code more general by improving your understanding of Contexts, Objects and Interaction States.
 
-**Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason! Try to express what's going on, be it with `.comment`/`#post-author`/`/* All Articles! */`.
+### Site Context ( reset, body, base styling)
 
-## Fitting the world in four or less indentation levels
+### Page Context (layouts, sidebar widths, heights)
+
+### Objects (stuff that never changes)
+
+### Interaction State
 
 TODO: Teach the people how to identify good use cases:
 
@@ -190,3 +198,10 @@ I just don't think of things like that. #section is an object. #sidebar is an ob
 
 (interaction state) - very nested styles. Can't imagine needing more than 3 levels plus a fourth for interaction state.
 
+## Get an Idea.
+
+**Be Smart.** Think how the compiler will build your code and ask yourself if all the code that it's generating is really needed: Can't this be done with less selectors?
+
+**Be crafty.** Use everything the compiler provides you. With Sass you can use the awesome `@extend`.
+
+**Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason! Try to express what's going on, be it with `.comment`/`.post-author`/`/* All Articles! */`.
