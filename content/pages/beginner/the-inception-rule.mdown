@@ -164,7 +164,7 @@ But that's not the only problem!
 
 Since your code is so specific to the DOM **maintainability becomes a problem**.
 
-Any change you make to it will need to be reflected into your Sass file and vice versa. It also means that the styles are bounded for life to the those elements and HTML structure; completely defeating the idea of Cascading Style Sheets. You may as well go into writing CSS right inside the HTML if you follow this path (**Don't**).
+Any change you make to it will need to be reflected into your Sass file and vice versa. It also means that the styles are bounded for life to the those elements and HTML structure; completely defeating the idea of Cascading Style Sheets. You may as well go into writing CSS right inside the HTML if you follow this path (**don't**).
 
 ## Meet The Inception Rule
 
@@ -203,26 +203,48 @@ Example:
 
 ### Objects
 
-I'm going to be using
+An object is an element, alone or with children, that is identified by a `class` or a `id`. Usually, this is going to be the most common type of styling you should have in your code.
+
+Objects can be anything that should be shipped as a whole. You can use objects as basic styling and then modify them via Page Context types when needed.
+
+Elements that could be objects:
+
+	#sideabr
+	#content
+	#footer
+	.blog-post
+	.comment
+	.widget
+	.logo
+	.user
+	.button
+
+You'll usually set one top class to identify the object and set that as a base for the selector, from there you should style using the most general selector available:
+
+	ul.special-deal {
+		[...]
+		li {
+			[..]
+		}
+		a {
+			[..]
+		}
+	}
+
+Note that objects should have at most 4 levels. Most of the time you'll stay around the 2-3 level range, and the fourth one would be the Interaction state.
 
 ### Interaction State
 
-TODO: Teach the people how to identify good use cases:
+Anything that changes when you interact with an **object**. You'll usually get close to the fourth indentation limit when adding interaction states; which is acceptable.
 
-(site context) - body class or id
-
-(page context) - layouts, sidebar widths, heights,
-
-(object) -  (stuff that never changes) across the site.
-
-I just don't think of things like that. #section is an object. #sidebar is an object. #sidebar #section is composition of the two.
-
-(interaction state) - very nested styles. Can't imagine needing more than 3 levels plus a fourth for interaction state.
-
-## Get an Idea.
+## Remember
 
 **Be Smart.** Think how the compiler will build your code and ask yourself if all the code that it's generating is really needed: Can't this be done with less selectors?
 
-**Be crafty.** Use everything the compiler provides you. With Sass you can use the awesome `@extend`.
+**Be Crafty.** Use everything the compiler provides you. (`@extend` vs `@mixin`)
 
-**Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason! Try to express what's going on, be it with `.comment`/`.post-author`/`/* All Articles! */`.
+**Be Expressive.** You're adding a declaration that affects global html tags? Document it! You're nesting `article aside section h3`, you better have a good reason!
+
+**Be Creative.** Is there a way to make the HTML code easier to work with css without adding extra classes? if there is and it doesn't affect semantics. Do it.
+
+**Be Moderate.** Abusing anything is bad. Use your common sense when in doubt.
