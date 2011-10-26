@@ -1,0 +1,77 @@
+@mixin pulse {
+  0% {
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse { @include pulse; }
+@-moz-keyframes pulse { @include pulse; }
+
+.pulse {
+  width: 20px;
+  height: 20px;
+  background: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 16px;
+  text-align: center;
+}
+
+.pulse > * {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  text-indent: -9000px;
+  @include border-radius(10px);
+  @include transition-property(top bottom left right opacity border-width);
+  @include box-shadow(rgba(#000, 0.8) 0 1px 2px);
+  
+  // Animation
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  -moz-animation-duration: 1.2s;
+  -moz-animation-name: pulse;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+.pulse {
+  &.dark > * {
+    border-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 7px;
+    top: 7px;
+    @include border-radius(3px);
+    @include box-shadow(rgba(#000, 0.8) 0 1px 2px);
+    background: rgba(255, 255, 255, 0.7);
+    vertical-align: middle;
+  }
+  &.dark:after {
+    background: rgba(0, 0, 0, 0.5);
+    @include box-shadow(none);
+  }
+}

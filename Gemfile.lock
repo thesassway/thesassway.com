@@ -17,10 +17,11 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    css_parser (1.1.9)
+    css_parser (1.2.5)
+      addressable
     ffi (1.0.9)
     fssm (0.2.7)
-    grid-coordinates (1.1.5)
+    grid-coordinates (1.2.0)
       compass (>= 0.11.5)
     haml (3.1.3)
     heroku (2.8.1)
@@ -68,8 +69,8 @@ PLATFORMS
 
 DEPENDENCIES
   compass (~> 0.11.5)
-  css_parser (~> 1.1.9)
-  grid-coordinates (~> 1.1.5)
+  css_parser (~> 1.2.5)
+  grid-coordinates (~> 1.2.0)
   heroku
   nesta (= 0.9.5)
   pygments.rb (~> 0.1.2)
