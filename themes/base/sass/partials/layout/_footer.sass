@@ -50,10 +50,7 @@
 
 #footer
   background: #171717
-  // +background(linear-gradient(#333333, #171717 75%))
-  border:
-    top: 5px solid #aaa
-    bottom: 5px solid $shadow-black
+  border-top: 5px solid #aaa
   color: $dark-grey
   font-size: 14px
   padding: 30px 0
@@ -127,8 +124,9 @@
     @extend .grid-container
     padding: 50px 0 0 0
     a.credit
-      @extend .grid-full
+      margin-left: 10px
       background: image-url("rizn-media-production.png") no-repeat
       display: inline-block
       line-height: 22px
       text-indent: -99999px
+      width: 202px

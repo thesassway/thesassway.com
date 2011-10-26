@@ -1,15 +1,21 @@
-Date: 22 August 2013
+Date: 2011-09-22 07:45:11 -0500
 Categories: projects, adam-stacoviak
-Author: Adam Stacoviak
-Summary: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+author: Adam Stacoviak
+summary: Stitch is a nice companion to Compass that gives you access to CSS design patterns you likely use every day.
 
-# Stitch: A CSS pattern framework for Compass
+# Stitch: A CSS pattern framework
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<a href="http://stitchcss.com/"><img src="/attachments/stitch-css.png" /></a>
 
-## Lorem ipsum dolor sit
+## Common CSS patterns as mixins and classes
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Stitch is a nice companion to Compass that gives you access to CSS design patterns you likely use every day. It claims to be more than just chunks of code, and aims to create patterns in your workflow and change the way you write CSS.
 
-* http://stitchcss.com/
-* /attachments/stitch-css.png
+Stitch labels itself as "for compass", though I do see a bit of overlap in mixins like [clear-floats](https://github.com/anthonyshort/stitch-css/blob/master/stylesheets/stitch/patterns/layout/_clear-floats.scss), and [image-replace](https://github.com/anthonyshort/stitch-css/blob/master/stylesheets/stitch/patterns/images/_image-replace.scss) and its own [CSS reset](https://github.com/anthonyshort/stitch-css/blob/master/stylesheets/stitch/_reset.scss) -- but overall has some good potential.
+
+[Fork it](https://github.com/anthonyshort/stitch-css) and [submit some issues](https://github.com/anthonyshort/stitch-css/issues). Help this thing move along.
+
+### Links
+
+* [Source on GitHub](https://github.com/anthonyshort/stitch-css)
+* [stitchcss.com](http://stitchcss.com/)

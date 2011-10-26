@@ -31,6 +31,13 @@ use Rack::ShowStatus
 # Nice looking errors
 use Rack::ShowExceptions
 
+# cache control headers for Heroku
+require 'rack/contrib'
+use Rack::ResponseHeaders do |headers|
+  headers['Cache-Control'] = 'public, max-age=1501'
+end
+use Rack::ETag
+
 # Nesta
 require 'nesta/app'
 Nesta::App.root = root
