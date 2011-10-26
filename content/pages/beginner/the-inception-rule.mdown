@@ -176,13 +176,34 @@ This basically means that you shouldn't be too specific or mimicking the DOM at 
 
 ## Making it fit in the Four or Less principle.
 
-Once you understand the problem behind being too specific with selectors, you need to understand how to make your code more general by improving your understanding of Contexts, Objects and Interaction States.
+Once you understand the problem behind being too specific with selectors, you need to understand how to make your code more general by improving your understanding of **Contexts**, **Objects** and **Interaction States**.
 
-### Site Context ( reset, body, base styling)
+### Site Context
+
+You're going to style something that lacks completely of classes or ids? Then odds are you're going to need a at most just one level.
+
+Good examples of this would be the default styling of `h[1..6]`, `ul`, `p`. There may be cases where it makes sense to add several selectors, for like resets. Use your common sense for this.
 
 ### Page Context (layouts, sidebar widths, heights)
 
-### Objects (stuff that never changes)
+If you're thinking about making the layout: sidebar/content dimensions, elements that vary depending on the page. Then you're talking about page context.
+
+Usually you'll need at least two levels of indentation to achieve this. However, remember that you should **only** assign those things that change when on a per page basis. Not the objects themselves (*look next section for objects*)
+
+Example:
+
+	.cart {
+		#sidebar {
+			width:150px;
+		}
+		#content {
+			width: 850px;
+		}
+	}
+
+### Objects
+
+I'm going to be using
 
 ### Interaction State
 
