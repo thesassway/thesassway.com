@@ -1,77 +1,100 @@
+// Animation mixins
+
+$supported-prefixes: -webkit- -moz-;
+$cubic-bezier: cubic-bezier(0, 0, 0, 1);
+@mixin animation-duration($supported-prefixes, $duration: 1.2) {
+  @each $prefix in $supported-prefixes {
+    #{$prefix}animation-duration: #{$duration}s;
+  }
+}
+@mixin animation-name($supported-prefixes, $name: pulse) {
+  @each $prefix in $supported-prefixes {
+    #{$prefix}animation-name: #{$name};
+  }
+}
+@mixin animation-iteration-count($supported-prefixes, $count: infinite) {
+  @each $prefix in $supported-prefixes {
+    #{$prefix}animation-iteration-count: #{$count};
+  }
+}
+@mixin animation-timing-function($supported-prefixes, $function: $cubic-bezier) {
+  @each $prefix in $supported-prefixes {
+    #{$prefix}animation-timing-function: #{$function};
+  }
+}
+@mixin transform($supported-prefixes) {
+  @each $prefix in $supported-prefixes {
+    #{$prefix}transform: scale(2.2);
+  }
+}
+
+.pulse {
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+}
+
 @mixin pulse {
   0% {
     opacity: 1;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
   }
   50% {
     opacity: 0;
-    -webkit-transform: scale(3);
-    -moz-transform: scale(3);
+    @include transform;
   }
   100% {
     opacity: 0;
   }
 }
 
-@-webkit-keyframes pulse { @include pulse; }
-@-moz-keyframes pulse { @include pulse; }
-
-.pulse {
-  width: 20px;
-  height: 20px;
-  background: none;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  line-height: 16px;
-  text-align: center;
-}
-
 .pulse > * {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 1);
-  width: 6px;
-  height: 6px;
-  display: inline-block;
-  vertical-align: middle;
-  text-indent: -9000px;
-  @include border-radius(10px);
+  @include border-radius(14px);
   @include transition-property(top bottom left right opacity border-width);
   @include box-shadow(rgba(#000, 0.8) 0 1px 2px);
+  @include box-sizing(border-box);
+  border: 1px solid rgba(#fff, 1);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-indent: -9000px;
   
   // Animation
-  -webkit-animation-duration: 1.2s;
-  -webkit-animation-name: pulse;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: cubic-bezier(0, 0, 0, 1);
-  -moz-animation-duration: 1.2s;
-  -moz-animation-name: pulse;
-  -moz-animation-iteration-count: infinite;
-  -moz-animation-timing-function: cubic-bezier(0, 0, 0, 1);
+  @include animation-duration($duration: 3);
+  @include animation-name;
+  @include animation-iteration-count();
+  @include animation-timing-function;
 }
 
 .pulse {
-  &.dark > * {
-    border-color: rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-    -moz-box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-  }
   &:after {
+    position: absolute;
+    @include box-shadow(rgba(#000, 0.8) 0 0 0);
+    @include box-sizing(border-box);
+    background: rgba(#fff, 0.7);
     content: '';
     display: block;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    left: 7px;
-    top: 7px;
-    @include border-radius(3px);
-    @include box-shadow(rgba(#000, 0.8) 0 1px 2px);
-    background: rgba(255, 255, 255, 0.7);
-    vertical-align: middle;
+    @include border-radius(8px);
+    width: 8px;
+    height: 8px;
+    left: 12px;
+    top: 12px;
+  }
+  &.dark > * {
+    border-color: rgba(#000, 0.8);
+    @include box-shadow(rgba(#fff, 0.8) 0 0 0);
   }
   &.dark:after {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(#000, 0.5);
     @include box-shadow(none);
   }
 }
+
+@-webkit-keyframes pulse { @include pulse; }
+@-moz-keyframes pulse { @include pulse; }
