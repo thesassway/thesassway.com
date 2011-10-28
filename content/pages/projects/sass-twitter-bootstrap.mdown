@@ -38,7 +38,8 @@ Thanks [John](http://wiseheartdesign.com/) for stepping out and porting this for
     @import "forms.scss";
     @import "tables.scss";
     @import "patterns.scss";
-    
-Update: [Vincent Waller](https://twitter.com/#!/vrwaller) also [let us know](https://twitter.com/#!/vrwaller/status/107875483508682752) about [compass-twitter-bootstrap](https://github.com/vwall/compass-twitter-bootstrap).
 
-[[Source on GitHub](https://github.com/jlong/sass-twitter-bootstrap)]
+## Links
+
+* [[Sass Twitter Bootstrap on GitHub](https://github.com/jlong/sass-twitter-bootstrap)]
+* [[Contributors to Sass Twitter Bootstrap ](https://github.com/jlong/sass-twitter-bootstrap/contributors)
