@@ -10,8 +10,6 @@ A few weeks ago I was at a web design mixer and found myself talking to a well-k
 
 "Wow. Sorry for turning into The Sass Jerk just then. That's not the party you were looking for, I'm sure." Gracefully, she said something like, "Hey, you clearly get a lot out of it. I just haven't had time to really try it."
 
-<!-- A week later I was at Bar Camp Philadelphia where I was giving an intro talk about Sass. The talk went really well, and I was still excited from the response when I ran into another well-known CSS blogger in the hall. I was conscious of turning back into The Sass Jerk so I was tried to keep it cool. He later tweeted something to the effect of, "The problem with CSS preprocessors is how over zealous the fans are." Oops. He might not have been talking about me specifically, but it got me thinking.  -->
-
 ## Why do I carry on like this?
 
 Well it turns out, I'm a fan. I'm also a fan of lots of music, film, books, TV, and even other web technology. What is it about Sass that turns me into a fanatic? I think it's a few things. It helps me get my job done, but that's not enough to push me over the edge. It also opens up new creative opportunities.  That's huge. I want it to reach critical mass where I can be sure other CSS folks have made an informed decision to use it or not. It's also that I know it can still improve and that a larger user base will help that along. And then there's the dream that if all of us like working with these tools that eventually we won't need them because real CSS will adopt them. 
