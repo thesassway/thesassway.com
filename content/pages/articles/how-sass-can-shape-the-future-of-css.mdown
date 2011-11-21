@@ -82,3 +82,10 @@ If work does continue on these proposals, or any part of them, I think that it w
 ## Conclusion
 
 I have to confess that I've only briefly experimented with Sass, and have not used it in any production websites, but what I like about it is the ease with which it's been possible to adapt the syntax into CSS itself. It's great to see community-created language extensions influence the evolution of the web, and even if none of these proposals ever make it to the implementation stage, you can be sure that ***at the very least*** they form part of the standards conversation.
+
+## Links
+
+* [CSSOM, Vars, Mixins, Nesting, and Modules](http://www.xanthir.com/blog/b49w0)
+* [Why “variables” in CSS are harmful](http://www.w3.org/People/Bos/CSS-variables)
+* [CSS Variables Draft](http://www.xanthir.com/blog/b4AD0)
+* [Better Variables through Custom Properties from Tab Atkins Jr. on 2011-10-24](http://lists.w3.org/Archives/Public/www-style/2011Oct/0699.html)
