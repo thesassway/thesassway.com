@@ -1,24 +1,28 @@
-Date: 12 October 2012
+Date: 2011-11-21 12:00:00 -0600
 Categories: intermediate, guides, john-w-long
 Author: John W. Long
-Summary: Most people who use Sass are familiar to some degree with the command line. While programs like Compass.app and Scout.app are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 about_author: john_w_long
+Summary: Most people who use Sass are familiar to some degree with the command line. While programs like Compass.app and Scout.app are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 
 # Interactive Sass: Having Fun On The Terminal
 
-Most people who use Sass are familiar to some degree with the command line. While programs like "Compass.app":http://compass.handlino.com/ and "Scout.app":http://mhs.github.com/scout-app/ are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
+Most people who use Sass are familiar to some degree with the command line. While programs like [Compass.app](http://compass.handlino.com/) and [Scout.app](http://mhs.github.com/scout-app/) are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 
-One of these little gems is the interactive Sass interpreter. Many modern programming languages (like Python and Ruby) ship with an interactive version that can be used from the command prompt. These programs read a line of code in from the user, evaluate it, and output the result. It's called a Read-Eval-Print loop. Also known as "REPL":http://en.wikipedia.org/wiki/Read–eval–print_loop.
+## The Interactive Sass Interpreter
 
-To use the interactive interpretor for Sass, open up the "command prompt":http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/ and type:
+One of these little gems is the interactive Sass interpreter. Many modern programming languages (like Python and Ruby) ship with an interactive version that can be used from the command prompt. These programs read a line of code in from the user, evaluate it, and output the result. It's called a Read-Eval-Print loop, also known as [REPL](http://en.wikipedia.org/wiki/Read–eval–print_loop).
 
+To use the interactive interpreter for Sass, open up the [command prompt](http://wiseheartdesign.com/articles/2010/11/12/the-designers-guide-to-the-osx-command-prompt/) and type:
+
+    :::bash
     sass --interactive
 
 Or, if you like, use the short version of the same command:
 
+    :::bash
     sass -i
 
-Once started in interactive mode, the `sass` command will output a prompt ">>" asking for input. Enter any valid "Sass Script":http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#sassscript expression and it will output the result on the line below:
+Once started in interactive mode, the `sass` command will output a prompt ">>" asking for input. Enter any valid [Sass Script](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#sassscript) expression and it will output the result on the line below:
 
     >> 12 * 4 - 6
     42
@@ -27,7 +31,7 @@ Once started in interactive mode, the `sass` command will output a prompt ">>" a
     >> lighten(#333, 10%)
     #4d4d4d
 
-_Sass Script_ is a small subset of the Sass language. It mostly includes the mathematical parts of Sass and functions. You can't use Sass features like mixins or variables. But even with this small amount of funcitonality, you can still use interactive Sass to learn some interesting things about the Sass language. For instance:
+*Sass Script* is a small subset of the Sass language. It mostly includes the mathematical parts of Sass and functions. You can't use Sass features like mixins or variables. But even with this small amount of functionality, you can still use interactive Sass to learn some interesting things about the Sass language. For instance:
 
     >> 1em + 1px
     SyntaxError: Incompatible units: 'em' and 'px'
@@ -61,6 +65,8 @@ Speaking of Sass color functions, I often use interactive Sass to reduce a serie
 
 This allows me to design in the browser tweaking color values with functions. When I arrive at a color I like, I can simplify it to it's actual color value using the `sass` command in interactive mode.
 
-To quit once you've entered interactive mode, just type Ctrl+D.
+To quit once you've entered interactive mode, just type `Ctrl+D`.
 
-It's also worth mentioning that Compass includes it's own version of interactive Sass which will give you access to an array of additional functions that Compass provides. Just execute `compass interactive` on the command prompt.
+## Conclusion
+
+As you can see, the interactive Sass interpreter is an nice way to play with many Sass Script functions, math, color functions and more. If you're a Compass user (as you should be), it's also worth mentioning Compass includes it's own version of interactive Sass which will give you access to an array of additional functions that Compass provides. Just execute `compass interactive` on the command prompt.
