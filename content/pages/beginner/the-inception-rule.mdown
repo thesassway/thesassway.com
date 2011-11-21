@@ -87,9 +87,9 @@ And so, like a child with a new toy, we begin to use this feature in *-what we t
 
 ## CSS Selector Nightmare
 
-The so called **nightmare** between front-end engineers where the code is bloated and tightly coupled to the DOM to a point where modifying anything about the structure ends up breaking the front-end.
+The so called **nightmare** between front-end engineers is when the styles are bloated and tightly coupled to the DOM to a point where modifying anything about the structure ends up breaking the front-end.
 
-Let's look this not-so-pretty piece of HTML.
+Let's look at this not-so-pretty piece of HTML.
 
     :::html
     <body>
