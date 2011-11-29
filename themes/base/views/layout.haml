@@ -13,27 +13,30 @@
     = haml :analytics, :layout => false
   %body{ :role => @page_role || 'page' }
 
-    = haml :top_bar, :layout => false
+    .fadeIn
+      = haml :top_bar, :layout => false
   
-    %header(role="banner")
-      .max-width
-        %h1.fadeIn
-          %a{:href => "/", :rel => "home"}
+      %header(role="banner")
+        .max-width
+          %h1
+            %a{:href => "/", :rel => "home"}
+              :plain
+                <span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span>
+
             :plain
-              <span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span>
+              <span class='trade-mark'>&trade;</span>
+          %h2
+            = @subtitle
 
-          :plain
-            <span class='trade-mark'>&trade;</span>
-        %h2.fadeIn
-          = @subtitle
+      %section(role="main")
+        = yield
 
-    %section(role="main")
-      = yield
+      %footer(role="footer")
+        :markdown
+          Copyright 2010 - 2011 The Sass Way, All Rights Reserved.
 
-    %footer(role="footer")
-      :markdown
-        Copyright 2010 - 2011 The Sass Way, All Rights Reserved.
+      = haml :podcasts, :layout => false
+      = haml :footer, :layout => false
 
-    = haml :podcasts, :layout => false
-    = haml :footer, :layout => false
+    -# do not indent
     = haml :footer_scripts, :layout => false

@@ -1,7 +1,7 @@
 - @page_role = 'article' if @page.date
 
 .primary.column
-  .content.fadeIn
+  .content
     = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
     - if @page.date
