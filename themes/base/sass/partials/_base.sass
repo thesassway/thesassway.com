@@ -15,13 +15,12 @@
 
 // Aniamte.sass
 @import animate/shared
-@import animate/animations/bouncing-entrances
-@import animate/animations/fading-entrances
+@import animate/animations/fading-entrances/fadeIn
 
 [role="homepage"]
-  .fadeIn, .bounceInLeft, .bounceInUp
+  .fadeIn
     @include animation-duration(1.0s)
-    @include animation-delay(.5s)
+    @include animation-delay(.25s)
     @include animation-timing-function(ease-in)
     @include animation-fill-mode(both)
 
