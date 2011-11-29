@@ -17,14 +17,15 @@
   
     %header(role="banner")
       .max-width
-        %h1
+        %h1.fadeIn
           %a{:href => "/", :rel => "home"}
             :plain
               <span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span>
 
           :plain
             <span class='trade-mark'>&trade;</span>
-        %h2= @subtitle
+        %h2.fadeIn
+          = @subtitle
 
     %section(role="main")
       = yield

@@ -1,7 +1,7 @@
-@import "compass"
+@import compass
 // @import "vendor/smashing-layout/smashing-layout"
 // @import "vendor/rem/rem"
-@import "grid-coordinates"
+@import grid-coordinates
 
 // Zocial
 // $zocial-font-size: 1.6em
@@ -10,11 +10,26 @@
 // @import "zocial"
 // +zocial
 
+// Font Stacks
+@import font-stacks
+
+// Aniamte.sass
+@import animate/shared
+@import animate/animations/bouncing-entrances
+@import animate/animations/fading-entrances
+
+[role="homepage"]
+  .fadeIn, .bounceInLeft, .bounceInUp
+    @include animation-duration(1.0s)
+    @include animation-delay(3s)
+    @include animation-timing-function(ease-in)
+    @include animation-fill-mode(both)
+
 +global-reset
 +reset-html5
 
 // Base Font
-$base-font-family: Clean, "Helvetica Neue", Arial, Clean, sans-serif
+$base-font-family: ff("Helvetica Neue")
 $base-font-size: 10px
 $base-line-height: 1.4rem
 

@@ -1,6 +1,8 @@
 # Compass Configuration
 
 require 'grid-coordinates'
+require 'animate-sass'
+require 'font-stacks'
 # require 'zocial-toolkit'
 
 # HTTP paths

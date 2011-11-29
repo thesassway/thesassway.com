@@ -11,6 +11,8 @@ GEM
   specs:
     RedCloth (4.2.8)
     addressable (2.2.6)
+    animate-sass (0.1.1)
+      compass (>= 0.11.5)
     blankslate (2.1.2.4)
     chunky_png (1.2.4)
     compass (0.11.5)
@@ -20,6 +22,8 @@ GEM
     css_parser (1.2.5)
       addressable
     ffi (1.0.9)
+    font-stacks (0.1.4)
+      compass (>= 0.11.5)
     fssm (0.2.7)
     grid-coordinates (1.2.0)
       compass (>= 0.11.5)
@@ -68,8 +72,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-sass
   compass (~> 0.11.5)
   css_parser (~> 1.2.5)
+  font-stacks
   grid-coordinates (~> 1.2.0)
   heroku
   nesta (= 0.9.5)
