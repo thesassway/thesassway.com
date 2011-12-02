@@ -12,14 +12,14 @@ Fluid or elastic layouts allow your site's content to grow and shrink to fit the
 I didn't think so either. Personally, I resisted fluid layouts before for one primary reason. Not that many layouts work at *all* sizes. When a layout of mine grew or shrank outside the "sweet spot" of my design I felt that it usually ruined the balance and composition of the design. At least when I made a fixed layout I could place the burden of having a big enough screen on the user.
 
     :::html
-    <p class="smug-designer">
+    <q class="smug-designer">
       "It wasn't <em>my<\em> fault they were on a netbook.
       I'm concerned with "mainstream" (desktop) users."
-    <\p>
+    <\q>
 
 But I knew it was a cheat. I hated horizontal scroll bars as much as my users and clients did. I just didn't know of a way to do fluid layouts without compromising my design.
 
-Then along came our new hero. My jaw dripped along with all the other web nerds then I read Ethan's article. All hail @media queries!
+And then, my jaw dripped along with all the other web nerds then I read Ethan's [article](http://www.alistapart.com/articles/responsive-web-design/). All hail @media queries!
 
 
 ## What are `@media` queries and why should I care?
@@ -29,7 +29,7 @@ If you've ever created a print style sheet you've used media-specific CSS. In th
     :::html
     <link rel="stylesheet" href="paper.css" media="print" />
 
-This gave us some control over media types, but that's it. Then CSS3 introduced the concept of using a query in that space as well. You can add your query in the `<link>` tag, or join the cool kids and use the `@media` rule in CSS. More on that later. First let's look at what kind of queries we can write. If you look at the [W3C Spec](http://www.w3.org/TR/css3-mediaqueries/#media1) you'll see a dazzling array of different properties you can check. The ones I'm most interested in are the ones concerning width, height, and ratio. By swapping out different rules based on these properties you can change the size and shape of your design to truly fit the viewing area.
+This gave us some control over media types, but that's it. Then CSS3 introduced the concept of using a query in that space as well. You can add your query in the `<link>` tag, or join the cool kids and use the `@media` rule in CSS. More on that later. First let's look at what kind of queries we can write. If you look at the [W3C Spec](http://www.w3.org/TR/css3-mediaqueries/#media1) you'll see a dazzling array of different properties you can check. The ones I'm most interested in are the ones concerning width, height, orientation, and ratio. By swapping out different rules based on these properties you can change the size and shape of your design to truly fit the viewing area.
 
 Here's a simple query in the `<link>` tag that will load a css file for small screens.
 
@@ -67,11 +67,20 @@ Which compiles to:
       }
     }
 
-You can use these in Sass just fine, and inside a query you can use all the Sass features you like. In the above example I used and manipulated a variable. You should note, however, that you can't use variables or mixins in the query declaration itself (`@media screen and (min-width: 1024px)`). I understand that some powerful tools for that are coming in an upcoming Sass release.
+You can use these in Sass just fine, and inside a query you can use all the Sass features you like. In the above example I used and manipulated a variable. You should note, however, that you can't use variables in the query declaration itself. It would be nice to write the following, but it won't work. 
+
+    :::scss
+    $breakpoint: 1024px;
+
+    @media screen and (min-width: $breakpoint) {
+     content: "this won't work :(";
+    }
+
+*Skip ahead to see how the upcoming Sass 3.2 release will help with this.*
 
 ## @media Bubbling
 
-Sass does provide what I consider to be a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query inside a nested selector Sass will "bubble" that selector and the new rule outside of the nest and back out to the root of your style sheet.
+Sass does provide what I consider to be a pretty killer feature for authoring @media when you nest them inside other selectors. If you add a @media query by nesting it inside a selector Sass will "bubble" that @media query and the new rule outside of the nest and back out to the root of your style sheet.
 
 I'll use @media un-nested (as above) when I'm setting up large-scale changes like a responsive master grid, but I find that I need to make small adjustments much more often. For example, lets say you have a profile picture that looks great large and floated to the left on a desktop, but needs to shrink on a smaller screen. It also needs to stop floating on a really wide screen. In Sass we can write that like this.
 
@@ -110,7 +119,60 @@ I really like how this lets me keep my rules for the different options adjacent 
 When I was designing the homepage for [The Coding Designer's Survival Kit](http://thecodingdesigner.com/) I made a module where the elements laid out in a circle that took up a lot of space in the wide screen version of the design. However in any width lower than 900px they overflowed the boundary and the circle no longer made sense. In this case the best design decision was to lay those elements out in another way, and I chose a grid. If you're curious you can [view my source](https://github.com/canarymason/The-Coding-Designer-s-Survival-Kit-Site/blob/master/sites/all/themes/badge/css/src/_design.sass#L328) sass for that project.
 
 
-## the future of `@media` in Sass
+## The Future of `@media` in Sass
 
-I hinted before about hints of what's to come for @media queries in Sass. An upcoming Sass release will allow you to pass content blocks to mixins. This will allow you to set up a mixin for all your @media breakpoints, and then use those like you would other mixins. Chris Eppstein published a [gist](https://gist.github.com/1215856#file_6_media_queries.scss) showing how you might use this. I have to say it got me salivating. Once that feature is in place we should be able to some very smart mixins and templates for media queries and responsive grid frameworks.
+[Sass 3.2](tktktk) is about to make all this calculating absolutely trivial. In my examples above you'll noticed that all the media queries were written out and included the pixel value for each break point, in every media query I used. "What? Where are the variables?", you asked? Well it turns out that until 3.2 Sass didn't support variables in media queries. Well, strictly speaking it still doesn't. But... Sass 3.2 introduces the ability to pass content blocks to functions. Chris Eppstein [published a gist](https://gist.github.com/1215856#file_6_media_queries.scss) showing how you might use this. I'll use these new mixins to redo my profile picture example: 
+
+    :::scss
+    @mixin respond-to($media) {
+      @if $media == handhelds {
+        @media only screen and (max-width: 320px) { @content; }
+      }
+      @else if $media == medium-screens {
+        @media only screen and (min-width: 321px) and (max-width: 1024px) { @content; }
+      }
+      @else if $media == wide-screens {
+        @media only screen and (min-width: 1024px) { @content; }
+      }
+    }
+
+    .profile-pic {
+      float: left;
+      width: 250px;
+      @include respond-to(handhelds) { width: 100% ;}
+      @include respond-to(medium-screens) { width: 125px; }
+      @include respond-to(wide-screens) { float: none; }
+    }
+
+And the compiled css: 
+
+    :::css
+    .profile-pic {
+      float: left;
+      width: 250px;
+    }
+    @media only screen and (max-width: 320px) {
+      .profile-pic {
+        width: 100%;
+      }
+    }
+    @media only screen and (min-width: 321px) and (max-width: 1024px) {
+      .profile-pic {
+        width: 125px;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      .profile-pic {
+        float: none;
+      }
+    }
+
+
+This makes it possible to set up a mixin for all your @media breakpoints and reuse that as often as you need. This makes it incredibly easy to keep track of all the different ways your styles may fracture as you do specific styling in each breakpoint. I have to say it got me salivating. I can tell you are too. Once that feature is in place we should be able to some very smart mixins and templates for media queries (and other tricks too!) and responsive grid frameworks.
+
+You can try out the new Sass features by installing it with this command: 
+
+`gem install sass --pre`
+
+
 
