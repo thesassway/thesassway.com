@@ -1,25 +1,32 @@
-Date: 6 October 2099
+Date: 2011-12-02 10:00:00 -0600
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
 about_author: mason_wendell
 Summary: In part one we talked about how Sass can help with fluid layouts and images. Now we'll turn our attention to the new kid in town. Media queries are the tool that takes a design from fluid to truly responsive.
 
-
 # Responsive Web Design in Sass Part 2: Media Queries in Sass
 
 Fluid or elastic layouts allow your site's content to grow and shrink to fit the screen, so that solves the problem right? OK. See you later.
 
-I didn't think so either. Personally, I resisted fluid layouts before for one primary reason. Not that many layouts work at *all* sizes. When a layout of mine grew or shrank outside the "sweet spot" of my design I felt that it usually ruined the balance and composition of the design. At least when I made a fixed layout I could place the burden of having a big enough screen on the user.
+## I resisted fluid layouts (too)
+
+I didn't think so either. Personally, I resisted fluid layouts for quite some time for one primary reason.
+
+Not ***all*** layouts work at ***all*** sizes.
+
+When a layout of mine grew or shrank outside the "sweet spot" of my design I felt that it usually ruined the balance and composition of the design. At least when I made a fixed layout I could place the burden of having a big enough screen on the user.
+
+It's clear to me now that with the explosion of newly connected devices, placing the burden of having the right size screen on the user is no longer a suitable solution. It's a recipe for failure.
 
     :::html
     <q class="smug-designer">
-      "It wasn't <em>my<\em> fault they were on a netbook.
+      "It wasn't <em>my</em> fault they were on a netbook.
       I'm concerned with "mainstream" (desktop) users."
-    <\q>
+    </q>
 
-But I knew it was a cheat. I hated horizontal scroll bars as much as my users and clients did. I just didn't know of a way to do fluid layouts without compromising my design.
+But I knew it was a cheat. I hated horizontal scroll bars as much as my users and clients did. I just didn't know of a way to do fluid layouts without compromising my designs.
 
-And then, my jaw dripped along with all the other web nerds then I read Ethan's [article](http://www.alistapart.com/articles/responsive-web-design/). All hail @media queries!
+And then, my jaw dripped along with all the other web nerds when I read Ethan's [article](http://www.alistapart.com/articles/responsive-web-design/). All hail @media queries!
 
 
 ## What are `@media` queries and why should I care?
@@ -166,7 +173,6 @@ And the compiled css:
         float: none;
       }
     }
-
 
 This makes it possible to set up a mixin for all your @media breakpoints and reuse that as often as you need. This makes it incredibly easy to keep track of all the different ways your styles may fracture as you do specific styling in each breakpoint. I have to say it got me salivating. I can tell you are too. Once that feature is in place we should be able to some very smart mixins and templates for media queries (and other tricks too!) and responsive grid frameworks.
 
