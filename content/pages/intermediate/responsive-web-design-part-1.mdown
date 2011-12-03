@@ -111,4 +111,6 @@ which becomes:
 
 ## Next up?
 
-In part 2, I will be covering media queries. If you have any questions, please feel free to share your comments below.
+In part 2 of Responsive Web Design in Sass, [Media Queries in Sass](/intermediate/responsive-web-design-part-2), I will be covering the breadth of what you'll need to know about media queries in Sass as well as the upcoming changes for media queries in Sass 3.2.
+
+If you have any questions, please feel free to share your comments below.
