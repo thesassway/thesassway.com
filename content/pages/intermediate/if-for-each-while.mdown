@@ -91,28 +91,28 @@ Which emits this CSS:
       width: 64px;
     }
 
-If you want to see a real world example of a `@for` directive, check out how I've used it in [Grid Coordinates](https://github.com/adamstac/grid-coordinates/blob/master/stylesheets/_grid-coordinates.sass) to create a range of classes on lines 39-55. Now that I look at my code for Grid Coordinates, based on the teachings of this guide, I can see how my code can be re-factored. If you can spot what I'm saying, you're doing just fine.
+If you want to see a real world example of a `@for` directive, check out how I've used it in [Grid Coordinates](https://github.com/adamstac/grid-coordinates/blob/master/stylesheets/partials/_grid-coordinates-mixin.scss) to create a range of classes on lines 37-53.
 
 Here's a sample of the code you'll see in that file.
 
-    :::sass
-    // Loops
-    @for $i from 1 through $grid-columns
-      .grid-#{$i}
-        +grid-base($i)
-        @extend .grid-block
-    @for $i from 1 through $grid-columns - 1
-      .grid-prefix-#{$i}
-        +grid-prefix($i)
-    @for $i from 1 through $grid-columns - 1
-      .grid-suffix-#{$i}
-        +grid-suffix($i)
-    @for $i from 1 through $grid-columns - 1
-      .grid-push-#{$i}
-        +grid-push($i)
-    @for $i from 1 through $grid-columns - 1
-      .grid-pull-#{$i}
-      +grid-pull($i)
+    :::scss
+    // Loops to enumerate the classes
+    // Yep, this saves us tons of typing (if this were CSS)
+    @for $i from 1 through $grid-columns {
+      .grid-#{$i} { @include grid-base($i); @extend .grid-block; }
+    }
+    @for $i from 1 to $grid-columns {
+      .grid-prefix-#{$i} { @include grid-prefix($i); }
+    }
+    @for $i from 1 to $grid-columns {
+      .grid-suffix-#{$i} { @include grid-suffix($i); }
+    }
+    @for $i from 1 to $grid-columns {
+      .grid-push-#{$i} { @include grid-push($i); }
+    }
+    @for $i from 1 to $grid-columns {
+      .grid-pull-#{$i} { @include grid-pull($i); }
+    }
 
 ### @each
 
