@@ -1,4 +1,4 @@
 desc "Release to GitHub and Heroku"
-task :release do
+task :deploy do
   system "git push heroku master && git push"
 end
