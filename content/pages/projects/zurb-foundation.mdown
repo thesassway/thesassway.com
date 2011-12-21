@@ -1,25 +1,38 @@
 Date: 2011-12-18 02:00:00 -0600
 Categories: projects, adam-stacoviak
 Author: Adam Stacoviak
-Summary: WordPress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass and Compass support using this simple plugin.
+Summary: What do you get when combine the power of Sass with Zurb? You get Zurb Foundation for Sass and Compass. It's the perfect flexible grid, desktop to mobile responsive, forms, buttons and UI library, plus other ZURB Playground favorites like Orbit and Reveal.
 
 # Zurb Foundation, for Sass and Compass
 
-WordPress is a great tool for building a fully customizable blog. With custom themes, you gain full control over almost all aspects of your blog, including your markup and styles. Wouldn't it be great if you could use Sass and Compass as well?
+What do you get when combine the power of Sass with Zurb? You get Zurb Foundation for Sass and Compass.
 
 <a href="https://github.com/adamstac/animate.sass"><img src="/attachments/zurb-foundation.png" class="full" /></a>
 
-## Sass for WordPress
+## Foundation is awesome.
 
-I created a very straight forward plugin for WordPress called [Sass for WordPress](https://github.com/roytomeij/sass-for-wordpress/) which watches for changes to your Sass files and re-compiles your CSS when needed.
+I come out of the gate saying, "Foundation is awesome."
 
-Where for instance [Forge](/projects/forge) is great to develop and compile complete themes using Sass, the Sass for WordPress plugin is a simple drop-in replacement when you only want to transform your CSS to Sass.
+ZURB Foundation is the perfect flexible grid, desktop to mobile responsive, forms, buttons and UI library, plus other [ZURB Playground](http://www.zurb.com/playground) favorites like [Orbit](http://www.zurb.com/playground/orbit-jquery-image-slider) and [Reveal](http://www.zurb.com/playground/reveal-modal-plugin).
+
+With [case studies](http://foundation.zurb.com/case-foundation.php) like [ZURB Jobs](http://www.zurb.com/jobs), [Swizzle](http://foundation.zurb.com/case-swizzle.php) and [the Foundation site itself](http://foundation.zurb.com/case-foundation.php), how can we deny ZURB of hitting this one out of the park.
+
+<a href="http://www.getswizzle.com/"><img src="http://foundation.zurb.com/images/case-swizzle.jpg" class="full" /></a>
+
+### Features
+
+* [The Grid](http://foundation.zurb.com/grid.php)
+* [Rapid Prototyping](http://foundation.zurb.com/prototyping.php)
+* [Mobility](http://foundation.zurb.com/mobile.php)
+
+Plus, you can learn what Foundation includes, as well as how to use it on mobile and on the desktop web via [the documentation](http://foundation.zurb.com/docs/index.php).
 
 ## Installation and usage
+    
+    :::bash
+    gem install
+    compass create <my_project> -r foundation-sass --using zurb-foundation --force
 
-All the Sass for WordPress plugin requires is having Sass and Compass installed and making sure PHP isn't running in safe mode. This is needed because PHP needs to be able to execute the `exec()` function, which is used to invoke the Sass-to-CSS compiler. Don't worry, all arguments that get sent to the shell from the plugin are properly escaped.
-
-Adding Sass support to your theme is as easy as installing the plugin to your plugins folder and enabling it in your plugins pane. Since you probably can't or don't want to install the Sass and Compass gems on your hosting environment, I recommend you to run the plugin locally when developing your theme(s) and upload the compiled CSS along with the reset of your theme.
 
 ### Link to your stylesheet
 
