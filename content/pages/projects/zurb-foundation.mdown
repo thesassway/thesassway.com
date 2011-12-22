@@ -50,7 +50,7 @@ If you use Bundler, simply add `foundation-sass` to your `Gemfile` and `bundle i
     gem 'foundation-sass'
 
 
-### Awesome examples to check out
+## Awesome examples to check out
 
 * [A prototype of Google+](http://foundation.zurb.com/prototype-example2.php)
 * [All grid sizes](http://foundation.zurb.com/grid-example1.php)
