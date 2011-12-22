@@ -1,4 +1,4 @@
-Date: 2011-12-18 02:00:00 -0600
+Date: 2011-12-22 14:30:00 -0600
 Categories: projects, adam-stacoviak
 Author: Adam Stacoviak
 Summary: What do you get when combine the power of Sass with Zurb? You get Zurb Foundation for Sass and Compass. It's the perfect flexible grid, desktop to mobile responsive, forms, buttons and UI library, plus other ZURB Playground favorites like Orbit and Reveal.
@@ -7,74 +7,58 @@ Summary: What do you get when combine the power of Sass with Zurb? You get Zurb 
 
 What do you get when combine the power of Sass with Zurb? You get Zurb Foundation for Sass and Compass.
 
-<a href="https://github.com/adamstac/animate.sass"><img src="/attachments/zurb-foundation.png" class="full" /></a>
+<a href="http://foundation.zurb.com/"><img src="/attachments/zurb-foundation.png" class="full" /></a>
 
 ## Foundation is awesome.
 
-I come out of the gate saying, "Foundation is awesome."
+I come out of the gate saying, "Foundation is awesome." It's the perfect flexible grid from desktop to mobile.
 
-ZURB Foundation is the perfect flexible grid, desktop to mobile responsive, forms, buttons and UI library, plus other [ZURB Playground](http://www.zurb.com/playground) favorites like [Orbit](http://www.zurb.com/playground/orbit-jquery-image-slider) and [Reveal](http://www.zurb.com/playground/reveal-modal-plugin).
+Foundation includes forms, buttons, and a UI library. Plus other [ZURB Playground](http://www.zurb.com/playground) favorites like [Orbit](http://www.zurb.com/playground/orbit-jquery-image-slider) and [Reveal](http://www.zurb.com/playground/reveal-modal-plugin).
 
-With [case studies](http://foundation.zurb.com/case-foundation.php) like [ZURB Jobs](http://www.zurb.com/jobs), [Swizzle](http://foundation.zurb.com/case-swizzle.php) and [the Foundation site itself](http://foundation.zurb.com/case-foundation.php), how can we deny ZURB of hitting this one out of the park.
+With [case studies](http://foundation.zurb.com/case-foundation.php) like [ZURB Jobs](http://www.zurb.com/jobs), [Swizzle](http://foundation.zurb.com/case-swizzle.php) and [the Foundation site itself](http://foundation.zurb.com/case-foundation.php), how can we deny ZURB of hitting this one out of the park?
 
 <a href="http://www.getswizzle.com/"><img src="http://foundation.zurb.com/images/case-swizzle.jpg" class="full" /></a>
 
-### Features
+## Foundation's Features
 
-* [The Grid](http://foundation.zurb.com/grid.php)
-* [Rapid Prototyping](http://foundation.zurb.com/prototyping.php)
-* [Mobility](http://foundation.zurb.com/mobile.php)
+ZURB Foundation features a set of global styles that include Eric Meyer's reset, tested styles for typography, links, lists, tables and more.
 
-Plus, you can learn what Foundation includes, as well as how to use it on mobile and on the desktop web via [the documentation](http://foundation.zurb.com/docs/index.php).
+* [The Grid](http://foundation.zurb.com/grid.php), built for [rapid prototyping](http://foundation.zurb.com/prototyping.php) and [mobility](http://foundation.zurb.com/mobile.php)
+* Various [layout](http://foundation.zurb.com/docs/layout.php) options
+* [UI Elements](http://foundation.zurb.com/docs/ui.php)
+* [Buttons](http://foundation.zurb.com/docs/buttons.php) and [forms](http://foundation.zurb.com/docs/forms.php)
+* Plus [playground](http://www.zurb.com/playground) favorites [Orbit](http://www.zurb.com/playground/orbit-jquery-image-slider) and [Reveal](http://www.zurb.com/playground/reveal-modal-plugin)
 
-## Installation and usage
+And ZURB didn't stop there, they did an awesome job showing off [the documentation](http://foundation.zurb.com/docs/index.php) too. You can learn about all the features of Foundation, as well as how to use it on mobile and desktop displays.
+
+## Installation
+
+From your Terminal, ...
     
     :::bash
-    gem install
-    compass create <my_project> -r foundation-sass --using zurb-foundation --force
+    gem install foundation-sass
 
 
-### Link to your stylesheet
-
-Link to your stylesheet with this code.
-
-    :::php
-    <link rel="stylesheet" href="<?php sass('stylesheets/scss/screen.scss')" type="text/css" />
-
-The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is the path to your Sass file, in this case it will look for `style.scss`. To use the original Sass syntax replace `style.scss` with `style.sass`.
-
-### The WordPress Theme Stylesheet
-    
-WordPress requires a file named `style.css`, aka the [theme stylesheet](http://codex.wordpress.org/Theme_Development#Theme_Stylesheet), located at the root of your theme used to identify your theme. You're going to want to keep that. :)
-
-### Sample Sass structure in WordPress
-
-Here's a snapshot of the terminal output of `tree .` ran inside of a theme using the Sass for WordPress plugin. I've omitted the mention of all the other theme files and just left what was needed to show off the hierarchy regarding adding Sass and Compass.
+Then require `foundation-sass` to your `config.rb` for Compass.
 
     :::bash
-    |-- config.rb
-    |-- style.css
-    `-- stylesheets
-        |-- css
-        |   |-- print.css
-        |   `-- screen.css
-        `-- scss
-            |-- print.scss
-            `-- screen.scss
+    require 'foundation-sass'
+    
+If you use Bundler, simply add `foundation-sass` to your `Gemfile` and `bundle install`.
 
-### Compass
+    :::bash
+    gem 'foundation-sass'
 
-[Compass](http://compass-style.org/) is the standard library of Sass and adds awesome [CSS3 mixins](http://compass-style.org/reference/compass/css3/), a number of [helper functions](http://compass-style.org/reference/compass/helpers/), [reset utilities](http://compass-style.org/reference/compass/reset/utilities/) and much more.
 
-Simply use `@import "compass";` as you normally would to add Compass to your Sass stylesheet. If a `config.rb` file doesn't exist it will be created on first run. Likewise, if you're going the route of the stylesheet structure mentioned above, you'll need to set a few Compass variables.
+### Awesome examples to check out
 
-    :::ruby
-    # Sass and CSS locations
-    sass_dir              = 'stylesheets/scss'
-    css_dir               = 'stylesheets/css'
+* [A prototype of Google+](http://foundation.zurb.com/prototype-example2.php)
+* [All grid sizes](http://foundation.zurb.com/grid-example1.php)
+* [Nesting the grid](http://foundation.zurb.com/grid-example2.php)
+* [The mobile grid](http://foundation.zurb.com/mobile-example1.php)
 
 ## Links
 
-* [Source on GitHub](https://github.com/roytomeij/sass-for-wordpress/)
-* [Forge, a WordPress theme development toolkit with Sass and CoffeeScript](/projects/forge)
-* [Getting started with Sass and Compass](/beginner/getting-started-with-sass-and-compass)
+* [ZURB Foundation](http://foundation.zurb.com/)
+* [Foundation Sass](https://github.com/zurb/foundation-sass) on GitHub
+* [Foundation Docs](http://foundation.zurb.com/docs/)
