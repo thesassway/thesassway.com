@@ -33,21 +33,75 @@ And ZURB didn't stop there, they did an awesome job showing off [the documentati
 
 ## Installation
 
-From your Terminal, ...
+From your Terminal ...
     
     :::bash
-    gem install foundation-sass
-
-
-Then require `foundation-sass` to your `config.rb` for Compass.
-
-    :::bash
-    require 'foundation-sass'
+    (sudo) gem install ZURB-foundation
     
-If you use Bundler, simply add `foundation-sass` to your `Gemfile` and `bundle install`.
+If you use [Bundler](http://gembundler.com/), simply add `ZURB-foundation` to your `Gemfile` and `bundle install`.
 
     :::bash
-    gem 'foundation-sass'
+    gem 'ZURB-foundation'
+    
+Form here, you have a few options on getting started with ZURB Foundation. You can start a Compass-based project with ZURB Foundation or you can install ZURB Foundation into an existing Compass-based project.
+
+### Start a Compass-based project with ZURB Foundation
+
+You can start a brand new project using Compass and ZURB Foundation with the following `compass` command.
+
+    :::bash
+    compass create <project-name> -r ZURB-foundation --using ZURB-foundation --force
+
+If you'd like to require ZURB Foundation to install using a particular Sass syntax, use the Compass `--syntax` flag. Here's an example.
+
+    :::bash
+    compass create <my_project> -r ZURB-foundation --using ZURB-foundation --syntax sass --force
+
+### Install ZURB Foundation into an existing Compass-based project
+
+You can install ZURB Foundation into an existing project with Compass in place already.
+
+    :::bash
+    compass install ZURB-foundation/project
+
+Running this will unfurl a number of files from the ZURB Foundation gem using the Compass framework.
+
+    :::bash
+    -> % compass install ZURB-foundation/project
+    directory images/misc/ 
+    directory images/orbit/ 
+    directory javascripts/ 
+    directory sass/ 
+    directory stylesheets/ 
+       create sass/app.scss 
+       create sass/ie.scss 
+       create javascripts/app.js 
+       create javascripts/forms.jquery.js 
+       create javascripts/jquery.customforms.js 
+       create javascripts/jquery.min.js 
+       create javascripts/jquery.reveal.js 
+       create javascripts/jquery.orbit-1.3.0.js 
+       create javascripts/jquery.placeholder.min.js 
+       create index.html 
+       create humans.txt 
+       create robots.txt 
+       create MIT-LICENSE.txt 
+       create images/misc/button-gloss.png 
+       create images/misc/button-overlay.png 
+       create images/misc/custom-form-sprites.png 
+       create images/misc/input-bg.png 
+       create images/misc/modal-gloss.png 
+       create images/misc/table-sorter.png 
+       create images/orbit/bullets.jpg 
+       create images/orbit/left-arrow.png 
+       create images/orbit/loading.gif 
+       create images/orbit/mask-black.png 
+       create images/orbit/pause-black.png 
+       create images/orbit/right-arrow.png 
+       create images/orbit/rotator-black.png 
+       create images/orbit/timer-black.png 
+       create stylesheets/app.css 
+       create stylesheets/ie.css 
 
 
 ## Awesome examples to check out
