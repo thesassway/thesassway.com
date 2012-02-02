@@ -40,4 +40,4 @@ You don't need to know the internals of Sass to know what will be done to your c
 
 ## Sass is just a tool
 
-Just as you can't expect everyone who holds a hammer to be a master carpenter, Sass doesn't automagically turn you into a great front-end developer. In the end, Sass is "just" a powerful tool. And when taking responsibility in this great power, it will help you write and maintain your stylesheets the easy way, whatever approach you to take. Know what your doing and you'll be fine.
+Just as you can't expect everyone who holds a hammer to be a master carpenter, Sass doesn't automagically turn you into a great front-end developer. In the end, Sass is "just" a powerful tool. And when taking responsibility in this great power, it will help you write and maintain your stylesheets the easy way, whatever approach you to take. Know what you are doing and you'll be fine.
