@@ -1,30 +1,30 @@
 Date: 2013-03-21 21:31:00 -0500
-Categories: intermediate, guides, adam-stacoviak
+Categories: intermediate, guides, john-w-long
 Author: John W. Long
 about_author: john_w_long
 Summary: One part a suggestion to the Sass community to adopt a standard way of structuring our Sass modules and one part show and tell. John attempts to leverage his knowledge of large Sass projects to suggest a format for a Standard Module Definition for Sass.
 
 
-Towards a Standard Module Definition for Sass
-=============================================
+# Towards a Standard Module Definition for Sass
 
 This article is one part a suggestion to the Sass community to adopt a standard way of structuring our Sass modules and one part show and tell. Since becoming a fan of Sass, one thing that has bothered me is that there is not a lot of documentation on how to structure a Sass project. This article an attempt to bring a little more clarity and light to that subject through introducing a suggested Standard Module Definition. The ideas presented here are not entirely my own, but have been gleaned by studying how other Sass projects (like Compass) are put together and through my experience writing Sass on a number of very large projects.
 
 
-1. Modules are a unit of code contained in a Sass partial
+## 1. Modules are a unit of code contained in a Sass partial
 
 I like to define my modules in Sass partials. Since Sass doesn't currently have a way to namespace code, the easiest way to group code by function is to do so in a partial. One module per file. Examples module names on the typical project may include buttons, forms, lists, and typography.
 
 
-2. Importing a module should never output code
+## 2. Importing a module should never output code
 
 I'm a strong believer in keeping your modules free of anything that would cause immediate CSS output. The idea is that you should be able to import any number of modules into your codebase and then make selective calls to control the output. This pretty much limits modules to mixins and variable definitions.
 
 
-3. If appropriate, a main mixin should be included in the module that outputs the standard usage of the module
+## 3. If appropriate, a main mixin should be included in the module that outputs the standard usage of the module
 
 This one's a little trickier to explain, but let me demonstrate with a code sample. Here is an example _buttons.scss:
 
+    :::scss
     // Main mixin
     @mixin buttons {
       a.button, button {
@@ -60,28 +60,30 @@ This one's a little trickier to explain, but let me demonstrate with a code samp
 
 The idea here is that the buttons module includes all kinds of mixins for creating and styling buttons, but the main mixin demonstrates and applies the default usage of the appropriate mixins. This makes it super simple to use the default behavior for a module in a stylesheet. Here's an example of how I often combine modules in my main stylesheet:
 
-  .content {
-    @include typography;
-    @include buttons;
-    @include lists;
-    @include forms;
-    ...
-  }
+    :::scss
+    .content {
+      @include typography;
+      @include buttons;
+      @include lists;
+      @include forms;
+      ...
+    }
 
 
-4. The name of the main mixin should be the name of the module
+## 4. The name of the main mixin should be the name of the module
 
 I'd recommend that you try to pluralize your module names (where appropriate) and that the name of your main mixin for that module be the same as the name of the module itself. This simple naming pattern will make it easy to import and use your modules without thinking hard about the names.
 
 
-5. Variable definitions should always be defaulted
+## 5. Variable definitions should always be defaulted
 
 If a module defines top-level variables, they should always be defined with the default directive. This will make it much easier to override those variables for a theme stylesheet or when reusiing the module for other purposes.
 
 Here's an example of using this directive to declare defaults for variables within a module:
 
-  $base-font-family: Helvetica, Arial, sans-serif !default;
-  $fixed-font-family: monospace !default;
+    :::scss
+    $base-font-family: Helvetica, Arial, sans-serif !default;
+    $fixed-font-family: monospace !default;
 
 
 6. Almost all project CSS should be written in modules
