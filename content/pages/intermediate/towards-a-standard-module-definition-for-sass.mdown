@@ -88,7 +88,7 @@ Here's an example of using this directive to declare defaults for variables with
     $fixed-font-family: monospace !default;
 
 
-## 7. Almost all project CSS should be written in modules
+## 6. Almost all project CSS should be written in modules
 
 I like to code almost all of my CSS in modules using this pattern. This makes it much easier to reuse styles across stylesheets for a given project or even to share code between projects. It also helps me think about my code in a modular way from the very beginning. A discipline that I find quite helpful.
 
