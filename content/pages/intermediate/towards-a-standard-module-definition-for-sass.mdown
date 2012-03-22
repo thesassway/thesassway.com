@@ -24,7 +24,7 @@ I'm a strong believer in keeping your modules free of anything that would cause 
 
 If approapriate, a primary mixin should be included in each module that outputs the standard usage of the module. This one is a little tricker to explain with words, so let me show you in code.
 
-Here is an example _buttons.scss:
+Here is an example \_buttons.scss:
 
     :::scss
     // Primary mixin
