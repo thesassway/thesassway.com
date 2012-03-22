@@ -20,14 +20,14 @@ I like to define my modules in Sass partials. Since Sass doesn't currently have 
 I'm a strong believer in keeping your modules free of anything that would cause immediate CSS output. The idea is that you should be able to import any number of modules into your codebase and then make selective calls to control the output. This pretty much limits modules to mixins and variable definitions.
 
 
-## 3. If appropriate, every module should have a primary mixin
+## 3. Each module should have a primary mixin
 
-A primary mixin should be included in each module that outputs the standard usage of the module. This one is a little tricker to explain with words, so let me show you in code.
+If approapriate, a primary mixin should be included in each module that outputs the standard usage of the module. This one is a little tricker to explain with words, so let me show you in code.
 
 Here is an example _buttons.scss:
 
     :::scss
-    // Main mixin
+    // Primary mixin
     @mixin buttons {
       a.button, button {
         @include button(black, silver);
@@ -60,7 +60,7 @@ Here is an example _buttons.scss:
 
     ...
 
-The idea here is that the buttons module includes all kinds of mixins for creating and styling buttons, but the main mixin demonstrates and applies the default usage of the appropriate mixins. This makes it super simple to use the default behavior for a module in a stylesheet. Here's an example of how I often combine modules in my main stylesheet:
+The idea here is that the buttons module includes all kinds of mixins for creating and styling buttons, but the primary mixin demonstrates and applies the default usage of the appropriate mixins. This makes it super simple to use the default behavior for a module in a stylesheet. Here's an example of how I often combine modules in my main stylesheet:
 
     :::scss
     .content {
@@ -72,7 +72,7 @@ The idea here is that the buttons module includes all kinds of mixins for creati
     }
 
 
-## 4. The name of the main mixin should be the name of the module
+## 4. The name of the primary mixin should be the same as the name of the module
 
 I'd recommend that you try to pluralize your module names (where appropriate) and that the name of your main mixin for that module be the same as the name of the module itself. This simple naming pattern will make it easy to import and use your modules without thinking hard about the names.
 
