@@ -30,7 +30,7 @@ Article Ideas
 
 ## Tools
 
-* Interactive Sass: Having Fun with the Terminal
+* Interactive Sass: Having Fun On the Terminal
 * Static Site Generators with Sass Support
 * Highly Configurable Sass Grid Frameworks
 * Choosing a Grid Framework
