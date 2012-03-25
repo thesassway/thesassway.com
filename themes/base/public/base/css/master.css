@@ -615,7 +615,7 @@ html {
   color: rgba(255, 255, 255, 0);
   cursor: pointer;
   display: block;
-  background: url('/base/images/toggle-grid.png?1317268167') no-repeat right 50%;
+  background: url('/base/images/toggle-grid.png?1318470466') no-repeat right 50%;
   font-size: 12px;
   line-height: 16px;
   padding-right: 22px;
@@ -1155,7 +1155,7 @@ html {
   opacity: 0.8;
   position: relative;
   top: -2px;
-  background: url('/base/images/helveticons-16/rss.png?1317268167') no-repeat;
+  background: url('/base/images/helveticons-16/rss.png?1318470466') no-repeat;
   display: block;
   height: 16px;
   text-indent: -99999px;
@@ -1582,7 +1582,7 @@ html {
   -webkit-box-shadow: black 0 0 6px;
   -o-box-shadow: black 0 0 6px;
   box-shadow: black 0 0 6px;
-  background: url('/base/images/sass-compass-in-action-80.png?1317268167') no-repeat;
+  background: url('/base/images/sass-compass-in-action-80.png?1318470466') no-repeat;
   cursor: pointer;
   display: block;
   height: 100px;
@@ -1633,7 +1633,7 @@ html {
 }
 #footer .site a.credit {
   margin-left: 10px;
-  background: url('/base/images/rizn-media-production.png?1317268167') no-repeat;
+  background: url('/base/images/rizn-media-production.png?1318470466') no-repeat;
   display: inline-block;
   line-height: 22px;
   text-indent: -99999px;
