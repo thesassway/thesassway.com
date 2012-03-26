@@ -1,4 +1,4 @@
-Date: 2050-03-26 09:00:00 -0500
+Date: 2012-03-26 16:15:00 -0500
 Categories: intermediate, guides, john-w-long
 Author: John W. Long
 about_author: john_w_long
@@ -7,9 +7,9 @@ Summary: One part suggestion to the Sass community to adopt a standard way of st
 
 # A Standard Module Definition for Sass
 
-Since becoming a fan of Sass, one thing that has bothered me is that not much has been written about best practices for structuring Sass projects. This is one of a series of articles we will be writing here at <em>The Sass Way</em> to talk about some of the things that folks are doing to make their projects better.
+Since becoming a fan of Sass, one thing that has bothered me is that not much has been written about best practices for structuring Sass projects. This is one of a series of articles we will be writing to talk about some of the things that folks are doing to make their projects better.
 
-In this article, I'd like to kickstart discussion on developing a <em>Standard Module Definition</em> for Sass. I'll start by sharing a couple of principles that I've found helpful for structuring Sass projects. (The principles here apply mostly to writing Sass for non-library code. We'll talk more about some ideas for structuring library modules in a future article.)
+In this article, I'd like to kickstart the discussion on developing a <em>Standard Module Definition</em> for Sass. I'll start by sharing a couple of principles that I've found helpful for structuring Sass projects. (The principles here apply mostly to writing Sass for non-library code. We'll talk more about some ideas for structuring library modules in a future article.)
 
 ## 1. A module is a unit of code contained in a partial
 
@@ -21,7 +21,7 @@ I'm a strong believer in keeping your modules free of anything that would cause 
 
 ## 3. Each module should have a primary mixin
 
-If approapriate, a primary mixin should be included in each module that outputs the standard usage of the module. This one is a little tricker to explain with words, so let me show you in code.
+If appropriate, a primary mixin should be included in each module that outputs the standard usage of the module. This one is a little tricker to explain with words, so let me show you in code.
 
 Here is an example `_buttons.scss`:
 
