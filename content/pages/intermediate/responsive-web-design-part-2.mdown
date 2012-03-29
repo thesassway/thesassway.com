@@ -28,7 +28,7 @@ It's clear to me now that with the explosion of newly connected devices, placing
 
 But, I knew designing to a fixed layout was a cheat and I hated horizontal scroll bars as much as my users and clients did. I just didn't know of a way to do fluid layouts without compromising my design.
 
-And then, my jaw dripped along with all the other web nerds when I read [Ethan Marcotte’s article](http://www.alistapart.com/articles/responsive-web-design/) on A List Apart. All hail media queries!
+And then, my jaw dropped along with all the other web nerds when I read [Ethan Marcotte’s article](http://www.alistapart.com/articles/responsive-web-design/) on A List Apart. All hail media queries!
 
 ## What are media queries and why should I care?
 
