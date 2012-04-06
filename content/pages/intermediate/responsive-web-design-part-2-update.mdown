@@ -87,19 +87,10 @@ Compiles to
       background: red;
     }
 
-### However
-
-As of my latest test (Sass 3.2.0.alpha.76) you need interpolation braces in order to do math on a variable in a query. The following Sass throws an error:
+You can also do math on a variable in a query, like so:
 
     :::sass
     @media screen and ($width-name : $target-width + 1) {
-      background: red;
-    }
-
-Once I added the braces it falls into place.
-
-    :::scss
-    @media screen and ($width-name : #{$target-width + 1}) {
       background: red;
     }
 
@@ -126,7 +117,7 @@ SCSS
         @media only screen and (max-width: $break-small) { @content; }
       }
       @else if $media == medium-screens {
-        @media only screen and (min-width: $break-small) and (max-width: $break-large) { @content; }
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
       }
       @else if $media == wide-screens {
         @media only screen and (min-width: $break-large) { @content; }
@@ -153,7 +144,7 @@ CSS
         width: 100%;
       }
     }
-    @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
       .profile-pic {
         width: 125px;
       }
