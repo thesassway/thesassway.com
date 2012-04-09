@@ -6,7 +6,7 @@ Summary: Sass 3.2 is on the way, and there are many improvements to how it handl
 
 # Responsive Web Design in Sass: Using Media Queries in Sass 3.2
 
-In [Responsive Web Design in Sass Part 2](/intermediate/responsive-web-design-part-2) I wrote about using media queries in Sass 3.1. At the time, I was mostly limited me to the (still very cool) [@media bubbling](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media) feature. I also pointed out some of the shortcomings.
+In [Responsive Web Design in Sass Part 2](/intermediate/responsive-web-design-part-2) I wrote about using media queries in Sass 3.1. At the time, I was mostly limited to the (still very cool) [@media bubbling](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media) feature. I also pointed out some of the shortcomings.
 
 At the end of the post I previewed how you can use [@content blocks](https://gist.github.com/1215856), one of the emerging features of Sass 3.2, to write a mixin that can really help to simplify using media queries in Sass. With Sass 3.2 nearly upon us, I am happy to report that media queries have become the first-class citizens they deserve to be. Let's see what's new.
 
