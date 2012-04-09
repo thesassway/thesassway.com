@@ -228,7 +228,7 @@ This is a hairy issue, and different use cases suggest different results. Eventu
 
 ### Combining @media Queries on Compile
 
-One feature I hear a lot of people bring up with @media bubbling is that you often end up with the same query in many places in your compiled CSS. The resulting CSS would be much smaller and more closely resemble "hand crafted" CSS if all the rules that match a particular query be combined when the CSS is compiled.
+One feature I hear a lot of people bring up with `@media` bubbling is that you often end up with the same query in many places in your compiled CSS. The resulting CSS would be much smaller and more closely resemble "handcrafted" CSS if all the rules that match a particular query be combined when the CSS is compiled.
 
     :::scss
     .profile-pic {
