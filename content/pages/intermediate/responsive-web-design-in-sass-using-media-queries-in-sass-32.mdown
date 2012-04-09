@@ -1,4 +1,4 @@
-Date: 2012-04-08 10:00:00 -0500
+Date: 2012-04-09 06:00:00 -0500
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
 about_author: mason_wendell
