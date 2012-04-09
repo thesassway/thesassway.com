@@ -1,12 +1,14 @@
-Date: 2099-04-05 17:00:00 -0600
+Date: 2012-04-08 10:00:00 -0500
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
 about_author: mason_wendell
-Summary: Sass 3.2 is on the way, and there are many improvements to how it handles Media Queries. Let's get a jump start on all the new stuff.
+Summary: Sass 3.2 is on the way, and there are many improvements to how it handles media queries. Let's get a jump start on all the new stuff and see how we can use media queries, which are now a first-class citizen, in Sass 3.2.
 
-# Responsive Web Design in Sass Part 2: Media Queries in Sass (Second Edition)
+# Responsive Web Design in Sass: Using Media Queries in Sass 3.2
 
-In my [last post](http://thesassway.com/intermediate/responsive-web-design-part-2) I wrote about using @media queries in Sass 3.1. That mostly limited me to the (still very cool) [@media bubbling](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media) feature. I also pointed out some of the shortcomings. At the end of the post I previewed how you can use one of the emerging features of Sass 3.2, [@content blocks](https://gist.github.com/1215856) to write a mixin that can really help to simplify using @media queries in Sass. Well Sass 3.2 is nearly upon us, and I'm happy to report that @media queries are now the first-class citizens they deserve to be. Let's see what's new.
+In [Responsive Web Design in Sass Part 2](/intermediate/responsive-web-design-part-2) I wrote about using media queries in Sass 3.1. At the time, I was mostly limited me to the (still very cool) [@media bubbling](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media) feature. I also pointed out some of the shortcomings.
+
+At the end of the post I previewed how you can use [@content blocks](https://gist.github.com/1215856), one of the emerging features of Sass 3.2, to write a mixin that can really help to simplify using media queries in Sass. With Sass 3.2 nearly upon us, I am happy to report that mmedia queries have become the first-class citizens they deserve to be. Let's see what's new.
 
 ## Variables in queries
 
@@ -104,7 +106,9 @@ Compiles to
 
 ## Variables in queries, using @content
 
-As I illustrated in the last post you can write some nicely abstracted media query systems using @content blocks in mixins. Now you can take that a step further by using variables in the actual queries. I think this will be very helpful in refining a set of breakpoints. I think on my next project I'll start with some of the usual device-related breakpoints (320, 480, 720) as "placeholder" breakpoints. Then as I progress in building my design I'll alter those to whatever values suit my design.
+In [Responsive Web Design in Sass Part 2](/intermediate/responsive-web-design-part-2), I illustrated how to write some nicely abstracted media query systems using `@content` blocks in mixins. Now you can take that a step further by using variables in the actual queries. I think this will be very helpful in refining a set of breakpoints.
+
+On my next project, I think I'll start with some of the usual device-related breakpoints (320, 480, 720) as "placeholder" breakpoints. Then as I progress in building my design I'll alter those to whatever values suit my design.
 
 SCSS
 
@@ -156,11 +160,13 @@ CSS
     }
 
 
-## Nothing's Perfect
+## Nothing is Perfect
 
 ### @extend within @media
 
-There are features and optimisations I'd like to see regarding @media handling in Sass. For example @extend doesn't behave like I'd expect when I use it in a media query. When I write the Following in Scss:
+There are features and optimisations I'd like to see regarding `@media` handling in Sass. For example `@extend` doesn't behave like I'd expect when I use it in a media query.
+
+When I write the Following in SCSS:
 
     :::scss
     .red {

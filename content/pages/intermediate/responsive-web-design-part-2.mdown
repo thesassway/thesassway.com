@@ -6,6 +6,13 @@ Summary: In part one we talked about how Sass can help with fluid layouts and im
 
 # Responsive Web Design in Sass Part 2: Media Queries in Sass
 
+<div class="editors-note">
+
+  <h4>EDITOR'S NOTE</h4>
+  <p>Mason followed up this article with <a href="/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32">Responsive Web Design in Sass: Using Media Queries in Sass 3.2</a></p>
+
+</div>
+
 In [part one](/intermediate/responsive-web-design-part-1) we talked about how Sass can help with fluid layouts and images. Now we'll turn our attention to the new kid in town. Media queries are the tool that takes a design from fluid to truly responsive.
 
 ## I Resisted Fluid Layouts (too)
@@ -131,6 +138,13 @@ I really like how this lets me keep my rules for the different options adjacent 
 When I was designing the homepage for [The Coding Designer's Survival Kit](http://thecodingdesigner.com/) I made a module where the elements laid out in a circle that took up a lot of space in the wide screen version of the design. However in any width lower than 900px they overflowed the boundary and the circle no longer made sense. In this case the best design decision was to lay those elements out in another way, and I chose a grid. If you're curious you can [view my source](https://github.com/canarymason/The-Coding-Designer-s-Survival-Kit-Site/blob/master/sites/all/themes/badge/css/src/_design.sass#L328) sass for that project.
 
 ## The Future of Media Queries in Sass
+
+<div class="editors-note">
+
+  <h4>EDITOR'S NOTE</h4>
+  <p>Mason followed up this article with <a href="/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32">Responsive Web Design in Sass: Using Media Queries in Sass 3.2</a></p>
+
+</div>
 
 Sass 3.2 is about to make all this calculating absolutely trivial. At the moment, Sass 3.2 is only available as [an Alpha release](https://rubygems.org/gems/sass/versions/3.2.0.alpha.35). There's [a milestone](https://github.com/nex3/sass/issues/milestones) on [Sass's GitHub project](https://github.com/nex3) as well that's at the 33% mark.
 
