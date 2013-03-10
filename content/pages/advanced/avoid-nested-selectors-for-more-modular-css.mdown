@@ -120,4 +120,4 @@ It's also worth noting that if you find yourself using nesting regularly, you sh
 
 ## Conclusion
 
-Hopefully you don't find these ideas too controversial. If you are interested in learning more about modular CSS I highly recommend taking a look at Jonathan Snook's ebook on [the subject](http://smacss.com) and following Harry Roberts over at [CSS Wizardry](http://csswizardry.com).
+Hopefully you don't find these ideas too controversial. If you are interested in learning more about modular CSS I highly recommend taking a look at Jonathan Snook's [ebook on the subject](http://smacss.com) and following Harry Roberts over at [CSS Wizardry](http://csswizardry.com).
