@@ -81,7 +81,7 @@ In my partials directory you will also notice that I have a base partial. The pu
 It might look something like this:
 
     :::scss
-    // Use compass ('cause it rocks!)
+    // Use Compass ('cause it rocks!)
     @import "compass";
 
     // Font weights
