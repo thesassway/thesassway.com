@@ -53,7 +53,6 @@ I then styled it using nested selectors:
     :::scss
     ul.menubar {
       background: white;
-      @include box-shadow(rgba(black, 0.2) 0 1px 1px);
       list-style: none;
       padding: 0 10px;
  
@@ -106,7 +105,6 @@ The menu system I was working on was actually much more complicated than the cod
       list-style: none;
       font-size: 14px;
       background: white;
-      @include box-shadow(rgba(black, 0.2) 0 1px 1px);
       padding: 0 10px;
  
       > li {
