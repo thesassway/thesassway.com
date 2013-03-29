@@ -12,33 +12,33 @@ I'm glad you asked. Perhaps an example would help. For myself, these principles 
 
 <div style="border: 4px solid #ddd; padding: 1px; margin: 2em 0"><iframe src="http://s.codepen.io/jlong/fulldetails/GhuKr" id="result" style="width: 100%; height: 250px; border: none"></iframe></div>
 
-To build a menubar like this, I initialially started out with the following HTML:
+To build this menubar, I started out with the following HTML:
 
     :::html
     <ul class="menubar">
       <li>
-        <a href="javascript:void(0)">File</a>
+        <a href="#">File</a>
         <ul>
-          <li><a href="javascript:void(0)">Open</a></li>
-          <li><a href="javascript:void(0)">Save</a></li>
-          <li><a href="javascript:void(0)">Save as&#8230;</a></li>
-          <li><a href="javascript:void(0)">Close</a></li>
+          <li><a href="#">Open</a></li>
+          <li><a href="#">Save</a></li>
+          <li><a href="#">Save as&#8230;</a></li>
+          <li><a href="#">Close</a></li>
           <li class="separator"></li>
-          <li><a href="javascript:void(0)">Exit</a></li>
+          <li><a href="#">Exit</a></li>
         </ul>
       </li>
       <li>
-        <a href="javascript:void(0)">Edit</a>
+        <a href="#">Edit</a>
         <ul>
-          <li><a href="javascript:void(0)">Cut</a></li>
-          <li><a href="javascript:void(0)">Copy</a></li>
-          <li><a href="javascript:void(0)">Paste</a></li>
+          <li><a href="#">Cut</a></li>
+          <li><a href="#">Copy</a></li>
+          <li><a href="#">Paste</a></li>
         </ul>
       </li>
       <li>
-        <a href="javascript:void(0)">Help</a>
+        <a href="#">Help</a>
         <ul>
-          <li><a href="javascript:void(0)">About</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </li>
     </ul>
@@ -158,7 +158,7 @@ Another thing to note is with a tiny bit of modification I could probably make t
 
 Some of you may have noticed that in the code above I still have a couple of nested selectors. In particular the pseudo class for hover and the class for the selected case. These are both state classes and are a very good use of nesting.
 
-But I also have one selector that is still referencing a child "li" element ("> li"). I wrote it this way because it seemed to be the best balance between the number of classes required and the added weight to my markup. Not everyone would agree with me that this is the best way to mark it up. Some would say that you should ONLY style using classes and avoid tag names entirely. You'll have to find your own balance for your own projects. My point is simply that nesting can often make your Sass code harder to read and maintain. And that removing nesting can lend itself to more modular CSS.
+But I also have one selector that is still referencing a child "li" element ("> li"). I wrote it this way because it seemed to be the best balance between the number of classes required and the added weight to my markup. Not everyone would agree with me that this is the best way to mark it up. Some would say that you should ONLY style using classes and avoid tag names entirely. You'll have to find your own balance for your own projects. My point is simply that avoiding nesting can make your Sass code easier to read and maintain.
 
 
 ## The Examples
@@ -168,3 +168,5 @@ To write this article I created several [CodePen](http://codepen.io) projects to
 * [Simple menu 1](http://codepen.io/jlong/pen/LlCrx) - the non-modular, nested approach.
 * [Simple menu 2](http://codepen.io/jlong/pen/wpbzq) - a more modular approach.
 * [Simple menu 3](http://codepen.io/jlong/pen/AmwrK) - an ultra-modular approach (using only class selectors).
+
+Let me know which approach you like the best.
