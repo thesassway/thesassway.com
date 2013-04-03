@@ -1,7 +1,7 @@
-Date: 9 March 2050
+Date: 3 April 2013
 Categories: beginner, guides, john-w-long
 Author: John W. Long
-Summary: One of the coolest features of crafting CSS with Sass is that you can build out a file structure that puts all your components in their right place. BUT the question is ... where is the right place? Is there a standard way of laying out your Sass files?
+Summary: One of the coolest features of crafting CSS with Sass is that you can build out a file structure that puts all your components in their right place. BUT the question is ... where is the right place? Is there a standard way to structure your Sass files?
 about_author: john_w_long
 
 
@@ -56,7 +56,7 @@ This allows me to keep my primary Sass file extremely clean:
     @import "partials/buttons";
     @import "partials/figures";
     @import "partials/grids";
-    ...
+    // ...
 
     // Third-party
     @import "vendor/colorpicker";
