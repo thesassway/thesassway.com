@@ -1,14 +1,12 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rack-contrib'
 gem 'rake'
-gem 'heroku'
 gem 'nesta', '0.9.5'
-gem 'compass', '~> 0.11.5'
-gem 'css_parser', '~> 1.2.5'
+gem 'compass'
 
 # Sass and Compass
-gem 'grid-coordinates', '~> 1.2.0'
+gem 'grid-coordinates'
 gem 'animate-sass'
 gem 'font-stacks'
 
