@@ -1,4 +1,4 @@
-Date: 10 March 2050
+Date: 2013-05-24
 Categories: advanced, guides, john-w-long
 Author: John W. Long
 about_author: john_w_long
@@ -80,7 +80,7 @@ Suppose you decided to make a page title, and declared the rule like this:
       color: red;
     }
 
-Without thinking about how you've used title already in other contexts you've created a rule that will effect all other elements that also use a class of "title". Now this example is a bit contrived, but in the real world this kind of style clash is common. On projects I've worked on in the past that use this style of coding it is a common occurance that someone adds a new rule somewhere else that blows out styles in other contexts. On large projects these kinds of "bugs" can be hard to catch before code is moved into production.
+Without thinking about how you've used title already in other contexts you've created a rule that will effect all other elements that also use a class of "title". Now this example is a bit contrived, but in the real world this kind of style clash is common. On projects I've worked on in the past that use this style of coding it is a common occurrence that someone adds a new rule somewhere else that blows out styles in other contexts. On large projects these kinds of "bugs" can be hard to catch before code is moved into production.
 
 So how can we simplify our code and at the same time add clarity? Like this:
 
@@ -114,7 +114,7 @@ Ah! Much better! This minimizes the chance that other rules will clash with the 
 
 ## Context and modularity
 
-The key word here is **context**. If you value modularity you will strive to avoid contextual styles. There are times when context can be useful. Responsive designs and themes often require them. But you should be very intentional when chosing to use contextual styles. If you use them without thinking you may find that your code is extremely hard to maintain and accidental bugs surface more regularly than you would like.
+The key word here is **context**. If you value modularity you will strive to avoid contextual styles. There are times when context can be useful. Responsive designs and themes often require them. But you should be very intentional when choosing to use contextual styles. If you use them without thinking you may find that your code is extremely hard to maintain and accidental bugs surface more regularly than you would like.
 
 It's also worth noting that if you find yourself using nesting regularly, you should consider if removing it could simplify your code.
 
