@@ -6,20 +6,20 @@ task :deploy do
 end
 
 desc "Run the localhost server"
-task :server do
+task :s do
   system "bundle exec shotgun config.ru"
 end
 
 namespace :styles do
-  
+
   desc "Clear the styles"
   task :clear => ["compile:clear"]
-  
+
   desc "Compile new styles"
   task :compile => ["compile:default"]
 
   namespace :compile do
-    
+
     task :clear do
       puts "*** Clearing styles ***"
       system "rm -Rfv #{css_dir}/*"
@@ -37,5 +37,5 @@ namespace :styles do
     end
 
   end
-  
+
 end
