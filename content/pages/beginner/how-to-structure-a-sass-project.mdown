@@ -147,7 +147,7 @@ As you can see each sub-project has it's own primary stylesheet, modules, partia
 Now that I've laid out my own method for this, you may want to explore how other people have structured their Sass projects. There's actually a lot of variation in what you can do here. And some methods may work better on different projects:
 
 * [Compass](https://github.com/chriseppstein/compass/tree/stable/frameworks)
-* [Breakpoint](https://github.com/lesjames/Breakpoint/tree/master/static/sass)
+* [Breakpoint](https://github.com/lesjames/breakpoint/tree/master/breakpoint)
 * [Octopress](https://github.com/imathis/octopress/tree/master/.themes/classic/sass)
 * [Sass Twitter Bootstrap](https://github.com/jlong/sass-twitter-bootstrap/tree/master/lib)
 
