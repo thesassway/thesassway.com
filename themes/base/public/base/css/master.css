@@ -483,55 +483,6 @@ html {
   padding-bottom: 30px;
 }
 
-#grid {
-  background-image: -webkit-gradient(linear, 0% 50%, 970 50%, color-stop(1.03093%, rgba(255, 0, 0, 0)), color-stop(1.03093%, rgba(255, 0, 0, 0.05)), color-stop(7.21649%, rgba(255, 0, 0, 0.05)), color-stop(7.21649%, rgba(255, 0, 0, 0)), color-stop(9.27835%, rgba(255, 0, 0, 0)), color-stop(9.27835%, rgba(255, 0, 0, 0.05)), color-stop(15.46392%, rgba(255, 0, 0, 0.05)), color-stop(15.46392%, rgba(255, 0, 0, 0)), color-stop(17.52577%, rgba(255, 0, 0, 0)), color-stop(17.52577%, rgba(255, 0, 0, 0.05)), color-stop(23.71134%, rgba(255, 0, 0, 0.05)), color-stop(23.71134%, rgba(255, 0, 0, 0)), color-stop(25.7732%, rgba(255, 0, 0, 0)), color-stop(25.7732%, rgba(255, 0, 0, 0.05)), color-stop(31.95876%, rgba(255, 0, 0, 0.05)), color-stop(31.95876%, rgba(255, 0, 0, 0)), color-stop(34.02062%, rgba(255, 0, 0, 0)), color-stop(34.02062%, rgba(255, 0, 0, 0.05)), color-stop(40.20619%, rgba(255, 0, 0, 0.05)), color-stop(40.20619%, rgba(255, 0, 0, 0)), color-stop(42.26804%, rgba(255, 0, 0, 0)), color-stop(42.26804%, rgba(255, 0, 0, 0.05)), color-stop(48.45361%, rgba(255, 0, 0, 0.05)), color-stop(48.45361%, rgba(255, 0, 0, 0)), color-stop(50.51546%, rgba(255, 0, 0, 0)), color-stop(50.51546%, rgba(255, 0, 0, 0.05)), color-stop(56.70103%, rgba(255, 0, 0, 0.05)), color-stop(56.70103%, rgba(255, 0, 0, 0)), color-stop(58.76289%, rgba(255, 0, 0, 0)), color-stop(58.76289%, rgba(255, 0, 0, 0.05)), color-stop(64.94845%, rgba(255, 0, 0, 0.05)), color-stop(64.94845%, rgba(255, 0, 0, 0)), color-stop(67.01031%, rgba(255, 0, 0, 0)), color-stop(67.01031%, rgba(255, 0, 0, 0.05)), color-stop(73.19588%, rgba(255, 0, 0, 0.05)), color-stop(73.19588%, rgba(255, 0, 0, 0)), color-stop(75.25773%, rgba(255, 0, 0, 0)), color-stop(75.25773%, rgba(255, 0, 0, 0.05)), color-stop(81.4433%, rgba(255, 0, 0, 0.05)), color-stop(81.4433%, rgba(255, 0, 0, 0)), color-stop(83.50515%, rgba(255, 0, 0, 0)), color-stop(83.50515%, rgba(255, 0, 0, 0.05)), color-stop(89.69072%, rgba(255, 0, 0, 0.05)), color-stop(89.69072%, rgba(255, 0, 0, 0)), color-stop(91.75258%, rgba(255, 0, 0, 0)), color-stop(91.75258%, rgba(255, 0, 0, 0.05)), color-stop(97.93814%, rgba(255, 0, 0, 0.05)), color-stop(97.93814%, rgba(255, 0, 0, 0)), color-stop(100%, rgba(255, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(left, rgba(255, 0, 0, 0) 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 70px, rgba(255, 0, 0, 0) 70px, rgba(255, 0, 0, 0) 90px, rgba(255, 0, 0, 0.05) 90px, rgba(255, 0, 0, 0.05) 150px, rgba(255, 0, 0, 0) 150px, rgba(255, 0, 0, 0) 170px, rgba(255, 0, 0, 0.05) 170px, rgba(255, 0, 0, 0.05) 230px, rgba(255, 0, 0, 0) 230px, rgba(255, 0, 0, 0) 250px, rgba(255, 0, 0, 0.05) 250px, rgba(255, 0, 0, 0.05) 310px, rgba(255, 0, 0, 0) 310px, rgba(255, 0, 0, 0) 330px, rgba(255, 0, 0, 0.05) 330px, rgba(255, 0, 0, 0.05) 390px, rgba(255, 0, 0, 0) 390px, rgba(255, 0, 0, 0) 410px, rgba(255, 0, 0, 0.05) 410px, rgba(255, 0, 0, 0.05) 470px, rgba(255, 0, 0, 0) 470px, rgba(255, 0, 0, 0) 490px, rgba(255, 0, 0, 0.05) 490px, rgba(255, 0, 0, 0.05) 550px, rgba(255, 0, 0, 0) 550px, rgba(255, 0, 0, 0) 570px, rgba(255, 0, 0, 0.05) 570px, rgba(255, 0, 0, 0.05) 630px, rgba(255, 0, 0, 0) 630px, rgba(255, 0, 0, 0) 650px, rgba(255, 0, 0, 0.05) 650px, rgba(255, 0, 0, 0.05) 710px, rgba(255, 0, 0, 0) 710px, rgba(255, 0, 0, 0) 730px, rgba(255, 0, 0, 0.05) 730px, rgba(255, 0, 0, 0.05) 790px, rgba(255, 0, 0, 0) 790px, rgba(255, 0, 0, 0) 810px, rgba(255, 0, 0, 0.05) 810px, rgba(255, 0, 0, 0.05) 870px, rgba(255, 0, 0, 0) 870px, rgba(255, 0, 0, 0) 890px, rgba(255, 0, 0, 0.05) 890px, rgba(255, 0, 0, 0.05) 950px, rgba(255, 0, 0, 0) 950px, rgba(255, 0, 0, 0) 970px);
-  background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0) 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 70px, rgba(255, 0, 0, 0) 70px, rgba(255, 0, 0, 0) 90px, rgba(255, 0, 0, 0.05) 90px, rgba(255, 0, 0, 0.05) 150px, rgba(255, 0, 0, 0) 150px, rgba(255, 0, 0, 0) 170px, rgba(255, 0, 0, 0.05) 170px, rgba(255, 0, 0, 0.05) 230px, rgba(255, 0, 0, 0) 230px, rgba(255, 0, 0, 0) 250px, rgba(255, 0, 0, 0.05) 250px, rgba(255, 0, 0, 0.05) 310px, rgba(255, 0, 0, 0) 310px, rgba(255, 0, 0, 0) 330px, rgba(255, 0, 0, 0.05) 330px, rgba(255, 0, 0, 0.05) 390px, rgba(255, 0, 0, 0) 390px, rgba(255, 0, 0, 0) 410px, rgba(255, 0, 0, 0.05) 410px, rgba(255, 0, 0, 0.05) 470px, rgba(255, 0, 0, 0) 470px, rgba(255, 0, 0, 0) 490px, rgba(255, 0, 0, 0.05) 490px, rgba(255, 0, 0, 0.05) 550px, rgba(255, 0, 0, 0) 550px, rgba(255, 0, 0, 0) 570px, rgba(255, 0, 0, 0.05) 570px, rgba(255, 0, 0, 0.05) 630px, rgba(255, 0, 0, 0) 630px, rgba(255, 0, 0, 0) 650px, rgba(255, 0, 0, 0.05) 650px, rgba(255, 0, 0, 0.05) 710px, rgba(255, 0, 0, 0) 710px, rgba(255, 0, 0, 0) 730px, rgba(255, 0, 0, 0.05) 730px, rgba(255, 0, 0, 0.05) 790px, rgba(255, 0, 0, 0) 790px, rgba(255, 0, 0, 0) 810px, rgba(255, 0, 0, 0.05) 810px, rgba(255, 0, 0, 0.05) 870px, rgba(255, 0, 0, 0) 870px, rgba(255, 0, 0, 0) 890px, rgba(255, 0, 0, 0.05) 890px, rgba(255, 0, 0, 0.05) 950px, rgba(255, 0, 0, 0) 950px, rgba(255, 0, 0, 0) 970px);
-  background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0) 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 70px, rgba(255, 0, 0, 0) 70px, rgba(255, 0, 0, 0) 90px, rgba(255, 0, 0, 0.05) 90px, rgba(255, 0, 0, 0.05) 150px, rgba(255, 0, 0, 0) 150px, rgba(255, 0, 0, 0) 170px, rgba(255, 0, 0, 0.05) 170px, rgba(255, 0, 0, 0.05) 230px, rgba(255, 0, 0, 0) 230px, rgba(255, 0, 0, 0) 250px, rgba(255, 0, 0, 0.05) 250px, rgba(255, 0, 0, 0.05) 310px, rgba(255, 0, 0, 0) 310px, rgba(255, 0, 0, 0) 330px, rgba(255, 0, 0, 0.05) 330px, rgba(255, 0, 0, 0.05) 390px, rgba(255, 0, 0, 0) 390px, rgba(255, 0, 0, 0) 410px, rgba(255, 0, 0, 0.05) 410px, rgba(255, 0, 0, 0.05) 470px, rgba(255, 0, 0, 0) 470px, rgba(255, 0, 0, 0) 490px, rgba(255, 0, 0, 0.05) 490px, rgba(255, 0, 0, 0.05) 550px, rgba(255, 0, 0, 0) 550px, rgba(255, 0, 0, 0) 570px, rgba(255, 0, 0, 0.05) 570px, rgba(255, 0, 0, 0.05) 630px, rgba(255, 0, 0, 0) 630px, rgba(255, 0, 0, 0) 650px, rgba(255, 0, 0, 0.05) 650px, rgba(255, 0, 0, 0.05) 710px, rgba(255, 0, 0, 0) 710px, rgba(255, 0, 0, 0) 730px, rgba(255, 0, 0, 0.05) 730px, rgba(255, 0, 0, 0.05) 790px, rgba(255, 0, 0, 0) 790px, rgba(255, 0, 0, 0) 810px, rgba(255, 0, 0, 0.05) 810px, rgba(255, 0, 0, 0.05) 870px, rgba(255, 0, 0, 0) 870px, rgba(255, 0, 0, 0) 890px, rgba(255, 0, 0, 0.05) 890px, rgba(255, 0, 0, 0.05) 950px, rgba(255, 0, 0, 0) 950px, rgba(255, 0, 0, 0) 970px);
-  background-image: linear-gradient(left, rgba(255, 0, 0, 0) 10px, rgba(255, 0, 0, 0.05) 10px, rgba(255, 0, 0, 0.05) 70px, rgba(255, 0, 0, 0) 70px, rgba(255, 0, 0, 0) 90px, rgba(255, 0, 0, 0.05) 90px, rgba(255, 0, 0, 0.05) 150px, rgba(255, 0, 0, 0) 150px, rgba(255, 0, 0, 0) 170px, rgba(255, 0, 0, 0.05) 170px, rgba(255, 0, 0, 0.05) 230px, rgba(255, 0, 0, 0) 230px, rgba(255, 0, 0, 0) 250px, rgba(255, 0, 0, 0.05) 250px, rgba(255, 0, 0, 0.05) 310px, rgba(255, 0, 0, 0) 310px, rgba(255, 0, 0, 0) 330px, rgba(255, 0, 0, 0.05) 330px, rgba(255, 0, 0, 0.05) 390px, rgba(255, 0, 0, 0) 390px, rgba(255, 0, 0, 0) 410px, rgba(255, 0, 0, 0.05) 410px, rgba(255, 0, 0, 0.05) 470px, rgba(255, 0, 0, 0) 470px, rgba(255, 0, 0, 0) 490px, rgba(255, 0, 0, 0.05) 490px, rgba(255, 0, 0, 0.05) 550px, rgba(255, 0, 0, 0) 550px, rgba(255, 0, 0, 0) 570px, rgba(255, 0, 0, 0.05) 570px, rgba(255, 0, 0, 0.05) 630px, rgba(255, 0, 0, 0) 630px, rgba(255, 0, 0, 0) 650px, rgba(255, 0, 0, 0.05) 650px, rgba(255, 0, 0, 0.05) 710px, rgba(255, 0, 0, 0) 710px, rgba(255, 0, 0, 0) 730px, rgba(255, 0, 0, 0.05) 730px, rgba(255, 0, 0, 0.05) 790px, rgba(255, 0, 0, 0) 790px, rgba(255, 0, 0, 0) 810px, rgba(255, 0, 0, 0.05) 810px, rgba(255, 0, 0, 0.05) 870px, rgba(255, 0, 0, 0) 870px, rgba(255, 0, 0, 0) 890px, rgba(255, 0, 0, 0.05) 890px, rgba(255, 0, 0, 0.05) 950px, rgba(255, 0, 0, 0) 950px, rgba(255, 0, 0, 0) 970px);
-  background-position: left top;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  margin: 0 auto;
-  margin-left: -480px;
-  width: 960px;
-}
-
-#toggle-grid {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.25s;
-  -moz-transition-duration: 0.25s;
-  -o-transition-duration: 0.25s;
-  transition-duration: 0.25s;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
-  opacity: 0.25;
-  position: absolute;
-  top: 13px;
-  right: 10px;
-  color: rgba(255, 255, 255, 0);
-  cursor: pointer;
-  display: block;
-  background: url('/base/images/toggle-grid.png?1317268167') no-repeat right 50%;
-  font-size: 12px;
-  line-height: 16px;
-  padding-right: 22px;
-  text-decoration: none;
-}
-#toggle-grid:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  color: #878787;
-}
-#toggle-grid .hide {
-  display: none;
-}
-
 @font-face {
   font-family: "PFCentroSerifPro-Regular";
   src: url(/base/webfonts/pfcentroserifpro/eot/style_173799.eot);
