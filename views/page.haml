@@ -4,7 +4,7 @@
   .content
     = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
-    - if @page.date
+    - if @page.date # Post
       %article.post
         ~ @page.to_html(self)
         - if author_block = @page.metadata('about_author')
@@ -26,13 +26,11 @@
         - unless @page.categories.empty?
           = haml :comments, :layout => false
 
-    - else
+    - else # Page
       ~ @page.to_html(self)
 
-    - unless @page.articles.empty?
+    - unless @page.articles.empty? # Category
       %section.page-articles
-        %header
-          %h2= "Posts in '#{@page.heading}'"
         = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
 
 = haml :sidebar, :layout => false

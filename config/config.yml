@@ -19,7 +19,7 @@ subtitle: "The latest in Sass and Compass &amp; Beginner, Intermediate and Advan
 # easy to create or install, and live inside the themes directory. You
 # can also use scripts/theme to install them.
 #
-theme: base
+# theme: base
 
 # If you want to use the Disqus service (http://disqus.com) to display
 # comments on your site, register a Disqus account and then specify your
@@ -62,6 +62,6 @@ content: content
 # Don't forget to uncomment the "production:" line too...
 
 production:
-  cache: false    
+  cache: false
   content: content
   google_analytics_code: "UA-4556641-15"

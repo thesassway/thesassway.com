@@ -7,19 +7,19 @@ require 'font-stacks'
 
 # HTTP paths
 http_path             = '/'
-http_stylesheets_path = '/base/css'
-http_images_path      = '/base/images'
-http_javascripts_path = '/base/javascripts'
+http_stylesheets_path = '/css'
+http_images_path      = '/images'
+http_javascripts_path = '/javascripts'
 
 # File system locations
-sass_dir              = 'themes/base/sass'
-css_dir               = 'themes/base/public/base/css'
-images_dir            = 'themes/base/public/base/images'
-javascripts_dir       = 'themes/base/public/base/javascripts'
+sass_dir              = 'sass'
+css_dir               = 'public/css'
+images_dir            = 'public/images'
+javascripts_dir       = 'public/javascripts'
 
 # Fonts
-http_fonts_path       = '/base/fonts'
-http_fonts_dir        = 'themes/base/public/base/fonts'
+http_fonts_path       = '/fonts'
+http_fonts_dir        = 'public/fonts'
 
 # Set to true for easier debugging
 line_comments         = false

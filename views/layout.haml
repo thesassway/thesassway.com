@@ -6,16 +6,16 @@
       %meta{ "name" => "description", "content" => @description }
     - if @keywords
       %meta{ "name" => "keywords", "content" => @keywords }
-    %link{ :href => "/base/sass-icon.ico", :rel => "shortcut icon" }
+    %link{ :href => "/sass-icon.ico", :rel => "shortcut icon" }
     %title= @title
-    %link{ :href => "/base/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "http://feeds.feedburner.com/thesassway", :rel => "alternate", :type => "application/atom+xml" }
     = haml :analytics, :layout => false
   %body{ :role => @page_role || 'page' }
 
     .fadeIn
       = haml :top_bar, :layout => false
-  
+
       %header(role="banner")
         .max-width
           %h1
