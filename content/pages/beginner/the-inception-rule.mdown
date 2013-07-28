@@ -1,7 +1,6 @@
 Date: 2011-11-20 10:30:00 -0600
-Categories: beginner, guides, mario-kuroir-ricalde
-Author: Mario "Kuroir" Ricalde
-about_author: mario_kuroir_ricalde
+Categories: beginner, guides, mario-ricalde
+Author: Mario Ricalde
 Summary: It's well known that Sass is an *efficient*, *realiable* and *precise* tool which gives us great power and freedom to make CSS fun and less of a pain to author; however with great power comes *responsibility*.
 
 # Nested Selectors: The Inception Rule
@@ -37,7 +36,7 @@ Odds are that while you were stuck in the CSS realm you began taking the approac
     :::html
     <div class="post complete highlight rounded clearfix">...</div>
 
-That was the everyday bread and butter. We all thought we wouldn't be able to enjoy writing CSS. However, as soon as Sass appeared in your life, you discovered this was **the way** to go when working with CSS. 
+That was the everyday bread and butter. We all thought we wouldn't be able to enjoy writing CSS. However, as soon as Sass appeared in your life, you discovered this was **the way** to go when working with CSS.
 
 And just as easy as it is to get going with Sass, it's also easy to use it incorrectly.
 
@@ -191,7 +190,7 @@ After compiling the Sass, we take a look at the result on to find that we've cre
     body div.content div.container div.articles > div.post div.author ul { ... }
     body div.content div.container div.articles > div.post div.author ul li { ... }
 
-There are so many reasons why this is just plain **wrong**, from [rendering performance](http://code.google.com/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors) to file-size performance. Just think about how many bytes this will add to your CSS. But, the odds are you may say: 
+There are so many reasons why this is just plain **wrong**, from [rendering performance](http://code.google.com/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors) to file-size performance. Just think about how many bytes this will add to your CSS. But, the odds are you may say:
 
 > "Hey, computers are faster now! and also the internet download speeds are better!" - User who hates Front-End Engineering.
 

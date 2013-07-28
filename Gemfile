@@ -4,6 +4,7 @@ gem 'rack-contrib'
 gem 'rake'
 gem 'nesta', '0.9.5'
 gem 'compass'
+gem 'rack-rewrite'
 
 # Sass and Compass
 gem 'grid-coordinates'

@@ -42,3 +42,13 @@ use Rack::ETag
 require 'nesta/app'
 Nesta::App.root = root
 run Nesta::App
+
+require 'rack/rewrite'
+use Rack::Rewrite do
+  # Adam Stacoviak
+  # rewrite '/adamstac',  '/adam-stacoviak'
+  # r301 '/adam-stacoviak', '/adamstac'
+
+  # Mario Ricalde
+  r301 '/mario-kuroir-ricalde', '/mario-ricalde'
+end

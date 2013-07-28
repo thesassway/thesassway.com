@@ -32,8 +32,7 @@
         = yield
 
       %footer(role="footer")
-        :markdown
-          Copyright 2010 - 2011 The Sass Way, All Rights Reserved.
+        %p= "Copyright 2010-#{Time.now.year} The Sass Way, All Rights Reserved."
 
       = haml :podcasts, :layout => false
       = haml :footer, :layout => false

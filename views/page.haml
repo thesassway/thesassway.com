@@ -2,35 +2,13 @@
 
 .primary.column
   .content
-    = haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
+    =# haml :summaries, :layout => false, :locals => { :pages => @page.pages, :heading => :h3 }
 
-    - if @page.date # Post
-      %article.post
-        ~ @page.to_html(self)
-        - if author_block = @page.metadata('about_author')
-          = haml author_block.to_sym, :layout => false
-        - unless @page.categories.empty?
-          .page-categories
-            %p
-              - unless @page.date.nil?
-                = "<em>#{format_date(@page.date)}</em> ~ "
-              - @page.categories.each do |category|
-                %a{ :href => category.abspath }= category.heading
-        :plain
-          <!-- Twitter button -->
-          <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
-          <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-          <!-- +1 button -->
-          <div class="g-plusone" data-annotation="inline" data-width="200"></div>
-          <iframe src="http://www.facebook.com/plugins/like.php?app_id=146787355413240&amp;href&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
-        - unless @page.categories.empty?
-          = haml :comments, :layout => false
+    = haml :post, :layout => false
 
-    - else # Page
+    - if is_page?
       ~ @page.to_html(self)
 
-    - unless @page.articles.empty? # Category
-      %section.page-articles
-        = haml :summaries, :layout => false, :locals => { :pages => @page.articles, :heading => :h3 }
+    = haml :category, :layout => false
 
 = haml :sidebar, :layout => false
