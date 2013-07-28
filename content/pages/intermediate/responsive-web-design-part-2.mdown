@@ -1,7 +1,6 @@
 Date: 2011-12-02 17:00:00 -0600
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
-about_author: mason_wendell
 Summary: In part one we talked about how Sass can help with fluid layouts and images. Now we'll turn our attention to the new kid in town. Media queries are the tool that takes a design from fluid to truly responsive.
 
 # Responsive Web Design in Sass Part 2: Media Queries in Sass
@@ -84,7 +83,7 @@ Which compiles to:
       }
     }
 
-You can use these in Sass just fine, and inside a query you can use all the Sass features you like. In the above example I used and manipulated a variable. You should note, however, that you can't use variables in the query declaration itself. It would be nice to write the following, but it won't work. 
+You can use these in Sass just fine, and inside a query you can use all the Sass features you like. In the above example I used and manipulated a variable. You should note, however, that you can't use variables in the query declaration itself. It would be nice to write the following, but it won't work.
 
     :::scss
     $breakpoint: 1024px;
@@ -148,7 +147,7 @@ When I was designing the homepage for [The Coding Designer's Survival Kit](http:
 
 Sass 3.2 is about to make all this calculating absolutely trivial. At the moment, Sass 3.2 is only available as [an Alpha release](https://rubygems.org/gems/sass/versions/3.2.0.alpha.35). There's [a milestone](https://github.com/nex3/sass/issues/milestones) on [Sass's GitHub project](https://github.com/nex3) as well that's at the 33% mark.
 
-In my examples above you may have noticed that all the media queries were written out and included the pixel value for each break point, in every media query I used. "What? Where are the variables?", you asked? Well it turns out that until 3.2, which is yet to be released, Sass didn't support variables in media queries. Well, strictly speaking it still doesn't. But, Sass 3.2 introduces the ability to pass content blocks to functions. Chris Eppstein [published a gist](https://gist.github.com/1215856#file_6_media_queries.scss) showing how you might use this. I'll use these new mixins to redo my profile picture example: 
+In my examples above you may have noticed that all the media queries were written out and included the pixel value for each break point, in every media query I used. "What? Where are the variables?", you asked? Well it turns out that until 3.2, which is yet to be released, Sass didn't support variables in media queries. Well, strictly speaking it still doesn't. But, Sass 3.2 introduces the ability to pass content blocks to functions. Chris Eppstein [published a gist](https://gist.github.com/1215856#file_6_media_queries.scss) showing how you might use this. I'll use these new mixins to redo my profile picture example:
 
     :::scss
     @mixin respond-to($media) {
@@ -171,7 +170,7 @@ In my examples above you may have noticed that all the media queries were writte
       @include respond-to(wide-screens) { float: none; }
     }
 
-And the compiled css: 
+And the compiled css:
 
     :::css
     .profile-pic {
@@ -198,7 +197,7 @@ This makes it possible to set up a mixin for all your @media breakpoints and reu
 
 ### Sass 3.2 Alpha
 
-You can try out the new Sass 3.2 features I've talked about in this article before its official release by installing it with this command: 
+You can try out the new Sass 3.2 features I've talked about in this article before its official release by installing it with this command:
 
     gem install sass --pre
 

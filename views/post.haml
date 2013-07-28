@@ -5,7 +5,7 @@
 
     ~ markdown(@page.body)
 
-    - if page_author = @page.metadata('author').downcase.gsub(" ", "_").sub!("[.]", "")
+    - if page_author = @page.metadata('author').downcase.gsub(" ", "_").sub(".", "")
       = haml page_author.to_sym, :layout => false
 
     - unless @page.categories.empty?

@@ -1,7 +1,6 @@
 Date: 12 September 2011 7:00am
 Categories: articles, john-w-long
 Author: John W. Long
-about_author: john_w_long
 Summary: Since the creation of Sass, it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added brand new features unheard of to CSS authors such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented syntax and a brand new perspective on how to author CSS. Then the SCSS syntax (Sassy CSS) was introduced ...
 
 # Sass vs. SCSS: Which Syntax is Better?
@@ -94,7 +93,7 @@ Oh, and if you're not using the `@extend` directive, you are really missing out 
 ### Reason #4: SCSS allows me to write better inline documentation
 
 It's true that the Sass syntax allows a certain amount of flexibility with comments, but I find myself writing more inline-documentation directly in SCSS than Sass. A lot of this has to do with the way the code hangs together and the flexibility in syntax that SCSS provides. Braces help me group my code and comments in a way that makes more sense to me. I know we are talking aesthetics here, but more flexibility makes a difference when writing documentation.
- 
+
 ### Reason #5: Existing CSS tools often work with SCSS
 
 I don't actually use a lot of other tools with my CSS, but one area where this is particularly helpful is syntax highlighting. Depending on your editor preference, it may or may not have support for the indented Sass syntax. But most editors already have built-in support for CSS and tend to work well with SCSS. Also, if you do any blogging, most code highlighters support CSS, but only a handful support the Sass syntax.

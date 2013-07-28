@@ -1,7 +1,6 @@
 Date: 18 August 2011
 Categories: news, adam-stacoviak
 Author: Adam Stacoviak
-about_author: adam_stacoviak
 Summary: There seems to be some disconnect between fact and fiction surrounding the Sass indented syntax. To be clear, the Sass indented syntax has not been and will never be deprecated!
 
 # Sass's indented syntax has not been and will never be deprecated!

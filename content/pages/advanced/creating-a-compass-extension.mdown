@@ -1,5 +1,5 @@
 Date: 2013-10-04 19:24:12 -0500
-Categories: projects, adam-stacoviak
+Categories: advanced, guides, adam-stacoviak
 author: Adam Stacoviak
 summary: Pictos is an awesome interface icon set from Drew Wilson. Pictos Free is, umm, free, and it's packaged as a simple Compass extension that leverages the Compass spriting module.
 
@@ -80,16 +80,16 @@ You should see something like this.
 
     :::bash
     -> % compass install pictos-free/icons
-    create public/images/pictos-free-black/icn1.png 
+    create public/images/pictos-free-black/icn1.png
     ...
-    create public/images/pictos-free-white/icn6.png 
-    create public/images/pictos-free-white/icn7.png 
-    create public/images/pictos-free-white/icn8.png 
-    create public/images/pictos-free-white/icn9.png 
-    create License.txt 
-    remove .sass-cache/ 
-    remove public/stylesheets/stylesheet.css 
-    create public/stylesheets/stylesheet.css 
+    create public/images/pictos-free-white/icn6.png
+    create public/images/pictos-free-white/icn7.png
+    create public/images/pictos-free-white/icn8.png
+    create public/images/pictos-free-white/icn9.png
+    create License.txt
+    remove .sass-cache/
+    remove public/stylesheets/stylesheet.css
+    create public/stylesheets/stylesheet.css
 
 Once you've done this, your project will now have the images for Pictos Free installed in your images directory and you are ready to use Pictos Free!
 
@@ -104,7 +104,7 @@ If you look at the partial file [\_pictos-free-black.sass](https://github.com/ad
     :::sass
     @import "pictos-free-black/*.png"
     +all-pictos-free-black-sprites
-    
+
 Which compiles to this CSS. This code snippet has been truncated because this single line of Sass compiles to approximately 174 lines of CSS for us.
 
     :::css
@@ -115,7 +115,7 @@ Which compiles to this CSS. This code snippet has been truncated because this si
     .pictos-free-black-icn1 {
       background-position: 0 0;
     }
-    
+
     ...
 
     .pictos-free-white-icn8 {

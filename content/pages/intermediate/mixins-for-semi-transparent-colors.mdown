@@ -1,7 +1,6 @@
 Date: 15 March 2050
 Categories: intermediate, guides, john-w-long
 Author: John W. Long
-about_author: john_w_long
 
 # Mixins for Semi-Transparent Colors
 

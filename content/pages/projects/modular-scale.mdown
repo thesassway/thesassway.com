@@ -1,7 +1,6 @@
 Date: 23 August 2011
 Categories: projects, adam-stacoviak
 Author: Adam Stacoviak
-about_author: adam_stacoviak
 Summary: Have you been wanting to design with modular scales, but the math and static-ness of CSS has held you back? Modular Scale is a Sass mixin that does all the heavy lifting and math for you to calculate the values of the modular scale. So put down the calculator and get excited about "prearranged sets of harmonious proportions" and let Sass do the work!
 
 # Sassy Modular Scale: Inspired by and adapted from Tim Brown's modularscale.com
@@ -47,7 +46,7 @@ For example, `@import vendor/modular-scale`.
 
 Building on Tim's original concept, Sassy Modular Scale provides a number of ratios (`$ratio`) that you can use to create relationships. The Golden Ratio is there, as well as eleven other ratios derived from musical intervals like the Major Third, Fourth, and Fifth. You can set any of these as your default ratio, define your own custom ratio, or choose multiple ratios for more complex relationships.
 
-You also choose a default starting value (`$base-size`). This can be any number that has meaning in your design, such as your base font size. Just like with ratios, you can also choose multiple starting values to create relationships between them. This is the same as the process Tim outlined in his original article. 
+You also choose a default starting value (`$base-size`). This can be any number that has meaning in your design, such as your base font size. Just like with ratios, you can also choose multiple starting values to create relationships between them. This is the same as the process Tim outlined in his original article.
 
 Finally you need to know which value you want from the calculated scale (`$multiple`). Do you want the next value up the scale? The 15th? Or perhaps the 6th value down the scale? This is the one variable you'll pass each time you use the function.
 
@@ -58,35 +57,35 @@ Sassy Modular Scale can be used as a function or as a mixin that generates a ran
 #### Function
 
 This is the most common use. The function takes an argument for the multiple, base-size, and ratio and returns the desired value along the newly calculated modular scale.
-  
+
     :::scss
     // modular-scale($multiple, $base-size, $ratio)
     .my-module {
       width: modular-scale(7, 14px, $golden);
     }
-  
-The `modular-scale()` function calculates the following set of values, and in this case returns the 7th value up the scale, starting with `$base-size`. 
-  
+
+The `modular-scale()` function calculates the following set of values, and in this case returns the 7th value up the scale, starting with `$base-size`.
+
     22.652px 36.651px 59.301px 95.949px 155.246px 251.188px [406.422px]
-  
+
 Here's the generated CSS
 
     :::css
     .my-module {
       width: 406.422px;
-    }    
-  
+    }
+
 In practice you'll often set some defaults before calling the function. There's also a short name for the function to save on keystrokes. The `ms()` function is identical to the `modular-scale()` function. In fact behind the scenes all it does is call the longer-named function and return its calculation.
 
     :::scss
     $base-size: 14px;
     $ratio: $golden;
-  
+
     h1 {
       font-size: ms(2);
-      // Pro tip: You can multiply the calculated value, 
+      // Pro tip: You can multiply the calculated value,
       // for example to arrive at a suitable line-height.
-      line-height: ms(2) * 1.2; 
+      line-height: ms(2) * 1.2;
     }
 
 Here's the generated CSS
@@ -96,7 +95,7 @@ Here's the generated CSS
       font-size: 36.651px;
       line-height: 43.981px;
     }
-    
+
 
 Setting multiple `$base-size` and/or `$ratio` values is simple. Just set the value of either variable as a space separated list. Note: If you use multiple `$base-size` values, the starting point of the scale will always be the *lowest* value in this list.
 
@@ -107,15 +106,15 @@ Setting multiple `$base-size` and/or `$ratio` values is simple. Just set the val
       width: ms(7);
     }
     // 18.239px 22.652px 29.51px 36.651px 47.748px 59.301px [77.256px]
-  
-  
+
+
     $base-size: 14px;
     $ratio: $golden $fourth;
     .my-other-module {
       width: ms(7);
     }
     // 18.667px 22.652px 24.889px 33.185px 36.651px 44.247px [58.996px]
-  
+
 Here's the generated CSS
 
     :::css
@@ -125,8 +124,8 @@ Here's the generated CSS
     .my-other-module {
       width: 58.996px;
     }
-     
-  
+
+
 #### Mixin to generate a range of classes
 
 There is also a mixin, which allows you to create multiple classes with modular scale values set to some property. These are well-suited to the `@extend` functionality in Sass
@@ -135,9 +134,9 @@ There is also a mixin, which allows you to create multiple classes with modular 
     $ratio: $golden;
     $base-size: 14px;
     $class-slug: ms;
-  
+
     @include modular-scale-classes(4, font-size);
-  
+
 Here's the generated CSS
 
     :::css
@@ -160,9 +159,9 @@ Here's the generated CSS
     .ms-4 {
       font-size: 27.344px;
     }
-    
-    
-### Conclusion      
+
+
+### Conclusion
 
 Tim Brown's Modular Scale technique is a really great tool for finding numerical relationships for your web work. Sassy Modular Scales is a robust tool for handling these calculations, and can really help you be more nimble when using this technique in Sass.
 
