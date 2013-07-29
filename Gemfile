@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rack-contrib'
 gem 'rake'
-gem 'nesta', '0.9.5'
+gem 'nesta', '0.9.13'
 gem 'compass'
 gem 'rack-rewrite'
 
