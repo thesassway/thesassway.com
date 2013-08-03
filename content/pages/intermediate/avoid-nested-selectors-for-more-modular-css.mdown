@@ -72,7 +72,7 @@ But we can improve this code further. The title class is still used in a context
 
 Suppose you decided to make a page title, and declared the rule like this:
 
-    :::css
+    :::scss
     .title {
       font-size: 3em;
       font-weight: bold;
@@ -83,7 +83,7 @@ Without thinking about how you've used title already in other contexts you've cr
 
 So how can we simplify our code and at the same time add clarity? Like this:
 
-    :::css
+    :::scss
     .page-title {
       font-size: 3em;
       font-weight: bold;
