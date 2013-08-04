@@ -151,12 +151,13 @@ for dropdown buttons:
     }
 
     .dropdown-button {
-      &::after { content: " ▾"; }
+      &::after { content: " \25BE"; }
     }
 
 Here, we've added a subclass for dropdown buttons. To use it, apply both classes
 to a button element:
 
+    :::html
     <button class="button dropdown-button">
       Dropdown
     </button>
@@ -167,7 +168,7 @@ If you prefer to only use one class in your markup, you can use the Sass
     :::scss
     .dropdown-button {
       @extend .button;
-      &::after { content: " ▾"; }
+      &::after { content: " \25BE"; }
     }
 
 The naming convention I like to use for sub-classes is to preceed the name of
@@ -203,13 +204,35 @@ something is selected. To continue our tabs example from earlier:
       }
     }
 
-Notice how I'm using the Sass ampersand operator again. In this case I'm using
-it to tightly associate the `is-selected` modifier with the `tab` object. This is
-important because I don't want the rules declared here to have ramifications on
-other objects. This tends to be true for most state classes, so I'd recommend
-trying to always declare them inside of the original class definition with the
-ampersand operator (like we've done in the example above).
+Notice how I'm using the Sass [ampersand operator](http://thesassway.com/intermediate/referencing-parent-selectors-using-ampersand)
+again. In this case I'm using it to tightly associate the `is-selected` modifier
+with the `tab` object. This is important because I don't want the rules declared
+here to have ramifications on other objects. This tends to be true for most
+state modifiers, so I'd recommend trying to always declare them inside of the
+original class definition with the ampersand operator (like we've done in the
+example above).
 
-The second way that a modifier can be used is to make a small modification on
-existing behavior.
+The second way that a modifier can be used is to make small changes to existing
+behavior. Here's an example using modifers to allow for different size
+textboxes:
+
+    :::scss
+    .textbox {
+      font: 13px sans-serif;
+      border: 1px solid #ccc;
+      border-top: 1px solid #999;
+      border-radius: 2px;
+      padding: 2px 4px;
+      
+      &:focus { outline: none; border: 1px solid #69e; }
+      
+      &.large { font-size: 18px; }
+      &.small { font-size: 11px; padding: 1px 2px; }
+    }
+
+Notice that by applying a `large` or `small` modifier to the textbox object we
+can now change the size of the textbox. In this case, we also wanted to force
+these modifiers to only apply to the `textbox` object so we used ampersand
+operator again.
+
 
