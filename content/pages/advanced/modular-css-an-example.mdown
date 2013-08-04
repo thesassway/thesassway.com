@@ -6,11 +6,12 @@ Summary: If avoiding nested selectors in favor of a flatter class-based CSS scar
 
 # Modular CSS, an example
 
-If my last article about [avoiding nested selectors for more modular CSS](http://thesassway.com/advanced/avoid-nested-selectors-for-more-modular-css) left your head spinning, you are not alone. After all, one of the coolest things about Sass is that you can nest selectors. Why would you want to give that power up?
+If my last article about [avoiding nested selectors for more modular CSS](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css) left your head spinning, you are not alone. After all, one of the coolest things about Sass is that you can nest selectors. Why would you want to give that power up?
 
 I'm glad you asked. Perhaps an example would help. For myself, these principles really started to make sense when I was building a menubar that looked something like this:
 
-<div style="border: 4px solid #ddd; padding: 1px; margin: 2em 0"><iframe src="http://s.codepen.io/jlong/fulldetails/GhuKr" id="result" style="width: 100%; height: 250px; border: none"></iframe></div>
+<p data-height="300" data-theme-id="394" data-slug-hash="jJhbI" data-user="jlong" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jlong/pen/jJhbI'>Simple menu</a> by John W. Long (<a href='http://codepen.io/jlong'>@jlong</a>) on <a href='http://codepen.io'>CodePen</a></p>
+<script async src="http://codepen.io/assets/embed/ei.js"></script>
 
 To build this menubar, I started out with the following HTML:
 
