@@ -12,8 +12,8 @@ pattern library like [Pears](http://pea.rs/) or a framework like
 
 Naming conventions can help us here as well. They provide an orderly structure
 for our names. Naming conventions for classes are the major part of what a
-methodology like [SMACSS](http://smacss.com/) or [BEM](http://bem.info/)
-provides.
+methodology like [SMACSS](http://smacss.com/), [BEM](http://bem.info/), or
+[OOCSS](https://github.com/stubbornella/oocss) provides.
 
 In this article I'd like to talk about a couple of my own naming conventions.
 These are mostly based on SMACSS and BEM, but have my own twist.
@@ -37,15 +37,18 @@ Here's an example of a button object in Sass:
 
     :::scss
     .button {
-      background: linear-gradient(#eee, #ddd);
+      background: linear-gradient(#eee, #ccc);
       border: 1px solid #999;
-      @include border-radius(5px);
-      color: #666;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #888;
+      @include border-radius(3px);
+      @include box-shadow(white 0 1px 0 inset, rgba(black, 0.1) 0 1px 0 0);
+      color: #333;
       cursor: pointer;
       padding: 4px 10px 5px;
       
       &:hover {
-        background: linear-gradient(#fff, #eee);
+        background: linear-gradient(#fff, #ddd);
         color: #111;
       }
     }
@@ -119,7 +122,7 @@ of tabs:
       top: 1px;
     }
 
-To use the Plural Parent Patern, simply pluralize the name parent object (the
+To use the *Plural Parent Patern*, simply pluralize the name parent object (the
 container).
 
 
@@ -235,4 +238,103 @@ can now change the size of the textbox. In this case, we also wanted to force
 these modifiers to only apply to the `textbox` object so we used ampersand
 operator again.
 
+There a times when it makes perfect sense to make a modifer a global modifier.
+Here are a couple of examples:
 
+    ::scss
+    .clearfix { @include clearfix; }
+
+    .is-hidden    { display:    none !important; }
+    .is-invisible { visibility: none !important; }
+
+    .block        { display: block        !important; }
+    .inline       { display: inline       !important; }
+    .inline-block { display: inline-block !important; }
+
+    .left  { float: left  !important; }
+    .right { float: right !important; }
+
+    .text-left   { text-align: left   !important; }
+    .text-center { text-align: center !important; }
+    .text-right  { text-align: right  !important; }
+
+    .mt0 { margin-top:    0   !important; }
+    .mt1 { margin-top:    1em !important; }
+    .mb0 { margin-bottom: 0   !important; }
+    .mb1 { margin-bottom: 1em !important; }
+
+Global modifers are generally best when they only change a single property.
+Often you will need to also use the `!important` flag to declare that they
+should override other rules. Also you should be careful about overusing
+modifiers like `.mt1` to adjust the top margin of an element. They are useful
+for one-offs, but when used frequently for the same purpose they should probably
+be rolled into an object definition or subclass.
+
+
+## Nouns and Adjectives
+
+Now before all of this gets too confusing let me share something that may help
+the English-minded folks among us.
+
+**Objects** traditionally are nouns. They take the form of:
+
+    .noun       // examples: .button, .menu, .textbox, .header, .footer
+
+**Parent-Child** relationships are also nouns:
+
+    .noun       // parent: .post
+    .noun-noun  // child:  .post-title
+
+**Subclasses** are often preceeded by a adjective describing the type of object:
+
+    .adjective-noun  // example: .dropdown-button
+
+And **Modifiers** are almost always adjectives (or are used descriptively):
+
+    .is-state    // state: is-selected, is-hidden
+    .adjective   // examples: .left, .right, .block, .inline
+
+
+## A word on file structure
+
+I've written about [how to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+in the past. Let me show you how it applies within my own modular CSS
+methodology. My `partials` directory is generally filled with files broken up by
+objects. Here's an incomplete directory listing from a more recent project:
+
+    partials/
+    |-- _alerts.scss
+    |-- _buttons.scss
+    |-- _checkboxes.scss
+    |-- _choices.scss
+    |-- _countdowns.scss
+    |-- _footer.scss
+    |-- _forms.scss
+    |-- _icons.scss
+    |-- _menus.scss
+    |-- _messages.scss
+    |-- _modifiers.scss
+    |-- _panes.scss
+    |-- _ratings.scss
+    |-- _results.scss
+    |-- _selectboxes.scss
+    |-- _tableviews.scss
+    |-- _textboxes.scss
+    |-- _throbbers.scss
+    `-- _typography.scss
+
+I like to pluralize my file names because each partial contains the object
+defintition along with any of the associated child objects, subclasses, and
+modifiers.
+
+
+## Conclusion
+
+So there you have it: a simple set of naming conventions for more modular CSS.
+Again, for my own method I've borrowed a lot from [SMACSS](http://smacss.com/),
+[BEM](http://bem.info/), and [OOCSS](https://github.com/stubbornella/oocss).
+If you're not familiar with any of these approaches they are well worth reading
+up on. You don't have to do modular CSS the way I do. Some folks prefer to use
+[different types of separators](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+to distiguish between different types of classes. But the core of the approach
+outlined here is common between the major methodologies.
