@@ -303,8 +303,8 @@ And **Modifiers** are almost always adjectives (or are used descriptively):
 
 I've written about [how to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 in the past. Let me show you how it applies within my own modular CSS
-methodology. My `partials` directory is generally filled with files broken up by
-objects. Here's an incomplete directory listing from a more recent project:
+methodology. My `partials` directory is generally filled with files broken out
+by object. Here's an incomplete directory listing from a more recent project:
 
     partials/
     |-- _alerts.scss
