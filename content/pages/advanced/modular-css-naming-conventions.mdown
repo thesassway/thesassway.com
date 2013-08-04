@@ -241,7 +241,7 @@ operator again.
 There a times when it makes perfect sense to make a modifer a global modifier.
 Here are a couple of examples:
 
-    ::scss
+    :::scss
     .clearfix { @include clearfix; }
 
     .is-hidden    { display:    none !important; }
@@ -278,21 +278,25 @@ the English-minded folks among us.
 
 **Objects** traditionally are nouns. They take the form of:
 
-    .noun       // examples: .button, .menu, .textbox, .header, .footer
+    :::scss
+    .noun {}            // examples: .button, .menu, .textbox, .header
 
 **Parent-Child** relationships are also nouns:
 
-    .noun       // parent: .post
-    .noun-noun  // child:  .post-title
+    :::scss
+    .noun {}            // parent: .post
+    .noun-noun {}       // child:  .post-title
 
 **Subclasses** are often preceeded by a adjective describing the type of object:
 
-    .adjective-noun  // example: .dropdown-button
+    :::scss
+    .adjective-noun {}  // example: .dropdown-button
 
 And **Modifiers** are almost always adjectives (or are used descriptively):
 
-    .is-state    // state: is-selected, is-hidden
-    .adjective   // examples: .left, .right, .block, .inline
+    :::scss
+    .is-state {}        // state: is-selected, is-hidden
+    .adjective {}       // examples: .left, .right, .block, .inline
 
 
 ## A word on file structure
