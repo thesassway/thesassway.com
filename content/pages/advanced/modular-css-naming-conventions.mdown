@@ -41,8 +41,9 @@ Here's an example of a button object in Sass:
       border: 1px solid #999;
       @include border-radius(5px);
       color: #666;
-      padding: 8px 15px;
-
+      cursor: pointer;
+      padding: 4px 10px 5px;
+      
       &:hover {
         background: linear-gradient(#fff, #eee);
         color: #111;
@@ -59,11 +60,9 @@ hover state for the button above.
 Adopting a naming convention for parent-child relationships between objects can
 really help clean up your CSS. I talked about this in my earlier article on [the
 advantages of avoiding nesting](http://thesassway.com/intermediate/avoid-nested-selectors-for-more-modular-css)
-in Sass. The chief advantage is that it frees you up from having to think of
-unique names for child objects to avoid namespace collisions with similar types
-of objects.
+in Sass.
 
-Here's the example from my earlier article:
+To continue the example from my earlier article:
 
     :::scss
     .post {
@@ -75,17 +74,7 @@ Here's the example from my earlier article:
       }
     }
 
-    .summary {
-      margin: 2em;
-
-      .title {
-        font-size: 1.2em;
-        font-wieght: bold;
-      }
-    }
-
-Instead of nesting objects underneath each other, remove the nesting and use
-more specific class names:
+Would be better written as:
 
     :::scss
     // Posts
@@ -97,28 +86,130 @@ more specific class names:
       font-weight: normal;
     }
 
-    // Summaries
-    .summary {
-      margin: 1em 0;
+The chief advantage of this approach is avoiding errors that may occur with
+similarly named objects. In the first example, if a title object was declared in
+another context it could conflict with the post title. Not so in the second
+example. Because the child object is prefixed with the parent object's name it
+is less likely that an accidental conflict will occur. Win and win.
+
+This example uses what I like to call the *Parent-Child Pattern* for declaring
+this relationship. To use it simply prefix the name of the of the child object
+with the name of the parent object. I like to separate with a single dash.
+
+There is one other pattern that can be used for declaring a parent-child
+relationship. It's especially handy for a set of objects and their container. I
+call it the *Plural Parent Pattern*. Here it is in action for marking up a group
+of tabs:
+
+    :::scss
+    .tabs {
+      border-bottom: 1px solid silver;
+      text-align: center;
     }
-    .summary-title {
-      font-size: 1.2em;
-      font-weight: bold;
+
+    .tab {
+      background: #e5e5e5;
+      border: 1px solid silver;
+      @include border-top-radius(3px);
+      color: #666;
+      display: inline-block;
+      padding: 7px 18px 7px;
+      text-decoration: none;
+      position: relative;
+      top: 1px;
     }
 
-This is our fist naming convention. Parent-child relationships can be defined by
-listing the parent object in the name of the child object. In fact, you can take
-this a bit farther and have parent-child-grandchild relationships as well.
-
-Here's a more advanced example of the parent-child naming convention showing
-markup for an iOS-style tableview:
-
-<div data-height="372" data-theme-id="0" data-slug-hash="KJjCL" data-user="jlong" data-default-tab="html" class="codepen"></div><script async src="http://codepen.io/assets/embed/ei.js"></script>
+To use the Plural Parent Patern, simply pluralize the name parent object (the
+container).
 
 
 ## Subclassing objects
 
+Most object-oriented systems have another concept for declaring that an object a
+kind of another object. It's called subclassing. It's useful for inheriting the
+properties of another object while adding additional behavior. It can be used to
+better model objects in the real world. For example, a Prius is a kind of car.
+it inherits the generic properties of a car (a stearing wheel, four tires,
+an engine, etc) and makes a few modifications (hybrid technology).
+
+We can use the same concept in CSS. Let's extend our button example to provide
+for dropdown buttons:
+
+    :::scss
+    .button {
+      background: linear-gradient(#eee, #ddd);
+      border: 1px solid #999;
+      @include border-radius(5px);
+      color: #666;
+      cursor: pointer;
+      padding: 4px 10px 5px;
+      
+      &:hover {
+        background: linear-gradient(#fff, #eee);
+        color: #111;
+      }
+    }
+
+    .dropdown-button {
+      &::after { content: " ▾"; }
+    }
+
+Here, we've added a subclass for dropdown buttons. To use it, apply both classes
+to a button element:
+
+    <button class="button dropdown-button">
+      Dropdown
+    </button>
+
+If you prefer to only use one class in your markup, you can use the Sass
+`@extend` directive, like so:
+
+    :::scss
+    .dropdown-button {
+      @extend .button;
+      &::after { content: " ▾"; }
+    }
+
+The naming convention I like to use for sub-classes is to preceed the name of
+the object with the type of object. In this case, `dropdown-button`.
 
 
+## Using modifiers
 
+The fourth type of class that I use is called a _modifier_. A modifier can be
+used to indicate that the object is in a certain state or to make small
+modifications on existing behavior.
+
+For state, I like to use the SMACSS naming convention of prefixing state
+classes with `is-`. A common example of a state class is to indicate that
+something is selected. To continue our tabs example from earlier:
+
+    :::scss
+    .tab {
+      background: #e5e5e5;
+      border: 1px solid silver;
+      @include border-top-radius(3px);
+      color: #666;
+      display: inline-block;
+      padding: 7px 18px 7px;
+      text-decoration: none;
+      position: relative;
+      top: 1px;
+
+      &.is-selected {
+        background: white;
+        border-bottom-color: white;
+        color: #333;
+      }
+    }
+
+Notice how I'm using the Sass ampersand operator again. In this case I'm using
+it to tightly associate the `is-selected` modifier with the `tab` object. This is
+important because I don't want the rules declared here to have ramifications on
+other objects. This tends to be true for most state classes, so I'd recommend
+trying to always declare them inside of the original class definition with the
+ampersand operator (like we've done in the example above).
+
+The second way that a modifier can be used is to make a small modification on
+existing behavior.
 
