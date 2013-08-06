@@ -1,7 +1,6 @@
-Date: 28 March 2050
+Date: 06 August 2013
 Categories: advanced, guides, john-w-long
 Author: John W. Long
-about_author: john_w_long
 Summary: If avoiding nested selectors in favor of a flatter class-based CSS scares you, maybe this example will help you embrace some of the principles of modular CSS.
 
 # Modular CSS, an example
@@ -56,33 +55,33 @@ I then styled it using nested selectors:
       background: white;
       list-style: none;
       padding: 0 10px;
- 
+
       > li {
         display: inline-block;
         position: relative;
- 
+
         > a {
           color: black;
           display: block;
           padding: 10px 14px;
           text-decoration: none;
- 
+
           &:hover { background: #29a7f5; color: white; }
         }
- 
+
         > ul {
           display: none;
           position: absolute;
           top: 100%;
           background: white;
           padding: 10px 0;
- 
+
           > li > a {
             color: black;
             display: block;
             padding: 8px 20px;
             text-decoration: none;
- 
+
             &:hover { background: #29a7f5; color: white; }
           }
         }
@@ -107,7 +106,7 @@ The menu system I was working on was actually much more complicated than the cod
       font-size: 14px;
       background: white;
       padding: 0 10px;
- 
+
       > li {
         display: inline-block;
         position: relative;
@@ -118,7 +117,7 @@ The menu system I was working on was actually much more complicated than the cod
       display: block;
       padding: 10px 14px;
       text-decoration: none;
- 
+
       &:hover, .is-selected & { background: #29a7f5; color: white; }
     }
 
@@ -130,7 +129,7 @@ The menu system I was working on was actually much more complicated than the cod
       list-style: none;
       width: 15em;
       padding: 10px 0;
- 
+
       .is-selected & { display: block; }
     }
     .menu-item {
@@ -138,9 +137,9 @@ The menu system I was working on was actually much more complicated than the cod
       display: block;
       padding: 8px 20px;
       text-decoration: none;
- 
+
       &:hover { background: #29a7f5; color: white; }
-    } 
+    }
 
 By flattening the structure of the CSS I was able to make it much easier to understand and modify. It also helped me conceptually to think about my styles in terms of objects instead of lists. In this example I have a "menubar" and a "menu". Each of those objects have their own child objects called "items" which are distinguished with the "menubar-item" and "menu-item" classes.
 
