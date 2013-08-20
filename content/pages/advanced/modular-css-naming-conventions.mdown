@@ -128,8 +128,8 @@ container).
 
 ## Subclassing objects
 
-Most object-oriented systems have another concept for declaring that an object a
-kind of another object. It's called subclassing. It's useful for inheriting the
+Most object-oriented systems have another concept for declaring that an object is
+a kind of another object. It's called subclassing. It's useful for inheriting the
 properties of another object while adding additional behavior. It can be used to
 better model objects in the real world. For example, a Prius is a kind of car.
 it inherits the generic properties of a car (a stearing wheel, four tires,
