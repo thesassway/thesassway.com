@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
+.ruby-gemset
+.ruby-version
 tmp
