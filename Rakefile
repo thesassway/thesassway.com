@@ -6,9 +6,10 @@ task :deploy do
 end
 
 desc "Run the localhost server"
-task :s do
+task :server do
   system "bundle exec shotgun config.ru"
 end
+task :s => :server
 
 namespace :styles do
 
