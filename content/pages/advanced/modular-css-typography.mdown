@@ -176,7 +176,7 @@ make the definition of the `typography` modifier a snap:
 
 ## An example
 
-To illustrate how this can all come together, I've put together a full modular typography demo on Codepen [here](http://codepen.io/jlong/pen/wErcp):
+To illustrate how this can all come together, I've put a full modular typography demo on Codepen [here](http://codepen.io/jlong/pen/wErcp):
 
 <div data-height="450" data-theme-id="393" data-slug-hash="gtvzG" data-user="jlong" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jlong/pen/gtvzG'>Modular Typography</a> by John W. Long (<a href='http://codepen.io/jlong'>@jlong</a>) on <a href='http://codepen.io'>CodePen</a></div>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
@@ -184,7 +184,7 @@ To illustrate how this can all come together, I've put together a full modular t
 
 ## In conclusion
 
-I share all this as an example of what has worked well for me. Your millage may
+I share all this as an example of what has worked well for me. Your mileage may
 vary. You may find that other approaches work better for your circumstances.
 This is the approach that has worked well for me on a number of websites and
 applications now.
