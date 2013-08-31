@@ -9,8 +9,6 @@ The more you write your own stylesheets, the more you begin to value using good
 names in your code. Naming is by far one the most difficult and debated activities
 of a developer. To many, naming is an art form.
 
-## Consult the wisdom of your peers
-
 Rather than making up my own names I sometimes consult a
 pattern library like Dan Cederholm's [Pears](http://pea.rs/) or a front-end framework like
 [Bootstrap](http://getbootstrap.com/) to find a good name for a concept.
@@ -36,7 +34,9 @@ Objects are small little chunks of functionality. You can think of them as
 interface elements like headers, footers, buttons, and content areas.
 
 I like to define my objects using only class selectors. ID and tag selectors can
-often complicate things because of CSS specificity so I avoid them.
+complicate things because [CSS specificity](http://coding.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/).
+[is a pain](http://csswizardry.com/2011/09/when-using-ids-can-be-a-pain-in-the-class/).
+So I avoid using ID or tag selectors in my stylesheets.
 
 Here's an example of a button object in Sass:
 
