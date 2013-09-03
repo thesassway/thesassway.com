@@ -137,7 +137,7 @@ Most object-oriented systems have another concept for declaring that an object i
 a kind of another object. It's called subclassing. It's useful for inheriting the
 properties of another object while adding additional behavior. It can be used to
 better model objects in the real world. For example, a Prius is a kind of car.
-it inherits the generic properties of a car (a stearing wheel, four tires,
+It inherits the generic properties of a car (a stearing wheel, four tires,
 an engine, etc) and makes a few modifications (hybrid technology).
 
 We can use the same concept in CSS. Let's extend our button example to provide
