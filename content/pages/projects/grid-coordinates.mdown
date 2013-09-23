@@ -1,4 +1,4 @@
-Date: 8 September 2013
+Date: 8 September 2050
 Categories: projects, adam-stacoviak
 Author: Adam Stacoviak
 about_author: adam_stacoviak
@@ -21,7 +21,7 @@ Grid Coordinates does one job - provide a rock solid grid framework. It's able t
     $grid-gutter-width: 20px
 
     @import "grid-coordinates"
-    
+
     // Do it.
     +grid-coordinates
 
