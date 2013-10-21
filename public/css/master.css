@@ -628,11 +628,18 @@ html {
   font-size: 12px;
   padding: 2px 3px;
 }
-.content-typography p, .content p, .content-typography ul, .content ul {
+.content-typography p, .content p {
   margin-bottom: 10px;
+}
+.content-typography ul, .content ul, .content-typography ol, .content ol {
+  margin: 15px 0 15px 35px;
 }
 .content-typography ul li, .content ul li {
   list-style: disc;
+  margin-bottom: 5px;
+}
+.content-typography ol li, .content ol li {
+  list-style: decimal;
   margin-bottom: 5px;
 }
 .content-typography strong, .content strong, .content-typography b, .content b {
@@ -1018,7 +1025,7 @@ html {
   opacity: 0.8;
   position: relative;
   top: -2px;
-  background: url('/images/helveticons-16/rss.png?1375497467') no-repeat;
+  background: url('/images/helveticons-16/rss.png?1378068313') no-repeat;
   display: block;
   height: 16px;
   text-indent: -99999px;
@@ -1436,7 +1443,7 @@ html {
   -webkit-box-shadow: black 0 0 6px;
   -moz-box-shadow: black 0 0 6px;
   box-shadow: black 0 0 6px;
-  background: url('/images/sass-compass-in-action-80.png?1375497467') no-repeat;
+  background: url('/images/sass-compass-in-action-80.png?1378068313') no-repeat;
   cursor: pointer;
   display: block;
   height: 100px;
@@ -1486,7 +1493,7 @@ html {
 }
 #footer .site a.credit {
   margin-left: 10px;
-  background: url('/images/rizn-media-production.png?1375497467') no-repeat;
+  background: url('/images/rizn-media-production.png?1378068313') no-repeat;
   display: inline-block;
   line-height: 22px;
   text-indent: -99999px;
