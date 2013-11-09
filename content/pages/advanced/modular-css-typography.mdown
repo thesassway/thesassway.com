@@ -1,7 +1,7 @@
 Date: 25 August 2050
 Categories: advanced, guides, john-w-long
 Author: John W. Long
-Summary: Learn how to use the @extend directive to create a reusable set of
+Summary: Learn how to modularize your typography to create solid foundation for your projects. Use multiple classes and the @extend directive to create a reusable set of
 typographical styles.
 
 # Modular CSS Typography
@@ -35,20 +35,36 @@ Compass with the `global-reset` mixin:
     @include global-reset;
 
 A couple of people have asked me why I don't use [Normalize.css](http://necolas.github.io/normalize.css/).
-Normalize is a brilliant project and I have great respect for Nicolas Gallagher
-and the team that has put it together. On my own projects though I prefer a
-reset that changes the defaults for all tags to use the same formatting. Zeroing
-out the styles on all elements allows me to build-up styles using nothing but
-classes. This is handy because I can modify the tag structure of the document at
-any point (for semantic reasons) while maintaing the class structure to ensure
-that the styling will remain the same. In general I use tags for sematics and
-classes for styles.
+Normalize is a brilliant project and I have a lot of respect for Nicolas
+Gallagher and the team that has put it together. Having a common set of
+useable styles is a great starting point for many projects.
+
+However, on my own projects I prefer a reset that changes the defaults for all
+tags to use the same formatting because it is more modular.
+
+The first reason I like this approach is that, zeroing out styles on all
+elements allows me to build-up styles using nothing but classes. This is handy
+because I can modify the tag structure of the document at any point (for
+semantic reasons) while maintaing the class structure to ensure that the
+styling will remain the same. In general I use tags for sematics and classes
+for styling.
+
+The other reason to start with a fuller reset is that starting from zero allows
+you to layer on styles without worrying about turning off other styles. Read
+that one more time. Anytime you have to turn off styles in multiple places in
+your stylesheets your are spreading the knowledge of those styles throughout
+your stylesheet instead of having them in only one place.
+
+My goal is to reduce the number of dependencies (connections) between rules
+spread across my stylesheets. Starting from zero puts me on much better footing
+to do that.
+
 
 
 ## Base styles
 
-After including a reset, I like to setup the base font settings for a project.
-Here's an example of doing this by setting the font on the `body` element:
+After including a reset, I setup the base font settings for a project. Here's
+an example of doing this by setting the font on the `body` element:
 
     :::scss
     body {
@@ -67,10 +83,11 @@ fiddle with it much less frequently when styling.
 
 ## OOCSS headings
 
-Nicole Sullivan suggests that you define styles for headings with additional
-classes so that you can do things like style `h2` tags like `h4`s when the
-occassion demands. A great example where this can be useful is in a sidebar.
-In a sidebar smaller headings from the main content are generally desirable:
+[Nicole Sullivan](http://www.stubbornella.org/) suggests that you define styles
+for headings with additional classes so that you can do things like style `h2`
+tags like `h4`s when the occassion demands. A great example where this can be
+useful is in a sidebar. In a sidebar smaller headings from the main content are
+generally desirable:
 
     :::html
     <div class="sidebar">
@@ -176,7 +193,8 @@ make the definition of the `typography` modifier a snap:
 
 ## An example
 
-To illustrate how this can all come together, I've put a full modular typography demo on Codepen [here](http://codepen.io/jlong/pen/wErcp):
+To illustrate how this can all come together, I've put a full modular
+typography demo on Codepen [here](http://codepen.io/jlong/pen/wErcp):
 
 <div data-height="450" data-theme-id="393" data-slug-hash="gtvzG" data-user="jlong" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jlong/pen/gtvzG'>Modular Typography</a> by John W. Long (<a href='http://codepen.io/jlong'>@jlong</a>) on <a href='http://codepen.io'>CodePen</a></div>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
@@ -184,7 +202,12 @@ To illustrate how this can all come together, I've put a full modular typography
 
 ## In conclusion
 
-I share all this as an example of what has worked well for me. Your mileage may
-vary. You may find that other approaches work better for your circumstances.
-This is the approach that has worked well for me on a number of websites and
-applications now.
+Having a good approach to modular typography will provide a solid foundation
+for your projects. This approach has worked well for me on a lot of different
+projects and I'm comfortable saying that it's generally useful for anyone who
+is trying to structure their projects in a more modular way.
+
+Of course, it's not the only way to write your stylesheets. Your milaege may
+vary.
+
+Thoughts or questions? Please share them in the comments below.
