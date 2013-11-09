@@ -40,3 +40,7 @@ namespace :styles do
   end
 
 end
+
+task :default do
+  sh "rake -T"
+end
