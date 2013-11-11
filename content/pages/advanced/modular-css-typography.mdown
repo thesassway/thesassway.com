@@ -34,14 +34,14 @@ Compass with the `global-reset` mixin:
     @include global-reset;
 
 A couple of people have asked me why I don't use [Normalize.css](http://necolas.github.io/normalize.css/).
-Normalize is a brilliant project and I have a lot of respect for Nicolas
+Normalize<sup>1</sup> is a brilliant project and I have a lot of respect for Nicolas
 Gallagher and the team that has put it together. Having a common set of
 useable styles is a great starting point for many projects.
 
 However, on my own projects I prefer a reset that changes the defaults for all
 tags to use the same formatting because it is more modular.
 
-The first reason I like this approach is that, zeroing out styles on all
+The first reason I like this approach is that zeroing out styles on all
 elements allows me to build-up styles using nothing but classes. This is handy
 because I can modify the tag structure of the document at any point (for
 semantic reasons) while maintaing the class structure to ensure that the
@@ -210,3 +210,15 @@ Of course, it's not the only way to write your stylesheets. Your milaege may
 vary.
 
 Thoughts or questions? Please share them in the comments below.
+
+
+## Footnotes
+
+1. [Chris Coyier](http://chriscoyier.net/) was kind enough to point out that one way of using Normalize
+is to use it as a starting point for your base typographical styles. In fact,
+looking back at the Normalize [website](http://nicolasgallagher.com/about-normalize-css/)
+this seems to be one of the recommended ways of using it. It would be
+interesting to take Normalize and use it as the basis for a better reset.
+Personally, I'd love to see an HTML meta tag for zeroing out styles on a
+website, because the concept of starting from zero and building up from there
+is so useful.

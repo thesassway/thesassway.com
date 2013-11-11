@@ -681,6 +681,15 @@ html {
   border-bottom: 1px dotted #999999;
   cursor: help;
 }
+.content-typography sup, .content sup, .content-typography sup, .content sup {
+  font-size: 12px;
+}
+.content-typography sup, .content sup {
+  vertical-align: super;
+}
+.content-typography sub, .content sub {
+  vertical-align: sub;
+}
 .content-typography .read-more, .content .read-more {
   margin-bottom: 0;
 }
