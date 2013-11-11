@@ -214,11 +214,11 @@ Thoughts or questions? Please share them in the comments below.
 
 ## Footnotes
 
-1. [Chris Coyier](http://chriscoyier.net/) was kind enough to point out that one way of using Normalize
-is to use it as a starting point for your base typographical styles. In fact,
-looking back at the Normalize [website](http://nicolasgallagher.com/about-normalize-css/)
-this seems to be one of the recommended ways of using it. It would be
-interesting to take Normalize and use it as the basis for a better reset.
-Personally, I'd love to see an HTML meta tag for zeroing out styles on a
-website, because the concept of starting from zero and building up from there
-is so useful.
+1. [Chris Coyier](http://chriscoyier.net/) was kind enough to point out that
+one way of using Normalize is to use it as a starting point for your base
+typographical styles and customize it as you see fit. In fact, looking back at
+the Normalize [website](http://nicolasgallagher.com/about-normalize-css/) this
+seems to be one of the recommended ways of using it. It would be interesting to
+take Normalize and use it as the basis for a better reset. Personally, I'd love
+to see an HTML meta tag for zeroing out styles on a website, because the
+concept of starting from zero and building up from there is so useful.
