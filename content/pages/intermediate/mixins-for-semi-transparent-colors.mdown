@@ -1,6 +1,7 @@
-Date: 15 March 2050
+Date: 18 November 2013
 Categories: intermediate, guides, john-w-long
 Author: John W. Long
+Summary: Learn how to use Sass color functions to calculate backwards compatible colors for browsers that don't support alpha transparency and wrap up this functionality in a couple of handy mixins.
 
 # Mixins for Semi-Transparent Colors
 
