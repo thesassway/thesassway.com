@@ -174,12 +174,12 @@ make the definition of the `typography` modifier a snap:
       i, em { @extend .italic; }
       b, strong { @extend .bold; }
 
-      h1 { @extend .h1; margin: 1em 0 0.5em; }
-      h2 { @extend .h2; margin: 1em 0 0.5em; }
-      h3 { @extend .h3; margin: 1em 0 0.5em; }
-      h4 { @extend .h4; margin: 1em 0 0.5em; }
-      h5 { @extend .h5; margin: 1em 0 0.5em; }
-      h6 { @extend .h6; margin: 1em 0 0.5em; }
+      h1, .h1 { @extend .h1; margin: 1em 0 0.5em; }
+      h2, .h2 { @extend .h2; margin: 1em 0 0.5em; }
+      h3, .h3 { @extend .h3; margin: 1em 0 0.5em; }
+      h4, .h4 { @extend .h4; margin: 1em 0 0.5em; }
+      h5, .h5 { @extend .h5; margin: 1em 0 0.5em; }
+      h6, .h6 { @extend .h6; margin: 1em 0 0.5em; }
 
       p, ul, ol, pre { @extend .block-margins; }
 
