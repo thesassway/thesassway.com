@@ -1,0 +1,224 @@
+Date: 24 November 2013
+Categories: advanced, hugo-giraudel
+Author: Hugo Giraudel
+Summary: Hugo Giraudel is back with another article on his new SassyLists library. Learn about how he made it and gain insight into how to build your own Compass extensions.
+
+# Getting sassy with lists!
+
+Hey guys, I'm very glad to be back at TheSassWay for another post! Today, I'd like to introduce the incoming major version of my Sass functions library [SassyLists](http://sassylists.com). As you may know, Sass 3.3 is about to be released, and I have quite a couple of awesome things coming up for SassyLists.
+
+But first, let me quickly introduce the project for those of you who don't know yet what it is about. You have probably noticed how powerful Sass lists can be; [you can do awesome things with them](http://hugogiraudel.com/2013/07/15/understanding-sass-lists/). Kind of JavaScript arrays, it's incredible! The only problem is that Sass doesn't provide much tools to deal with lists. Let's see, we have: `append()`, `length()`, `nth()`, `join()`, `zip()` and `index()`. Okay, that's the strict minimum but what if we want moar?
+
+This is why I created a library of functions to deal with complicated lists. As of today, it includes almost thirty functions and I plan on adding more in the future. For example, you can use tools like `replace()`, `remove()`, `insert-nth()`, `slice()` or even `reverse()` to name just a few. For the complete list of available functions, please have a look at [the main table on the site](http://sassylists.com/).
+
+I started this project a couple of months ago and began with just a few functions. As time passed, I added more and more and now that Sass 3.3 is coming out, I had much to do! All functions needed to be revisited, some needed to be entirely rewritten. Anyway, let me show you what is in the Pandora box. ;)
+
+## Dealing with dependencies
+
+When giving the user the ability not to include the library as a whole but only small pieces of it, you expose yourself to something: missing dependencies. This is not too much of my concern since SassyLists is a [Compass Extension](http://compass-style.org/help/tutorials/extensions/) before anything else, so in most cases it will be installed as a whole. 
+
+But I wanted to do something in case some people are picking functions directly from the repo to copy/paste into their project. So I came up with a cool way to check for dependencies inside a function thanks to the new `function_exists()`, `variable_exists()`, `mixin_exists()` functions from Sass 3.3.
+
+Let's call the function `dependencies()`, shall we? Maybe we could pass it a list of function names we need for a specific case, and it should return true only if all of them are available. Right?
+
+``` sass
+@function dependencies($functions...) {
+    @each $function in $functions {
+        @if not function_exists($function) {
+            @return false;
+        }
+    }
+
+    @return true;
+}
+```
+
+Couldn't be any simpler, right? We loop through the arguments passed to the function and check them with the `function_exists()` function. If any of them doesn't exist, we return `false`. And if we get out of the loop (because all dependencies are okay), we return `true`. 
+
+Now let's use it:
+
+``` sass
+@function whatever($arg) {
+    @if dependencies('insert-nth', 'remove') {
+        // Function core
+    }
+
+    @else {
+        @warn "A function is missing for `whatever`. Please make sure you're including all dependencies.";
+        @return false;
+    }
+}
+```
+
+In case either `insert-nth()` or `remove()` doesn't exist in current context, the `whatever()` function will return `false` and will warn you that there is a missing dependency that you should satisfy before going on. 
+
+Now what if we want to tell what function is missing in the warning message? That's actually pretty simple, we just have to tweak a little bit our `dependencies()` function. 
+
+``` sass
+@function dependencies($functions...) {
+    $result: ();
+
+    @each $function in $functions {
+        @if not function_exists($function) {
+            $result: append($result, $function);
+        }
+    }
+
+    @return if($result == (), false, $result);
+}
+```
+
+Instead of simply toggling a boolean, we return either `false` if everything is alright or a list of missing dependencies (which is basically `true`). And now our `whatever()` function:
+
+``` sass
+@function whatever($arg) {
+    $missing-dependencies: dependencies('insert-nth', 'remove');
+
+    @if not $missing-dependencies {
+        // Function core
+    }
+
+    @else {
+        @warn "#{$missing-dependencies} missing for `whatever`. Please make sure you're including all dependencies.";
+        @return false;
+    }
+}
+```
+
+There we go; it should return the list of all missing functions. Let's say you forgot to include both `insert-nth()` and `remove()`, the warning message will be: 
+
+> "insert-nth" "remove" missing for `whatever`. Please make sure you're including all dependencies.
+
+Pretty neat, right? Now what if ... the `dependencies()` function doesn't exist? If you can ommit to include some functions, you can also forget to include the dependency checker and that sucks because you don't want everythink to be fucked up because you forgot to include the dependency checker. It is only a tool to help you manage dependency, not a compulsory piece of the function that uses it.
+
+Hopefully, this is very well handled because if the `dependencies()` function doesn't exist in the current context, Sass will treat `dependencies('insert-nth', 'remove')` as a string, resulting a `true` assertion. So if the dependency checker doesn't exist, the function will still run and not return `false` right away.
+
+## Making a sorting function
+
+The 0.x.x versions of SassyLists already include a sorting function able to sort a list of numeric values. I was pretty happy back then to be able to do such a thing with pure Sass as well as disappointed not to be able to sort strings as well. Thankfully, Sass 3.3 is bringing us a lot of power with string manipulation functions like `str-length()`, `str-slice()` and moar.
+
+If you can explode a string to get its characters, you can map them to a matrix of characters, get an index to finally sort them. Awesome, let's do this shall we? But first let me tell this is a complicated function so I'll try to keep it clear. 
+
+Let's start with the skeleton for our function. 
+
+``` sass
+@function sort($list, $matrix: null) {
+    $missing-dependencies: dependencies("_compare", "insert-nth");
+    
+    @if not $missing-dependencies {
+        // Function core
+    }
+    
+    @else {
+        @warn "#{$missing-dependencies} missing for `sort`. Please make sure you're including all dependencies.";
+        @return false;
+    }
+}
+```
+
+The `$matrix` argument is the ability for the user to provite its own matrix of characters if he's facing a list of values that involves some characters that are not supported by the function. The default is set to `null` to avoid declaring a list of dozens or characters in the function signature. It is declared in the function like this:
+
+``` sass
+$matrix: if($matrix != null, $matrix, " " "!" "\"" "#" "$" "%" "&" "'" "(" ")" "*" "+" "," "-" "." "/" ":" ";" "<" "=" ">" "?" "@" "[" "\\" "]" "^" "_" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z");
+```
+
+... and there are very few characters here. I saved you from all the French accented characters like `é`, `è`, `ê`, `ë` for each vowel... Anyway, if you need so you can override this matrix by passing your own to the function as a second argument. As you may notice, I even quoted the numbers; that's because I needed all characters to be the same type (`string`).
+
+Okay, let's dig in. For the next explanations, I'll add comments to the code to avoid breaking out the code in too much pieces that would make the reading annoying. 
+
+``` sass
+// Declare the matrix of characters
+$matrix: if($matrix != null, $matrix, " " "!" "\"" "#" "$" "%" "&" "'" "(" ")" "*" "+" "," "-" "." "/" ":" ";" "<" "=" ">" "?" "@" "[" "\\" "]" "^" "_" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z");
+// Put a first word in the result list
+$result: nth($list, 1);
+
+// Loop through the values from list
+// Starting from the 2nd since we just appended the 1st
+@for $i from 2 through length($list) {
+    $item: nth($list, $i);
+
+    // If it's not a list
+    @if length($item) == 1 {
+        $index: 0;
+
+        // Loop through all sorted values in $result
+        @for $j from 1 through length($result) {
+            // If the current $item is greater than the item for $result 
+            @if _compare($item, nth($result, $j), $matrix) {
+                // Note the index, and move on to next word in $result
+                $index: $j;
+            }
+        }
+        // Once we've looped through $result, we know where to insert $item
+        $result: insert-nth($result, $index + 1, $item);
+    }
+
+    // If it's a list, we simply warn the user that we won't deal with it
+    @else {
+        @warn "List found. Omitted.";
+    }
+}
+
+// Return result
+@return $result;
+```
+
+This is the `sort()` function. To prevent it from being 50 lines long, I moved the index comparison in another function I called `_compare()` (with a leading underscore because it's really just a helper &mdash;kind of like a private function&mdash; and not a function meant to be called on its own). Let's see how it works:
+
+``` sass
+@function _compare($a, $b, $matrix) {
+    // Casting both values to strings
+    $a: to-lower-case($a + unquote(""));
+    $b: to-lower-case($b + unquote(""));
+
+    // Looping through the characters
+    @for $i from 1 through min(str-length($a), str-length($b)) {
+        // Getting their index in the matrix
+        $index-a: index($matrix, str-slice($a, $i, $i));
+        $index-b: index($matrix, str-slice($b, $i, $i));
+
+        // If they are different, return the comparison
+        @if $index-a != $index-b { @return $index-a > $index-b; }
+
+        // If they are equals, do nothing and move on to next character
+    }
+    
+    // In case they are equals after all chars, return the shortest first
+    @return str-length($a) > str-length($b);
+}
+```
+That's pretty much it. Now let's test it:
+
+``` sass
+$list: aztr tzep "!taopzt" 21 aztp 3ef "#" 67% fiofa 121 az 4px 4 4p tr fml 454 sglm zmlgk vk321 mletk ez15kmelk z;
+$sort: sort($list);
+// !taopzt, #, 121, 21, 3ef, 4, 454, 4p, 4px, 67%, az, aztp, aztp, aztp, aztr, ez15kmelk, fiofa, fml, mletk, sglm, tr, tzep, vk321, z, zmlgk
+```
+
+Hurray! It works like a charm. We could slightly improve the `compare()` function so that it warns us in case it finds a character that doesn't exist in the matrix. As you may guess, it is very simple to do:
+
+``` sass
+$index-a: index($matrix, str-slice($a, $i, $i));
+@if not $index-a {
+	$index-a: 1;
+	@warn "#{str-slice($a, $i, $i)} from #{$a} not found in matrix.";
+}
+
+$index-b: index($matrix, str-slice($b, $i, $i));
+@if not $index-b {
+	$index-b: 1;
+	@warn "#{str-slice($b, $i, $i)} from #{$b} not found in matrix.";
+}
+```
+
+Not only does it warn the user, but it also prevent the function from failing because of an index set to `false`. If the character is not found, the index is set to 1 so the function can go on. Of course, this may resolve in a slightly wrong order, fixable by editing the matrix of characters.
+
+## Meanwhile
+
+While waiting for the 1.0.0 running on Sass 3.3, you can still use SassyLists (in 0.4.3 as of writing) either by sneaking into the [GitHub repository](https://github.com/Team-Sass/SassyLists) or by installing it as a Compass Extension:
+
+1. `gem install SassyLists`
+2. Add `require 'SassyLists'` to your `config.rb`
+3. Import it in your stylesheets with `@import 'SassyLists'`
+
+Hope you like it! If you think of anything to improve it, be sure to share. :)
