@@ -48,11 +48,13 @@ end
 #   end
 # end
 
+# Directories
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
+
+# Directory indexes
+activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
