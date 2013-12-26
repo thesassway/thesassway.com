@@ -1,5 +1,6 @@
 ---
 title: Intermediate Guides &amp; Tutorials on Sass and Compass
+layout: category
 ---
 
 # Intermediate

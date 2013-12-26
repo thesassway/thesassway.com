@@ -1,5 +1,6 @@
 ---
 title: Articles on Sass and Compass
+layout: category
 ---
 
 # Articles

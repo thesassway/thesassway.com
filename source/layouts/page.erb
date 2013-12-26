@@ -1,0 +1,10 @@
+<% @page_role = 'article' if current_page.data.date %>
+
+<% wrap_layout 'layout' do %>
+  <div class="primary column">
+    <div class="content">
+      <%= yield %>
+    </div>
+  </div>
+  <%= partial 'layouts/sidebar' %>
+<% end %>

@@ -1,0 +1,8 @@
+<% wrap_layout 'page' do %>
+  <%= yield %>
+  <section class="page-articles">
+    <% if false # disable for now %>
+    <%= partial 'summaries', :locals => { :pages => @page.articles, :heading => :h3 } %>
+    <% end %>
+  </section>
+<% end %>
