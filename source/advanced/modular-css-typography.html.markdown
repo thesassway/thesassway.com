@@ -1,7 +1,9 @@
+---
 Date: 9 November 2013
 Categories: advanced, guides, john-w-long
 Author: John W. Long
 Summary: Learn how to modularize your typography to create solid foundation for your projects. Use multiple classes and the @extend directive to create a reusable set of typographical styles.
+---
 
 # Modular CSS Typography
 

@@ -1,7 +1,9 @@
+---
 Date: 2011-12-22 14:30:00 -0600
 Categories: projects, adam-stacoviak
 Author: Adam Stacoviak
 Summary: What do you get when combine the power of Sass with Zurb? You get Zurb Foundation for Sass and Compass. It's the perfect flexible grid, desktop to mobile responsive, forms, buttons and UI library, plus other ZURB Playground favorites like Orbit and Reveal.
+---
 
 # Zurb Foundation, for Sass and Compass
 

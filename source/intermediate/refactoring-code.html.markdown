@@ -1,7 +1,9 @@
+---
 Date: 22 August 2050
 Categories: intermediate, guides, adam-stacoviak
 Author: Adam Stacoviak
 Summary: A brief introduction to ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+---
 
 # Heading Level 1
 

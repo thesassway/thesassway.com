@@ -1,7 +1,9 @@
+---
 Date: 2011-11-20 10:30:00 -0600
 Categories: beginner, guides, mario-ricalde
 Author: Mario Ricalde
 Summary: It's well known that Sass is an *efficient*, *realiable* and *precise* tool which gives us great power and freedom to make CSS fun and less of a pain to author; however with great power comes *responsibility*.
+---
 
 # Nested Selectors: The Inception Rule
 

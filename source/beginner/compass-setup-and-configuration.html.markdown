@@ -1,7 +1,9 @@
+---
 Date: 31 August 2019
 Categories: beginner, guides, adam-stacoviak
 Author: Adam Stacoviak
 Summary: ...
+---
 
 # Compass Setup and Configuration
 

@@ -1,7 +1,9 @@
+---
 Date: 2011-11-19 21:00:00 -0600
 Categories: articles, mason-wendell
 Author: Mason Wendell
 Summary: What is it about Sass that turns me into a fanatic? How is Sass like your favorite TV show? And why am I often alone at parties?
+---
 
 # The Sass Jerk
 

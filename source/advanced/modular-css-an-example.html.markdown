@@ -1,7 +1,9 @@
+---
 Date: 06 August 2013
 Categories: advanced, guides, john-w-long
 Author: John W. Long
 Summary: If avoiding nested selectors in favor of a flatter class-based CSS scares you, maybe this example will help you embrace some of the principles of modular CSS.
+---
 
 # Modular CSS, an example
 

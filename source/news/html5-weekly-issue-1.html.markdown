@@ -1,7 +1,9 @@
+---
 Date: 30 August 2011 11:00
 Categories: news, adam-stacoviak
 Author: Adam Stacoviak
 Summary: We get linked to not once, but twice in the VERY FIRST issue of HTML5 Weekly!
+---
 
 # HTML5 Weekly links to check out!
 

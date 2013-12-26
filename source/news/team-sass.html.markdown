@@ -1,7 +1,9 @@
+---
 Date: 19 August 2011
 Categories: news, adam-stacoviak
 Author: Adam Stacoviak
 Summary: Join the movement! Tell the world you're on #teamSass ...
+---
 
 # Are you on #teamSass?
 

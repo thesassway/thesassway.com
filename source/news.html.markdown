@@ -1,4 +1,6 @@
+---
 title: News, Tweets and events about Sass and Compass
+---
 
 # News
 

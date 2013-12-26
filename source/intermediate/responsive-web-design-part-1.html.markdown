@@ -1,7 +1,9 @@
+---
 Date: 2011-10-11 10:00:00 -0500
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
 Summary: Responsive Web Design is the new wave, right? In this two part series we'll explore the principles, and talk about how Sass can help. In part one we dive into how Sass can help with the calculations behind fluid layouts and images.
+---
 
 # Responsive Web Design in Sass Part 1: Fluid Layouts and Fluid Images
 

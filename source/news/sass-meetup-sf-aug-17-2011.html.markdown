@@ -1,7 +1,9 @@
+---
 Date: 17 August 2011
 Categories: news, adam-stacoviak
 Author: Adam Stacoviak
 Summary: There's a Sass Meetup hitting San Francisco this Wednesday (Aug 17) at 6pm at 212 Sutter on the 2nd floor. Enjoy free beer and great Sass talk!
+---
 
 # Sass Meetup / San Francisco (Aug 17th)
 

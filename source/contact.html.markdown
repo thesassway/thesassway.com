@@ -1,4 +1,6 @@
+---
 title: Contact us, Submit a tip or just say hello
+---
 
 # Contact us
 

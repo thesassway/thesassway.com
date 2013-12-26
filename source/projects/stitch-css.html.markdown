@@ -1,7 +1,9 @@
+---
 Date: 2011-09-22 07:45:11 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
 summary: Stitch is a nice companion to Compass that gives you access to CSS design patterns you likely use every day.
+---
 
 # Stitch: A CSS pattern framework
 

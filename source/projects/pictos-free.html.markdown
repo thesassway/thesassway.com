@@ -1,7 +1,9 @@
+---
 Date: 2011-10-16 10:00:00 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
 summary: Pictos Free is a free version of Pictos-style Tumblr icons from Drew Wilson, thanks to his collaboration with WooThemes, that I've packaged it up as a simple Compass extension that leverages Compass's spriting feature.
+---
 
 # Pictos Free + Spriting with Compass
 

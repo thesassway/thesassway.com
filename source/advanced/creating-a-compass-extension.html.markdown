@@ -1,7 +1,9 @@
+---
 Date: 2050-10-04 19:24:12 -0500
 Categories: advanced, guides, adam-stacoviak
 author: Adam Stacoviak
 summary: Pictos is an awesome interface icon set from Drew Wilson. Pictos Free is, umm, free, and it's packaged as a simple Compass extension that leverages the Compass spriting module.
+---
 
 # Pictos Free + Spriting with Compass
 

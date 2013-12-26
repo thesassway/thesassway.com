@@ -1,7 +1,9 @@
+---
 Date: 2011-09-27 10:12:43 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
 summary: How far is too far when it comes to CSS text shadows? Be prepared to cross that line and then some with Mason Wendell in his project Sassy Text Shadows -- the response is to the call put forth by Paul Irish's Mother Effing Text Shadow, and an answer to the burning question, "Why would you want to use trigonometry in CSS?"
+---
 
 # Sassy Text Shadows
 

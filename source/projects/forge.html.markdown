@@ -1,7 +1,9 @@
+---
 Date: 2011-10-13 20:00:00 -0500
 Categories: projects, adam-stacoviak
 author: Adam Stacoviak
 summary: If you're a WordPress fan and have been looking for a way to work with Sass and CoffeeScript in your themes, Forge is your answer!
+---
 
 # Forge, a WordPress theme development toolkit with Sass and CoffeeScript
 

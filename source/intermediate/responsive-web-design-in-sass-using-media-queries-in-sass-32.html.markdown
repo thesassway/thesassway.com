@@ -1,7 +1,9 @@
+---
 Date: 2012-04-09 06:00:00 -0500
 Categories: intermediate, guides, mason-wendell
 Author: Mason Wendell
 Summary: Sass 3.2 is on the way, and there are many improvements to how it handles media queries. Let's get a jump start on all the new stuff and see how we can use media queries, which are now a first-class citizen, in Sass 3.2.
+---
 
 # Responsive Web Design in Sass: Using Media Queries in Sass 3.2
 

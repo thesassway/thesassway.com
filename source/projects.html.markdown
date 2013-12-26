@@ -1,4 +1,6 @@
+---
 title: Featured Sass and Compass Projects
+---
 
 # Projects
 
