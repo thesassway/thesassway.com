@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <% if current_page.data.description %><meta name="description" content="<%= current_page.data.description %>" ><% end %>
+    <% if current_page.data.keywords %><meta name="keywords" content="<%= current_page.data.keywords %>" ><% end %>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "The Sass Way" %></title>
+
+    <%= stylesheet_link_tag "master" %>
+    <%= javascript_include_tag  "all" %>
+
+    <link href="/sass-icon.ico" rel="shortcut icon">
+    <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
+  </head>
+  <body class="<%= page_classes %>">
+    <div class="fadeIn">
+      <%= partial 'layouts/top_bar' %>
+
+      <header role="banner">
+        <div class="max-width">
+          <h1>
+            <a href="/" rel="home"><span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span></a>
+            <span class='trade-mark'>&trade;</span>
+          </h1>
+          <h2><%= @subtitle %></h2>
+        </div>
+      </header>
+
+      <section role="main">
+        <%= yield %>
+      </section>
+
+      <footer role="footer">
+        <p><%= "Copyright 2010-#{Time.now.year} The Sass Way, All Rights Reserved." %></p>
+      </footer>
+
+      <%= partial 'layouts/podcasts' %>
+      <%= partial 'layouts/footer' %>
+    </div>
+    <%= partial 'layouts/footer_scripts' %>
+    <%= partial 'layouts/analytics' %>
+  </body>
+</html>

@@ -3,12 +3,9 @@
 ###
 
 # Change Compass configuration
-compass_config do |config|
-  config.require 'grid-coordinates'
-  config.require 'animate-sass'
-  config.require 'font-stacks'
-  config.output_style = :compact
-end
+# compass_config do |config|
+#   config.output_style = :compact
+# end
 
 ###
 # Page options, layouts, aliases and proxies
