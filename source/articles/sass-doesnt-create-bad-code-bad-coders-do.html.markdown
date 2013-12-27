@@ -1,8 +1,8 @@
 ---
-Date: 2012-02-02 10:00:00 -0600
-Categories: articles, roy-tomeij
-Author: Roy Tomeij
-Summary: Those who don't see any use for pre-processors such as Sass often use the "bad code" argumentation. It creates too specific selectors due to nesting, huge sprites and they hate the way Sass enforces an architectural approach that doesn't work. And it's all true. If you're a poor developer. You know, one who would handcraft too specific selectors, 15MB sprites and doesn't know how to cleanly structure a project.
+date: 2012-02-02 10:00:00 -0600
+categories: articles, roy-tomeij
+author: Roy Tomeij
+summary: Those who don't see any use for pre-processors such as Sass often use the "bad code" argumentation. It creates too specific selectors due to nesting, huge sprites and they hate the way Sass enforces an architectural approach that doesn't work. And it's all true. If you're a poor developer. You know, one who would handcraft too specific selectors, 15MB sprites and doesn't know how to cleanly structure a project.
 ---
 
 # Sass doesn't create bad code. Bad coders do.

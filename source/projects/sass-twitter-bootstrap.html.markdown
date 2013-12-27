@@ -1,8 +1,8 @@
 ---
-Date: 28 August 2011
-Categories: projects, adam-stacoviak
-Author: Adam Stacoviak
-Summary: Twitter's "Twitter Bootstrap" is a HOT topic, especially in the Sass community, namely because they used LESS instead of Sass. Well, fellow staff member John w. Long changed that with Sass Twitter Bootstrap.
+date: 28 August 2011
+categories: projects, adam-stacoviak
+author: Adam Stacoviak
+summary: Twitter's "Twitter Bootstrap" is a HOT topic, especially in the Sass community, namely because they used LESS instead of Sass. Well, fellow staff member John w. Long changed that with Sass Twitter Bootstrap.
 ---
 
 # Sass Twitter Bootstrap

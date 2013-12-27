@@ -1,17 +1,17 @@
 <% wrap_layout 'page' do %>
   <article class="post">
-    <h1><%= current_page.data.heading %></h1>
+    <h1><%= meta.heading %></h1>
 
     <%= yield %>
 
-    <% if page_author = current_page.data.author %>
+    <% if page_author = meta.author %>
       <%= partial 'shared/' + page_author.downcase.gsub(" ", "_").sub(".", "") %>
     <% end %>
 
     <% unless current_page.categories.empty? %>
       <div class="page-categories">
         <p>
-          <% unless current_page.data.date.nil? %>
+          <% unless meta.date.nil? %>
             <%= "<em>#{format_date(current_page.date.nil?)}</em> ~ " %>
           <% end %>
           <% current_page.categories.each do |category| %>

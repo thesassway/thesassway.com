@@ -1,8 +1,8 @@
 ---
-Date: 12 September 2011 7:00am
-Categories: articles, john-w-long
-Author: John W. Long
-Summary: Since the creation of Sass, it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added brand new features unheard of to CSS authors such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented syntax and a brand new perspective on how to author CSS. Then the SCSS syntax (Sassy CSS) was introduced ...
+date: 12 September 2011 7:00am
+categories: articles, john-w-long
+author: John W. Long
+summary: Since the creation of Sass, it has been plagued by many levels of controversy. It billed itself as "a better CSS" and added brand new features unheard of to CSS authors such as variables, nesting and mixins. Sass also introduced an entirely different indentation-oriented syntax and a brand new perspective on how to author CSS. Then the SCSS syntax (Sassy CSS) was introduced ...
 ---
 
 # Sass vs. SCSS: Which Syntax is Better?

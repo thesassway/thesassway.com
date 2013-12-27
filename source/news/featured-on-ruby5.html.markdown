@@ -1,8 +1,8 @@
 ---
-Date: 30 August 2011 08:00
-Categories: news, adam-stacoviak
-Author: Adam Stacoviak
-Summary: We were featured on the Ruby5 podcast (thanks!).
+date: 30 August 2011 08:00
+categories: news, adam-stacoviak
+author: Adam Stacoviak
+summary: We were featured on the Ruby5 podcast (thanks!).
 ---
 
 # Featured on the Ruby5 podcast

@@ -1,8 +1,8 @@
 ---
-Date: 30 August 2011 14:00
-Categories: news, adam-stacoviak
-Author: Adam Stacoviak
-Summary: Twitter responses like this are awesome! We appreciate your responses and interactions with us on Twitter. Please keep it up. :)
+date: 30 August 2011 14:00
+categories: news, adam-stacoviak
+author: Adam Stacoviak
+summary: Twitter responses like this are awesome! We appreciate your responses and interactions with us on Twitter. Please keep it up. :)
 ---
 
 # Fantastic Twitter Interactions around Sass Number Functions

@@ -1,8 +1,8 @@
 ---
-Date: 30 August 2011 10:00
-Categories: news, adam-stacoviak
-Author: Adam Stacoviak
-Summary: I love how Nathan opens with, "I aim for this to be the article I wish I had read when I was first contemplating Sass but (at the time) did not consider it worthwhile. I could not have been more wrong."
+date: 30 August 2011 10:00
+categories: news, adam-stacoviak
+author: Adam Stacoviak
+summary: I love how Nathan opens with, "I aim for this to be the article I wish I had read when I was first contemplating Sass but (at the time) did not consider it worthwhile. I could not have been more wrong."
 ---
 
 # "Sass for Designers", by Nathan Smith

@@ -1,5 +1,6 @@
 ---
 title: Featured Sass and Compass Projects
+layout: category
 ---
 
 # Projects

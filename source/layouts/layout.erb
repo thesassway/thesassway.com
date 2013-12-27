@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 
-    <% if current_page.data.description %><meta name="description" content="<%= current_page.data.description %>" ><% end %>
-    <% if current_page.data.keywords %><meta name="keywords" content="<%= current_page.data.keywords %>" ><% end %>
+    <% if meta.description %><meta name="description" content="<%= meta.description %>" ><% end %>
+    <% if meta.keywords %><meta name="keywords" content="<%= meta.keywords %>" ><% end %>
 
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Sass Way" %></title>
+    <title><%= meta.title || "The Sass Way" %></title>
 
     <%= stylesheet_link_tag "master" %>
     <%= javascript_include_tag  "all" %>

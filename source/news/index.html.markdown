@@ -1,5 +1,6 @@
 ---
 title: News, Tweets and events about Sass and Compass
+layout: category
 ---
 
 # News
