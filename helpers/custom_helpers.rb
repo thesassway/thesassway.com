@@ -22,9 +22,30 @@ module CustomHelpers
     current_page.data
   end
 
+  # Published date for page
+  def published_date(page = current_page)
+    date = page.data.date
+    case date
+    when String
+      DateTime.parse(date)
+    when Time
+      DateTime.parse(date.to_s)
+    else
+      date
+    end
+  end
+
+  def published?(page = current_page)
+    published_date(page) < Date.today
+  end
+
+  def draft?(page = current_page)
+    not published? page
+  end
+
   # The children of the current page ordered by date
-  def children
-    current_page.children.sort_by do |child|
+  def children(drafts = false)
+    pages = current_page.children.sort_by do |child|
       date = child.data.date
       case date
       when String
@@ -34,6 +55,11 @@ module CustomHelpers
       else
         date
       end
+    end
+    if drafts
+      pages
+    else
+      pages.reject { |p| draft? p }
     end
   end
 
