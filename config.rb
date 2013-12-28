@@ -80,3 +80,36 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+###
+# Rack middleware
+###
+
+# Code highlighting
+require 'pygments'
+require 'rack/codehighlighter'
+use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
+
+# Nice looking 404s and other messages
+use Rack::ShowStatus
+
+# Nice looking errors
+use Rack::ShowExceptions
+
+# Cache control headers for Heroku
+require 'rack/contrib'
+use Rack::ResponseHeaders do |headers|
+  headers['Cache-Control'] = 'public, max-age=1501'
+end
+use Rack::ETag
+
+# URL rewriting
+require 'rack/rewrite'
+use Rack::Rewrite do
+  # Adam Stacoviak
+  # rewrite '/adamstac',  '/adam-stacoviak'
+  # r301 '/adam-stacoviak', '/adamstac'
+
+  # Mario Ricalde
+  r301 '/mario-kuroir-ricalde', '/mario-ricalde'
+end
