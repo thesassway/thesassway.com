@@ -63,7 +63,7 @@ module CustomHelpers
     end
   end
 
-  def feed(limit=8, drafts = false)
+  def feed(limit = 8, drafts = false)
     categories = %w(beginner intermediate advanced articles news projects)
     pages = []
     for category in categories

@@ -1,13 +1,12 @@
 <% wrap_layout 'page' do %>
   <article class="post">
-    <h1><%= meta.heading %></h1>
-
     <%= yield %>
 
     <% if page_author = meta.author %>
       <%= partial 'shared/' + page_author.downcase.gsub(" ", "_").sub(".", "") %>
     <% end %>
 
+    <% if false # TODO: get categories and comments working %>
     <% unless current_page.categories.empty? %>
       <div class="page-categories">
         <p>
@@ -26,7 +25,8 @@
     <div class="g-plusone" data-annotation="inline" data-width="200"></div>
 
     <div id="comments">
-      <%= partial 'comments' %>
+      <%= partial 'layouts/comments' %>
     </div>
+    <% end %>
   </article>
 <% end %>
