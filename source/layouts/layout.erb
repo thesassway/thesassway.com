@@ -18,7 +18,7 @@
     <link href="/sass-icon.ico" rel="shortcut icon">
     <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
   </head>
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" role="<%= @page_role || 'page' %>">
     <div class="fadeIn">
       <%= partial 'layouts/top_bar' %>
 
