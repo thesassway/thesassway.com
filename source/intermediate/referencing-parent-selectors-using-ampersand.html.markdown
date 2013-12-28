@@ -5,7 +5,7 @@ author: Adam Stacoviak
 summary: Referencing parent selectors by using the ampersand (&amp;) can be a powerful tool, if used right. There are simple uses of this feature as well as some very complex uses of this feature. In this post we will cover the basic uses of the ampersand (&amp;) as well as link you to a post by Joel Oliveira that goes much deeper on the subject.
 ---
 
-# Referencing Parent Selectors using the ampersand (&amp;) character
+# Referencing parent selectors using the ampersand character
 
 Referencing parent selectors by using the ampersand (&amp;) can be a powerful tool, if used right. There are simple uses of this feature as well as some very complex uses of this feature. In this post we will cover the basic uses of the ampersand (&amp;) as well as link you to a post by Joel Oliveira that goes much deeper on the subject.
 

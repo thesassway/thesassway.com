@@ -41,7 +41,16 @@ module CustomHelpers
 
   # The children of the current page ordered by date
   def children(page = current_page, drafts = false)
-    pages = page.children.sort_by do |child|
+    pages = sort_by_date(page.children)
+    if drafts
+      pages
+    else
+      pages.reject { |p| draft? p }
+    end
+  end
+
+  def sort_by_date(pages)
+    pages.sort_by do |child|
       date = child.data.date
       case date
       when String
@@ -52,11 +61,16 @@ module CustomHelpers
         date
       end
     end
-    if drafts
-      pages
-    else
-      pages.reject { |p| draft? p }
+  end
+
+  def feed(limit=8, drafts = false)
+    categories = %w(beginner intermediate advanced articles news projects)
+    pages = []
+    for category in categories
+      page = sitemap.find_resource_by_path("#{category}/index.html")
+      pages += children(page, drafts)
     end
+    sort_by_date(pages).reverse[0..limit]
   end
 
   # November 18th, 2013
