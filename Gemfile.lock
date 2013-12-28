@@ -81,6 +81,8 @@ GEM
     rack (1.5.2)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
+    rack-google_analytics (1.0.2)
+      rack
     rack-livereload (0.3.15)
       rack
     rack-rewrite (1.2.1)
@@ -125,6 +127,7 @@ DEPENDENCIES
   pygments.rb (~> 0.1.2)
   rack-codehighlighter!
   rack-contrib
+  rack-google_analytics
   rack-rewrite
   rake
   wdm (~> 0.1.0)

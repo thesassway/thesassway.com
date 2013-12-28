@@ -6,6 +6,7 @@ gem 'rake'
 # Rack
 gem 'rack-contrib'
 gem 'rack-rewrite'
+gem 'rack-google_analytics'
 
 # Middleman
 gem 'middleman', '~> 3.2.1'
