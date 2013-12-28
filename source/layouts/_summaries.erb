@@ -1,26 +1,18 @@
 <% unless pages.empty? %>
   <% pages.each do |page| %>
     <article class="post">
-      <% content_tag (defined?(heading) ? heading : :h2) do %>
-        <a href="<%= page.abspath %>">
-          <%= page.heading %>
+      <% content_tag(defined?(heading) ? heading : :h2) do %>
+        <a href="<%= page.path %>">
+          <%= title(page) %>
         </a>
       <% end %>
-      <% if page.date %>
+      <% if page.data.date %>
         <div class="page-date">
-          <%= format_date(page.date) %>
+          <%= format_date(published_date(page)) %>
         </div>
       <% end %>
-      <% if page.summary.nil? || page.summary.empty? %>
-        ~ page.body
-      <% else %>
-        ~ page.summary
-        <p class="read-more">
-          <a href="<%= page.abspath %>">
-            <%= page.read_more %>
-          </a>
-        </p>
-      <% end %>
+      <p><%= page.data.summary %></p>
+      <p class="read-more"><a href="<%= page.path %>">Continue reading&#8230;</a></p>
     </article>
   <% end %>
 <% end %>

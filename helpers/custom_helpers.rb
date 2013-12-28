@@ -1,13 +1,5 @@
 module CustomHelpers
 
-  def is_post?
-    true
-  end
-
-  def is_category?
-    true
-  end
-
   # Grab the page title from the first H1 if not provided in frontmatter
   def title(page = current_page)
     page.data.title || begin
@@ -20,6 +12,10 @@ module CustomHelpers
   # Shortcut for current page data
   def meta
     current_page.data
+  end
+
+  def summary(page)
+
   end
 
   # Published date for page
@@ -44,8 +40,8 @@ module CustomHelpers
   end
 
   # The children of the current page ordered by date
-  def children(drafts = false)
-    pages = current_page.children.sort_by do |child|
+  def children(page = current_page, drafts = false)
+    pages = page.children.sort_by do |child|
       date = child.data.date
       case date
       when String
@@ -61,6 +57,11 @@ module CustomHelpers
     else
       pages.reject { |p| draft? p }
     end
+  end
+
+  # November 18th, 2013
+  def format_date(date)
+    date.strftime '%B %e, %Y'
   end
 
 end
