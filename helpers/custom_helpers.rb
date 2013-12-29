@@ -49,8 +49,8 @@ module CustomHelpers
     end
   end
 
-  def articles_by_author(author)
-    feed.reject { |a| a.data.author != author }
+  def articles_by_author(author, drafts = false)
+    feed(drafts).reject { |a| a.data.author != author }
   end
 
   def sort_by_date(pages)
@@ -67,7 +67,7 @@ module CustomHelpers
     end
   end
 
-  def feed(limit = 8, drafts = false)
+  def feed(drafts = false)
     categories = %w(beginner intermediate advanced articles news projects)
     pages = []
     for category in categories
