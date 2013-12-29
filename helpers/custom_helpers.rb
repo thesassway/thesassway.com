@@ -3,7 +3,7 @@ module CustomHelpers
   # Grab the page title from the first H1 if not provided in frontmatter
   def title(page = current_page)
     page.data.title || begin
-      content = page.render({:layout => false})
+      content = page.render(layout: false)
       match = content.match(/<h1.*?>(.*?)<\/h1>/m)
       escape_html(match[1]) if match
     end
@@ -12,10 +12,6 @@ module CustomHelpers
   # Shortcut for current page data
   def meta
     current_page.data
-  end
-
-  def summary(page)
-
   end
 
   # Published date for page
@@ -50,7 +46,7 @@ module CustomHelpers
   end
 
   def articles_by_author(author, drafts = false)
-    feed(drafts).reject { |a| a.data.author != author }
+    articles(drafts).reject { |a| a.data.author != author }
   end
 
   def sort_by_date(pages)
@@ -67,7 +63,7 @@ module CustomHelpers
     end
   end
 
-  def feed(drafts = false)
+  def articles(drafts = false)
     categories = %w(beginner intermediate advanced articles news projects)
     pages = []
     for category in categories
@@ -80,6 +76,18 @@ module CustomHelpers
   # November 18th, 2013
   def format_date(date)
     date.strftime '%B %e, %Y'
+  end
+
+  def atom_id(page = current_page)
+    page.data.atom_id || begin
+      published = published_date(page).strftime('%Y-%m-%d')
+      "tag:thesassway.com,#{published}:#{page.url}"
+    end
+  end
+
+  def absolute_urls(text)
+    text.gsub!(/(<a href=['"])\//, '\1' + 'http://thesassway.com')
+    text
   end
 
 end
