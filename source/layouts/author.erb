@@ -1,0 +1,6 @@
+<% wrap_layout 'page' do %>
+  <%= yield %>
+  <section class="page-articles">
+    <%= partial 'layouts/summaries', :locals => { :pages => articles_by_author(meta.author), :heading => :h3 } %>
+  </section>
+<% end %>

@@ -5,4 +5,4 @@ layout: page
 
 <% @page_role = 'homepage' %>
 
-<%= partial 'layouts/summaries', :locals => { :pages => feed } %>
+<%= partial 'layouts/summaries', :locals => { :pages => feed[0..8] } %>

@@ -49,6 +49,10 @@ module CustomHelpers
     end
   end
 
+  def articles_by_author(author)
+    feed.reject { |a| a.data.author != author }
+  end
+
   def sort_by_date(pages)
     pages.sort_by do |child|
       date = child.data.date
@@ -70,7 +74,7 @@ module CustomHelpers
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)
     end
-    sort_by_date(pages).reverse[0..limit]
+    sort_by_date(pages).reverse
   end
 
   # November 18th, 2013
