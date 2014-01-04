@@ -90,12 +90,6 @@ require 'pygments'
 require 'rack/codehighlighter'
 use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
 
-# Nice looking 404s and other messages
-use Rack::ShowStatus
-
-# Nice looking errors
-use Rack::ShowExceptions
-
 # Cache control headers for Heroku
 require 'rack/contrib'
 use Rack::ResponseHeaders do |headers|
