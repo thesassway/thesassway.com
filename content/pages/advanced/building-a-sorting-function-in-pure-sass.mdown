@@ -5,7 +5,7 @@ Summary: Hugo takes another page from his SassyLists playbook and teaches us how
 
 # Building a sorting function in pure Sass
 
-The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers (recently updated to use the quicksort algorithm thanks to [Snugug](http://twitter.com/snugug). Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
+The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers (recently updated to use the quicksort algorithm thanks to [Snugug](http://twitter.com/snugug)). Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
 
 Until now. Or I should say, shortly. 
 
@@ -16,9 +16,7 @@ Until now. Or I should say, shortly.
 
 The heart of any sorting function is the ability to compare two strings and determine which one should go before the other. Most programming languages make this fairly easy, but to do this in Sass we have to build our own string comparison function.
 
-For starters, we need to teach Sass the correct order to sort strings in based on the characters each string contains.
-
-I'm going to define this with a variable:
+For starters, we need to teach Sass the correct order to sort strings in based on the characters each string contains. Let's define this in a variable:
 
     :::scss
     // Declare the default sort order. Use Sass's !default flag so this
