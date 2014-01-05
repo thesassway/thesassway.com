@@ -7,9 +7,9 @@ Summary: Hugo takes another page from his SassyLists playbook and teaches us how
 
 The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers (recently updated to use the quicksort algorithm thanks to [Snugug](http://twitter.com/snugug)). Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
 
-Until now. Or I should say, shortly. 
+Until now. Or I should say, shortly. [Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
 
-[Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
+*Note: we will use the `bubble sort` algorithm because this is the easiest to implement in Sass. Some would say that it performs poorly compared to other sorting algorithms and they would be right. Although since we are mostly dealing with short lists in Sass, `bubble sorting` will be more than enough. If you feel like giving it a go with a more robust sort algorithm, [here are a couple of them I implemented in Sass](http://sassmeister.com/gist/8239322) just for the heck of it.*
 
 
 ## Comparing strings
@@ -59,9 +59,7 @@ The `str-compare()` function returns `true` if variable `$a` goes before variabl
 
 ## Swapping two values
 
-Just for the sake of it, I recently tried to [implement famous sorting algorithms in pure Sass](http://sassmeister.com/gist/8239322). I succeeded in implementing `bubbleSort`, `shellSort`, `quickSort` (thanks to Snugug) and `selectionSort`. Since `bubbleSort` is probably the easiest to use, this is the one we'll use for our sorting function.
-
-Basically, bubble sorting relies on swapping two values in the array after comparing them. So all we need is a function swapping value at index `$a` and value at index `$b` in the given list.
+Since bubble sorting relies on swapping two values in the array after comparing them, we need a function to swap the value at index `$a` with the value at index `$b` in the given list.
 
     :::scss
     @function swap($list, $a, $b) {
