@@ -9,8 +9,7 @@ The current version of my [SassyLists](http://sassylists.com) library includes a
 
 Until now. Or I should say, shortly. [Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
 
-*Note: we will use the `bubble sort` algorithm because this is the easiest to implement in Sass. Some would say that it performs poorly compared to other sorting algorithms and they would be right. Although since we are mostly dealing with short lists in Sass, `bubble sorting` will be more than enough. If you feel like giving it a go with a more robust sort algorithm, [here are a couple of them I implemented in Sass](http://sassmeister.com/gist/8239322) just for the heck of it.*
-
+*Note: the sorting algorithm described in this article is the [`bubble sort` algorithm](http://sassmeister.com/gist/8270101). It is not the fastest one, but it has the merit of being short and easily readable. That being said, I have implemented the sort function with two other algorithms: [with selection sort](http://sassmeister.com/gist/8274478) and [with quicksort](http://sassmeister.com/gist/8274674). Tests still need to be run but chances are high that `quicksort` is, well, the quickest.*
 
 ## Comparing strings
 
