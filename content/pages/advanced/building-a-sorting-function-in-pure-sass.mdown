@@ -59,7 +59,7 @@ The `str-compare()` function returns `true` if variable `$a` goes before variabl
 
 ## Swapping two values
 
-Since bubble sorting relies on swapping two values in the array after comparing them, we need a function to swap the value at index `$a` with the value at index `$b` in the given list.
+Since bubble sorting relies on swapping two values in the array after comparing them, we need a function to swap the value at index `$a` with the value at index `$b` in the given list. Couldn't be any easier!
 
     :::scss
     @function swap($list, $a, $b) {
@@ -72,7 +72,7 @@ Since bubble sorting relies on swapping two values in the array after comparing 
       @return $list;
     }
 
-The above is fairly self explanatory. To avoid cycling through the list to make another one with new values, we take advantage of the brand new `set-nth` function which simply edit the list instead of building a fresh one.
+The above is fairly self explanatory. To avoid cycling through the list to swap values, we take advantage of the brand new `set-nth` function which simply updates the list instead of building a fresh one &mdash; which is obviously far better for performances.
 
 ## The string sorting function
 
