@@ -31,6 +31,7 @@ Now for the meat of our comparison function:
 
     :::scss
     @function str-compare($a, $b, $order: $default-sort-order) {
+      // Casting values to strings
       $a: to-lower-case($a + unquote(""));
       $b: to-lower-case($b + unquote(""));      
 
@@ -40,14 +41,10 @@ Now for the meat of our comparison function:
         // Extract a character from each string
         $char-a: str-slice($a, $i, $i);
         $char-b: str-slice($b, $i, $i);
-
-        // Get the index of each character from the $order list
-        $index-a: index($order, $char-a);
-        $index-b: index($order, $char-b);
         
         // If characters exist in $order list and are different
         // return true if first comes before second
-        @if comparable($$char-a, $char-b) and index($order, $char-a) != index($order, $char-b) {
+        @if $char-a and $char-b and index($order, $char-a) != index($order, $char-b) {
           @return index($order, $char-a) < index($order, $char-b);
         }
       }
@@ -83,18 +80,24 @@ The above is fairly self explanatory. To avoid cycling through the list to make 
 
 ## The string sorting function
 
-Armed with `str-compare()` and `swap()` we now have everything we need to build a proper string sorting function:
+Armed with `str-compare()` and `swap()` we now have everything we need to build a proper string sorting function. Last thing to do is to implement the sorting algorithm. Bubble sorting basically loops through the list, compare items with each others and swap them once compared until the list is completely sorted.
 
     :::sass
     @function sort($list, $order: $default-sort-order) {
+      // Loop through list
       @for $i from 1 through length($list) {
+        // Enable second pointer
         @for $j from $i * -1 through -1 {
+          // abs() trick to loop backward
           $j: abs($j);
-          @if $j > 1 and str-compare(nth($list, $j), nth($list, $j - 1)) {
+          // Compare both values
+          @if $j > 1 and str-compare(nth($list, $j), nth($list, $j - 1), $order) {
+            // Swap them
             $list: swap($list, $j, $j - 1);
           }
         }
       }
+      // Return sorted list
       @return $list;
     }
 
