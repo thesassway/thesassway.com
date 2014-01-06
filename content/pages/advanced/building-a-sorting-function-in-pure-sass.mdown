@@ -7,7 +7,9 @@ Summary: Hugo takes another page from his SassyLists playbook and teaches us how
 
 The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers. Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
 
-Until now. Or I should say, shortly. [Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
+Until now. Or I should say, shortly.
+
+[Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
 
 
 ## Comparing strings
@@ -57,7 +59,9 @@ The `str-compare()` function returns `true` if `$string-a` goes before `$string-
 
 ## Swapping two values
 
-Since bubble sorting relies on swapping two values in the array after comparing them, we need a function to swap the value at `$index-a` with the value at `$index-b` in the given list. Couldn't be any easier!
+For the sake of our example, I'm going to implement the sorting function using the [Buble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand. (In SassyLists, I've chosen to use [Quicksort](http://en.wikipedia.org/wiki/Quicksort) because it's generally faster.)
+
+Since bubble sort relies on swapping two values in a list we need one more function to make this easy for us:
 
     :::scss
     @function swap($list, $index-a, $index-b) {
@@ -70,12 +74,12 @@ Since bubble sorting relies on swapping two values in the array after comparing 
       @return $list;
     }
 
-The above is fairly self explanatory. To avoid cycling through the list to swap values, we take advantage of the brand new `set-nth` function which simply updates the list instead of building a fresh one &mdash; which is obviously far better for performance.
+Our new `swap()` function accepts a list along with two indexes (`$index-a` and `$index-b`) that indicate the positions of the two items in the list to swap. To avoid cycling through the list to swap values, I've taken advantage of the `set-nth()` function (new in Sass 3.3) which simply updates the list instead of building a fresh one (which is far better for performance).
 
 
 ## The string sorting function
 
-Armed with `str-compare()` and `swap()` we now have everything we need to build a proper string sorting function. Last thing to do is to implement the sorting algorithm. Bubble sorting basically loops through the list, compares items with each other and swap them once compared until the list is completely sorted.
+Armed with `str-compare()` and `swap()` we now have everything we need to build a proper string sorting function:
 
     :::sass
     @function sort($list, $order: $default-sort-order) {
@@ -96,6 +100,7 @@ Armed with `str-compare()` and `swap()` we now have everything we need to build 
       @return $list;
     }
 
+Bubble sorting basically loops through the list, compares items with each other and swaps them once compared until the list is completely sorted.
 
 Now let's test it:
 
