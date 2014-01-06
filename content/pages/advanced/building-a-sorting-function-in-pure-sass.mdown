@@ -83,20 +83,25 @@ Armed with `str-compare()` and `swap()` we now have everything we need to build 
 
     :::sass
     @function sort($list, $order: $default-sort-order) {
-      // Loop through list
+
+      // Cycle through each item in the list
       @for $i from 1 through length($list) {
-        // Enable second pointer
+
+        // Compare the item with the previous items in the list
         @for $j from $i * -1 through -1 {
+
           // abs() trick to loop backward
           $j: abs($j);
+
           // Compare both values
           @if $j > 1 and str-compare(nth($list, $j), nth($list, $j - 1), $order) {
-            // Swap them
+            // If the item should go before the other, swap them
             $list: swap($list, $j, $j - 1);
           }
         }
       }
-      // Return sorted list
+
+      // Return the sorted list
       @return $list;
     }
 
