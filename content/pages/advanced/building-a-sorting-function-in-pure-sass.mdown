@@ -116,18 +116,4 @@ Now let's test it:
 
 Hurray! It works like a charm.
 
-
-## SassyLists
-
-The latest version of [SassyLists](http://sassylists.com/) includes slightly more robust versions of these and nearly 30 other functions that can make working with lists in Sass so much easier. However, it won't be released until Sass 3.3 is available.
-
-While waiting for 3.3, you can still use the current version of SassyLists (in 0.4.3 as of writing) either by sneaking into the [GitHub repository](https://github.com/Team-Sass/SassyLists) or by installing it as a Compass Extension:
-
-1. `gem install SassyLists`
-2. Add `require 'SassyLists'` to your `config.rb`
-3. Import it in your stylesheets with `@import 'SassyLists'`
-
-Hope you like it! If you think of anything to improve it, be sure to share.
-
-
 *Note: The sorting algorithm described in this article is the [bubble sort algorithm](http://en.wikipedia.org/wiki/Bubble_sort). It's not the fastest algorithm ([quicksort](http://en.wikipedia.org/wiki/Quicksort) is waaaaay faster), but it does have the merit of being short and easy to read. That being said, I have implemented the sort function with a couple of other algorithms and made a [GitHub repository](https://github.com/HugoGiraudel/Sass-sort) out of it. Be sure to have a look at the code and feel free to comment.*
