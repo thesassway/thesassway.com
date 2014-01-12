@@ -1,0 +1,43 @@
+-
+  name: Guides and Tutorials
+  slug: guides
+  subtitle: Sass and Compass Guides & Tutorials
+  description: >
+    <p>Our Sass &amp; Compass Guides and Tutorials are written to span the full gamut of Sass users. In these guides and tutorials, we take into account that you might be just getting started and we do our best to be clear about the subject matter and the tools required to follow along. We will bring you up-close and personal with Sass and the depths of Compass, both project's documentation, the most advanced features and usages, how to create mixins, "frameworks", extensions and more.</p>
+  superset: true
+-
+  name: Beginner
+  slug: beginner
+  subtitle: Beginner Guides & Tutorials on Sass and Compass
+  description: >
+    <p>Our beginner guides and tutorials have been written for those who are just getting started with Sass and Compass. In these guides and tutorials, we take into account that you might be just getting started so we do our best to be clear about the subject matter and the tools required to follow along. We do our best to not alienate anyone.</p>
+-
+  name: Intermediate
+  slug: intermediate
+  subtitle: Intermediate Guides & Tutorials on Sass and Compass
+  description: >
+    <p>Our intermediate guides and tutorials have been written for those who are venturing further into the world of Sass and Compass. In these guides and tutorials, we will bring you up-close and personal with Sass and the depths of Compass, both project's documentation, advanced usages and more.</p>
+-
+  name: Advanced
+  slug: advanced
+  subtitle: Advanced Guides & Tutorials on Sass and Compass
+  description: >
+    <p>Our advanced guides and tutorials have been written for those who are or aim to be extreme Sass and Compass experts. In these guides and tutorials, we will talk about the most advanced features and usages of Sass and Compass, how to create mixins, "frameworks", extensions and more.</p>
+-
+  name: Articles
+  slug: articles
+  subtitle: Articles on Sass and Compass
+  description: >
+    <p>Our Articles editorial section is where we will post more subjective, opinionated content. Expect us to ruffle feathers, state opinions, "rebound" someone else's blog post, and everything in between.</p>
+-
+  name: News
+  slug: news
+  subtitle: News, Tweets, and events about Sass and Compass
+  description: >
+    <p>To extend our Twitter handle (<a href="http://twitter.com/TheSassWay" class="link external" target="_blank">@TheSassWay</a>) where we cover the latest news on crafting CSS using Sass and Compass, we will also post news, updates and announcements to this editorial section. Tell your friends about us and send us your Sass news.</p>
+-
+  name: Projects
+  slug: projects
+  subtitle: Featured Sass and Compass Projects
+  description: >
+    <p>This is not a comprehensive directory of Sass and Compass projects. We simply aim to highlight and showcase what hits our radar. If you're a fan of <a href="http://thechangelog.com/" class="link external" target="_blank">The Changelog</a>, we hope to be a little of that for the Sass and Compass community and then some.</p>

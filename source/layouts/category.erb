@@ -1,6 +1,0 @@
-<% wrap_layout 'page' do %>
-  <%= yield %>
-  <section class="page-articles">
-    <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
-  </section>
-<% end %>

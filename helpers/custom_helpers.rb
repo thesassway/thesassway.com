@@ -68,18 +68,13 @@ module CustomHelpers
     end
   end
 
-  def categories
-
-  end
-
   def content_directories
-    %w(beginner intermediate advanced articles news projects guides)
+    data.categories.select { |c| !c.superset }.map(&:slug)
   end
 
   def articles(drafts = false)
     pages = []
-    categories = content_directories
-    for category in categories
+    for category in content_directories
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)
     end

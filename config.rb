@@ -14,6 +14,9 @@ end
 # Page options, layouts, aliases and proxies
 ###
 
+# Ignore
+ignore "templates/*"
+
 # Per-page layout changes:
 #
 # With no layout
@@ -48,10 +51,14 @@ ready do
       author: slug 
     }
   end
-end
 
-ready do
-  data.authors.each do |author|
+  data.categories.each do |category|
+    proxy "/#{category.slug}/index.html", "templates/category.html", locals: { category: category }
+    resource = sitemap.find_resource_by_path "/#{category.slug}/index.html"
+    resource.add_metadata page: {
+      title: category.name,
+      author: category.slug 
+    }
   end
 end
 

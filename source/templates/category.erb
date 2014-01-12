@@ -1,0 +1,15 @@
+---
+layout: page
+---
+
+<h1><%= category.name %></h1>
+
+<h2><%= category.subtitle %></h2>
+
+<%= category.description %>
+
+<p>If you have questions or suggestions, please <a href="/contact">contact us</a> to let us know!</p>
+
+<section class="page-articles">
+  <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
+</section>
