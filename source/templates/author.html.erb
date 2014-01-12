@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<h1><%= author.name %></h1>
+
+<h2><%= author.title %></h2>
+
+<section class="author-bio">
+  <img class="author-image" src="<%= author.avatar %>">
+  <%= author.bio %>
+</section>
+
+<section class="page-articles">
+  <%= partial 'layouts/summaries', :locals => { :pages => articles_by_author(author), :heading => :h3 } %>
+</section>

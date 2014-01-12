@@ -98,6 +98,8 @@ GEM
       blankslate (>= 2.1.2.3)
       ffi (>= 1.0.7)
     sass (3.2.7)
+    shotgun (0.9)
+      rack (>= 1.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -130,4 +132,5 @@ DEPENDENCIES
   rack-google_analytics
   rack-rewrite
   rake
+  shotgun
   wdm (~> 0.1.0)

@@ -2,8 +2,14 @@
   <article class="post">
     <%= yield %>
 
-    <% if page_author = meta.author %>
-      <%= partial 'shared/' + page_author.downcase.gsub(" ", "_").sub(".", "") %>
+    <% if author %>
+      <section class="author-bio">
+        <h2><span>The Author,</span> <%= author.name %></h2>
+
+        <img class="author-image" src="<%= author.avatar %>">
+        
+        <%= author.bio %>
+      </section>
     <% end %>
 
     <% if false # TODO: get categories and comments working %>

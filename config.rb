@@ -38,6 +38,23 @@ end
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+ready do
+  data.authors.each do |author|
+    slug = author.name.strip.downcase.gsub('.', '').gsub(/\s+/, '-')
+    proxy "/#{slug}.html", "templates/author.html", locals: { author: author }
+    resource = sitemap.find_resource_by_path "/#{slug}.html"
+    resource.add_metadata page: {
+      title: "#{author.name}, #{author.title}",
+      author: slug 
+    }
+  end
+end
+
+ready do
+  data.authors.each do |author|
+  end
+end
+
 ###
 # Helpers
 ###
@@ -79,6 +96,16 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+###
+# Category pages
+###
+ready do
+  sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
+    proxy "/categories/#{category}.html", "category.html", 
+      :locals => { :category => category, :pages => pages }
+  end
 end
 
 ###

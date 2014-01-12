@@ -14,6 +14,11 @@ module CustomHelpers
     current_page.data
   end
 
+  def author
+    name = meta.author
+    data.authors.find { |a| name === a.name }
+  end
+
   # Published date for page
   def published_date(page = current_page)
     date = page.data.date
@@ -46,7 +51,7 @@ module CustomHelpers
   end
 
   def articles_by_author(author, drafts = false)
-    articles(drafts).reject { |a| a.data.author != author }
+    articles(drafts).reject { |a| a.data.author != author.name }
   end
 
   def sort_by_date(pages)
@@ -63,9 +68,17 @@ module CustomHelpers
     end
   end
 
+  def categories
+
+  end
+
+  def content_directories
+    %w(beginner intermediate advanced articles news projects guides)
+  end
+
   def articles(drafts = false)
-    categories = %w(beginner intermediate advanced articles news projects)
     pages = []
+    categories = content_directories
     for category in categories
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)

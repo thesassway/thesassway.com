@@ -1,5 +1,6 @@
 ---
 title: Sass and Compass Guides &amp; Tutorials
+layout: category
 ---
 
 # Guides and Tutorials
