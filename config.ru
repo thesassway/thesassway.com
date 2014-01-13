@@ -7,9 +7,9 @@ Bundler.require(:default)
 root = ::File.dirname(__FILE__)
 
 # Code highlighting
-require 'pygments'
-require 'rack/codehighlighter'
-use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
+#require 'pygments'
+#require 'rack/codehighlighter'
+#use Rack::Codehighlighter, :pygments, :element => "pre>code", :markdown => true
 
 # Cache control headers for Heroku
 require 'rack/contrib'
