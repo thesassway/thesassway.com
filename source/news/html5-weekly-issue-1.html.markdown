@@ -1,6 +1,6 @@
 ---
 date: 30 August 2011 11:00
-categories: news, adam-stacoviak
+categories: news
 author: Adam Stacoviak
 summary: We get linked to not once, but twice in the VERY FIRST issue of HTML5 Weekly!
 ---

@@ -1,6 +1,6 @@
 ---
 date: 2011-10-22 12:00:00 -0500
-categories: projects, roy-tomeij
+categories: projects
 author: Roy Tomeij
 summary: WordPress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass and Compass support using this simple plugin.
 ---

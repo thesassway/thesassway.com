@@ -1,5 +1,6 @@
 -
   name: Adam Stacoviak
+  slug: adam-stacoviak
   title: Editor in Chief
   avatar: http://a0.twimg.com/profile_images/1138182773/as-current_reasonably_small.jpeg
   website: http://adamstacoviak.com/
@@ -19,6 +20,7 @@
       to time. <a href="http://twitter.com/adamstac">Follow him on Twitter</a>.</p>
 -
   name: John W. Long
+  slug: john-w-long
   title: Managing Editor
   avatar: http://a0.twimg.com/profile_images/1509219193/john_155.jpg 
   website: http://wiseheartdesign.com
@@ -35,6 +37,7 @@
     <p>Connect with John on Twitter at <a href="http://twitter.com/johnwlong">@johnwlong</a>.</p>
 -
   name: Mario Ricalde
+  slug: mario-ricalde
   avatar: https://si0.twimg.com/profile_images/1477488461/dolce_reasonably_small.jpg
   twitter: mario_ricalde
   github: MarioRicalde
@@ -56,6 +59,7 @@
       on <a href="https://github.com/MarioRicalde">GitHub</a>.</p>
 -
   name: Mason Wendell
+  slug: mason-wendell
   avatar: http://a0.twimg.com/profile_images/553236702/stinkyavatar_reasonably_small.jpg
   website: http://birdsandmonkeys.com
   twitter: canarymason
@@ -75,6 +79,7 @@
     <p>Follow Mason on Twitter at <a href="http://twitter.com/canarymason">@canarymason</a>.</p>
 -
   name: Peter Gasston
+  slug: peter-gasston
   avatar: https://si0.twimg.com/profile_images/391831398/peter_opie_reasonably_small.png
   website: http://www.broken-links.com/
   twitter: stopsatgreen
@@ -95,6 +100,7 @@
       and <a href="http://lanyrd.com/profile/stopsatgreen/">Lanyrd.com</a>.</p>
 -
   name: Roy Tomeij
+  slug: roy-tomeij
   avatar: https://twimg0-a.akamaihd.net/profile_images/1796230903/roy_square_reasonably_small.jpg
   website: http://roytomeij.com/
   twitter: roy
@@ -109,6 +115,7 @@
       <a href="http://roytomeij.com/">his blog</a>.</p>
 -
   name: Scott Kellum
+  slug: scott-kellum
   avatar: https://si0.twimg.com/profile_images/378800000041996269/34ec08551531618f71850715c2afdbef.jpeg
   website: http://scottkellum.com/
   twitter: scottkellum
@@ -129,6 +136,7 @@
       <a href="https://twitter.com/scottkellum">Follow Scott on Twitter</a>.</p>
 -
   name: Hugo Giraudel
+  slug: hugo-giraudel
   avatar: https://pbs.twimg.com/profile_images/378800000638607178/d6b74325fc8156ccc6a3926156e5e1b6.jpeg
   website: hugogiraudel
   twitter: hugogiraudel

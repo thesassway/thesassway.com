@@ -1,6 +1,6 @@
 ---
 date: 2012-03-26 16:15:00 -0500
-categories: intermediate, guides, john-w-long
+categories: intermediate, guides
 author: John W. Long
 summary: One part suggestion to the Sass community to adopt a standard way of structuring Sass modules and one part show and tell. John attempts to leverage his knowledge of large Sass projects to suggest a format for a Standard Module Definition for Sass.
 ---

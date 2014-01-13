@@ -1,6 +1,6 @@
 ---
 date: 2011-10-14 00:30:00 -0500
-categories: projects, adam-stacoviak
+categories: projects
 author: Adam Stacoviak
 summary: Zocial Buttons is a CSS3 buttons Sass framework that makes adding "Follow me on Twitter", "Find us on Facebook" and "Fork this on GitHub" buttons to your site TOO EASY.
 ---

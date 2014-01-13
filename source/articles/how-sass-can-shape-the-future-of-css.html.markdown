@@ -1,6 +1,6 @@
 ---
 date: 2011-11-20 20:00:00 -0600
-categories: articles, peter-gasston
+categories: articles
 author: Peter Gasston
 summary: The rise in popularity of CSS extensions, such as Sass, in recent years has not gone unnoticed by the people who work on proposing and standardizing modules for CSS3 (and CSS4).
 ---

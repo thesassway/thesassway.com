@@ -1,6 +1,6 @@
 ---
 date: 30 August 2011 10:00
-categories: news, adam-stacoviak
+categories: news
 author: Adam Stacoviak
 summary: I love how Nathan opens with, "I aim for this to be the article I wish I had read when I was first contemplating Sass but (at the time) did not consider it worthwhile. I could not have been more wrong."
 ---

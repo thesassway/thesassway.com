@@ -1,6 +1,6 @@
 ---
 date: 31 August 2019
-categories: beginner, guides, adam-stacoviak
+categories: beginner, guides
 author: Adam Stacoviak
 summary: ...
 ---

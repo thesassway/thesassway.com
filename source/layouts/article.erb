@@ -12,15 +12,17 @@
       </section>
     <% end %>
 
-    <% if false # TODO: get categories and comments working %>
-    <% unless current_page.categories.empty? %>
+    <% unless meta.categories.empty? %>
       <div class="page-categories">
         <p>
           <% unless meta.date.nil? %>
-            <%= "<em>#{format_date(current_page.date.nil?)}</em> ~ " %>
+            <%= "<em>#{format_date(meta.date)}</em> ~ " %>
           <% end %>
-          <% current_page.categories.each do |category| %>
-            <a href="<%= category.abspath %>"><%= category.heading %></a>
+          <% meta.categories.split(/\s*,\s*/).each do |slug| c = category(slug) %>
+            <a href="/<%= c.slug %>"><%= c.name %></a>
+          <% end %>
+          <% if author %>
+            <a href="/<%= author.slug %>"><%= author.name %></a>
           <% end %>
         </p>
       </div>
@@ -30,6 +32,7 @@
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <div class="g-plusone" data-annotation="inline" data-width="200"></div>
 
+    <% if false # TODO: get comments working %>
     <div id="comments">
       <%= partial 'layouts/comments' %>
     </div>

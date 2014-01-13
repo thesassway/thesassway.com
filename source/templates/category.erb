@@ -11,5 +11,10 @@ layout: page
 <p>If you have questions or suggestions, please <a href="/contact">contact us</a> to let us know!</p>
 
 <section class="page-articles">
-  <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
+  <% if  category.superset %>
+    <% pages = articles_for(category.superset.split(/\s*,\s*/)) %>
+    <%= partial 'layouts/summaries', :locals => { :pages => pages, :heading => :h3 } %>
+  <% else %>
+    <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
+  <% end %>
 </section>

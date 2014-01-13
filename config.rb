@@ -43,22 +43,15 @@ end
 
 ready do
   data.authors.each do |author|
-    slug = author.name.strip.downcase.gsub('.', '').gsub(/\s+/, '-')
-    proxy "/#{slug}.html", "templates/author.html", locals: { author: author }
-    resource = sitemap.find_resource_by_path "/#{slug}.html"
-    resource.add_metadata page: {
-      title: "#{author.name}, #{author.title}",
-      author: slug 
-    }
+    proxy "/#{author.slug}.html", "templates/author.html", locals: { author: author }
+    resource = sitemap.find_resource_by_path "/#{author.slug}.html"
+    resource.add_metadata page: { title: "#{author.name}, #{author.title}" }
   end
 
   data.categories.each do |category|
     proxy "/#{category.slug}/index.html", "templates/category.html", locals: { category: category }
     resource = sitemap.find_resource_by_path "/#{category.slug}/index.html"
-    resource.add_metadata page: {
-      title: category.name,
-      author: category.slug 
-    }
+    resource.add_metadata page: { title: category.name }
   end
 end
 

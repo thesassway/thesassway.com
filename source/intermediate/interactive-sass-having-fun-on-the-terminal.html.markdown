@@ -1,6 +1,6 @@
 ---
 date: 2011-11-22 09:30:00 -0600
-categories: intermediate, guides, john-w-long
+categories: intermediate, guides
 author: John W. Long
 summary: Most people who use Sass are familiar to some degree with the command line. While programs like Compass.app and Scout.app are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 ---

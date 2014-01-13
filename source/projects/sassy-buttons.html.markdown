@@ -1,6 +1,6 @@
 ---
 date: 7 September 2011 1:55pm
-categories: projects, adam-stacoviak
+categories: projects
 summary: Are you wanting to achieve that sexy CSS3 buttons look with none of the work? Well then, Sassy Buttons are for you!
 ---
 

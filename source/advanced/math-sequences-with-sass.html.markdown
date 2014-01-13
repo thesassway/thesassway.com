@@ -1,6 +1,6 @@
 ---
 date: 12 October 2013
-categories: advanced, guides, hugo-giraudel
+categories: advanced, guides
 author: Hugo Giraudel
 summary: A fun experiment by Hugo Giradel that demonstrates advanced usage of functions. Learn about the fibonacci sequence in Sass and more!
 ---

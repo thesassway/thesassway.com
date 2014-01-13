@@ -1,6 +1,6 @@
 ---
 date: 28 August 2011 17:00
-categories: intermediate, guides, john-w-long
+categories: intermediate, guides
 author: John W. Long
 summary: Without question, one of the most powerful and valuable features of Sass is the ability to package up existing code into reusable chunks of code called _mixins_.
 ---

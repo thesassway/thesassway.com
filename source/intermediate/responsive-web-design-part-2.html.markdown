@@ -1,6 +1,6 @@
 ---
 date: 2011-12-02 17:00:00 -0600
-categories: intermediate, guides, mason-wendell
+categories: intermediate, guides
 author: Mason Wendell
 summary: In part one we talked about how Sass can help with fluid layouts and images. Now we'll turn our attention to the new kid in town. Media queries are the tool that takes a design from fluid to truly responsive.
 ---

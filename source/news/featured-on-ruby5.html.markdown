@@ -1,6 +1,6 @@
 ---
 date: 30 August 2011 08:00
-categories: news, adam-stacoviak
+categories: news
 author: Adam Stacoviak
 summary: We were featured on the Ruby5 podcast (thanks!).
 ---

@@ -1,6 +1,6 @@
 ---
 date: 2099-02-02 10:00:00 -0600
-categories: articles, roy-tomeij
+categories: articles
 author: Roy Tomeij
 summary: Using Compass' `inline-image()` function it's easy to include images directly in your CSS. When using the same image more than once you're creating needlessly heavy CSS files. Use `@extend` to prevent this and reduce HTTP requests without repeating yourself.
 ---

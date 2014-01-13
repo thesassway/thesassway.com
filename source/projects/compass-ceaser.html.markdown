@@ -1,6 +1,6 @@
 ---
 date: 2011-09-23 08:30:00 -0500
-categories: projects, adam-stacoviak
+categories: projects
 author: Adam Stacoviak
 summary: If you're a fan of the classic Penner equations by Robert Penner, made famous by Flash and jQuery. You are going to love Compass Ceaser Easing by Jared Hardy, also known for his Sassy Buttons project.
 ---

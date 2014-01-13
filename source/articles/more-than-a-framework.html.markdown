@@ -1,6 +1,6 @@
 ---
 date: 2099-01-14 00:00:00 +0100
-categories: articles, scott-kellum
+categories: articles
 author: Scott Kellum
 summary: Sass is the perfect foundation for frameworking. With all the power in Sass it is important to know how to apply it to create something truly amazing, maybe even ask yourself if Sass can create something that is more than a framework.
 ---

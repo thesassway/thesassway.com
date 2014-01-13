@@ -1,6 +1,6 @@
 ---
 date: 29 June 2011
-categories: beginner, guides, adam-stacoviak
+categories: beginner, guides
 author: Adam Stacoviak
 summary: So your friend, co-worker, web-buddy or whomever told you about Sass, Compass ... or both. Great! Now what? In this beginner guide we take you through the first steps of getting started with Sass and Compass. We walk you through installation, creating a test project, compiling your first lines Sass to CSS and we even "mixin" a little Sass history.
 ---

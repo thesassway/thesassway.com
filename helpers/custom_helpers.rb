@@ -21,23 +21,24 @@ module CustomHelpers
 
   # Published date for page
   def published_date(page = current_page)
-    date = page.data.date
-    case date
-    when String
-      DateTime.parse(date)
-    when Time
-      DateTime.parse(date.to_s)
-    else
-      date
-    end
+    parse_date(page.data.date)
   end
 
   def published?(page = current_page)
-    published_date(page) < Date.today
+    date = published_date(page)
+    date < Date.today if date
   end
 
   def draft?(page = current_page)
     not published? page
+  end
+
+  def categories
+    data.categories
+  end
+
+  def category(slug)
+    categories.find { |c| c.slug === slug }
   end
 
   # The children of the current page ordered by date
@@ -56,34 +57,43 @@ module CustomHelpers
 
   def sort_by_date(pages)
     pages.sort_by do |child|
-      date = child.data.date
-      case date
-      when String
-        DateTime.parse(date)
-      when Time
-        DateTime.parse(date.to_s)
-      else
-        date
-      end
+      parse_date(child.data.date) || DateTime.now
     end
   end
 
   def content_directories
-    data.categories.select { |c| !c.superset }.map(&:slug)
+    categories.select { |c| !c.superset }.map(&:slug)
   end
 
   def articles(drafts = false)
+    articles_for(content_directories, drafts)
+  end
+
+  def articles_for(categories, drafts = false)
+    categories = [*categories]
     pages = []
-    for category in content_directories
+    for category in categories
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)
     end
     sort_by_date(pages).reverse
   end
 
+  def parse_date(date)
+    case date
+    when String
+      DateTime.parse(date)
+    when Time
+      DateTime.parse(date.to_s)
+    else
+      date
+    end
+  end
+
   # November 18th, 2013
   def format_date(date)
-    date.strftime '%B %e, %Y'
+    d = parse_date(date)
+    d.strftime '%B %e, %Y'
   end
 
   def atom_id(page = current_page)

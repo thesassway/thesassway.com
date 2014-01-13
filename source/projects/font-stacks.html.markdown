@@ -1,6 +1,6 @@
 ---
 date: 2013-11-29 02:00:00 -0600
-categories: projects, adam-stacoviak
+categories: projects
 author: Adam Stacoviak
 summary: WordPress is a great tool for building a fully customizable blog. Now you can make it even better by adding Sass and Compass support using this simple plugin.
 ---

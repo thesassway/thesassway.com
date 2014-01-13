@@ -1,6 +1,6 @@
 ---
 date: 2011-11-20 10:30:00 -0600
-categories: beginner, guides, mario-ricalde
+categories: beginner, guides
 author: Mario Ricalde
 summary: It's well known that Sass is an *efficient*, *realiable* and *precise* tool which gives us great power and freedom to make CSS fun and less of a pain to author; however with great power comes *responsibility*.
 ---

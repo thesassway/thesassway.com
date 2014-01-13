@@ -1,6 +1,6 @@
 ---
 date: 19 August 2011
-categories: news, adam-stacoviak
+categories: news
 author: Adam Stacoviak
 summary: Join the movement! Tell the world you're on #teamSass ...
 ---

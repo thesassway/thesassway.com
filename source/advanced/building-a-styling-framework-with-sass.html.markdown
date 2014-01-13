@@ -1,6 +1,6 @@
 ---
 date: 9 October 2019
-categories: advanced, guides, scott-kellum
+categories: advanced, guides
 author: Scott Kellum
 about_author: scott_kellum
 summary: Sass provides so much power, but how can it be leveraged to create frameworks.
