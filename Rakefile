@@ -7,7 +7,7 @@ end
 
 desc "Run the localhost server"
 task :server do
-  system "bundle exec shotgun config.ru"
+  system "bundle exec foreman start"
 end
 task :s => :server
 
