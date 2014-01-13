@@ -2,4 +2,5 @@
 .sass-cache
 .ruby-gemset
 .ruby-version
+.env
 tmp

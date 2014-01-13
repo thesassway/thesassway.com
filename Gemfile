@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 # Rake
 gem 'rake'
@@ -23,6 +24,10 @@ gem 'font-stacks'
 gem 'pygments.rb', '~> 0.1.2'
 gem 'rack-codehighlighter', :git => 'git://github.com/jlong/rack-codehighlighter.git'
 
+# Puma
+gem 'puma'
+
 group :development do
   gem 'shotgun'
+  gem 'foreman'
 end
