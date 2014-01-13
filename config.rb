@@ -10,6 +10,7 @@ compass_config do |config|
   config.output_style = :compact
 end
 
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -55,6 +56,13 @@ ready do
   end
 end
 
+
+###
+# Disqus
+###
+set :disqus_short_name, 'thesassway'
+
+
 ###
 # Helpers
 ###
@@ -98,15 +106,18 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+
 ###
 # Category pages
 ###
+
 ready do
   sitemap.resources.group_by {|p| p.data["category"] }.each do |category, pages|
     proxy "/categories/#{category}.html", "category.html", 
       :locals => { :category => category, :pages => pages }
   end
 end
+
 
 ###
 # Rack middleware
