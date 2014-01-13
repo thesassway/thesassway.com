@@ -1,0 +1,18 @@
+<% unless pages.empty? %>
+  <% pages.each do |page| %>
+    <article class="post">
+      <% content_tag(defined?(heading) ? heading : :h2) do %>
+        <a href="<%= page.url %>">
+          <%= title(page) %>
+        </a>
+      <% end %>
+      <% if page.data.date %>
+        <div class="page-date">
+          <%= format_date(published_date(page)) %>
+        </div>
+      <% end %>
+      <p><%= page.data.summary %></p>
+      <p class="read-more"><a href="<%= page.url %>">Continue reading&#8230;</a></p>
+    </article>
+  <% end %>
+<% end %>

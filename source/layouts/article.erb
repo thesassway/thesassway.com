@@ -1,0 +1,39 @@
+<% wrap_layout 'page' do %>
+  <article class="post">
+    <%= yield %>
+
+    <% if author %>
+      <section class="author-bio">
+        <h2><span>The Author,</span> <%= author.name %></h2>
+
+        <img class="author-image" src="<%= author.avatar %>">
+        
+        <%= author.bio %>
+      </section>
+    <% end %>
+
+    <% unless meta.categories.empty? %>
+      <div class="page-categories">
+        <p>
+          <% unless meta.date.nil? %>
+            <%= "<em>#{format_date(meta.date)}</em> ~ " %>
+          <% end %>
+          <% meta.categories.split(/\s*,\s*/).each do |slug| c = category(slug) %>
+            <a href="/<%= c.slug %>"><%= c.name %></a>
+          <% end %>
+          <% if author %>
+            <a href="/<%= author.slug %>"><%= author.name %></a>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+      
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <div class="g-plusone" data-annotation="inline" data-width="200"></div>
+
+    <div id="comments">
+      <%= partial 'layouts/disqus' %>
+    </div>
+  </article>
+<% end %>

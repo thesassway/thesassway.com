@@ -1,0 +1,151 @@
+-
+  name: Adam Stacoviak
+  slug: adam-stacoviak
+  title: Editor in Chief
+  avatar: http://a0.twimg.com/profile_images/1138182773/as-current_reasonably_small.jpeg
+  website: http://adamstacoviak.com/
+  twitter: adamstac
+  github: adamstac
+  dribbble: adamstac
+  bio: >
+    <p><a href="http://adamstacoviak.com/">Adam Stacoviak</a> is Editor-in-Chief of
+      <a href="http://thesassway.com/">The Sass Way</a>.</p>
+
+    <p>Adam is the Product Manager at <a href="http://purecharity.com/">Pure Charity</a>,
+      he runs <a href="http://riznmedia.com/">RIZN Media</a>, is founder and
+      Editor-in-Chief at <a href="http://thechangelog.com/">The Changelog</a>, and the
+      creator and host of <a href="http://5by5.tv/founderstalk">Founders Talk</a>.</p>
+
+    <p>Adam blogs at <a href="http://adamstacoviak.com/">adamstacoviak.com</a> from time
+      to time. <a href="http://twitter.com/adamstac">Follow him on Twitter</a>.</p>
+-
+  name: John W. Long
+  slug: john-w-long
+  title: Managing Editor
+  avatar: http://a0.twimg.com/profile_images/1509219193/john_155.jpg 
+  website: http://wiseheartdesign.com
+  twitter: johnwlong
+  github: jlong
+  dribbble: johnwlong
+  bio: >
+    <p><a href="http://wiseheartdesign.com/">John W. Long</a> is the <em>Managing Editor</em>
+      of <a href="http://thesassway.com/">The Sass Way</a> as well as a designer, hacker and
+      a UX Designer at <a href="http://uservoice.com/">UserVoice</a>. John is the creator of
+      <a href="http://radiantcms.org/">Radiant CMS</a> and
+      <a href="http://get-serve.com/">Serve</a>.</p>
+
+    <p>Connect with John on Twitter at <a href="http://twitter.com/johnwlong">@johnwlong</a>.</p>
+-
+  name: Mario Ricalde
+  slug: mario-ricalde
+  avatar: https://si0.twimg.com/profile_images/1477488461/dolce_reasonably_small.jpg
+  twitter: mario_ricalde
+  github: MarioRicalde
+  bio: >
+    <p>Mario Ricalde is a tenacious self-taught developer who enjoys improving the front-end
+      development process by providing utilities and procedures.</p>
+
+    <p>Mario is the creator of the <a href="https://github.com/kuroir/SCSS">SCSS TextMate
+      Bundle</a>, <a href="https://github.com/kuroir/Survival-Kit">Survival + Kit</a> a
+      Compass Framework which aims to provide useful mixins for Front-End Engineers and
+      <a href="https://github.com/kuroir/AVA-Pattern">The Arrangement for View Assets
+      Pattern</a> (writing it!).</p>
+
+    <p>He has worked for several companies around the world and is currently working with
+      <a href="http://destructoid.com/">Destructoid</a>,
+      <a href="http://www.peeweepc.com/">PeeWeePC</a> and
+      <a href="https://learnable.com/">Sitepoint's Learnable.com</a>. You can follow him
+      on <a href="https://twitter.com/mario_ricalde">Twitter</a> and check out his codes
+      on <a href="https://github.com/MarioRicalde">GitHub</a>.</p>
+-
+  name: Mason Wendell
+  slug: mason-wendell
+  avatar: http://a0.twimg.com/profile_images/553236702/stinkyavatar_reasonably_small.jpg
+  website: http://birdsandmonkeys.com
+  twitter: canarymason
+  bio: > 
+    <p>Mason Wendell is a Design, CSS, HTML, and Drupal expert who has been designing and
+      building websites since the early days of the web. He was an early adopter of Sass
+      and Compass, and can't stop talking about it.</p>
+
+    <p>Mason is Creative Director at <a href="http://zivtech.com">Zivtech</a> where he
+      enjoys blurring the line between design and front-end development. He developed
+      <a href="https://github.com/canarymason/Survival-Kit">The Coding Designer's Survival Kit</a>
+      and hosts a video podcast about designing in the browser using Sass at
+      <a href="http://thecodingdesigner.com">TheCodingDesigner.com</a>. He blogs at
+      <a href="http://birdsandmonkeys.com">Birds and Monkeys</a> when he runs out of
+      room everywhere else.</p>
+
+    <p>Follow Mason on Twitter at <a href="http://twitter.com/canarymason">@canarymason</a>.</p>
+-
+  name: Peter Gasston
+  slug: peter-gasston
+  avatar: https://si0.twimg.com/profile_images/391831398/peter_opie_reasonably_small.png
+  website: http://www.broken-links.com/
+  twitter: stopsatgreen
+  bio: >
+    <p><a href="http://www.petergasston.co.uk/">Peter Gasston</a> works as a developer at
+      <a href="http://top10.com/">Top10</a> and codes mainly client-side languages (although he's
+      familiar with server-side as well). Peter is a keen advocate of open web standards, is the
+      author of <a href="http://nostarch.com/css3.htm">The Book of CSS3: A Developer’s Guide to
+      the Future of Web Design</a> (released May 2011), and has written for .Net magazine and
+      <a href="http://www.css3.info/">CSS3.info</a>.</p>
+
+    <p>Peter blogs on technical issues at <a href="http://www.broken-links.com/">Broken-Links.com</a>,
+      has spoken at <a href="http://ignitelondon.net/">Ignite London</a> as well as various other
+      web development meetings, and can often be found under the user name of 'stopsatgreen' (clever
+      anagram).</p>
+
+    <p>Connect with Peter on Twitter at <a href="https://twitter.com/#!/stopsatgreen">@stopsatgreen</a>
+      and <a href="http://lanyrd.com/profile/stopsatgreen/">Lanyrd.com</a>.</p>
+-
+  name: Roy Tomeij
+  slug: roy-tomeij
+  avatar: https://twimg0-a.akamaihd.net/profile_images/1796230903/roy_square_reasonably_small.jpg
+  website: http://roytomeij.com/
+  twitter: roy
+  github: roytomeij
+  bio: >
+    <p><a href="http://roytomeij.com/">Roy Tomeij</a> is co-founder of <a href="http://www.80beans.com/">80beans</a>
+      and <a href="http://www.slicecraft.nl/">SliceCraft</a> in Amsterdam (The Netherlands), where
+      he takes care of front-end architecture and business development using an agile approach. He
+      loves front-end meta languages like Haml, Sass &amp; CoffeeScript.</p>
+
+    <p>Contact Roy on Twitter at <a href="http://twitter.com/roy">@roy</a> or read
+      <a href="http://roytomeij.com/">his blog</a>.</p>
+-
+  name: Scott Kellum
+  slug: scott-kellum
+  avatar: https://si0.twimg.com/profile_images/378800000041996269/34ec08551531618f71850715c2afdbef.jpeg
+  website: http://scottkellum.com/
+  twitter: scottkellum
+  github: scottkellum
+  dribbble: ScottKellum
+  bio: >
+    <p>Scott Kellum a designer at <a href="http://www.voxmedia.com/">VOX Media</a> creating beautiful
+      features for <a href="http://theverge.com/">The Verge</a> as well as having worked on
+      <a href="http://www.sbnation.com/">SB Nation</a> and <a href="http://www.polygon.com/">Polygon</a>.
+      With a classical graphic design background and passion for code, Scott is particularly interested
+      in the areas where design and development meet.</p>
+
+    <p>He&#8217;s worked on numerous Compass plugins like
+      <a href="https://github.com/Team-Sass/modular-scale">Modular Scale</a>,
+      <a href="https://github.com/Team-Sass/singularity">Singularity</a>,
+      <a href="https://github.com/Team-Sass/color-schemer">Color Schemer</a>, and
+      <a href="https://github.com/Team-Sass/toolkit">Toolkit</a> to help solve design problems in code.
+      <a href="https://twitter.com/scottkellum">Follow Scott on Twitter</a>.</p>
+-
+  name: Hugo Giraudel
+  slug: hugo-giraudel
+  avatar: https://pbs.twimg.com/profile_images/378800000638607178/d6b74325fc8156ccc6a3926156e5e1b6.jpeg
+  website: hugogiraudel
+  twitter: hugogiraudel
+  github: hugogiraudel
+  dribbble: hugogiraudel
+  bio: >
+    <p><a href="http://hugogiraudel.com">Hugo Giraudel</a> is a front-end developer and celebrated
+      blogger from France. He's written articles for <a href="http://css-tricks.com">CSS-Tricks.com</a>,
+      <a href="http://tympanus.net/codrops/">Codrops</a>, and now The Sass Way.
+      He's also the curator of <a href="http://browserhacks.com/">BrowserHacks.com</a>.</p>
+
+    <p>Connect with Hugo on Twitter at <a href="http://twitter.com/hugogiraudel">@HugoGiraudel</a>.</p>
