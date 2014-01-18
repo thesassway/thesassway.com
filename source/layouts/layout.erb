@@ -12,37 +12,39 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= title || "The Sass Way" %></title>
 
+    <!-- Stylesheets & JavaScripts -->
     <%= stylesheet_link_tag "master" %>
     <%= javascript_include_tag  "all" %>
 
+    <!-- Favicon -->
     <link href="/sass-icon.ico" rel="shortcut icon">
+
+    <!-- Atom feed -->
     <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
 
     <!-- Roboto Condensed -->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300' rel='stylesheet' type='text/css'>
   </head>
-  <body class="<%= page_classes %>" role="<%= @page_role || 'page' %>">
-    <div role="top-bar">
-      <nav role="main-nav">
-        <ul>
-          <li><a href="/">Homepage</a></li>
-          <li class="beginner"><a href="/beginner">Beginner</a></li>
-          <li><a href="/intermediate">Intermediate</a></li>
-          <li><a href="/advanced">Advanced</a></li>
-          <li class="articles"><a href="/articles">Articles</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li class="subscribe"><a href="http://feeds.feedburner.com/thesassway">Subscribe</a></li>
+  <body>
+
+    <header class="site-header" role="banner">
+
+      <nav role="navigation" aria-label="main navigation" class="row">
+        <ul class="site-nav large-6 columns">
+          <li class="site-nav-item"><a class="site-nav-link" href="/">Home</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/beginner">Beginner</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/intermediate">Intermediate</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/advanced">Advanced</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/articles">Articles</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/news">News</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="/projects">Projects</a></li>
+          <li class="site-nav-item"><a class="site-nav-link" href="http://feeds.feedburner.com/thesassway">Subscribe</a></li>
         </ul>
       </nav>
-    </div>
 
-    <header role="banner">
-      <h1><a href="/" rel="home">The Sass Way</a></h1>
-      <h2>The latest in Sass and Compass - Beginner, Intermediate and Advanced topics</h2>
     </header>
 
-    <section role="main">
+    <section class="site-content" role="main">
       <%= yield %>
     </section>
 
@@ -53,5 +55,6 @@
     <%= partial 'layouts/podcasts' %>
     <%= partial 'layouts/footer' %>
     <%= partial 'layouts/footer_scripts' %>
+
   </body>
 </html>

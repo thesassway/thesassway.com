@@ -1,4 +1,20 @@
 .site-header {
+
+}
+
+.site-nav {
+  list-style: none;
+  display: table;
+  width: 100%;
+}
+.site-nav-item {
+  display: table-cell;
+  width: (100% / 8);
+}
+.site-nav-link {
+  display: block;
+  text-decoration: none;
+  text-align: center;
 }
 
 .site-footer {
