@@ -1,0 +1,18 @@
+@import 'partials/base';
+
+// Reset
+@include global-reset;
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+}
+
+*, *:before, *:after { @include box-sizing(border-box); }
+
+// Partials
+@import 'partials/typography';
+@import 'partials/grid';

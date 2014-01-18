@@ -1,0 +1,23 @@
+$text-color: #333;
+$quiet-color: #666;
+$loud-color: #000;
+
+$heading-color: #111;
+
+$link-color: #d54aaf;
+$link-hover-color: saturate(#d54aaf, 20%);
+$link-visited-color: purple;
+
+$base-font-family: 'Roboto Condensed', sans-serif;
+$base-font-size: 18px;
+$base-font-weight: 300;
+
+$fixed-font-family: "Andale Mono", AndaleMono, monospace;
+$fixed-font-size: 15px;
+$fixed-line-height: 1.2;
+
+$heading-font-weight: 700;
+
+@import "compass/css3";
+@import "compass/reset";
+@import "../modules/all";
