@@ -22,7 +22,8 @@ gem 'font-stacks'
 
 # Code highlighting
 gem 'pygments.rb', '~> 0.1.2'
-gem 'rack-codehighlighter', :git => 'git://github.com/jlong/rack-codehighlighter.git'
+gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
+
 
 # Puma
 gem 'puma'

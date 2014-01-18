@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/jlong/rack-codehighlighter.git
-  revision: 6c5dcb784d14d113abf7c3a0458cdf1223adf26a
+  remote: git://github.com/wbzyl/rack-codehighlighter.git
+  revision: 64bf50520cb1d563432832ae30d85bbd94cec5bd
   specs:
-    rack-codehighlighter (0.4.7)
+    rack-codehighlighter (0.5.0)
       nokogiri (>= 1.4.1)
       rack (>= 1.0.0)
 
@@ -78,8 +78,10 @@ GEM
       sprockets (~> 2.1)
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
+    mini_portile (0.5.2)
     multi_json (1.8.2)
-    nokogiri (1.5.9)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     puma (2.7.1)
       rack (>= 1.1, < 2.0)
     pygments.rb (0.1.3)
