@@ -4,17 +4,22 @@
   color: $link-color;
   text-decoration: none;
   
-  &:visited {
-    color: $link-visited-color;
-  }
-  
-  &:hover, &:visited:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
+  &:visited { color: $link-visited-color; }
+  &:hover, &:visited:hover { color: $link-hover-color; text-decoration: underline; }
+
+  .reversed & {
+    color: $reversed-link-color;
+    &:visited { color: $reversed-link-visited-color; }
+    &:hover, &:visited:hover { color: $reversed-link-hover-color; }
   }
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, %h1, %h2, %h3, %h4, %h5, %h6 { font-weight: $heading-font-weight; }
+.h1, .h2, .h3, .h4, .h5, .h6,
+%h1, %h2, %h3, %h4, %h5, %h6 {
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  .reversed & { color: $reversed-heading-color; }
+}
 
 .h1, .h2, %h1, %h2 { line-height: 1.2; }
 
@@ -30,13 +35,19 @@
 .fixed { font-family: $fixed-font-family; font-size: $fixed-font-size; line-height: $fixed-line-height; }
 
 .italic { font-style: italic; }
-.bold { font-weight: 700; }
+.bold {
+  font-weight: 700;
+  color: $loud-color;
+  .reversed & { color: $reversed-loud-color; }
+}
 
 .highlight {
   @include syntax-highlight($text-color, $link-color);
 }
 
 .typeset {
+  color: $text-color;
+
   a { @extend .link; }
 
   h1, .h1 { @extend %h1; margin: 1em 0 0.5em; }
@@ -53,5 +64,9 @@
   
   pre { @extend .fixed; }
 
+  .reversed & {
+    color: $reversed-text-color;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 

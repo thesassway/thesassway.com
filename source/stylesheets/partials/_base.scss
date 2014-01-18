@@ -1,12 +1,18 @@
-$text-color: #333;
-$quiet-color: #666;
 $loud-color: #000;
-
-$heading-color: #111;
-
+$quiet-color: rgba($loud-color, 0.5);
+$text-color: rgba($loud-color, 0.8);
+$heading-color: rgba($loud-color, 0.9);
 $link-color: #d54aaf;
 $link-hover-color: saturate(#d54aaf, 20%);
 $link-visited-color: purple;
+
+$reversed-text-color: rgba(white, 0.5);
+$reversed-quiet-color: rgba(white, 0.3);
+$reversed-loud-color: rgba(white, 0.8);
+$reversed-heading-color: rgba(white, 0.8);
+$reversed-link-hover-color: white;
+$reversed-link-color: rgba($reversed-link-hover-color, 0.9);
+$reversed-link-visited-color: rgba($reversed-link-hover-color, 0.8);
 
 $base-font-family: 'Roboto Condensed', sans-serif;
 $base-font-size: 18px;
