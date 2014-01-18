@@ -1,6 +1,8 @@
 <% wrap_layout 'page' do %>
-  <article class="post">
-    <%= yield %>
+  <article>
+    <div class="typeset">
+      <%= yield %>
+    </div>
 
     <% if author %>
       <section class="author-bio">

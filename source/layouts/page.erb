@@ -1,10 +1,8 @@
 <% @page_role = 'article' if meta.date %>
 
 <% wrap_layout 'layout' do %>
-  <div class="primary column">
-    <div class="content">
-      <%= yield %>
-    </div>
+  <div class="typeset">
+    <%= yield %>
   </div>
   <%= partial 'layouts/sidebar' %>
 <% end %>
