@@ -10,6 +10,7 @@ root = ::File.dirname(__FILE__)
 require 'pygments'
 require 'rack/codehighlighter'
 if ENV['HOME'] == '/app'
+  # If running on Heroku...
   require 'rubypython'
   RubyPython.start(:python_exe => "python2.6")
 end
