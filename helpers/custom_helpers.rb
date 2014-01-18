@@ -19,6 +19,10 @@ module CustomHelpers
     data.authors.find { |a| name === a.name }
   end
 
+  def authors
+    data.authors
+  end
+
   # Published date for page
   def published_date(page = current_page)
     parse_date(page.data.date)
