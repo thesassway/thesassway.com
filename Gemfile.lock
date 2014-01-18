@@ -136,7 +136,7 @@ DEPENDENCIES
   middleman (~> 3.2.1)
   middleman-livereload (~> 3.1.0)
   puma
-  pygments.rb (~> 0.1.2)
+  pygments.rb
   rack-codehighlighter!
   rack-contrib
   rack-google_analytics

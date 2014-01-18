@@ -21,7 +21,7 @@ gem 'animate-sass'
 gem 'font-stacks'
 
 # Code highlighting
-gem 'pygments.rb', '~> 0.1.2'
+gem 'pygments.rb'
 gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 
 
