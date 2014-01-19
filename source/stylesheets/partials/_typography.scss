@@ -23,8 +23,8 @@
 }
 
 .h1, .h2, %h1, %h2 { line-height: 0.6 * $base-line-height; }
-
 .h3, .h4, %h3, %h4 { line-height: 0.7 * $base-line-height; }
+.h5, .h6, %h5, %h6 { line-height: 0.8 * $base-line-height; }
 
 .h1, %h1 { font-size: 400%; letter-spacing: -2px; }
 .h2, %h2 { font-size: 250%; letter-spacing: -1px; }
@@ -64,7 +64,7 @@
   h4, .h4 { @extend %h4; margin: 1em 0 0.5em; }
   h5, .h5 { @extend %h5; margin: 1em 0 0.5em; }
   h6, .h6 { @extend %h6; margin: 1em 0 0.5em; }
-  
+
   p, ul, ol { margin: 1em 0; }
   
   i, em { @extend .italic; }
@@ -80,3 +80,6 @@
   }
 }
 
+.title { @extend %h1; margin: 1em 0 0.25em; text-align: center; }
+.subtitle { @extend %h5; font-weight: 300; margin: 0 0 1em; text-align: center; }
+  

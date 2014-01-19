@@ -17,6 +17,14 @@
   border: 0;
 }
 
+// Fonts
+.font-extra-light { font-weight: 200 !important; }
+.font-light       { font-weight: 300 !important; }
+.font-normal      { font-weight: 400 !important; }
+.font-semi-bold   { font-weight: 600 !important; }
+.font-bold        { font-weight: 700 !important; }
+.font-ultra-bold  { font-weight: 900 !important; }
+
 // Alignment
 .text-left     { text-align: left   !important; }
 .text-center   { text-align: center !important; }
