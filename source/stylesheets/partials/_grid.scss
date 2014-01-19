@@ -205,7 +205,6 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
     .#{$size}#{-$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
   }
 
-  [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
   [class*="column"] + [class*="column"].end { float: $default-float; }
 
 

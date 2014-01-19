@@ -1,0 +1,19 @@
+.summary {
+  margin: 3em 0;
+}
+
+.summary-title {
+  @extend %h4;
+  margin-bottom: 0.2em;
+
+  > a {
+    color: $heading-color;
+    text-decoration: none;
+    &:hover { color: $link-color; }
+  }
+}
+
+a.summary-more {
+  @extend %link;
+  white-space: nowrap;
+}

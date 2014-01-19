@@ -10,12 +10,12 @@ module CustomHelpers
   end
 
   # Shortcut for current page data
-  def meta
-    current_page.data
+  def meta(page = current_page)
+    page.data
   end
 
-  def author
-    name = meta.author
+  def author(page = current_page)
+    name = meta(page).author
     data.authors.find { |a| name === a.name }
   end
 

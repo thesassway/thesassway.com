@@ -4,11 +4,7 @@ layout: layout
 ---
 
 <div class="hero">
-  <h1><%= image_tag "thesassway.svg", alt: "The Sass Way" %></h1>
+  <h1><%= image_tag "thesassway.svg", class: "text-middle", alt: "The Sass Way" %></h1>
 </div>
 
-<div class="row">
-  <div class="large-10 large-offset-1 columns typeset">
-    <%= partial 'layouts/summaries', :locals => { :pages => articles[0..8] } %>
-  </div>
-</div>
+<%= partial 'layouts/summaries', :locals => { :pages => articles[0..8] } %>

@@ -1,0 +1,7 @@
+.avatar {
+  @include border-radius(100%);
+
+  &.fill-width {
+    width: 100%;
+  }
+}
