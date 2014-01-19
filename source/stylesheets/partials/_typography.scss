@@ -42,8 +42,15 @@
   .reversed & { color: $reversed-loud-color; }
 }
 
+.fine-print { font-size: 0.9 * $base-font-size; }
+
 .highlight {
   @include syntax-highlight($text-color, $link-color);
+}
+
+.reversed {
+  color: $reversed-text-color;
+  -webkit-font-smoothing: antialiased;
 }
 
 .typeset {

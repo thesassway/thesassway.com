@@ -49,21 +49,21 @@
 
     <footer class="site-footer reversed">
       <div class="row">
-        <section class="small-12 large-5 columns typeset">
+        <section class="small-12 large-5 columns">
           <h3 class="mt1 mb0"><a href="/"><%= image_tag 'thesassway-small.svg', class: "text-middle", alt: "The Sass Way" %></a></h3>
-          <p>
-            <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
-            We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
-            Send us a pull request!
-          </p>
-
-          <p><a href="/contact">Contact us</a> to send us your Sass news or to suggest new content for us to write about.</p>
-
-          <ul>
-            <li><a href="http://feeds.feedburner.com/thesassway">RSS</a></li>
-            <li><a href="http://twitter.com/TheSassWay">Twitter</a></li>
-            <li><a href="http://facebook.com/thesassway">Facebook</a></li>
-            <li><a href="http://github.com/thesassway">GitHub</a></li>
+          <div class="typeset fine-print">
+            <p>
+              <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
+              We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
+              Send us a pull request!
+            </p>
+            <p><a href="/contact">Contact us</a> to send us your Sass news or to suggest new content for us to write about.</p>
+          </div>
+          <ul class="social-icons mb4">
+            <li class="social-icon-item"><a class="social-icon-button" href="http://feeds.feedburner.com/thesassway"><i class="feed-icon x24"></i><span class="sr-only">Atom Feed</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://twitter.com/TheSassWay"><i class="twitter-icon x24"></i><span class="sr-only">Twitter</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://facebook.com/thesassway"><i class="facebook-icon x24"></i><span class="sr-only">Facebook</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://github.com/thesassway"><i class="github-icon x24"></i><span class="sr-only">GitHub</span></a></li>
           </ul>
         </section>
 
@@ -100,13 +100,16 @@
           </ul>
         </section>
 
-        <section class="large-12 columns typeset text-center">
+        <section class="large-12 columns typeset fine-print text-center">
           <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
           <p>The Sass Way is a <a href="http://riznmedia.com/">Rizn Media</a> production.</p>
-
-          <%= partial 'layouts/fusion_ads' %>
         </section>
       </div>
+      <%#<div class="row">%>
+        <%#<section class="small-8 medium-4 small-centered columns">%>
+          <%#<%= partial 'layouts/fusion_ads' %>
+        <%#</section>%>
+      <%#</div>%>
     </footer>
 
     <%= javascript_include_tag  "all" %>
