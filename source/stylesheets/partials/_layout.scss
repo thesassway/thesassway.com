@@ -19,6 +19,7 @@
 }
 .site-nav-item {
   display: table-cell;
+  text-align: center;
 }
 a.site-nav-link {
   border-top: 2px solid transparent;
@@ -27,7 +28,6 @@ a.site-nav-link {
   display: inline-block;
   font-size: $base-font-size * 0.7;
   text-decoration: none;
-  text-align: center;
   text-transform: uppercase;
   padding: 10px;
   letter-spacing: 1px;
