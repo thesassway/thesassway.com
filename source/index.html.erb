@@ -3,8 +3,8 @@ title: The Sass Way
 layout: layout
 ---
 
-<div class="hero">
-  <h1><%= image_tag "thesassway.svg", class: "text-middle", alt: "The Sass Way" %></h1>
+<div class="hero row">
+  <h1 class="small-centered small-8 medium-6 columns"><%= image_tag "thesassway.svg", class: "site-logo text-middle", alt: "The Sass Way" %></h1>
 </div>
 
 <%= partial 'layouts/summaries', :locals => { :pages => articles[0..8] } %>
