@@ -1,0 +1,20 @@
+.social-icons {
+  list-style: none;
+}
+.social-icon-item {
+  display: inline;
+  margin-right: 0.25em;
+}
+a.social-icon-button {
+  background: $reversed-text-color;
+  @include border-radius(100%);
+  color: #36363d;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 32px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+
+  &:hover { background: $reversed-loud-color; }
+}
