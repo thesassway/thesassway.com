@@ -11,7 +11,7 @@
   .c { color: #888888; }
 
   // Error
-  .err { color: #a61717; background-color: #e3d2d2; }
+  .err { color: #a61717; }
 
   // Keyword
   .k { color: #008800; @if $bold-text { font-weight: bold; } }
@@ -122,28 +122,28 @@
   .mf, .mh, .mi, .mo { color: #0000dd; @if $bold-text { font-weight: bold; } }
 
   // Literal.String.Backtick, Literal.String.Char, Literal.String.Doc, Literal.String.Double, Literal.String.Escape
-  .sb, .sc, .sd, .s2 { color: #dd2200; background-color: #fff0f0; }
+  .sb, .sc, .sd, .s2 { color: #dd2200; }
 
   // Literal.String.Escape
-  .se { color: #0044dd; background-color: #fff0f0; }
+  .se { color: #0044dd; }
 
   // Literal.String.HereDoc
-  .sh { color: #dd2200; background-color: #fff0f0; }
+  .sh { color: #dd2200; }
 
   // Literal.String.Interpol
-  .si { color: #3333bb; background-color: #fff0f0; }
+  .si { color: #3333bb; }
 
   // Literal.String.Other
-  .sx { color: #22bb22; background-color: honeydew; }
+  .sx { color: #22bb22; }
 
   // Literal.String.Regex
-  .sr { color: #008800; background-color: #fff0ff; }
+  .sr { color: #008800; }
 
   // Literal.String.Single
-  .s1 { color: #dd2200; background-color: #fff0f0; }
+  .s1 { color: #dd2200; }
 
   // Literal.String.Symbol
-  .ss { color: #aa6600; background-color: #fff0f0; }
+  .ss { color: #aa6600; }
 
   // Name.Builtin.Pseudo
   .bp { color: #003388; }
@@ -187,7 +187,7 @@
   .c { color: $comment; }
 
   // Error
-  .err { color: $error; background: $error-bg; }
+  .err { color: $error; }
 
   // Keyword
   .k { color: $keyword; }

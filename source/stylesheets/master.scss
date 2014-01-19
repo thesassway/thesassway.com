@@ -8,7 +8,7 @@ body {
   font-size: $base-font-size;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
-  line-height: 1.6;
+  line-height: $base-line-height;
 }
 
 *, *:before, *:after { @include box-sizing(border-box); }
@@ -17,4 +17,5 @@ body {
 @import 'partials/typography';
 @import 'partials/grid';
 @import 'partials/layout';
+@import 'partials/hero';
 @import 'partials/modifiers';

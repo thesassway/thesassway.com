@@ -21,22 +21,20 @@
     <!-- Atom feed -->
     <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
 
-    <!-- Roboto Condensed -->
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300" rel="stylesheet" type="text/css">
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic,400,700|Source+Sans+Pro:400italic,700italic,400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header class="site-header" role="banner">
       <nav role="navigation" aria-label="main navigation" class="row">
         <ul class="site-nav large-6 columns">
-          <li class="site-nav-item"><a class="site-nav-link" href="/">Home</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/beginner">Beginner</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/intermediate">Intermediate</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/advanced">Advanced</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/articles">Articles</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/news">News</a></li>
           <li class="site-nav-item"><a class="site-nav-link" href="/projects">Projects</a></li>
-          <li class="site-nav-item"><a class="site-nav-link" href="http://feeds.feedburner.com/thesassway">Subscribe</a></li>
         </ul>
       </nav>
     </header>
@@ -46,10 +44,9 @@
     </section>
 
     <footer class="site-footer reversed">
-      <div class="row typeset">
-        <section class="large-5 columns">
-          <a href="/" class="float-left mr1.5 mv1.5"><img src="/images/thesassway-avatar-90.png"></a>
-
+      <div class="row">
+        <section class="large-5 columns typeset">
+          <h3 class="mt1 mb0"><a href="/"><%= image_tag 'thesassway-small.svg', class: "text-middle", alt: "The Sass Way" %></a></h3>
           <p>
             <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
             We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
@@ -66,8 +63,8 @@
           </ul>
         </section>
 
-        <section class="large-2 large-offset-1 columns">
-          <h2 class="h5">Contributors</h2>
+        <section class="large-2 large-offset-1 columns typeset">
+          <h3 class="h5">Contributors</h3>
           <ul>
             <% for contributor in authors %> 
               <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
@@ -75,8 +72,8 @@
           </ul>
         </section>
 
-        <section class="large-2 columns">
-          <h2 class="h5">Categories</h2>
+        <section class="large-2 columns typeset">
+          <h3 class="h5">Categories</h3>
           <ul>
             <li><a href="/guides">Guides</a></li>
             <li><a href="/beginner">Beginner</a></li>
@@ -88,8 +85,8 @@
           </ul>
         </section>
 
-        <section class="large-2 columns">
-          <h2 class="h5">Made with</h2>
+        <section class="large-2 columns typeset">
+          <h3 class="h5">Made with</h3>
           <ul>
             <li><a href="https://github.com/thesassway">GitHub</a></li>
             <li><a href="http://middlemanapp.com">Middleman</a></li>
@@ -99,7 +96,7 @@
           </ul>
         </section>
 
-        <section class="large-12 columns text-center">
+        <section class="large-12 columns typeset text-center">
           <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
           <p>The Sass Way is a <a href="http://riznmedia.com/">Rizn Media</a> production.</p>
 

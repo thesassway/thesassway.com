@@ -2,10 +2,10 @@
 
 .link {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
   
   &:visited { color: $link-visited-color; }
-  &:hover, &:visited:hover { color: $link-hover-color; text-decoration: underline; }
+  &:hover, &:visited:hover { color: $link-hover-color; text-decoration: none; }
 
   .reversed & {
     color: $reversed-link-color;
@@ -16,14 +16,15 @@
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 %h1, %h2, %h3, %h4, %h5, %h6 {
+  font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   color: $heading-color;
   .reversed & { color: $reversed-heading-color; }
 }
 
-.h1, .h2, %h1, %h2 { line-height: 1.2; }
+.h1, .h2, %h1, %h2 { line-height: 0.6 * $base-line-height; }
 
-.h3, .h4, %h3, %h4 { line-height: 1.3; }
+.h3, .h4, %h3, %h4 { line-height: 0.8 * $base-line-height; }
 
 .h1, %h1 { font-size: 400%; letter-spacing: -2px; }
 .h2, %h2 { font-size: 250%; letter-spacing: -1px; }
@@ -57,12 +58,14 @@
   h5, .h5 { @extend %h5; margin: 1em 0 0.5em; }
   h6, .h6 { @extend %h6; margin: 1em 0 0.5em; }
   
-  p, ul, ol, pre { margin: 1em 0; }
+  p, ul, ol { margin: 1em 0; }
   
   i, em { @extend .italic; }
   b, strong { @extend .bold; }
   
-  pre { @extend .fixed; }
+  code, pre { @extend .fixed; }
+  code { color: #b06; }
+  pre { margin: 2em 0; }
 
   .reversed & {
     color: $reversed-text-color;

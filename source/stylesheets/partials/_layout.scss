@@ -1,5 +1,15 @@
 .site-header {
+  position: relative;
 
+  &::after {
+    position: absolute;
+    content: '';
+    background: rgba($text-color, 0.1);
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .site-nav {
@@ -9,12 +19,34 @@
 }
 .site-nav-item {
   display: table-cell;
-  width: (100% / 8);
 }
-.site-nav-link {
-  display: block;
+a.site-nav-link {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: $quiet-color;
+  display: inline-block;
+  font-size: $base-font-size * 0.7;
   text-decoration: none;
   text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  letter-spacing: 1px;
+
+  &:focus, &:hover {
+    border-bottom-color: $link-color;
+    color: $text-color;
+  }
+
+  &:active {
+    color: $link-color;
+    border-bottom-color: $link-color;
+  }
+
+  &.is-selected {
+    color: $link-color;
+    border-bottom-color: $link-color;
+  }
+
 }
 
 .site-footer {
