@@ -1,11 +1,14 @@
 <% unless pages.empty? %>
   <% pages.each do |page| %>
+    <% author = author(page) %>
     <article class="summary">
       <div class="row">
-        <div class="small-2 small-offset-1 columns">
-          <a href="<%= page.url %>"><img class="avatar fill-width" src="<%= author(page).avatar %>" alt="<%= author(page).name %>"></a>
-        </div>
-        <div class="small-8 columns">
+        <% if author %>
+          <div class="small-2 small-offset-1 columns">
+            <a href="<%= page.url %>"><img class="avatar fill-width" src="<%= author(page).avatar %>" alt="<%= author(page).name %>"></a>
+          </div>
+        <% end %>
+        <div class="small-8<% unless author %> small-offset-2<% end %> columns">
           <h3 class="summary-title"><a href="<%= page.url %>"><%= title(page) %></a></h3>
           <div class="summary-body">
             <p><%= page.data.summary.strip %>&nbsp; <a class="summary-more" href="<%= page.url %>">Read more&#8230;</a></p>
