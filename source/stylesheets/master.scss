@@ -5,7 +5,7 @@
 
 body {
   color: $text-color;
-  font-size: $base-font-size;
+  font-size: 14px;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
@@ -25,3 +25,8 @@ body {
 @import 'partials/social-icons';
 @import 'partials/modifiers';
 @import 'partials/fusion-ads';
+
+
+@media #{$medium-up} {
+  body { font-size: $base-font-size; }
+}
