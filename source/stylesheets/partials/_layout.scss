@@ -4,7 +4,7 @@
   &::after {
     position: absolute;
     content: '';
-    background: rgba($text-color, 0.1);
+    background: $border-color;
     height: 1px;
     left: 0;
     right: 0;

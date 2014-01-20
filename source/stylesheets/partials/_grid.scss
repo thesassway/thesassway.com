@@ -61,7 +61,7 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 
 // For creating container, nested, and collapsed rows.
 //
-// 
+//
 // $behavior - Any special beavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
 @mixin grid-row($behavior: false) {
 
