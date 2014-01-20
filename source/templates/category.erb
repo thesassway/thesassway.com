@@ -9,9 +9,10 @@ layout: layout
   </div>
 </div>
 
+<% show_avatars = !(%w(news projects).include?(category.slug)) %>
 <% if category.superset %>
   <% pages = articles_for(category.superset.split(/\s*,\s*/)) %>
-  <%= partial 'layouts/summaries', :locals => { :pages => pages, :heading => :h3 } %>
+  <%= partial 'layouts/summaries', :locals => { pages: pages, avatars: show_avatars } %>
 <% else %>
-  <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
+  <%= partial 'layouts/summaries', :locals => { pages: children, avatars: show_avatars } %>
 <% end %>

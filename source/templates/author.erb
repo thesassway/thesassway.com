@@ -1,16 +1,18 @@
 ---
-layout: page
+layout: layout
 ---
 
-<h1><%= author.name %></h1>
+<div class="row title-avatar">
+  <div class="small-4 medium-3 large-2 small-centered columns">
+    <img class="avatar full-width" src="<%= author.avatar %>" alt="<%= author.title %>">
+  </div>
+</div>
 
-<h2><%= author.title %></h2>
+<div class="row">
+  <div class="large-8 large-offset-2 columns">
+    <h1 class="title"><%= author.name %></h1>
+    <h2 class="subtitle"><%= author.title %></h2>
+  </div>
+</div>
 
-<section class="author-bio">
-  <img class="avatar" src="<%= author.avatar %>">
-  <%= author.bio %>
-</section>
-
-<section class="page-articles">
-  <%= partial 'layouts/summaries', :locals => { :pages => articles_by_author(author), :heading => :h3 } %>
-</section>
+<%= partial 'layouts/summaries', :locals => { pages: articles_by_author(author) } %>
