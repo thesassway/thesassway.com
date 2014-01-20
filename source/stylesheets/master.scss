@@ -25,8 +25,3 @@ body {
 @import 'partials/social-icons';
 @import 'partials/modifiers';
 @import 'partials/fusion-ads';
-
-
-@media #{$medium-up} {
-  body { font-size: $base-font-size; }
-}
