@@ -67,6 +67,10 @@
 
   p, ul, ol { margin: 1.5em 0; }
 
+  ul { list-style: disc; }
+  ol { list-style: decimal; }
+  li { margin-left: 2.25em; margin-bottom: 0.5em}
+
   i, em { @extend .italic; }
   b, strong { @extend .bold; }
 

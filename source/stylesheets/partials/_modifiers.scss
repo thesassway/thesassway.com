@@ -56,6 +56,16 @@
 // No wrap
 .no-wrap { white-space: nowrap; }
 
+// Lists
+.no-bullets {
+  list-style: none !important;
+
+  li {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
 // Spacing
 @for $d from 0 through 5 {
   $spacer: 10px;
