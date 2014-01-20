@@ -12,37 +12,108 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= title || "The Sass Way" %></title>
 
+    <!-- Stylesheets -->
     <%= stylesheet_link_tag "master" %>
-    <%= javascript_include_tag  "all" %>
 
+    <!-- Favicon -->
     <link href="/sass-icon.ico" rel="shortcut icon">
+
+    <!-- Atom feed -->
     <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic,400,700|Source+Sans+Pro:400italic,700italic,400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
   </head>
-  <body class="<%= page_classes %>" role="<%= @page_role || 'page' %>">
-    <div class="fadeIn">
-      <%= partial 'layouts/top_bar' %>
+  <body>
 
-      <header role="banner">
-        <div class="max-width">
-          <h1>
-            <a href="/" rel="home"><span class="char1">T</span><span class="char2">h</span><span class="char3">e</span><span class="char4"> </span><span class="char5">S</span><span class="char6">a</span><span class="char7">s</span><span class="char8">s</span><span class="char9"> </span><span class="char10">W</span><span class="char11">a</span><span class="char12">y</span></a>
-            <span class='trade-mark'>&trade;</span>
-          </h1>
-          <h2>The latest in Sass and Compass - Beginner, Intermediate and Advanced topics</h2>
+    <header class="site-header" role="banner">
+      <nav role="navigation" aria-label="main navigation">
+        <div class="row">
+          <div class="medium-10 small-centered columns">
+            <ul class="site-nav">
+              <li class="site-nav-item"><a class="site-nav-link" href="/">Home</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/beginner">Beginner</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/intermediate">Intermediate</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/advanced">Advanced</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/articles">Articles</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/news">News</a></li>
+              <li class="site-nav-item"><a class="site-nav-link" href="/projects">Projects</a></li>
+            </ul>
+          </div>
         </div>
-      </header>
+      </nav>
+    </header>
 
-      <section role="main">
-        <%= yield %>
-      </section>
-
-      <footer role="footer">
-        <p><%= "Copyright 2010-#{Time.now.year} The Sass Way, All Rights Reserved." %></p>
-      </footer>
-
-      <%= partial 'layouts/podcasts' %>
-      <%= partial 'layouts/footer' %>
+    <div class="site-content" role="main">
+      <%= yield %>
     </div>
-    <%= partial 'layouts/footer_scripts' %>
+
+    <footer class="site-footer reversed">
+      <div class="row">
+        <section class="small-12 large-5 columns">
+          <h3 class="mt1 mb0"><a href="/"><%= image_tag 'thesassway-small.svg', class: "text-middle", alt: "The Sass Way" %></a></h3>
+          <div class="typeset fine-print">
+            <p>
+              <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
+              We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
+              Send us a pull request!
+            </p>
+            <p><a href="/contact">Contact us</a> to send us your Sass news or to suggest new content for us to write about.</p>
+          </div>
+          <ul class="social-icons mb4">
+            <li class="social-icon-item"><a class="social-icon-button" href="http://feeds.feedburner.com/thesassway"><i class="feed-icon x24"></i><span class="sr-only">Atom Feed</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://twitter.com/TheSassWay"><i class="twitter-icon x24"></i><span class="sr-only">Twitter</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://facebook.com/thesassway"><i class="facebook-icon x24"></i><span class="sr-only">Facebook</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" href="http://github.com/thesassway"><i class="github-icon x24"></i><span class="sr-only">GitHub</span></a></li>
+          </ul>
+        </section>
+
+        <section class="small-4 large-2 large-offset-1 columns typeset">
+          <h3 class="h5">Contributors</h3>
+          <ul class="no-bullets">
+            <% for contributor in authors %> 
+              <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
+            <% end %>
+          </ul>
+        </section>
+
+        <section class="small-4 large-2 columns typeset">
+          <h3 class="h5">Categories</h3>
+          <ul class="no-bullets">
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/beginner">Beginner</a></li>
+            <li><a href="/intermediate">Intermediate</a></li>
+            <li><a href="/advanced">Advanced</a></li>
+            <li><a href="/articles">Articles</a></li>
+            <li><a href="/news">News</a></li>
+            <li><a href="/projects">Projects</a></li>
+          </ul>
+        </section>
+
+        <section class="small-4 large-2 columns typeset">
+          <h3 class="h5">Made with</h3>
+          <ul class="no-bullets">
+            <li><a href="https://github.com/thesassway">GitHub</a></li>
+            <li><a href="http://middlemanapp.com">Middleman</a></li>
+            <li><a href="http://heroku.com/">Heroku</a></li>
+            <li><a href="http://sass-lang.com/">Sass</a></li>
+            <li><a href="http://compass-style.org/">Compass</a></li>
+          </ul>
+        </section>
+
+        <section class="large-12 columns typeset fine-print text-center">
+          <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
+          <p>The Sass Way is a <a href="http://riznmedia.com/">Rizn Media</a> production.</p>
+        </section>
+      </div>
+      <%#<div class="row">%>
+        <%#<section class="small-8 medium-4 small-centered columns">%>
+          <%#<%= partial 'layouts/fusion_ads' %>
+        <%#</section>%>
+      <%#</div>%>
+    </footer>
+
+    <%= javascript_include_tag  "all" %>
+    <%= partial 'layouts/javascripts' %>
   </body>
 </html>

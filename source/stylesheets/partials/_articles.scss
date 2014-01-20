@@ -1,0 +1,19 @@
+.article {
+}
+
+.typeset .article-categories {
+  margin: 2em 0;
+  font-size: 18px;
+}
+
+.article-author, .article-comments {
+  margin-top: 3em;
+
+  &::before {
+    content: '';
+    display: block;
+    background: $border-color;
+    height: 1px;
+    margin-bottom: 3em;
+  }
+}

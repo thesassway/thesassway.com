@@ -1,8 +1,10 @@
 ---
 title: The Sass Way
-layout: page
+layout: layout
 ---
 
-<% @page_role = 'homepage' %>
+<div class="hero row">
+  <h1 class="small-centered small-8 medium-6 columns"><%= image_tag "thesassway.svg", class: "site-logo text-middle", alt: "The Sass Way", width: 503, height: 247 %></h1>
+</div>
 
-<%= partial 'layouts/summaries', :locals => { :pages => articles[0..8] } %>
+<%= partial 'layouts/summaries', :locals => { pages: articles[0..8], avatars: true } %>

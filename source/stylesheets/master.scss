@@ -1,0 +1,27 @@
+@import 'partials/base';
+
+// Reset
+@include global-reset;
+
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+}
+
+*, *:before, *:after { @include box-sizing(border-box); }
+
+// Partials
+@import 'partials/typography';
+@import 'partials/icons';
+@import 'partials/grid';
+@import 'partials/layout';
+@import 'partials/avatars';
+@import 'partials/heros';
+@import 'partials/summaries';
+@import 'partials/articles';
+@import 'partials/social-icons';
+@import 'partials/modifiers';
+@import 'partials/fusion-ads';

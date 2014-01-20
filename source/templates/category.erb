@@ -1,20 +1,18 @@
 ---
-layout: page
+layout: layout
 ---
 
-<h1><%= category.name %></h1>
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+    <h1 class="title"><%= category.name %></h1>
+    <h2 class="subtitle"><%= category.subtitle %></h2>
+  </div>
+</div>
 
-<h2><%= category.subtitle %></h2>
-
-<%= category.description %>
-
-<p>If you have questions or suggestions, please <a href="/contact">contact us</a> to let us know!</p>
-
-<section class="page-articles">
-  <% if  category.superset %>
-    <% pages = articles_for(category.superset.split(/\s*,\s*/)) %>
-    <%= partial 'layouts/summaries', :locals => { :pages => pages, :heading => :h3 } %>
-  <% else %>
-    <%= partial 'layouts/summaries', :locals => { :pages => children, :heading => :h3 } %>
-  <% end %>
-</section>
+<% show_avatars = !(%w(news projects).include?(category.slug)) %>
+<% if category.superset %>
+  <% pages = articles_for(category.superset.split(/\s*,\s*/)) %>
+  <%= partial 'layouts/summaries', :locals => { pages: pages, avatars: show_avatars } %>
+<% else %>
+  <%= partial 'layouts/summaries', :locals => { pages: children, avatars: show_avatars } %>
+<% end %>
