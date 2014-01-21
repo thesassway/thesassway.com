@@ -2,7 +2,7 @@
   name: Adam Stacoviak
   slug: adam-stacoviak
   title: Editor in Chief
-  avatar: http://a0.twimg.com/profile_images/1138182773/as-current_reasonably_small.jpeg
+  avatar: /images/authors/adam-stacoviak.jpeg
   website: http://adamstacoviak.com/
   twitter: adamstac
   github: adamstac
@@ -22,7 +22,7 @@
   name: John W. Long
   slug: john-w-long
   title: Managing Editor
-  avatar: http://a0.twimg.com/profile_images/1509219193/john_155.jpg 
+  avatar: /images/authors/john-w-long.jpeg
   website: http://wiseheartdesign.com
   twitter: johnwlong
   github: jlong
@@ -38,7 +38,7 @@
 -
   name: Mario Ricalde
   slug: mario-ricalde
-  avatar: https://si0.twimg.com/profile_images/1477488461/dolce_reasonably_small.jpg
+  avatar: /images/authors/mario-ricalde.jpeg
   twitter: mario_ricalde
   github: MarioRicalde
   bio: >
@@ -60,7 +60,7 @@
 -
   name: Mason Wendell
   slug: mason-wendell
-  avatar: https://pbs.twimg.com/profile_images/378800000151569464/b0fdffabe28ba8f422a164a76c24b91e.png
+  avatar: /images/authors/mason-wendell.png
   website: http://birdsandmonkeys.com
   twitter: canarymason
   bio: > 
@@ -80,7 +80,7 @@
 -
   name: Peter Gasston
   slug: peter-gasston
-  avatar: https://si0.twimg.com/profile_images/391831398/peter_opie_reasonably_small.png
+  avatar: /images/authors/peter-gasston.png
   website: http://www.broken-links.com/
   twitter: stopsatgreen
   bio: >
@@ -101,7 +101,7 @@
 -
   name: Roy Tomeij
   slug: roy-tomeij
-  avatar: https://twimg0-a.akamaihd.net/profile_images/1796230903/roy_square_reasonably_small.jpg
+  avatar: /images/authors/roy-tomeij.jpeg
   website: http://roytomeij.com/
   twitter: roy
   github: roytomeij
@@ -116,7 +116,7 @@
 -
   name: Scott Kellum
   slug: scott-kellum
-  avatar: https://si0.twimg.com/profile_images/378800000041996269/34ec08551531618f71850715c2afdbef.jpeg
+  avatar: /images/authors/scott-kellum.jpeg
   website: http://scottkellum.com/
   twitter: scottkellum
   github: scottkellum
@@ -137,7 +137,7 @@
 -
   name: Hugo Giraudel
   slug: hugo-giraudel
-  avatar: https://pbs.twimg.com/profile_images/378800000638607178/d6b74325fc8156ccc6a3926156e5e1b6.jpeg
+  avatar: /images/authors/hugo-giraudel.jpeg
   website: hugogiraudel
   twitter: hugogiraudel
   github: hugogiraudel
