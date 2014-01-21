@@ -1,52 +1,4 @@
 .site-header {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: '';
-    background: $border-color;
-    height: 1px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-}
-
-.site-nav {
-  list-style: none;
-  display: table;
-  width: 100%;
-}
-.site-nav-item {
-  display: table-cell;
-  text-align: center;
-}
-a.site-nav-link {
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  color: $quiet-color;
-  display: inline-block;
-  font-size: $base-font-size * 0.7;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px;
-  letter-spacing: 1px;
-
-  &:focus, &:hover {
-    border-bottom-color: $link-color;
-    color: $text-color;
-  }
-
-  &:active {
-    color: $link-color;
-    border-bottom-color: $link-color;
-  }
-
-  &.is-selected {
-    color: $link-color;
-    border-bottom-color: $link-color;
-  }
-
 }
 
 .site-logo {
@@ -58,6 +10,6 @@ a.site-nav-link {
 }
 
 .site-footer {
-  background: #36363d;
+  background: $reversed-background-color;
   padding: 4em 0;
 }

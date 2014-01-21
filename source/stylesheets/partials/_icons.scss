@@ -18,10 +18,9 @@
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
 
-  &.x24 {
-    font-size: 24px !important;
-    vertical-align: -15%;
-  }
+  &.x24 { font-size: 24px !important; vertical-align: -15%; }
+  &.x32 { font-size: 32px !important; }
+  &.x48 { font-size: 48px !important; }
 }
 
 .reply-arrow-icon:before { content: "\e061"; }
@@ -79,7 +78,7 @@
 .star-icon:before { content: "\e633"; }
 .star2-icon:before { content: "\e634"; }
 .map-icon:before { content: "\e635"; }
-.list-icon:before { content: "\e636"; }
+.menu-icon:before { content: "\e636"; }
 .checkmark2-icon:before { content: "\e637"; }
 .folder-icon:before { content: "\e638"; }
 .cc-icon:before { content: "\e639"; }
