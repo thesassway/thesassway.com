@@ -1,4 +1,5 @@
 $navigation-color: $quiet-color;
+$navigation-sidebar-width: 330px;
 
 @media #{$small-only} {
   .navigation-button {
@@ -29,7 +30,7 @@ $navigation-color: $quiet-color;
     bottom: 0;
     background-color: $reversed-background-color;
     @include transition(all 400ms ease-in-out);
-    width: 330px;
+    width: $navigation-sidebar-width;
     z-index: 1;
 
     .navigation-button:focus + & { left: 0; }
