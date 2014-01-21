@@ -1,5 +1,5 @@
 $navigation-color: $quiet-color;
-$navigation-sidebar-width: 320px / 0.6;
+$navigation-sidebar-width: 100%;
 
 .navigation-state {
   position: absolute;
@@ -32,7 +32,7 @@ $navigation-sidebar-width: 320px / 0.6;
     position: fixed;
     padding-top: 64px;
     top: 0;
-    right: -$navigation-sidebar-width - 100px;
+    right: -$navigation-sidebar-width - 10%;
     bottom: 0;
     background-color: $reversed-background-color;
     @include transition(all 200ms ease-in-out);
