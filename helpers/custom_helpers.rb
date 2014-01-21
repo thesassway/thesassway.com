@@ -19,8 +19,10 @@ module CustomHelpers
     data.authors.find { |a| name === a.name }
   end
 
-  def authors
-    data.authors
+  def authors(inactive = false)
+    people = data.authors
+    people.reject! { |a| a.inactive } unless inactive
+    people
   end
 
   # Published date for page

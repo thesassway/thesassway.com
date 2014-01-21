@@ -25,7 +25,7 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic,400,700|Source+Sans+Pro:400italic,700italic,400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
 
     <!-- Viewport declarations -->
-    <meta name="viewport" content="width=<%= 320 / 0.6 %>px">
+    <meta name="viewport" content="width=<%= 320 / 0.6 %>">
     <meta name="viewport" content="initial-scale=0.6">
   </head>
   <body>
@@ -74,7 +74,7 @@
           <h3 class="h5">Contributors</h3>
           <ul class="no-bullets">
             <% for contributor in authors %> 
-              <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
+                   <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
             <% end %>
           </ul>
         </section>
