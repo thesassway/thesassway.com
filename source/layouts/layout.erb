@@ -25,13 +25,15 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic,400,700|Source+Sans+Pro:400italic,700italic,400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
 
     <!-- Viewport declarations -->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1">
   </head>
   <body>
 
     <header class="site-header" role="banner">
       <nav class="navigation" role="navigation" aria-label="main navigation">
-        <button type="button" class="navigation-button"><i class="menu-icon x48"></i><span class="sr-only">Menu</span></button>
+        <label class="navigation-button" for="navigation-state"><i class="menu-icon x48"></i><span class="sr-only">Menu</span></label>
+        <input class="navigation-state" type="checkbox" id="navigation-state" />
         <ul class="navigation-menu">
           <li class="navigation-menu-item"><a href="/">Home</a></li>
           <li class="navigation-menu-item"><a href="/beginner">Beginner</a></li>
@@ -113,7 +115,6 @@
       <%#</div>%>
     </footer>
 
-    <%= javascript_include_tag  "all" %>
     <%= partial 'layouts/javascripts' %>
   </body>
 </html>

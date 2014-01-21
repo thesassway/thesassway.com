@@ -1,6 +1,11 @@
 $navigation-color: $quiet-color;
 $navigation-sidebar-width: 330px;
 
+.navigation-state {
+  position: absolute;
+  left: -200px;
+}
+
 @media #{$small-only} {
   .navigation-button {
     @include appearance(none);
@@ -10,9 +15,9 @@ $navigation-sidebar-width: 330px;
     padding: 0;
     padding: 5px;
     position: fixed;
-    left: 2px;
+    right: 2px;
     top: 2px;
-    z-index: 1;
+    z-index: 2;
 
     &:focus {
       color: rgba($text-color, 0.5);
@@ -25,27 +30,32 @@ $navigation-sidebar-width: 330px;
     list-style: none;
     display: block;
     position: fixed;
+    padding-top: 64px;
     top: 0;
-    left: -100%;
+    right: -$navigation-sidebar-width - 100px;
     bottom: 0;
     background-color: $reversed-background-color;
-    @include transition(all 400ms ease-in-out);
+    @include transition(all 200ms ease-in-out);
     width: $navigation-sidebar-width;
     z-index: 1;
 
-    .navigation-button:focus + & { left: 0; }
+    .navigation-state:checked + & { right: 0; }
   }
 
   .navigation-menu-item {
     display: block;
-    border-bottom: 1px solid $reversed-border-color;
+    border-top: 1px solid $reversed-border-color;
+    &:last-child { border-bottom: 1px solid $reversed-border-color; }
   }
+
   .navigation-menu-item > a {
     display: block;
     color: $reversed-link-color;
     font-size: 22px;
     padding: 20px 30px;
     text-decoration: none;
+
+    &:hover { background-color: $reversed-border-color; }
   }
 }
 

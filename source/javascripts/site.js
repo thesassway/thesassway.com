@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
   // Open external links in a new window
   hostname = window.location.hostname
