@@ -4,6 +4,9 @@
 
 // Display
 .is-hidden { display: none !important; }
+@media #{$small-only}  { .small-hidden  { display: none !important; } }
+@media #{$medium-only} { .medium-hidden { display: none !important; } }
+@media #{$large-only}  { .large-hidden  { display: none !important; } }
 
 // Screen reader only
 .sr-only {
