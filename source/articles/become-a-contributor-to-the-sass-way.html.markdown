@@ -15,8 +15,17 @@ Today, I'd like to announce that we've put the [source code](http://github.com/t
 
 Our vision for The Sass Way is to be the premiere source of articles, tutorials, and news about Sass. We want to make it easy for folks to get up and running with the language we have come to know and love. Sass has changed our lives for the better and we want to tell the world about it.
 
-But we can't do this without you! We need your help! Starting today we are accepting new article submissions from anyone in the Sass community via GitHub. Just fork [the project](http://github.com/thesassway/thesassway.com), write your article in [Markdown](http://daringfireball.net/projects/markdown/), and submit a [pull request](https://help.github.com/articles/fork-a-repo). Oh, and be sure you've read our [contributor guidelines](https://github.com/thesassway/thesassway.com/blob/master/CONTRIBUTING.md).
+But we can't do this without you! We need your help! Starting today we are accepting new article and news submissions from anyone in the Sass community via GitHub.
+
+## How to contribute
+
+1. Fork the project on Github: [http://github.com/thesassway/thesassway.com](http://github.com/thesassway/thesassway.com)
+2. Write your article in [Markdown](http://daringfireball.net/projects/markdown/)
+3. Send us a [pull request](https://help.github.com/articles/fork-a-repo).
+
+Oh, and be sure you've read our [contributor guidelines](https://github.com/thesassway/thesassway.com/blob/master/CONTRIBUTING.md)!
 
 See something amiss on the site? File an issue on the [issue tracker](https://github.com/thesassway/thesassway.com/issues). Want to fix it yourself? Send us a pull request.
 
 So what are you waiting for? Let's make The Sass Way awesome!
+
