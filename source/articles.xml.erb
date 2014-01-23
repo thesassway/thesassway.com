@@ -14,8 +14,11 @@ layout: false
       <title type="html"><![CDATA[<%= title(article) %>]]></title>
       <link href="http://thesassway.com/<%= article.url %>" rel="alternate" type="text/html"></link>
       <id><%= atom_id(article) %></id>
+      <author><name><%= author(article).name %></name></author>
       <content type="html">
-        <![CDATA[<%= absolute_urls(article.render(layout: false)) %>]]>
+        <![CDATA[
+<%= absolute_urls(article.render(layout: false)) %>
+        ]]>
       </content>
       <published><%= published_date(article).xmlschema %></published>
       <updated><%= published_date(article).xmlschema %></updated>
