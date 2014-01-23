@@ -2,20 +2,20 @@
 layout: false
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns='http://www.w3.org/2005/Atom'>
-  <title type='text'>The Sass Way</title>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">The Sass Way</title>
   <subtitle type="text">The latest in Sass and Compass - Beginner, Intermediate and Advanced topics</subtitle>
-  <generator uri='http://middlemanapp.com'>Middleman</generator>
+  <generator uri="http://middlemanapp.com">Middleman</generator>
   <id>tag:thesassway.com,2009:/</id>
   <link href="http://thesassway.com" rel="alternate"></link>
   <% if articles.first %><updated><%= published_date(articles.first).xmlschema %></updated><% end %>
   <% for article in articles[0..25] %>
     <entry>
-      <title><%= title(article) %></title>
+      <title type="html"><![CDATA[<%= title(article) %>]]></title>
       <link href="http://thesassway.com/<%= article.url %>" rel="alternate" type="text/html"></link>
       <id><%= atom_id(article) %></id>
-      <content type='html'>
-<%= absolute_urls(article.render(layout: false)) %>
+      <content type="html">
+        <![CDATA[<%= absolute_urls(article.render(layout: false)) %>]]>
       </content>
       <published><%= published_date(article).xmlschema %></published>
       <updated><%= published_date(article).xmlschema %></updated>
