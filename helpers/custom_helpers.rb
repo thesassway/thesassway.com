@@ -32,7 +32,7 @@ module CustomHelpers
 
   def published?(page = current_page)
     date = published_date(page)
-    date < Date.today if date
+    date <= Date.today if date
   end
 
   def draft?(page = current_page)
