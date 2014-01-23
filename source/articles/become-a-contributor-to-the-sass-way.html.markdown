@@ -17,6 +17,7 @@ Our vision for The Sass Way is to be the premiere source of articles, tutorials,
 
 But we can't do this without you! We need your help! Starting today we are accepting new article and news submissions from anyone in the Sass community via GitHub.
 
+
 ## How to contribute
 
 1. Fork the project on Github: [http://github.com/thesassway/thesassway.com](http://github.com/thesassway/thesassway.com)
@@ -25,7 +26,17 @@ But we can't do this without you! We need your help! Starting today we are accep
 
 Oh, and be sure you've read our [contributor guidelines](https://github.com/thesassway/thesassway.com/blob/master/CONTRIBUTING.md)!
 
-See something amiss on the site? File an issue on the [issue tracker](https://github.com/thesassway/thesassway.com/issues). Want to fix it yourself? Send us a pull request.
+
+## GitHub issue tracker
+
+We've also setup an issue tracker on our GitHub project. If you come across something on the site that needs to be fixed, [file an issue there](https://github.com/thesassway/thesassway.com/issues). Want to fix it yourself? Send us a pull request.
+
+We'll also be using the issue tracker for Twitter submissions. You heard that right. If you'd like to suggest that we Tweet about an article that you've written on your own site or a bit of Sass news, file an issue with the suggested tweet text. If we like it, we'll tweet about it from our [@TheSassWay](http://twitter.com/thesassway) Twitter handle.
+
+
+## Let's kick some Sass!
+
+The Sass Way wouldn't be what it is today without the input of so many people from the Sass community. Hopefully our new open publishing model will make it even easier for folks to contribute. Let us know what you think.
 
 So what are you waiting for? Let's make The Sass Way awesome!
 
