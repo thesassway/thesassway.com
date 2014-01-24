@@ -87,6 +87,7 @@ set :images_dir, 'images'
 
 # Directory indexes
 activate :directory_indexes
+set :trailing_slash, false
 
 # Build-specific configuration
 configure :build do
