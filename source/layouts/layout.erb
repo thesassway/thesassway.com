@@ -58,9 +58,9 @@
             <p>
               <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
               We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
-              Send us a pull request!
+              <a href="https://github.com/thesassway/thesassway.com/blob/master/CONTRIBUTING.md">Read our contributor guidelines</a> and send us a pull request!
             </p>
-            <p><a href="/contact">Contact us</a> to send us your Sass news or to suggest new content for us to write about.</p>
+            <p><a href="https://github.com/thesassway/thesassway.com/issues">Submit an issue</a> to get in touch about your Sass news or to suggest new content for us to write about.</p>
           </div>
           <ul class="social-icons mb4">
             <li class="social-icon-item"><a class="social-icon-button" href="http://feeds.feedburner.com/thesassway"><i class="feed-icon x24"></i><span class="sr-only">Atom Feed</span></a></li>
@@ -73,7 +73,7 @@
         <section class="small-4 large-2 large-offset-1 columns typeset">
           <h3 class="h5">Contributors</h3>
           <ul class="no-bullets">
-            <% for contributor in authors %> 
+            <% for contributor in authors %>
                    <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
             <% end %>
           </ul>
@@ -105,7 +105,7 @@
 
         <section class="large-12 columns typeset fine-print text-center">
           <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
-          <p>The Sass Way is a <a href="http://riznmedia.com/">Rizn Media</a> production.</p>
+          <p>A <a href="http://riznmedia.com/">RIZN Media</a> production&nbsp;&nbsp;&middot;&nbsp;&nbsp;In association with <a href="http://thechangelog.com/">The Changelog</a>.</p>
         </section>
       </div>
       <%#<div class="row">%>
