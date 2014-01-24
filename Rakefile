@@ -10,5 +10,5 @@ end
 task :s => :server
 
 task :default do
-  sh "rake -T"
+  system "rake -T"
 end
