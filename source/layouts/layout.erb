@@ -16,7 +16,12 @@
     <%= stylesheet_link_tag "master" %>
 
     <!-- Favicon -->
-    <link href="/sass-icon.ico" rel="shortcut icon">
+    <link href="/favicon.ico" rel="shortcut icon">
+
+    <!-- Apple Touch Icons -->
+    <% [57, 72, 114, 144].each do |icon| %>
+      <link href="/apple-touch-icon-<%= icon %>x<%= icon %>.png" rel="apple-touch-icon" sizes="<%= icon %>x<%= icon %>" type="image/png" />
+    <% end %>
 
     <!-- Atom feed -->
     <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
