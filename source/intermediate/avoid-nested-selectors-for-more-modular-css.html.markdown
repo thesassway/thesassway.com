@@ -1,6 +1,6 @@
 ---
 date: 2013-05-24
-categories: intermediate, guides
+categories: modular-css, intermediate, guides
 author: John W. Long
 summary: We've written before about the dangers of nesting your CSS selectors too deeply. The Inception Rule is a good one for getting you to avoid some mangled CSS selectors. But there's actually a lot of benefit to taking this concept a couple of steps farther. What happens when you avoid nesting for almost all of your major selectors?
 ---

@@ -1,6 +1,6 @@
 ---
 date: 31 August 2013
-categories: advanced, guides
+categories: modular-css, advanced, guides
 author: John W. Long
 summary: The more you write your own stylesheets, the more you begin to value using good names in your code. Naming is by far one the most difficult and debated activities of a developer. To many, naming is an art form.
 ---

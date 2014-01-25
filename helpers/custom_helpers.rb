@@ -68,21 +68,27 @@ module CustomHelpers
   end
 
   def content_directories
-    categories.select { |c| !c.superset }.map(&:slug)
+    categories.select { |c| c.directory }.map(&:slug)
   end
 
   def articles(drafts = false)
-    articles_for(content_directories, drafts)
-  end
-
-  def articles_for(categories, drafts = false)
-    categories = [*categories]
     pages = []
-    for category in categories
+    for category in content_directories
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)
     end
     sort_by_date(pages).reverse
+  end
+
+  def articles_for(categories, drafts = false)
+    categories = [*categories]
+    pages = articles(drafts).select do |article|
+      if string = meta(article).categories
+        slugs = string.strip.split(/\s*,\s*/)
+        slugs && slugs.any? { |s| categories.include? s }
+      end
+    end
+    pages
   end
 
   def parse_date(date)
