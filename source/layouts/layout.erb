@@ -70,18 +70,18 @@
           </ul>
         </section>
 
-        <section class="small-5 small-offset-1 medium-3 large-2 large-offset-1 columns typeset">
-          <h3 class="h5">Contributors</h3>
-          <ul class="no-bullets">
+        <section class="small-5 small-offset-1 medium-3 large-2 large-offset-1 columns">
+          <h3 class="h6 mt2 mb1">Contributors</h3>
+          <ul class="link-list">
             <% for contributor in authors %>
-                   <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
+             <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
             <% end %>
           </ul>
         </section>
 
-        <section class="small-5 medium-3 large-2 columns typeset">
-          <h3 class="h5">Categories</h3>
-          <ul class="no-bullets">
+        <section class="small-5 medium-3 large-2 columns">
+          <h3 class="h6 mt2 mb1">Categories</h3>
+          <ul class="link-list">
             <li><a href="/guides">Guides</a></li>
             <li><a href="/beginner">Beginner</a></li>
             <li><a href="/intermediate">Intermediate</a></li>
@@ -92,9 +92,9 @@
           </ul>
         </section>
 
-        <section class="small-hidden medium-3 large-2 large-offset-0 columns typeset">
-          <h3 class="h5">Made with</h3>
-          <ul class="no-bullets">
+        <section class="small-hidden medium-3 large-2 large-offset-0 columns">
+          <h3 class="h6 mt2 mb1">Made with</h3>
+          <ul class="link-list">
             <li><a href="https://github.com/thesassway">GitHub</a></li>
             <li><a href="http://middlemanapp.com">Middleman</a></li>
             <li><a href="http://heroku.com/">Heroku</a></li>
@@ -103,7 +103,7 @@
           </ul>
         </section>
 
-        <section class="small-10 small-offset-1 large-12 columns typeset fine-print text-center">
+        <section class="small-10 small-offset-1 large-12 large-offset-0 columns typeset fine-print text-center">
           <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
           <p>A <a href="http://riznmedia.com/">RIZN Media</a> production&nbsp;&nbsp;&middot;&nbsp;&nbsp;In association with <a href="http://thechangelog.com/">The Changelog</a>.</p>
         </section>

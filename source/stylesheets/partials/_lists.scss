@@ -1,0 +1,22 @@
+.link-list {
+  color: $text-color;
+
+  a {
+    color: $link-color;
+    display: block;
+    font-size: 16px;
+    padding: 2px 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: underline;
+    }
+  }
+
+  .reversed & {
+    color: $reversed-text-color;
+    a { color: $reversed-text-color; }
+    a:hover { color: $reversed-link-hover-color; }
+  }
+}
