@@ -1,1 +1,3 @@
-//= require_tree .
+//=require ./vendor/jquery
+//=require_tree ./vendor
+//=require_tree .
