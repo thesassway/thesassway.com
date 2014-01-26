@@ -2,23 +2,25 @@
 date: 26 Jan 2014
 categories: beginner, guides
 author: Frank S
-summary: Learn how to keep variable names organized and modular.
+summary: Sass makes it easy to reuse common values with variables. But if you are not careful your variable names can spiral out of control. Frank S debuts his first article on The Sass Way with some helpful advice on naming your variables.
 ---
 
-# Variable Naming
+# Choosing great variable names
 
-Variables in Sass is a very powerful way to define values that get used in multiple places
-in your project. They allow you to make quick and easy changes from a central point without
-having to do cumbersome find and replace substitutions across multiple files and directories.
+Variables in Sass are a powerful way to define values in one place that can be reused in
+multiple places in your project. They allow you to make changes from a central point
+without needing to use find and replace across multiple files and directories.
 
-But... **Naming Things is Hard!**
+But... **Naming things is hard!**
 
-It is very easy for variable names to spiral out of control, and before you know it the benefit is lost
-because those variables are hard to recall and end up causing more frustration than benefit.
+If you're not careful, it's very easy for variable names to spiral out of control. Before
+you know it the benefit is lost because those variables are hard to recall and end up
+causing more frustration than benefit.
 
 However, by following some simple guidelines you can maintain control... and your sanity!
 
-## Function Over Description
+
+## Use semantic variable names
 
 Imagine for a moment that you client's primary brand color is red and you called that
 variable `$red`. Six months go by and the marketing department decides to re-brand the company
@@ -27,30 +29,34 @@ and the primary brand color is now blue.
 Changing the value of `$red` is easy enough, but the variable has no description of its
 intended purpose.
 
-Instead of describing what a variable looks like, describe its function.
+Instead of describing what a variable looks like in the name, describe its function or
+purpose. In other words, try to choose semantic names for your variables.
 
     :::scss
     // Bad
     $red: red;
     $yellow: yellow;
 
-    // Good
-    $brand: red;
-    $accent: yellow;
+    // Better
+    $brand-color: red;
+    $accent-color: yellow;
 
-## Be Specific
 
-I like to name my variables by arranging descriptive words from generic to specific.
+## Adopt useful conventions
 
-The real benefit of specificity is the grouping of variables that share commonality, and
-this makes them easier to read and recall.
+It's important to come up with some good conventions for naming your variables so that they
+are easy to remember.
+
+For example, you can postfix color names with `-color`:
 
     :::scss
     // Base colors
-    $color-base: #333;
-    $color-brand: red;
-    $color-brand-80: rgba($color-brand, 0.8);
-    $color-accent: yellow;
+    $base-color: #333;
+    $brand-color: red;
+    $brand-80-color: rgba($color-brand, 0.8);
+    $accent-color: yellow;
+
+Or, add a prefix like `header-` or `footer-` for specific sections:
 
     // Header
     $header-height: 100px;
@@ -58,15 +64,14 @@ this makes them easier to read and recall.
 
     // Footer
     $footer-height: 200px;
-    $footer-background-color: #AAA;
+    $footer-background-color: #aaa;
 
-## Keep a Centralized Config
 
-*This is more an organizational tip than a naming tip.*
+## Keep a centralized config
 
-I like to keep all my variables in a single file, called `_config.sass`, that I include in my primary stylesheet using the `@import` directive.
-
-Every other file that gets included after my config file will have access to those variables.
+I like to keep all my variables in a single file, called `_config.scss`, that I include in
+my primary stylesheet using the `@import` directive. This way, every other file that gets
+included after my config file will have access to those variables.
 
     :::scss
     @import base/config;
@@ -75,9 +80,9 @@ Every other file that gets included after my config file will have access to tho
 
     @import modules/button;
 
+
 ## Conclusion
 
-There are many opinions on how to name things in software, but what is truly important
-is that you find a convention that works for you and your team and that it will ensure easy
-extension and updating of your project's stylesheets.
-
+There are probably a lot of opinions on how to name things in Sass, but what's really important
+is that you find conventions that work for you and your team. Choosing good variable names will
+make it much easier to maintain your project's stylesheets.
