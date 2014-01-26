@@ -53,6 +53,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.abbreviation {
+  border-bottom: 1px dotted rgba(mix(white, $text-color), 0.5);
+}
+
 .typeset {
   color: $text-color;
 
@@ -76,6 +80,8 @@
 
   code, pre { @extend .fixed; }
   code { color: #b06; }
+
+  abbr[title] { @extend .abbreviation; }
 
   pre {
     @include border-radius(1em);
