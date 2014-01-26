@@ -2,7 +2,7 @@
 date: 26 Jan 2014
 categories: beginner, guides
 author: Frank S
-summary: Sass makes it easy to reuse common values with variables. But if you are not careful your variable names can spiral out of control. Frank S debuts his first article on The Sass Way with some helpful advice on naming your variables.
+summary: Sass makes it easy to reuse common values with variables. But if you're not careful your variable names can spiral out of control. Frank S debuts his first article on *The Sass Way* with some helpful advice on naming your variables.
 ---
 
 # Choosing great variable names
