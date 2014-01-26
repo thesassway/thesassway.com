@@ -2,7 +2,7 @@
 date: 26 Jan 2014
 categories: beginner, guides
 author: Frank S
-summary: Learn how to keeping variable names organized and modular.
+summary: Learn how to keep variable names organized and modular.
 ---
 
 # Variable Naming
