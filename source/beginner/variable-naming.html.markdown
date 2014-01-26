@@ -78,6 +78,6 @@ Every other file that gets included after my config file will have access to tho
 ## Conclusion
 
 There are many opinions on how to name things in software, but what is truly important
-is that you find a convention that works for you and your team and that will ensure easy
-extension and updating of your project.
+is that you find a convention that works for you and your team and that it will ensure easy
+extension and updating of your project's stylesheets.
 
