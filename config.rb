@@ -32,7 +32,7 @@ ignore "templates/*"
 # end
 
 with_layout :article do
-  categories = %w(beginner intermediate advanced articles news projects)
+  categories = data.categories.map(&:slug)
   for category in categories
     page "/#{category}/*"
   end
