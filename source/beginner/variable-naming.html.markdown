@@ -58,6 +58,7 @@ For example, you can postfix color names with `-color`:
 
 Or, add a prefix like `header-` or `footer-` for specific sections:
 
+    :::scss
     // Header
     $header-height: 100px;
     $header-background-color: $color-brand;
