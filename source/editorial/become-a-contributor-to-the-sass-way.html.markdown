@@ -3,6 +3,7 @@ date: January 22, 2014
 categories: articles
 author: John W. Long
 summary: The source of TheSassWay.com is now on GitHub and we are accepting pull requests for news, articles, and bug fixes! Here's your chance to become a contributor!
+categories: editorial
 ---
 
 # Here's your chance to become a contributor to The Sass Way!

@@ -27,9 +27,9 @@
     <p>Our advanced guides and tutorials have been written for those who are or aim to be extreme Sass and Compass experts. In these guides and tutorials, we will talk about the most advanced features and usages of Sass and Compass, how to create mixins, "frameworks", extensions and more.</p>
   directory: true
 -
-  name: Articles
-  slug: articles
-  subtitle: Articles on Sass and Compass
+  name: Editorial 
+  slug: editorial
+  subtitle: Opinionated articles on Sass and Compass
   description: >
     <p>Our Articles editorial section is where we will post more subjective, opinionated content. Expect us to ruffle feathers, state opinions, "rebound" someone else's blog post, and everything in between.</p>
   directory: true
