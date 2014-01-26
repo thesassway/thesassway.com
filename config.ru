@@ -36,6 +36,9 @@ use Rack::Rewrite do
 
   # Mario Ricalde
   r301 '/mario-kuroir-ricalde', '/mario-ricalde'
+
+  # Articles -> Editorial
+  r301 %r{^/articles(.*)$}, '/editorial$1'
 end
 
 run Middleman.server
