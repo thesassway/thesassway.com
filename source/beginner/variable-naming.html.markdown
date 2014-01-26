@@ -11,10 +11,10 @@ Variables in Sass are a powerful way to define values in one place that can be r
 multiple places in your project. They allow you to make changes from a central point
 without needing to use find and replace across multiple files and directories.
 
-But... **Naming things is hard!**
+But choosing good names can be hard!
 
 If you're not careful, it's very easy for variable names to spiral out of control. Before
-you know it the benefit is lost because those variables are hard to recall and end up
+you know it the benefit is lost because variable names are hard to recall and end up
 causing more frustration than benefit.
 
 However, by following some simple guidelines you can maintain control... and your sanity!
