@@ -88,13 +88,9 @@
         <section class="small-5 medium-3 large-2 columns">
           <h3 class="h6 mt2 mb1">Categories</h3>
           <ul class="link-list mb4">
-            <li><a href="/guides">Guides</a></li>
-            <li><a href="/beginner">Beginner</a></li>
-            <li><a href="/intermediate">Intermediate</a></li>
-            <li><a href="/advanced">Advanced</a></li>
-            <li><a href="/articles">Articles</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/projects">Projects</a></li>
+            <% for category in categories %>
+              <li><a href="/<%= category.slug %>"><%= category.short_name %></a></li>
+            <% end %>
           </ul>
         </section>
 

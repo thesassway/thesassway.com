@@ -1,5 +1,6 @@
 -
   name: Guides and Tutorials
+  short_name: Guides
   slug: guides
   subtitle: Sass and Compass Guides & Tutorials
   description: >
@@ -7,6 +8,7 @@
   superset: beginner, intermediate, advanced
 -
   name: Beginner
+  short_name: Beginner
   slug: beginner
   subtitle: Beginner Guides & Tutorials on Sass and Compass
   description: >
@@ -14,6 +16,7 @@
   directory: true
 -
   name: Intermediate
+  short_name: Intermediate
   slug: intermediate
   subtitle: Intermediate Guides & Tutorials on Sass and Compass
   description: >
@@ -21,6 +24,7 @@
   directory: true
 -
   name: Advanced
+  short_name: Advanced
   slug: advanced
   subtitle: Advanced Guides & Tutorials on Sass and Compass
   description: >
@@ -28,6 +32,7 @@
   directory: true
 -
   name: Editorial 
+  short_name: Editorial 
   slug: editorial
   subtitle: Opinionated articles on Sass and Compass
   description: >
@@ -35,6 +40,7 @@
   directory: true
 -
   name: News
+  short_name: News
   slug: news
   subtitle: News, Tweets, and events about Sass and Compass
   description: >
@@ -42,6 +48,7 @@
   directory: true
 -
   name: Projects
+  short_name: Projects
   slug: projects
   subtitle: Featured Sass and Compass Projects
   description: >
@@ -49,6 +56,7 @@
   directory: true
 -
   name: Modular CSS
+  short_name: Modular CSS
   slug: modular-css
   subtitle: Applying Modular CSS with Sass
   description: >
