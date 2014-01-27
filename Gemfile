@@ -16,9 +16,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw] # Faster file watcher upda
 
 # Sass and Compass
 gem 'compass'
-gem 'grid-coordinates'
-gem 'animate-sass'
-gem 'font-stacks'
 
 # Code highlighting
 gem "pygments.rb"
@@ -29,6 +26,5 @@ gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter
 gem 'puma'
 
 group :development do
-  gem 'shotgun'
   gem 'foreman'
 end
