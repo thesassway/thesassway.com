@@ -120,4 +120,8 @@ module CustomHelpers
     text
   end
 
+  def markdown(string)
+    Kramdown::Document.new(string, input: 'kramdown', remove_block_html_tags: false).to_html
+  end
+
 end
