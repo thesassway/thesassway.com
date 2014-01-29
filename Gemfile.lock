@@ -12,8 +12,6 @@ GEM
     activesupport (3.2.16)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    animate-sass (0.1.1)
-      compass (>= 0.11.5)
     blankslate (3.1.2)
     chunky_png (1.2.8)
     coffee-script (2.2.0)
@@ -32,14 +30,10 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.6.0)
-    font-stacks (0.1.4)
-      compass (>= 0.11.5)
     foreman (0.63.0)
       dotenv (>= 0.7)
       thor (>= 0.13.6)
     fssm (0.2.10)
-    grid-coordinates (1.2.0)
-      compass (>= 0.11.5)
     haml (3.1.8)
     hike (1.2.3)
     http_parser.rb (0.5.3)
@@ -128,11 +122,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  animate-sass
   compass
-  font-stacks
   foreman
-  grid-coordinates
   middleman (~> 3.2.1)
   middleman-livereload (~> 3.1.0)
   puma
