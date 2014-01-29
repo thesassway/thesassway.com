@@ -5,7 +5,7 @@ author: John W. Long
 summary: Learn how to use Sass color functions to calculate backwards compatible colors for browsers that don't support alpha transparency and wrap up this functionality in a couple of handy mixins.
 ---
 
-# Mixins for Semi-Transparent Colors
+# Mixins for semi-transparent colors
 
 One of the things I love most about Sass is its ability to calculate colors based on other colors. I often use functions like <code>darken()</code>, <code>saturate()</code>, and <code>adjust-color()</code> to calculate highlight colors or shadows for things like buttons.
 

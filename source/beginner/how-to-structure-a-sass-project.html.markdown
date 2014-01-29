@@ -6,7 +6,6 @@ summary: One of the coolest features of crafting CSS with Sass is that you can b
 about_author: john_w_long
 ---
 
-
 # How to structure a Sass project
 
 One of the most useful features of Sass is being able to separate your stylesheets into separate files. You can then use the `@import` directive to include the source of your individual files into one master stylesheet.

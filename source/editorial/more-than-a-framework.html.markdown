@@ -6,7 +6,7 @@ summary: Sass is the perfect foundation for frameworking. With all the power in 
 categories: editorial
 ---
 
-# More than a Framework
+# More than a framework
 
 The potential of Sass can be seen in small code examples using variables, mixins, and other features but it shines when all these parts start working together. Where CSS frameworks fail, Sass creates openings that allow for agile code to adapt to every users needs. With this power comes responsibility and bloat in the compiled CSS easily creep up. However well considered Sass can provide a foundation above and beyond anything else.
 

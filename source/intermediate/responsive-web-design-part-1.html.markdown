@@ -5,7 +5,7 @@ author: Mason Wendell
 summary: Responsive Web Design is the new wave, right? In this two part series we'll explore the principles, and talk about how Sass can help. In part one we dive into how Sass can help with the calculations behind fluid layouts and images.
 ---
 
-# Responsive Web Design in Sass Part 1: Fluid Layouts and Fluid Images
+# Responsive Web Design in Sass Part 1: Fluid layouts and fluid images
 
 No doubt you've at least heard the term "Responsive Web Design". Since Ethan Marcotte's [article](http://www.alistapart.com/articles/responsive-web-design/) and [book](http://www.abookapart.com/products/responsive-web-design) came out over the last year or so it's been the hot topic among web folk, and rightly so. The solutions Ethan puts forth gracefully solve a number of problems we've been limping along with.
 

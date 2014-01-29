@@ -5,7 +5,7 @@ author: Adam Stacoviak
 summary: ...
 ---
 
-# Compass Setup and Configuration
+# Compass setup and configuration
 
 If you've read Getting [Started with Sass and Compass](http://localhost:9393/beginner/getting-started-with-sass-and-compass), you're ready to dive into the Compass configuration file to see how we can fine tune things to our needs and liking.
 

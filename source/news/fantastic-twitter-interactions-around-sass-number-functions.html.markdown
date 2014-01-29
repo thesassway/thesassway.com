@@ -5,7 +5,7 @@ author: Adam Stacoviak
 summary: Twitter responses like this are awesome! We appreciate your responses and interactions with us on Twitter. Please keep it up. :)
 ---
 
-# Fantastic Twitter Interactions around Sass Number Functions
+# Fantastic twitter interactions around Sass number functions
 
 Twitter responses like this are awesome! We appreciate your responses and interactions with us on Twitter. Please keep it up. :)
 

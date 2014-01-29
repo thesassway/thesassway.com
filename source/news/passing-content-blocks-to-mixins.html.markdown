@@ -5,7 +5,7 @@ author: Adam Stacoviak
 summary: For the Sass Veterans out there, I can imagine a big'ol smile appeared on your face when you read that headline. If you know the power of mixins, then you can imagine being able to pass a block of Sass to a mixin and watch the magic happen. We're going to look at the history of this feature and a few examples of how it can be used.
 ---
 
-# New Sass Feature: Passing content blocks to mixins
+# New Sass feature: Passing content blocks to mixins
 
 For the Sass veterans out there, I can just imagine a big'ol smile appeared on your face when you read that headline. If you know the power of mixins, then you can imagine being able to pass a block of Sass to a mixin and watch the magic happen. We're going to look at the history of this feature and a few examples of how it can be used.
 
