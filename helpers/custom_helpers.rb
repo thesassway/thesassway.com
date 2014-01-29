@@ -122,7 +122,7 @@ module CustomHelpers
     text
   end
 
-  def markdown(string, block = false)
+  def render_markdown(string, block = false)
     html = Kramdown::Document.new(string, input: 'kramdown', remove_block_html_tags: false).to_html
     if block
       html
