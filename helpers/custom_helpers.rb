@@ -1,3 +1,5 @@
+require 'rexml/document'
+
 module CustomHelpers
 
   # Grab the page title from the first H1 if not provided in frontmatter
@@ -120,8 +122,14 @@ module CustomHelpers
     text
   end
 
-  def markdown(string)
-    Kramdown::Document.new(string, input: 'kramdown', remove_block_html_tags: false).to_html
+  def markdown(string, block = false)
+    html = Kramdown::Document.new(string, input: 'kramdown', remove_block_html_tags: false).to_html
+    if block
+      html
+    else
+      doc = REXML::Document.new(html)
+      doc.root.children.join
+    end
   end
 
 end
