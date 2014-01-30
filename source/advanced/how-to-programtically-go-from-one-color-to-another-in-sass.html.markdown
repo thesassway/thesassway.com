@@ -1,5 +1,5 @@
 ---
-date: 29 January 2014
+date: 30 January 2014
 categories: advanced, guides
 author: Hugo Giraudel
 summary: Have you ever wanted to know how to programmatically jump from one color to another? In this article, I'll show you how to find the color operations that are required to go from the color to another. To do this, we'll use a couple of Sass 3.3 features, including maps and the handy `call` function.
@@ -147,4 +147,4 @@ What do you think of all this? Have you found interesting ways to morph and use 
 
 I hope you've enjoyed this experiment! If you'd like to play with the code in this project, check out [this Sassmeister gist](http://sassmeister.com/gist/8668994). Cheers!
 
-On a side note, Brandon Mathis has worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for disecting your own color schemes.
+On a side note, Brandon Mathis has also worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for disecting your own color schemes.
