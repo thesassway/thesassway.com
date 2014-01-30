@@ -38,7 +38,7 @@ To calculate the difference between two colors we need determine the differences
     $saturation: saturation($color-a) - saturation($color-b);
     $lightness: lightness($color-a) - lightness($color-b);
 
-As you can see, it is very easy to derive the differences between two colors in Sass. Now with these differences in hand we need to determine which functions we need to caclulate `$color-b` from `$color-a`.
+As you can see, it is very easy to derive the differences between two colors in Sass. Now with these differences in hand we need to determine which functions we need to calculate `$color-b` from `$color-a`.
 
     :::scss
     // Hue is easy, adjust-hue takes negative and positive params:
@@ -65,7 +65,7 @@ To wrap up our `color-diff()` function we'll return a map of functions and value
       @return (
         #{$function-hue}: -($hue),
         #{$function-saturation}: abs($saturation),
-        #{$function-lightness}: ($lightness),
+        #{$function-lightness}: abs($lightness),
       );
     }
 
