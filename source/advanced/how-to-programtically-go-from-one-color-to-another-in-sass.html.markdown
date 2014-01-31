@@ -11,14 +11,14 @@ At work, we have four major sections on our site: *Shopping*, *News*, *Associati
 
 Each color scheme is made up of a few secondary colors that are based on the key color. The secondary colors are generally simple variations on the key color. One is a little lighter, another has less saturation, another a slightly different hue... You get the idea.
 
-Now Sass allows us to use tools like `lighten()` and `adjust-hue()` to programatically generate the secondary colors that we need, but often the differences between the key color and the secondary colors are not simple transformations.
+Now Sass allows us to use tools like `lighten()` and `adjust-hue()` to programmatically generate the secondary colors that we need, but often the differences between the key color and the secondary colors are not simple transformations.
 
 This got me thinking! What if we could calculate the mathematical relationship between two colors and use that calculation to generate colors of other themes?
 
 
 ## Understanding colors
 
-Before we go too far, perhaps it would be a good idea to review how colors actually work in CSS. I've got a older article on my own website that gives a good overview of [Colors in CSS](http://hugogiraudel.com/2012/11/27/css-colors/). Go on. Have a look! I can wait.
+Before we go too far, perhaps it would be a good idea to review how colors actually work in CSS. I've got an older article on my own website that gives a good overview of [Colors in CSS](http://hugogiraudel.com/2012/11/27/css-colors/). Go on. Have a look! I can wait.
 
 Okay, ready now? So you've probably figured out that colors can be written using an HSL representation. HSL stands for *Hue Saturation Lightness*, the three main components of a color. According to Wikipedia:
 
@@ -120,7 +120,7 @@ Victory! It works like a charm.
 
 ## Back to our case
 
-Now getting back to my original use case. I wanted to see if there was a way to consistently caculate the secondary colors for each theme with one caclulation.
+Now getting back to my original use case. I wanted to see if there was a way to consistently calculate the secondary colors for each theme with one calculation.
 
 Using the `color-diff()` function I can now see if there is a consistent mathematical relationship between the primary and secondary colors in each theme.
 
@@ -141,10 +141,10 @@ Darn it! Since each color diff produces different results, I can't actually use 
 
 ## Final thoughts
 
-Even though I couldn't use the `color-diff()` function in my project, I still found the whole excercise quite valuable. After all, I got a great blog post out of this! It's also been interesting to study how you can morph one color into another one.
+Even though I couldn't use the `color-diff()` function in my project, I still found the whole exercise quite valuable. After all, I got a great blog post out of this! It's also been interesting to study how you can morph one color into another one.
 
 What do you think of all this? Have you found interesting ways to morph and use color in your own projects?
 
 I hope you've enjoyed this experiment! If you'd like to play with the code in this project, check out [this Sassmeister gist](http://sassmeister.com/gist/8668994). Cheers!
 
-On a side note, Brandon Mathis has also worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for disecting your own color schemes.
+On a side note, Brandon Mathis has also worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for dissecting your own color schemes.
