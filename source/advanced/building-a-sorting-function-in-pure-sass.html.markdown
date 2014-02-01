@@ -2,7 +2,7 @@
 date: 1 February 2014
 categories: advanced
 author: Hugo Giraudel
-summary: Hugo takes a page from his SassyLists playbook and teaches us how to build a string sorting function in pure Sass.
+summary: Until recently it was actually impossible to build a sorting function for strings and other types in Sass, but with the recent release of Sass 3.3 we now have have the features we need to do just that.
 ---
 
 # Building a sorting function in pure Sass
@@ -117,6 +117,6 @@ Now let's test it:
 Hurray! It works like a charm.
 
 
-# Learning more
+## Learning more
 
 My first attempts to create a sorting function in Sass used a much slower algorithm. But thanks to some prompting by [Sam Richards](http://twitter.com/snugug) (he got me started with QuickSort) I eventually explored a number of different sorting algorithms. I've now implemented several of these in Sass. You can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository.
