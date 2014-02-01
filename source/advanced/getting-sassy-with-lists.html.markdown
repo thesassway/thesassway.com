@@ -1,7 +1,9 @@
-Date: 24 November 2013
-Categories: advanced, hugo-giraudel
-Author: Hugo Giraudel
-Summary: Hugo Giraudel is back with another article on his new SassyLists library. Learn about how he made it and gain insight into how to build your own Compass extensions.
+---
+date: 24 November 2013
+categories: advanced, guides
+author: Hugo Giraudel
+summary: Hugo Giraudel is back with another article on his new SassyLists library. Learn about how he made it and gain insight into how to build your own Compass extensions.
+---
 
 # Getting Sass-y with lists!
 
