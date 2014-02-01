@@ -1,0 +1,133 @@
+Date: 24 January 6
+Categories: advanced, hugo-giraudel
+Author: Hugo Giraudel
+Summary: Hugo takes another page from his SassyLists playbook and teaches us how to build a string sorting function in pure Sass.
+
+# Building a sorting function in pure Sass
+
+The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers. Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
+
+Until now. Or I should say, shortly.
+
+[Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
+
+
+## Comparing strings
+
+The heart of any sorting function is the ability to compare two strings and determine which one should go before the other. Most programming languages make this fairly easy, but to do this in Sass we have to build our own string comparison function.
+
+For starters, we need to teach Sass the correct order to sort strings in based on the characters each string contains. Let's define this in a variable:
+
+    :::scss
+    // Declare the default sort order. Use Sass's !default flag so this
+    // value doesn't override the variable if it was already declared.
+    $default-sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
+
+This can be used to declare that strings that begin with `a` should appear before strings that begin with `b` or `c` and so on. In real life you'd probably want to include other characters in your sort order string (like numbers, characters with accents, and other symbols), but `a-z` works for our example.
+
+Now for the meat of our comparison function:
+
+    :::scss
+    @function str-compare($string-a, $string-b, $order: $default-sort-order) {
+      // Cast values to strings
+      $string-a: to-lower-case($string-a + unquote(""));
+      $string-b: to-lower-case($string-b + unquote(""));      
+
+      // Loop through and compare the characters of each string...
+      @for $i from 1 through min(str-length($string-a), str-length($string-b)) {
+
+        // Extract a character from each string
+        $char-a: str-slice($string-a, $i, $i);
+        $char-b: str-slice($string-b, $i, $i);
+        
+        // If characters exist in $order list and are different
+        // return true if first comes before second
+        @if $char-a and $char-b and index($order, $char-a) != index($order, $char-b) {
+          @return index($order, $char-a) < index($order, $char-b);
+        }
+      }
+      
+      // In case they are equal after all characters in one string are compared,
+      // return the shortest first
+      @return str-length($string-a) < str-length($string-b);
+    }
+
+What's going on here? We are basically looping through the characters in each string (`$string-a` and `$string-b`) and looking up location of each in the `$order` list with the Sass `index()` function. This gives us two numbers that can be compared to see which character goes before the other. If the numbers are the same we loop around to the next set of characters, but if they are different we've found which one goes first.
+
+The `str-compare()` function returns `true` if `$string-a` goes before `$string-b` and `false` if it does not.
+
+
+## Swapping two values
+
+For the sake of our example, I'm going to implement the sorting function using the [Buble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand. (In SassyLists, I've chosen to use [Quicksort](http://en.wikipedia.org/wiki/Quicksort) because it's generally faster.)
+
+Since bubble sort relies on swapping two values in a list we need one more function to make this easy for us:
+
+    :::scss
+    @function swap($list, $index-a, $index-b) {
+      @if abs($index-a) > length($list) or abs($index-b) > length($list) {
+        @return $list;
+      }
+      $tmp: nth($list, $index-a);
+      $list: set-nth($list, $index-a, nth($list, $index-b));
+      $list: set-nth($list, $index-b, $tmp);
+      @return $list;
+    }
+
+Our new `swap()` function accepts a list along with two indexes (`$index-a` and `$index-b`) that indicate the positions of the two items in the list to swap. To avoid cycling through the list to swap values, I've taken advantage of the `set-nth()` function (new in Sass 3.3) which simply updates the list instead of building a fresh one (which is far better for performance).
+
+
+## The string sorting function
+
+Armed with `str-compare()` and `swap()` we now have everything we need to build a proper string sorting function:
+
+    :::sass
+    @function sort($list, $order: $default-sort-order) {
+
+      // Cycle through each item in the list
+      @for $i from 1 through length($list) {
+
+        // Compare the item with the previous items in the list
+        @for $j from $i * -1 through -1 {
+
+          // abs() trick to loop backward
+          $j: abs($j);
+
+          // Compare both values
+          @if $j > 1 and str-compare(nth($list, $j), nth($list, $j - 1), $order) {
+            // If the item should go before the other, swap them
+            $list: swap($list, $j, $j - 1);
+          }
+        }
+      }
+
+      // Return the sorted list
+      @return $list;
+    }
+
+Bubble sorting basically loops through the list, compares items with each other and swaps them once compared until the list is completely sorted.
+
+Now let's test it:
+
+    :::scss
+    $list: oranges pears apples strawberries bananas;
+    $sort: sort($list);
+    // => apples bananas oranges pears strawberries
+
+Hurray! It works like a charm.
+
+
+## SassyLists
+
+The latest version of [SassyLists](http://sassylists.com/) includes slightly more robust versions of these and nearly 30 other functions that can make working with lists in Sass so much easier. However, it won't be released until Sass 3.3 is available.
+
+While waiting for 3.3, you can still use the current version of SassyLists (in 0.4.3 as of writing) either by sneaking into the [GitHub repository](https://github.com/Team-Sass/SassyLists) or by installing it as a Compass Extension:
+
+1. `gem install SassyLists`
+2. Add `require 'SassyLists'` to your `config.rb`
+3. Import it in your stylesheets with `@import 'SassyLists'`
+
+Hope you like it! If you think of anything to improve it, be sure to share.
+
+
+*Note: The sorting algorithm described in this article is the [bubble sort algorithm](http://en.wikipedia.org/wiki/Bubble_sort). It's not the fastest algorithm ([quicksort](http://en.wikipedia.org/wiki/Quicksort) is waaaaay faster), but it does have the merit of being short and easy to read. That being said, I have implemented the sort function with a couple of other algorithms and made a [GitHub repository](https://github.com/HugoGiraudel/Sass-sort) out of it. Be sure to have a look at the code and feel free to comment.*
