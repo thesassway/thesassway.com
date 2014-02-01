@@ -1,5 +1,5 @@
 ---
-date: 24 February 1
+date: 1 February 2014
 categories: advanced
 author: Hugo Giraudel
 summary: Hugo takes a page from his SassyLists playbook and teaches us how to build a string sorting function in pure Sass.
@@ -7,13 +7,10 @@ summary: Hugo takes a page from his SassyLists playbook and teaches us how to bu
 
 # Building a sorting function in pure Sass
 
-My very first attempt at building a sorting function in Sass goes back to months ago. Back then, someone asked on Twitter how we could build a function to sort a list of numeric values in Sass in order to build a modular scale. Quickly enough, I came up with a (highly inefficient) way to do it. Unfortunately, no way to do the same with strings (or any other Sass type) before Sass 3.3. 
+Several months ago someone asked me on Twitter if it was possible to sort a list of numeric values in Sass. They were trying to derive a [modular scale](http://alistapart.com/article/more-meaningful-typography) in Sass and needed a sorting function. After a little bit of work I came up with a way to do it for numbers. However, because of limitations in Sass, there was no way to build a sorting function for other Sass types (like Strings).
 
-Thankfully we've been able to play with Sass 3.3 features. Thus, not later than a couple of days after the original tweet, I came up with a sorting function for strings. However I used a very very slow way to do so. It's only when [Sam Richards](http://twitter.com/snugug) came up with a quick-sort function for numbers a couple of weeks ago that I started looking for better algorithms to sort strings.
+Fast forward to the present day. Sass 3.3 has been released and with it [a ton of new features](http://davidwalsh.name/future-sass). Today, I'd like to show you how to use some of these features to build a sorting function in Sass.
 
-Anyway, I'm glad to say I have found several efficient ways to sort strings (numbers or whatever) in pure Sass. I've succeeded in implementing a couple of famous algo'; you can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository. 
-
-Back to today's topic: I'd like to show you one way to build a sorting function in Sass. 
 
 ## Comparing strings
 
@@ -55,15 +52,16 @@ Now for the meat of our comparison function:
       @return str-length($string-a) < str-length($string-b);
     }
 
-What's going on here? We are basically looping through the characters in each string (`$string-a` and `$string-b`) and looking up location of each in the `$order` list with the Sass `index()` function. This gives us two numbers that can be compared to see which character goes before the other. If the numbers are the same we loop around to the next set of characters, but if they are different we've found which one goes first.
+What's going on here? We are basically looping through the characters in each string (`$string-a` and `$string-b`) and looking up the location of each in the `$order` list with the Sass `index()` function. This gives us two numbers that can be compared to see which character goes before the other. If the numbers are the same we loop around to the next set of characters, but if they are different we've found which one goes first.
 
 The `str-compare()` function returns `true` if `$string-a` goes before `$string-b` and `false` if it does not.
 
+
 ## Swapping two values
 
-For the sake of our example, I'm going to implement the sorting function using the [Bubble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand (for SassyLists I've chosen [Quicksort](http://en.wikipedia.org/wiki/Quicksort) which is generally faster).
+For the sake of our example, I'm going to implement the sorting function using the [Bubble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand.
 
-Since bubble sort relies on swapping two values in a list we need one more function to make this easy for us:
+Since Bubble Sort relies on swapping two values in a list we need one more function to make this easy for us:
 
     :::scss
     @function swap($list, $index-a, $index-b) {
@@ -77,6 +75,7 @@ Since bubble sort relies on swapping two values in a list we need one more funct
     }
 
 Our new `swap()` function accepts a list along with two indexes (`$index-a` and `$index-b`) that indicate the positions of the two items in the list to swap. To avoid cycling through the list to swap values, I've taken advantage of the `set-nth()` function (new in Sass 3.3) which simply updates the list instead of building a fresh one (which is far better for performance).
+
 
 ## The string sorting function
 
@@ -106,7 +105,7 @@ Armed with `str-compare()` and `swap()` we now have everything we need to build 
       @return $list;
     }
 
-Bubble sorting basically loops through the list, compares items with each other and swaps them once compared until the list is completely sorted.
+Bubble Sort basically loops through the list, compares items with each other and swaps them once compared until the list is completely sorted.
 
 Now let's test it:
 
@@ -117,4 +116,7 @@ Now let's test it:
 
 Hurray! It works like a charm.
 
-*Note: The sorting algorithm described in this article is the [bubble sort algorithm](http://en.wikipedia.org/wiki/Bubble_sort). It's not the fastest algorithm ([quicksort](http://en.wikipedia.org/wiki/Quicksort) is waaaaay faster), but it does have the merit of being short and easy to read. That being said, I have implemented the sort function with a couple of other algorithms and made a [GitHub repository](https://github.com/HugoGiraudel/Sass-sort) out of it. Be sure to have a look at the code and feel free to comment.*
+
+# Learning more
+
+My first attempts to create a sorting function in Sass used a much slower algorithm. But thanks to some prompting by [Sam Richards](http://twitter.com/snugug) (he got me started with QuickSort) I eventually explored a number of different sorting algorithms. I've now implemented several of these in Sass. You can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository.
