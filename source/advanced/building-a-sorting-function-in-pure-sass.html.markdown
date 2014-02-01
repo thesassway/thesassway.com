@@ -7,12 +7,13 @@ summary: Hugo takes a page from his SassyLists playbook and teaches us how to bu
 
 # Building a sorting function in pure Sass
 
-The current version of my [SassyLists](http://sassylists.com) library includes a sorting function that allows you to sort a list of numbers. Unfortunately, Sass doesn't provide the features necessary to build a function that will sort a list of strings in pure Sass.
+My very first attempt at building a sorting function in Sass goes back to months ago. Back then, someone asked on Twitter how we could build a function to sort a list of numeric values in Sass in order to build a modular scale. Quickly enough, I came up with a (highly inefficient) way to do it. Unfortunately, no way to do the same with strings (or any other Sass type) before Sass 3.3. 
 
-Until now. Or I should say, shortly.
+Thankfully we've been able to play with Sass 3.3 features. Thus, not later than a couple of days after the original tweet, I came up with a sorting function for strings. However I used a very very slow way to do so. It's only when [Sam Richards](http://twitter.com/snugug) came up with a quick-sort function for numbers a couple of weeks ago that I started looking for better algorithms to sort strings.
 
-[Along with a slew of other features](http://davidwalsh.name/future-sass), Sass 3.3 will add the features needed to do just this. And today, I'd like to show you how this will work with Sass 3.3.
+Anyway, I'm glad to say I have found several efficient ways to sort strings (numbers or whatever) in pure Sass. I've succeeded in implementing a couple of famous algo'; you can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository. 
 
+Back to today's topic: I'd like to show you one way to build a sorting function in Sass. 
 
 ## Comparing strings
 
@@ -58,10 +59,9 @@ What's going on here? We are basically looping through the characters in each st
 
 The `str-compare()` function returns `true` if `$string-a` goes before `$string-b` and `false` if it does not.
 
-
 ## Swapping two values
 
-For the sake of our example, I'm going to implement the sorting function using the [Buble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand. (In SassyLists, I've chosen to use [Quicksort](http://en.wikipedia.org/wiki/Quicksort) because it's generally faster.)
+For the sake of our example, I'm going to implement the sorting function using the [Bubble Sort](http://en.wikipedia.org/wiki/Bubble_sort) algorithm because it's easy to understand (for SassyLists I've chosen [Quicksort](http://en.wikipedia.org/wiki/Quicksort) which is generally faster).
 
 Since bubble sort relies on swapping two values in a list we need one more function to make this easy for us:
 
@@ -77,7 +77,6 @@ Since bubble sort relies on swapping two values in a list we need one more funct
     }
 
 Our new `swap()` function accepts a list along with two indexes (`$index-a` and `$index-b`) that indicate the positions of the two items in the list to swap. To avoid cycling through the list to swap values, I've taken advantage of the `set-nth()` function (new in Sass 3.3) which simply updates the list instead of building a fresh one (which is far better for performance).
-
 
 ## The string sorting function
 
@@ -117,19 +116,5 @@ Now let's test it:
     // => apples bananas oranges pears strawberries
 
 Hurray! It works like a charm.
-
-
-## SassyLists
-
-The latest version of [SassyLists](http://sassylists.com/) includes slightly more robust versions of these and nearly 30 other functions that can make working with lists in Sass so much easier. However, it won't be released until Sass 3.3 is available.
-
-While waiting for 3.3, you can still use the current version of SassyLists (in 0.4.3 as of writing) either by sneaking into the [GitHub repository](https://github.com/Team-Sass/SassyLists) or by installing it as a Compass Extension:
-
-1. `gem install SassyLists`
-2. Add `require 'SassyLists'` to your `config.rb`
-3. Import it in your stylesheets with `@import 'SassyLists'`
-
-Hope you like it! If you think of anything to improve it, be sure to share.
-
 
 *Note: The sorting algorithm described in this article is the [bubble sort algorithm](http://en.wikipedia.org/wiki/Bubble_sort). It's not the fastest algorithm ([quicksort](http://en.wikipedia.org/wiki/Quicksort) is waaaaay faster), but it does have the merit of being short and easy to read. That being said, I have implemented the sort function with a couple of other algorithms and made a [GitHub repository](https://github.com/HugoGiraudel/Sass-sort) out of it. Be sure to have a look at the code and feel free to comment.*
