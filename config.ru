@@ -38,7 +38,7 @@ use Rack::Rewrite do
   r301 '/mario-kuroir-ricalde', '/mario-ricalde'
 
   # Articles -> Editorial
-  r301 %r{^/articles(.*)$}, '/editorial$1'
+  r301 %r{^/articles(?!\.xml)(.*)$}, '/editorial$1'
 end
 
 run Middleman.server
