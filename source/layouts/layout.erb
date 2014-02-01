@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <% if meta.description %><meta name="description" content="<%= meta.description %>" ><% end %>
+    <% if meta.keywords %><meta name="keywords" content="<%= meta.keywords %>" ><% end %>
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= title || "The Sass Way" %></title>
+
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag "master" %>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="shortcut icon">
+
+    <!-- Apple Touch Icons -->
+    <% [57, 72, 114, 144].each do |icon| %>
+      <link href="/apple-touch-icon-<%= icon %>x<%= icon %>.png" rel="apple-touch-icon" sizes="<%= icon %>x<%= icon %>" type="image/png" />
+    <% end %>
+
+    <!-- Atom feed -->
+    <link href="http://feeds.feedburner.com/thesassway" rel="alternate" type="application/atom+xml">
+
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Lora:400italic,700italic,400,700|Source+Sans+Pro:400italic,700italic,400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+
+    <!-- Viewport declarations -->
+    <meta name="viewport" content="width=<%= 320 / 0.6 %>">
+    <meta name="viewport" content="initial-scale=0.6">
+  </head>
+  <body>
+
+    <header class="site-header" role="banner">
+      <nav class="navigation" role="navigation" aria-label="main navigation">
+        <label class="navigation-button" for="navigation-state"><i class="menu-icon x48"></i><span class="sr-only">Menu</span></label>
+        <input class="navigation-state" type="checkbox" id="navigation-state" />
+        <ul class="navigation-menu">
+          <li class="navigation-menu-item"><a href="/" title="Home"><i class="home-icon x24 small-hidden"></i><span class="medium-up-hidden">Home</span></a></li>
+          <li class="navigation-menu-item"><a href="/beginner">Beginner</a></li>
+          <li class="navigation-menu-item"><a href="/intermediate">Intermediate</a></li>
+          <li class="navigation-menu-item"><a href="/advanced">Advanced</a></li>
+          <li class="navigation-menu-item"><a href="/editorial">Editorial</a></li>
+          <li class="navigation-menu-item"><a href="/news">News</a></li>
+          <li class="navigation-menu-item"><a href="/projects">Projects</a></li>
+          <li class="navigation-menu-item"><a href="http://feeds.feedburner.com/thesassway" title="Subscribe"><i class="feed-icon x24 small-hidden"></i><span class="medium-up-hidden">Subscribe</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="site-content" role="main">
+      <%= yield %>
+    </div>
+
+    <footer class="site-footer reversed">
+      <div class="row">
+        <section class="small-10 small-offset-1 large-5 columns large-offset-0">
+          <h3 class="mt1 mb0"><a href="/"><%= image_tag 'thesassway-small.svg', class: "text-middle", alt: "The Sass Way" %></a></h3>
+          <div class="typeset fine-print">
+            <p>
+              <em>The Sass Way</em> covers the latest news and topics on handcrafting CSS with <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a>.
+              We use an open publishing model and rely on contributions from the Sass community via our <a href="http://github.com/thesassway/thesassway.com">GitHub project</a>.
+            </p>
+            <p><a href="https://github.com/thesassway/thesassway.com/blob/master/CONTRIBUTING.md">Send us a pull request!</a></p>
+            <p><a href="https://github.com/thesassway/thesassway.com/issues">Submit an issue</a> to get in touch about your Sass news or to suggest new content for us to write about.</p>
+          </div>
+          <ul class="social-icons mb4">
+            <li class="social-icon-item"><a class="social-icon-button" title="Subscribe" href="http://feeds.feedburner.com/thesassway"><i class="feed-icon x24"></i><span class="sr-only">Atom Feed</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" title="Twitter" href="http://twitter.com/TheSassWay"><i class="twitter-icon x24"></i><span class="sr-only">Twitter</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" title="Facebook" href="http://facebook.com/thesassway"><i class="facebook-icon x24"></i><span class="sr-only">Facebook</span></a></li>
+            <li class="social-icon-item"><a class="social-icon-button" title="GitHub" href="http://github.com/thesassway"><i class="github-icon x24"></i><span class="sr-only">GitHub</span></a></li>
+          </ul>
+        </section>
+
+        <section class="small-5 small-offset-1 medium-3 large-2 large-offset-1 columns">
+          <h3 class="h6 mt2 mb1">Contributors</h3>
+          <ul class="link-list mb4">
+            <% for contributor in authors %>
+             <li><a href="/<%= contributor.slug %>"><%= contributor.name %></a></li>
+            <% end %>
+          </ul>
+        </section>
+
+        <section class="small-5 medium-3 large-2 columns">
+          <h3 class="h6 mt2 mb1">Categories</h3>
+          <ul class="link-list mb4">
+            <% for category in categories %>
+              <li><a href="/<%= category.slug %>"><%= category.short_name %></a></li>
+            <% end %>
+          </ul>
+        </section>
+
+        <section class="small-hidden medium-3 large-2 large-offset-0 columns">
+          <h3 class="h6 mt2 mb1">Made with</h3>
+          <ul class="link-list mb4">
+            <li><a href="https://github.com/thesassway">GitHub</a></li>
+            <li><a href="http://middlemanapp.com">Middleman</a></li>
+            <li><a href="http://heroku.com/">Heroku</a></li>
+            <li><a href="http://sass-lang.com/">Sass</a></li>
+            <li><a href="http://compass-style.org/">Compass</a></li>
+          </ul>
+        </section>
+
+        <section class="small-10 small-offset-1 large-12 large-offset-0 columns typeset fine-print text-center">
+          <p>&copy; 2010-<%= Time.now.year%> The Sass Way. All rights reserved. Articles copyright The Sass Way and individual authors.</p>
+          <p>A <a href="http://riznmedia.com/">RIZN Media</a> production. In association with <a href="http://thechangelog.com/">The Changelog</a>.</p>
+        </section>
+      </div>
+      <%#<div class="row">%>
+        <%#<section class="small-8 medium-4 small-centered columns">%>
+          <%#<%= partial 'layouts/fusion_ads' %>
+        <%#</section>%>
+      <%#</div>%>
+    </footer>
+
+    <%= partial 'layouts/javascripts' %>
+  </body>
+</html>

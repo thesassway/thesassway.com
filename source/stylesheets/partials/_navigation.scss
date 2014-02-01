@@ -1,0 +1,122 @@
+$navigation-color: $quiet-color;
+$navigation-sidebar-width: 100%;
+
+.navigation-state {
+  position: absolute;
+  left: -200px;
+}
+
+@media #{$small-only} {
+  .navigation-button {
+    @include appearance(none);
+    color: rgba(mix($text-color, white), 0.5);
+    background: none;
+    border: none;
+    padding: 0;
+    padding: 5px;
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    z-index: 2;
+
+    &:focus {
+      color: rgba($text-color, 0.5);
+      outline: none;
+    }
+  }
+
+  .navigation-menu {
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    display: block;
+    position: fixed;
+    padding-top: 64px;
+    top: 0;
+    right: -$navigation-sidebar-width - 10%;
+    bottom: 0;
+    background-color: $reversed-background-color;
+    @include transition(all 200ms ease-in-out);
+    width: $navigation-sidebar-width;
+    z-index: 1;
+
+    .navigation-state:checked + & { right: 0; }
+  }
+
+  .navigation-menu-item {
+    display: block;
+    border-top: 1px solid $reversed-border-color;
+    &:last-child { border-bottom: 1px solid $reversed-border-color; }
+  }
+
+  .navigation-menu-item > a {
+    display: block;
+    color: $reversed-link-color;
+    font-size: 22px;
+    padding: 20px 30px;
+    text-decoration: none;
+
+    &:hover { background-color: $reversed-border-color; }
+  }
+}
+
+@media #{$medium-up} {
+  .navigation {
+    position: relative;
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: $border-color;
+      height: 1px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .navigation-button {
+    display: none;
+  }
+
+  .navigation-menu {
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    display: block;
+    text-align: center;
+  }
+
+  .navigation-menu-item {
+    display: inline-block; 
+    text-align: center;
+  }
+
+  .navigation-menu-item > a {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    color: $navigation-color;
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 8px;
+    padding: 10px;
+    letter-spacing: 1px;
+
+    &:focus, &:hover {
+      border-bottom-color: $link-color;
+      color: $text-color;
+    }
+
+    &:active {
+      color: $link-color;
+      border-bottom-color: $link-color;
+    }
+
+    &.is-selected {
+      color: $link-color;
+      border-bottom-color: $link-color;
+    }
+  }
+
+}

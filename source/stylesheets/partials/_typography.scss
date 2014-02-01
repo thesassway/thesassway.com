@@ -1,0 +1,117 @@
+@import 'compass';
+
+%link {
+  color: $link-color;
+  text-decoration: underline;
+  
+  &:visited { color: $link-visited-color; }
+  &:hover, &:visited:hover { color: $link-hover-color; text-decoration: none; }
+
+  .reversed & {
+    color: $reversed-link-color;
+    &:visited { color: $reversed-link-visited-color; }
+    &:hover, &:visited:hover { color: $reversed-link-hover-color; }
+  }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+%h1, %h2, %h3, %h4, %h5, %h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  color: $heading-color;
+  .reversed & { color: $reversed-heading-color; }
+}
+
+.h1, .h2, %h1, %h2 { line-height: 0.6 * $base-line-height; }
+.h3, .h4, %h3, %h4 { line-height: 0.7 * $base-line-height; }
+.h5, .h6, %h5, %h6 { line-height: 0.8 * $base-line-height; }
+
+.h1, %h1 { font-size: 400%; letter-spacing: -2px; }
+.h2, %h2 { font-size: 250%; letter-spacing: -1px; }
+.h3, %h3 { font-size: 200%; }
+.h4, %h4 { font-size: 180%; }
+.h5, %h5 { font-size: 130%; }
+.h6, %h6 { font-size: 100%; }
+
+.fixed { font-family: $fixed-font-family; font-size: $fixed-font-size; line-height: $fixed-line-height; }
+
+.italic { font-style: italic; }
+.bold {
+  font-weight: 700;
+  color: $loud-color;
+  .reversed & { color: $reversed-loud-color; }
+}
+
+.fine-print { font-size: 0.9 * $base-font-size; }
+
+.highlight {
+  @include syntax-highlight($text-color, $link-color);
+}
+
+.reversed {
+  color: $reversed-text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+.abbreviation {
+  border-bottom: 1px dotted rgba(mix(white, $text-color), 0.5);
+}
+
+.emphasis {
+  i, em { @extend .italic; }
+  b, strong { @extend .bold; }
+}
+
+.blockquote {
+  border-left: 3px solid $border-color;
+  color: #b06;
+  padding-left: 1.5em;
+  @extend .italic;
+}
+
+.typeset {
+  color: $text-color;
+
+  a { @extend %link; }
+
+  h1, .h1 { @extend %h1; margin: 1em 0 0.75em; }
+  h2, .h2 { @extend %h2; margin: 1em 0 0.5em; }
+  h3, .h3 { @extend %h3; margin: 1em 0 0.5em; }
+  h4, .h4 { @extend %h4; margin: 1em 0 0.5em; }
+  h5, .h5 { @extend %h5; margin: 1em 0 0.5em; }
+  h6, .h6 { @extend %h6; margin: 1em 0 0.5em; }
+
+  p, ul, ol, blockquote { margin: 1.5em 0; }
+
+  ul { list-style: disc; }
+  ol { list-style: decimal; }
+  li { margin-left: 2.25em; margin-bottom: 0.5em}
+  blockquote { @extend .blockquote; }
+
+  @extend .emphasis;
+
+  code, pre { @extend .fixed; }
+  code { color: #b06; }
+
+  abbr[title] { @extend .abbreviation; }
+
+  pre {
+    @include border-radius(1em);
+    margin: 2em 0;
+    padding: 2em;
+    background: #f0f2f4;
+    overflow: hidden;
+  }
+
+  .reversed & {
+    color: $reversed-text-color;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.title-avatar {
+  margin-top: 5em !important;
+  margin-bottom: -3em !important;
+}
+.title { @extend %h1; margin: 1em 0 0.25em; text-align: center; }
+.subtitle { @extend %h5; font-weight: 300; margin: 0 0 1em; text-align: center; }

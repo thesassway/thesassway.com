@@ -1,0 +1,18 @@
+---
+layout: layout
+---
+
+<div class="row">
+  <div class="large-10 large-offset-1 columns">
+    <h1 class="title"><%= category.name %></h1>
+    <h2 class="subtitle"><%= category.subtitle %></h2>
+  </div>
+</div>
+
+<% show_avatars = !(%w(news projects).include?(category.slug)) %>
+<% if category.superset %>
+  <% pages = articles_for(category.superset.split(/\s*,\s*/)) %>
+  <%= partial 'layouts/summaries', :locals => { pages: pages, avatars: show_avatars } %>
+<% else %>
+  <%= partial 'layouts/summaries', :locals => { pages: articles_for(category.slug), avatars: show_avatars } %>
+<% end %>

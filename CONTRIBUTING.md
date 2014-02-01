@@ -32,7 +32,7 @@ amazing folks from the Sass community. If you'd like to submit an article for
 publication on TheSassWay.com, here's the suggested process:
 
 1. Fork the repository
-2. Add a new article to the `content/pages` directory of your fork.
+2. Add a new article to the `source` directory of your fork.
 3. Commit your changes
 4. Submit a pull request
 

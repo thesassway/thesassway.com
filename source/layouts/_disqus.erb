@@ -1,0 +1,9 @@
+<% if meta.comments != false && short_name = config.disqus_short_name %>
+  <div id="disqus_thread">
+    <% if environment == :development %><script>var disqus_developer = true;</script><% end %>
+    <script async="<%= true %>" src="http://<%= short_name %>.disqus.com/embed.js" type="text/javascript"></script>
+    <noscript>
+      <a>(href="http://#{short_name}.disqus.com/embed.js?url=ref") View comments.</a>
+    </noscript>
+  </div>
+<% end %>

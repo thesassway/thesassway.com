@@ -1,0 +1,22 @@
+<% unless pages.empty? %>
+  <% pages.each do |page| %>
+    <% author = author(page) %>
+    <% show_avatar = !!(defined?(avatars) && !avatars.nil? && avatars && author) %>
+    <article class="summary">
+      <div class="row">
+        <% if show_avatar %>
+          <div class="small-hidden medium-2 medium-offset-1 columns">
+            <a href="<%= page.url %>"><img class="avatar full-width" src="<%= author.avatar %>" alt="<%= author.name %>"></a>
+          </div>
+        <% end %>
+        <div class="small-10 small-offset-1 medium-8 <% unless show_avatar %>medium-offset-2<% else %>medium-offset-0<% end %> columns">
+          <h3 class="summary-title"><a href="<%= page.url %>"><%= title(page) %></a></h3>
+          <div class="summary-body emphasis">
+            <p><%= render_markdown(page.data.summary.strip) %>&nbsp; <a class="summary-more" href="<%= page.url %>">Read more&#8230;</a></p>
+          </div>
+          </p>
+        </div>
+      </div>
+    </article>
+  <% end %>
+<% end %>

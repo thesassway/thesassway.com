@@ -1,0 +1,113 @@
+//
+// Modifiers for quickly changing attributes of an object.
+//
+
+// Display
+.is-hidden { display: none !important; }
+@media #{$small-only}  { .small-hidden     { display: none !important; } }
+@media #{$medium-only} { .medium-hidden    { display: none !important; } }
+@media #{$large-only}  { .large-hidden     { display: none !important; } }
+@media #{$small-up}    { .small-up-hidden  { display: none !important; } }
+@media #{$medium-up}   { .medium-up-hidden { display: none !important; } }
+@media #{$large-up}    { .large-up-hidden  { display: none !important; } }
+
+// Screen reader only
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Fonts
+.font-extra-light { font-weight: 200 !important; }
+.font-light       { font-weight: 300 !important; }
+.font-normal      { font-weight: 400 !important; }
+.font-semi-bold   { font-weight: 600 !important; }
+.font-bold        { font-weight: 700 !important; }
+.font-ultra-bold  { font-weight: 900 !important; }
+
+// Alignment
+.text-left     { text-align: left   !important; }
+.text-center   { text-align: center !important; }
+.text-right    { text-align: right  !important; }
+.text-middle   { vertical-align: middle   !important; }
+.text-top      { vertical-align: top      !important; }
+.text-bottom   { vertical-align: bottom   !important; }
+.text-baseline { vertical-align: baseline !important; }
+
+// Word wrap
+.text-wrap { white-space: normal !important; }
+.text-nowrap { white-space: nowrap !important; }
+
+// Floats
+.float-left  { float: left  !important; }
+.float-right { float: right !important; }
+
+// Clear
+.clear-left  { clear: left  !important; }
+.clear-right { clear: right !important; }
+.clear-both  { clear: both  !important; }
+.clear-none  { clear: none  !important; }
+
+// Display
+.block        { display: block !important; }
+.inline       { display: inline !important; }
+.inline-block { display: inline-block !important; }
+
+// No wrap
+.no-wrap { white-space: nowrap; }
+
+// Lists
+.no-bullets {
+  list-style: none !important;
+
+  li {
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+// Spacing
+@for $d from 0 through 5 {
+  $spacer: 10px;
+  $step: $d * $spacer !important;
+  $half-step: ($d + 0.5) * $spacer !important;
+  
+  // Margins
+  .mt#{$d}    { margin-top: $step; }
+  .mt#{$d}\.5 { margin-top: $half-step; }
+  .ml#{$d}    { margin-left: $step; }
+  .ml#{$d}\.5 { margin-left: $half-step; }
+  .mb#{$d}    { margin-bottom: $step; }
+  .mb#{$d}\.5 { margin-bottom: $half-step; }
+  .mr#{$d}    { margin-right: $step; }
+  .mr#{$d}\.5 { margin-right: $half-step; }
+  .mv#{$d}    { margin-top: $step; margin-bottom: $step; }
+  .mv#{$d}\.5 { margin-top: $half-step; margin-bottom: $half-step; }
+  .mh#{$d}    { margin-left: $step; margin-right: $step; }
+  .mh#{$d}\.5 { margin-left: $half-step; margin-right: $half-step; }
+  .ma#{$d}    { margin: $step; }
+  .ma#{$d}\.5 { margin: $half-step; }
+  
+  
+  // Padding
+  .pt#{$d}    { padding-top: $step; }
+  .pt#{$d}\.5 { padding-top: $half-step; }
+  .pl#{$d}    { padding-left: $step; }
+  .pl#{$d}\.5 { padding-left: $half-step; }
+  .pb#{$d}    { padding-bottom: $step; }
+  .pb#{$d}\.5 { padding-bottom: $half-step; }
+  .pr#{$d}    { padding-right: $step; }
+  .pr#{$d}\.5 { padding-right: $half-step; }
+  .pv#{$d}    { padding-top: $step; padding-bottom: $step; }
+  .pv#{$d}\.5 { padding-top: $half-step; padding-bottom: $half-step; }
+  .ph#{$d}    { padding-left: $step; padding-right: $step; }
+  .ph#{$d}\.5 { padding-left: $half-step; padding-right: $half-step; }
+  .pa#{$d}    { padding: $step; }
+  .pa#{$d}\.5 { padding: $half-step; }
+}

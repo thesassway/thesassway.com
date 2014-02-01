@@ -1,35 +1,105 @@
-# Compass Configuration
+###
+# Compass
+###
 
-require 'grid-coordinates'
-require 'animate-sass'
-require 'font-stacks'
-# require 'zocial-toolkit'
+# Change Compass configuration
+compass_config do |config|
+  config.output_style = :compact
+end
 
-# HTTP paths
-http_path             = '/'
-http_stylesheets_path = '/css'
-http_images_path      = '/images'
-http_javascripts_path = '/javascripts'
 
-# File system locations
-sass_dir              = 'sass'
-css_dir               = 'public/css'
-images_dir            = 'public/images'
-javascripts_dir       = 'public/javascripts'
+###
+# Page options, layouts, aliases and proxies
+###
 
-# Fonts
-http_fonts_path       = '/fonts'
-http_fonts_dir        = 'public/fonts'
+# Ignore
+ignore "templates/*"
 
-# Set to true for easier debugging
-line_comments         = false
-preferred_syntax      = :sass
+# Per-page layout changes:
+#
+# With no layout
+# page "/path/to/file.html", :layout => false
+#
+# With alternative layout
+# page "/path/to/file.html", :layout => :otherlayout
+#
+# A path which all have the same layout
+# with_layout :admin do
+#   page "/admin/*"
+# end
 
-# CSS output style - :nested, :expanded, :compact, or :compressed
-output_style          = :expanded
+with_layout :article do
+  categories = data.categories.map(&:slug)
+  for category in categories
+    page "/#{category}/*"
+  end
+end
 
-# Determine whether Compass asset helper functions generate relative
-# or absolute paths
-relative_assets       = false
+# Proxy pages (http://middlemanapp.com/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
+#  :which_fake_page => "Rendering a fake page with a local variable" }
 
-# Learn more: http://compass-style.org/docs/tutorials/configuration-reference/
+ready do
+  data.authors.each do |author|
+    proxy "/#{author.slug}.html", "templates/author.html", locals: { author: author }
+    resource = sitemap.find_resource_by_path "/#{author.slug}.html"
+    resource.add_metadata page: { title: "#{author.name}, #{author.title}" }
+  end
+
+  data.categories.each do |category|
+    proxy "/#{category.slug}/index.html", "templates/category.html", locals: { category: category }
+    resource = sitemap.find_resource_by_path "/#{category.slug}/index.html"
+    resource.add_metadata page: { title: category.name }
+  end
+end
+
+
+###
+# Disqus
+###
+set :disqus_short_name, 'thesassway'
+
+
+###
+# Helpers
+###
+
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
+# Reload the browser automatically whenever files change
+# activate :livereload
+
+# Methods defined in the helpers block are available in templates
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
+
+# Directories
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+
+# Directory indexes
+activate :directory_indexes
+set :trailing_slash, false
+
+# Build-specific configuration
+configure :build do
+  # For example, change the Compass output style for deployment
+  # activate :minify_css
+
+  # Minify Javascript on build
+  # activate :minify_javascript
+
+  # Enable cache buster
+  # activate :asset_hash
+
+  # Use relative URLs
+  # activate :relative_assets
+
+  # Or use a different image path
+  # set :http_prefix, "/Content/images/"
+end

@@ -1,0 +1,34 @@
+$base-font-family: 'Lora', Times, serif;
+$base-font-size: 18px;
+$base-font-weight: 400;
+$base-line-height: 1.7;
+
+$heading-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-weight: 700;
+
+$fixed-font-family: 'Source Code Pro', 'Andale Mono', AndaleMono, monospace;
+$fixed-font-size: 16px;
+$fixed-line-height: 1.5;
+
+$loud-color: #000;
+$quiet-color: rgba($loud-color, 0.5);
+$text-color: rgba($loud-color, 0.8);
+$heading-color: rgba($loud-color, 0.9);
+$link-color: #cb6898;
+$link-hover-color: saturate(#cb6898, 20%);
+$link-visited-color: purple;
+$border-color: rgba($text-color, 0.1);
+
+$reversed-background-color: #36363d;
+$reversed-text-color: rgba(white, 0.6);
+$reversed-quiet-color: rgba(white, 0.3);
+$reversed-loud-color: rgba(white, 0.8);
+$reversed-heading-color: rgba(white, 0.7);
+$reversed-link-hover-color: white;
+$reversed-link-color: rgba($reversed-link-hover-color, 0.9);
+$reversed-link-visited-color: rgba($reversed-link-hover-color, 0.8);
+$reversed-border-color: rgba($reversed-text-color, 0.1);
+
+@import "compass/css3";
+@import "compass/reset";
+@import "../modules/all";

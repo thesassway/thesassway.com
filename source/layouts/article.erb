@@ -1,0 +1,49 @@
+<% wrap_layout 'layout' do %>
+  <article class="article">
+    <div class="row">
+      <div class="large-10 large-offset-1 columns typeset">
+        <%= yield %>
+
+        <% unless meta.categories.empty? %>
+          <div class="article-categories">
+            <p>
+              <% unless meta.date.nil? %>
+                <%= format_date(meta.date) %> ~
+              <% end %>
+              <%=
+                meta.categories.split(/\s*,\s*/).map { |slug|
+                  c = category(slug)
+                  %{<a href="/#{c.slug}">#{c.name}</a>}
+                }.join(', ')
+              %><% if author %>,
+                <a href="/<%= author.slug %>"><%= author.name %></a>
+              <% end %>
+            </p>
+          </div>
+        <% end %>
+
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <div class="g-plusone" data-annotation="inline" data-width="200"></div>
+      </div>
+    </div>
+
+    <% if author %>
+      <div class="row article-author">
+        <div class="small-2 large-offset-1 columns">
+          <img class="avatar full-width" src="<%= author.avatar %>">
+        </div>
+        <div class="small-8 columns typeset ">
+          <h2 class="mt0">The Author, <%= author.name %></h2>
+          <div class="fine-print"><%= author.bio %></div>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="row article-comments">
+      <div class="large-10 large-offset-1 columns">
+        <%= partial 'layouts/disqus' %>
+      </div>
+    </div>
+  </article>
+<% end %>
