@@ -80,7 +80,7 @@ It's now possible to use it in *SassScript* to output the current selector. This
 This should prove especially useful for people who are developing Sass libraries. Chris Eppstein introduced these features in [this gist](https://gist.github.com/chriseppstein/5649985) which has some helpful discussion.
 
 
-## Improved `if()` semantics
+## Improved if() semantics
 
 If you're not a heavy user of Sass you probably haven't run across the `if()` function before. Sass does have the `@if` control structure:
 
