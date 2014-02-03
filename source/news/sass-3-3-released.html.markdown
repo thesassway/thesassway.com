@@ -7,7 +7,7 @@ summary: It's been a long time comming, but well worth the wait! Sass 3.3 includ
 
 # Sass 3.3 released!
 
-We are pleased to annouce that Sass 3.3 has been released with many long awaited features. You can get the full scoope in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html). But here's a summary of some of the cool new features.
+We are pleased to annouce that Sass 3.3 has been released with many long awaited features. You can get the full scoop in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html). But here's a summary of some of the cool new features.
 
 
 ## New map data structure
