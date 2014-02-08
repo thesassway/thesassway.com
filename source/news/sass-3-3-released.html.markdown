@@ -2,7 +2,7 @@
 date: 1 February 2014
 categories: news
 author: John W. Long
-summary: It's been a long time comming, but well worth the wait! Sass 3.3 includes many long awaited features, including the new Map data structure, source maps, improved ampersand semantics, and an improved `if()` function.
+summary: It's been a long time coming, but well worth the wait! Sass 3.3 includes many long awaited features, including the new Map data structure, source maps, improved ampersand semantics, and an improved `if()` function.
 ---
 
 # Sass 3.3 released!
@@ -32,8 +32,8 @@ Maps can also be used instead of keyword parameters:
 
     :::scss
     $adjustments: (hue: 5deg, lightness: 10%);
-    $color-1: adjust-color($color-1, $adjustments);
-    $color-2: adjust-color($color-2, $adjustments);
+    $color-1: adjust-color($color-1, $adjustments...);
+    $color-2: adjust-color($color-2, $adjustments...);
 
 For more info about Sass maps see the [change log](https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
 
@@ -47,29 +47,29 @@ Sass source maps are a hot new feature in Sass that make it possible to view the
 I don't have time to detail how this works in this post, but read Google's documentation on *[Working with CSS processors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)* or Sam Richard's article on *[Debugging Sass source maps](http://snugug.com/musings/debugging-sass-source-maps)*. Or, if you are more visual, watch Chris Eppstein show this off in his video presentation on *[The Mind-blowing power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)* (in which he also shows off many more amazing Sass 3.3 features).
 
 
-## Improved ampersand (&) semantics and @at-root
+## Improved parent selector (&) semantics and @at-root
 
-The ampersand opperator has a long and celebrated past in the Sass community. It makes it possible to write code that references the parent selector:
+The ampersand operator has a long and celebrated past in the Sass community. It makes it possible to write code like this:
 
     :::scss
-    // The ampersand operator in action...
-    button {
+    // The parent selector in action...
+    .button {
       &.primary { background: orange; }
       &.secondary { background: blue; }
     }
 
     // Output:
-    button.primary { background: orange; }
-    button.secondary { background: blue; }
+    .button.primary { background: orange; }
+    .button.secondary { background: blue; }
 
-It's now possible to use it in *SassScript* to output the current selector. This example also uses the new `@at-root` syntax to undo the nesting on the current selector:
+It's now possible to use it with a suffix to append to the selector. This example also uses the new `@at-root` directive to undo the nesting on the current selector:
 
     :::scss
     // Ampersand in SassScript:
-    button {
+    .button {
       @at-root {
-        .#{&}-primary { background: orange; }
-        .#{&}-secondary { background: blue; }
+        &-primary { background: orange; }
+        &-secondary { background: blue; }
       }
     }
 
@@ -77,7 +77,7 @@ It's now possible to use it in *SassScript* to output the current selector. This
     .button-primary { background: orange; }
     .button-secondary { background: blue; }
 
-This should prove especially useful for people who are developing Sass libraries. Chris Eppstein introduced these features in [this gist](https://gist.github.com/chriseppstein/5649985) which has some helpful discussion.
+Previously, this would have caused an error in Sass, but no longer!
 
 
 ## Improved if() semantics
@@ -152,7 +152,7 @@ Previously, this would have failed silently with no output.
 
 ## And, much, much more!
 
-These are just the highlights of what's changed in the latest version of Sass. As I said before, to get the full scoop you'll need to read the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html).
+These are just the highlights of what's changed in the latest version of Sass. As I said before, you'll need to read the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) to find out more!
 
 Here's Chris Eppstein presenting, *The Mind-blowing power of Sass 3.3*:
 
