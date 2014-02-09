@@ -12,7 +12,7 @@ We are pleased to annouce that Sass 3.3 has been released with many long awaited
 
 ## New map data structure
 
-The most significant change to the language in this update is the addition of the `Map` data structure! If you've used regular programming languages like JavaScript or Ruby you may know that a `Map` is sometimes called a `Hash`. They store a mix of key/value pairs in a list:
+The most significant change to the language in this update is the addition of the `Map` data structure! If you've used regular programming languages like JavaScript or Ruby you may know that a `Map` is sometimes called a `Hash`. They store a mix of key/value pairs:
 
     :::scss
     $colors: (
