@@ -55,7 +55,7 @@ Now here comes the interesting part. What if we never use the `icon` class in ou
 
 ## Enter placeholder selectors
 
-Placeholder selectors were introduced to solve this exact problem. They are very similar to class selectors, but instead of using a `.` at the start, the `%` character is used. Placeholder selectors have the additional property that they *will not* show up in the generated CSS, only the selectors that extend them will be included in the output.
+Placeholder selectors were introduced to solve this exact problem. They are very similar to class selectors, but instead of using a period (`.`) at the start, the percent character (`%`) is used. Placeholder selectors have the additional property that they *will not* show up in the generated CSS, only the selectors that extend them will be included in the output.
 
 Going back to our initial example, if our icon styles are defined like so:
 
