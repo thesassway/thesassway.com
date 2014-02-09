@@ -92,7 +92,7 @@ The following CSS will be generated:
     }
 
 
-Notice how `.error` is no longer present in the compiled CSS!
+Notice how `.icon` is no longer present in the compiled CSS!
 
 
 ## Extend vs. include
