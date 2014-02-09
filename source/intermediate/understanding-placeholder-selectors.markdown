@@ -1,15 +1,20 @@
 ---
-date: 9 Feb 2014
+date: 9 February 2014
 categories: intermediate, guides
 author: Daniel Imms
-summary: Sass provides us with many tools to get the job done cleanly and efficiently. This article from Daniel Imms goes into depth on using placeholder selectors with `@extend`, problems that can occur and how it differs with `@include`.
+summary: Sass provides us with a number of helpful tools to share code between CSS rules. In this article, I'll talk about a powerful new feature in Sass called placeholder selectors. We'll look at how to use this feature correctly, cover some problems that may occur, and examine how it differs from other approaches.
 ---
 
 # Understanding placeholder selectors
 
-[`@extend`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#extend) is a great tool, allowing us to reuse styles and stay <abbr title="Don't Repeat Yourself">DRY</abbr>. 
+Sass provides a number of different ways to share code between CSS rules. You can use [mixins](/intermediate/leveraging-sass-mixins-for-cleaner-code) to insert new CSS properties and/or rules into your CSS and you can use `@extend` to share CSS properties between selectors. Sass 3.2 introduces a new concept called "placeholders" to make `@extend` generate more efficent output.
 
-For those of you that are unfamiliar with the `@extend` keyword, it allows sharing all styles of a class with another. This is illustrated in the following example:
+But before we get into that, let's talk about how extend works...
+
+
+## How extend works
+
+The [`@extend`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#extend) directive allows us to easily share styles between selectors. This is best illustrated with an example:
 
     :::scss
     .icon {
@@ -27,7 +32,7 @@ For those of you that are unfamiliar with the `@extend` keyword, it allows shari
       // info specific styles...
     }
 
-After compilation, the `.error-icon` and `.info-icon` selectors will share all styles of the `.icon` selector by attaching them to `.icon`'s styles.
+Which will generate the following output:
 
     :::css
     .icon, .error-icon, .info-icon {
@@ -35,14 +40,22 @@ After compilation, the `.error-icon` and `.info-icon` selectors will share all s
       margin: 0 .5em;
     }
 
+    .error-icon {
+      // error specific styles...
+    }
 
-But what if we never use the `icon` class and its only purpose is to be there to extend? The resulting CSS files will be slightly larger as we'll have a style that will never be used.
+    .info-icon {
+      // info specific styles...
+    }
 
-Since we all care deeply about performance on the web (right?), we want to keep both the weight and complexity of our page down as much as possible.
+What's going on here? The `@extend` directive allows us to declare that `.error-icon` and `.info-icon` should inherit the properties of the `.icon` selector. It does this by modifying the `.icon` selector to also include `.error-icon` and `.info-icon`. Pretty nifty, right?
+
+Now here comes the interesting part. What if we never use the `icon` class in our markup and its only purpose is to be there to extend? The resulting CSS will be slightly larger than it really needs to be because we'll have a style that will never be used. We can get around this with placeholder selectors.
+
 
 ## Enter placeholder selectors
 
-In version 3.2.0 of Sass, placeholder selectors were introduced to fix this exact flaw. They are selectors defined like any other, but instead of using a `.` or `#` at the start, the `%` character is used. Placeholder selectors have the additional property that they *will not* be generated, only the selectors that extend them will be.
+Placeholder selectors were introduced to solve this exact problem. They are very similar to class selectors, but instead of using a `.` at the start, the `%` character is used. Placeholder selectors have the additional property that they *will not* show up in the generated CSS, only the selectors that extend them will be included in the output.
 
 Going back to our initial example, if our icon styles are defined like so:
 
@@ -54,13 +67,15 @@ Going back to our initial example, if our icon styles are defined like so:
 
     .error-icon {
       @extend %icon;
+      // error specific styles...
     }
 
     .info-icon {
       @extend %icon;
+      // info specific styles...
     }
 
-They will be compiled to:
+The following CSS will be generated:
 
     :::css
     .error-icon, .info-icon {
@@ -68,11 +83,23 @@ They will be compiled to:
       margin: 0 .5em;
     }
 
-Notice how `.error` is no longer present in the compiled CSS.
+    .error-icon {
+      // error specific styles...
+    }
 
-## @extend vs @include
+    .info-icon {
+      // info specific styles...
+    }
 
-At first glance it looks like placeholder selectors are the same as parameterless mixins. While this is almost always true from a *functional* perspective, the CSS that is output differs drastically. Consider the implementation of the icon example using mixins:
+
+Notice how `.error` is no longer present in the compiled CSS!
+
+
+## Extend vs. include
+
+At first glance it may look like placeholder selectors are the same as parameterless mixins. While this is almost true from a *functional* perspective (it will achieve nearly identical results in the browser), the CSS that is generated differs drastically.
+
+Consider the implementation of the icon example using mixins:
 
     :::scss
     @mixin icon {
@@ -82,30 +109,37 @@ At first glance it looks like placeholder selectors are the same as parameterles
 
     .error-icon {
       @include icon;
+      // error specific styles...
     }
 
     .info-icon {
       @include icon;
+      // info specific styles...
     }
 
-From a maintenance perspective it is just as good as the `@extend` example, not so from a performance perspective though. This is what it's compiled as:
+This will generate the following CSS:
 
     :::css
     .error-icon {
       transition: background-color ease .2s;
       margin: 0 .5em;
+      // error specific styles...
     }
 
     .info-icon {
       transition: background-color ease .2s;
       margin: 0 .5em;
+      // info specific styles...
     }
 
-Notice how the rules themselves are duplicated when `@include` is used.
+From a maintenance perspective this is just as good as the `@extend` example, but if you are concerned about the CSS output, this is much worse because the properties are duplicated between rules instead of sharing the same selector.
+
 
 ## Limitations
 
-There is a major limitation with placeholder selectors, well `@extend` in general, to always keep in your mind. `@extend` doesn't work when the *extending* selector is in a different `@media` block. Consider the following:
+One limitation with `@extend` that applies to placeholder selectors as well is that it doesn't work between rules in different `@media` blocks.
+
+Consider the following:
 
     :::scss
     %icon {
@@ -125,15 +159,15 @@ There is a major limitation with placeholder selectors, well `@extend` in genera
 
 This will actually result in a compile error:
 
-<pre><samp>
-You may not @extend an outer selector from within @media.
-You may only @extend selectors within the same directive.
-From "@extend %icon" on line 8 of /app/lib/sassmeister.rb.
-</samp></pre>
+    You may not @extend an outer selector from within @media.
+    You may only @extend selectors within the same directive.
+    From "@extend %icon" on line 8 of icons.scss
 
-When I first ran into this limitation there was no compiler message and I thought it was a bug. There is a very good reason that this is how it works though. Since `@extend` works by adding a selector to another selector without duplicating any of the styles, it doesn't make sense for them to be shared across multiple `@media` blocks (because they're impossible to share).
+When I first ran into this limitation there I thought it was a bug. However, there is a very good reason for why it works this way in Sass.
 
-It does work the other way though, any media queries surrounding the placeholder selector will be applied to the selectors extending it.
+Since `@extend` works by adding a selector to another selector without duplicating any of the properties it's actually impossible to join selectors in different `@media` blocks.
+
+It does work the other way though. Any media queries surrounding the placeholder selector will be applied to the selectors extending it providing they are not in an `@media` block:
 
     :::scss
     @media screen {
@@ -151,7 +185,7 @@ It does work the other way though, any media queries surrounding the placeholder
       @extend %icon;
     }
 
-Which compiles to:
+This will compile to:
 
     :::css
     @media screen {
@@ -161,8 +195,9 @@ Which compiles to:
       }
     }
 
+
 ## Final words
 
-The `@extend` and `@include` keywords are both very powerful features with some subtle differences. When approaching a style reuse problem that could be solved by either of them, you should ask yourself which is the right solution.
+The `@extend` and `@include` directives are both very powerful features with some subtle differences. When approaching a style reuse problem you may want to ask yourself if the generated CSS is important to you. In some cases `@extend` can greatly simplify the output and significantly improve the performance of your CSS.
 
-Of course, nothing is stopping you from [mixing and matching](http://sassmeister.com/gist/8893261) if the situtation calls for it. Just make sure that the maintenance gains outweight the additional complexity of the Sass.
+Of course, nothing is stopping you from [mixing and matching](http://sassmeister.com/gist/8893261) `@extend` and `@include` if the situation calls for it. However, I generally try to err on the side of easy-to-understand and maintain source code.
