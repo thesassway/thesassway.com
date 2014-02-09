@@ -5,9 +5,9 @@ author: John W. Long
 summary: It's been a long time coming, but well worth the wait! Sass 3.3 includes many long awaited features, including the new Map data structure, source maps, improved ampersand semantics, and an improved `if()` function.
 ---
 
-# Sass 3.3 released!
+# Sass 3.3 (Maptastic Maple)
 
-We are pleased to annouce that Sass 3.3 has been released with many long awaited features. You can get the full scoop in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html). But here's a summary of some of the cool new features.
+We are pleased to annouce that Sass 3.3 (aka Maptastic Maple) has been released with many long awaited features. You can get the full scoop in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html). But here's a summary of some of the cool new features.
 
 
 ## New map data structure
