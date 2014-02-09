@@ -163,7 +163,7 @@ This will actually result in a compile error:
     You may only @extend selectors within the same directive.
     From "@extend %icon" on line 8 of icons.scss
 
-When I first ran into this limitation there I thought it was a bug. However, there is a very good reason for why it works this way in Sass.
+When I first ran into this limitation I thought it was a bug. However, there is a very good reason for why it works this way in Sass.
 
 Since `@extend` works by adding a selector to another selector without duplicating any of the properties it's actually impossible to join selectors in different `@media` blocks.
 
