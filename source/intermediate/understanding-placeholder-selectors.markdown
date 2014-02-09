@@ -2,7 +2,7 @@
 date: 9 February 2014
 categories: intermediate, guides
 author: Daniel Imms
-summary: Sass provides us with a number of helpful tools to share code between CSS rules. In this article, I'll talk about a powerful new feature in Sass called placeholder selectors. We'll look at how to use this feature correctly, cover some problems that may occur, and examine how it differs from other approaches.
+summary: Sass provides us with a number of helpful tools to share code between CSS rules. In this article, I'll talk about a relatively new feature in Sass called placeholder selectors. We'll look at how to use this feature correctly, cover some problems that may occur, and examine how it differs from other approaches.
 ---
 
 # Understanding placeholder selectors
