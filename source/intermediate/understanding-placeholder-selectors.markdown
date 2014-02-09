@@ -5,7 +5,7 @@ author: Daniel Imms
 summary: Sass provides us with many tools to get the job done cleanly and efficiently. This article from Daniel Imms goes into depth on using placeholder selectors with `@extend`, problems that can occur and how it differs with `@include`.
 ---
 
-# Extending @extend with placeholder selectors
+# Understanding placeholder selectors
 
 [`@extend`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#extend) is a great tool, allowing us to reuse styles and stay <abbr title="Don't Repeat Yourself">DRY</abbr>. 
 
