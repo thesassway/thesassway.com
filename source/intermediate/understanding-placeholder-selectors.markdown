@@ -7,7 +7,7 @@ summary: Sass provides us with a number of helpful tools to share code between C
 
 # Understanding placeholder selectors
 
-Sass provides a number of different ways to share code between CSS rules. You can use [mixins](/intermediate/leveraging-sass-mixins-for-cleaner-code) to insert new CSS properties and/or rules into your CSS and you can use `@extend` to share CSS properties between selectors. Sass 3.2 introduces a new concept called "placeholders" to make `@extend` generate more efficent output.
+Sass provides a number of different ways to share code between CSS rules. You can use [mixins](/intermediate/leveraging-sass-mixins-for-cleaner-code) to insert new CSS properties and/or rules into your CSS and you can use `@extend` to share CSS properties between selectors. Sass 3.2 introduces a new concept called "placeholders" to make `@extend` generate more efficient output.
 
 But before we get into that, let's talk about how extend works...
 
