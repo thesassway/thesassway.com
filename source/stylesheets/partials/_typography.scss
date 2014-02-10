@@ -64,7 +64,7 @@
 
 .blockquote {
   border-left: 3px solid $border-color;
-  color: #b06;
+  color: $accent-color;
   padding-left: 1.5em;
   @extend .italic;
 }
@@ -91,7 +91,7 @@
   @extend .emphasis;
 
   code, pre { @extend .fixed; }
-  code { color: #b06; }
+  code { color: $accent-color; }
 
   abbr[title] { @extend .abbreviation; }
 

@@ -1,0 +1,27 @@
+.graphic-header {
+  color: $reversed-text-color;
+  background: $reversed-background-color;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  margin-top: -$masthead-height;
+}
+.graphic-header-title { @extend %h1; margin-top: $masthead-height; }
+.graphic-header-subtitle { @extend %h6; }
+
+.reversed {
+  .graphic-header-title { color: white; }
+  .graphic-header-subtitle { color: white; }
+}
+
+.sass-3-3-graphic-header {
+  background-color: #cb6898;
+  @include background-image(
+    linear-gradient(rgba(#610431, 0), rgba(#610431, 0.2), rgba(#610431, 0.8)),
+    image-url('headers/women-mechanics.jpeg')
+  );
+  background-size: auto 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 12em;
+}
+

@@ -29,6 +29,10 @@ $reversed-link-color: rgba($reversed-link-hover-color, 0.9);
 $reversed-link-visited-color: rgba($reversed-link-hover-color, 0.8);
 $reversed-border-color: rgba($reversed-text-color, 0.1);
 
+$accent-color: #b06;
+
+$masthead-height: 50px;
+
 @import "compass/css3";
 @import "compass/reset";
 @import "../modules/all";

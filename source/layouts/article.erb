@@ -1,8 +1,13 @@
 <% wrap_layout 'layout' do %>
   <article class="article">
+    <%= partial "headers/_#{header}" if header %>
     <div class="row">
       <div class="large-10 large-offset-1 columns typeset">
-        <%= yield %>
+        <% if header %>
+          <%= body_without_title %>
+        <% else %>
+          <%= yield %>
+        <% end %>
 
         <% unless meta.categories.empty? %>
           <div class="article-categories">
