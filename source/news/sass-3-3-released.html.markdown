@@ -8,7 +8,7 @@ header: sass-3-3
 
 # Sass 3.3 (Maptastic Maple)
 
-We are pleased to annouce that Sass 3.3 (aka Maptastic Maple) has been released with many long awaited features. You can get the full scoop in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html). But here's a summary of some of the cool new features.
+We are pleased to annouce that Sass 3.3 (aka Maptastic Maple) has been released! You can get the full scoop on what's changed in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but here's a summary of some of the cool new features...
 
 
 ## New map data structure
