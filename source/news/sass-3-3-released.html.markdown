@@ -142,11 +142,11 @@ A significant and welcome change contibuted by [Rob Wierzbowski](https://twitter
 Which would output:
 
     :::css
-    .span:nth-child(5) { content: 5; }
-    .span:nth-child(4) { content: 4; }
+    .span:nth-child(1) { content: 5; }
+    .span:nth-child(2) { content: 4; }
     .span:nth-child(3) { content: 3; }
-    .span:nth-child(2) { content: 2; }
-    .span:nth-child(1) { content: 1; }
+    .span:nth-child(4) { content: 2; }
+    .span:nth-child(5) { content: 1; }
 
 Previously, this would have failed silently with no output.
 
