@@ -24,12 +24,12 @@ The [`@extend`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#extend
 
     .error-icon {
       @extend .icon;
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
       @extend .icon;
-      // info specific styles...
+      /* info specific styles... */
     }
 
 Which will generate the following output:
@@ -41,11 +41,11 @@ Which will generate the following output:
     }
 
     .error-icon {
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
-      // info specific styles...
+      /* info specific styles... */
     }
 
 What's going on here? The `@extend` directive allows us to declare that `.error-icon` and `.info-icon` should inherit the properties of the `.icon` selector. It does this by modifying the `.icon` selector to also include `.error-icon` and `.info-icon`. Pretty nifty, right?
@@ -67,12 +67,12 @@ Going back to our initial example, if our icon styles are defined like so:
 
     .error-icon {
       @extend %icon;
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
       @extend %icon;
-      // info specific styles...
+      /* info specific styles... */
     }
 
 The following CSS will be generated:
@@ -84,15 +84,15 @@ The following CSS will be generated:
     }
 
     .error-icon {
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
-      // info specific styles...
+      /* info specific styles... */
     }
 
 
-Notice how `.error` is no longer present in the compiled CSS!
+Notice how `.icon` is no longer present in the compiled CSS!
 
 
 ## Extend vs. include
@@ -109,12 +109,12 @@ Consider the implementation of the icon example using mixins:
 
     .error-icon {
       @include icon;
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
       @include icon;
-      // info specific styles...
+      /* info specific styles... */
     }
 
 This will generate the following CSS:
@@ -123,13 +123,13 @@ This will generate the following CSS:
     .error-icon {
       transition: background-color ease .2s;
       margin: 0 .5em;
-      // error specific styles...
+      /* error specific styles... */
     }
 
     .info-icon {
       transition: background-color ease .2s;
       margin: 0 .5em;
-      // info specific styles...
+      /* info specific styles... */
     }
 
 From a maintenance perspective this is just as good as the `@extend` example, but if you are concerned about the CSS output, this is much worse because the properties are duplicated between rules instead of sharing the same selector.
@@ -163,7 +163,7 @@ This will actually result in a compile error:
     You may only @extend selectors within the same directive.
     From "@extend %icon" on line 8 of icons.scss
 
-When I first ran into this limitation there I thought it was a bug. However, there is a very good reason for why it works this way in Sass.
+When I first ran into this limitation I thought it was a bug. However, there is a very good reason for why it works this way in Sass.
 
 Since `@extend` works by adding a selector to another selector without duplicating any of the properties it's actually impossible to join selectors in different `@media` blocks.
 
