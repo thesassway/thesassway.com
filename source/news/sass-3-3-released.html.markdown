@@ -98,6 +98,7 @@ Produces:
 
 The `@at-root` directive can also be used with a block. This means that the previous example could have been written:
 
+    :::scss
     .message {
       @at-root {
         .info { color: blue; }
@@ -107,6 +108,7 @@ The `@at-root` directive can also be used with a block. This means that the prev
 
 By default `@at-root` will only bust out nested rules, but it can also be used to remove the effects of `@media` or `@support` blocks. For instance:
 
+    :::scss
     @media print {
       .page {
         width: 8in !important;
@@ -118,6 +120,7 @@ By default `@at-root` will only bust out nested rules, but it can also be used t
 
 Would produce the following output:
 
+    :::scss
     @media print {
       .page {
         width: 8in !important;
