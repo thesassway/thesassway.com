@@ -35,7 +35,7 @@ So let's start with creating a Sass function that receives a color value and dep
 }
 ```
 
-Lightness() is a built-in Sass function that calculates the lightness of a colors RGB value between 0% and 100%. Where 0% is the darkest and 100% the lightest.
+Lightness() is a [built-in Sass function](http://sass-lang.com/documentation/Sass/Script/Functions.html#lightness-instance_method) that calculates the lightness of a colors RGB value between 0% and 100%. Where 0% is the darkest and 100% the lightest.
 So in our function we receive a color, and if that colors lightness value is greater than 50%, meaning it's a lighter color, we return a dark value to ensure a good contrast.
 
 Alrighty then. Let’s create some basic styling and then call our function.
@@ -76,3 +76,5 @@ $notification-alert: rgb(172, 34, 34);          // Red
 There we have it! We call our function with the background color of our button, and the function returns the appropriate text color. As you can see, the function parameter can take a hex value, rgba, hsl or the name of the color.
 
 So if you want to change the alert notification color, you just change the value of the variable, and the text color changes automatically. This is of course a simplified example of how you can use lightness() for dynamical colors. It can be extended to detect more lightness values, used on different button states and a lot more!
+
+A demo can be [viewed here](http://codepen.io/sebastianekstrom/pen/avDjh).
