@@ -24,4 +24,12 @@ $(function() {
     }
   });
 
+  $(window).on('scroll', function() {
+    if (document.body.scrollTop > 0) {
+      $('.navigation').addClass('is-fixed');
+    } else {
+      $('.navigation').removeClass('is-fixed');
+    }
+  });
+
 });

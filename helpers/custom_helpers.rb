@@ -27,6 +27,10 @@ module CustomHelpers
     meta(page).header
   end
 
+  def reversed_header?(page = current_page)
+    meta(page).reversed_header
+  end
+
   def author(page = current_page)
     name = meta(page).author
     data.authors.find { |a| name === a.name }
