@@ -120,7 +120,7 @@ By default `@at-root` will only bust out nested rules, but it can also be used t
 
 Would produce the following output:
 
-    :::scss
+    :::css
     @media print {
       .page {
         width: 8in !important;
