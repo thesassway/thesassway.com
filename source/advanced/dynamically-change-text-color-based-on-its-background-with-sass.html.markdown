@@ -10,7 +10,7 @@ summary: With the help of variables, functions and mixins we can create really d
 With the help of variables, functions and mixins we can create really dynamic, automatic and clean code, which is one of the big strengths in Sass. In this article I'll show you how you can guarantee a good contrast between a text and its background dynamically with Sass and lightness().
 
 
-## The code
+## How to do it
 
 We'll use notification bars as an example of this. So lets start with some basic HTML:
 
