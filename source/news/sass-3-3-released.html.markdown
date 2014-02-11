@@ -49,7 +49,7 @@ Sass source maps are a hot new feature in Sass that make it possible to view the
 I don't have time to detail how this works in this post, but read Google's documentation on *[Working with CSS processors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)* or Sam Richard's article on *[Debugging Sass source maps](http://snugug.com/musings/debugging-sass-source-maps)*. Or, if you are more visual, watch Chris Eppstein show this off in his video presentation on *[The Mind-blowing power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)* (in which he also shows off many more amazing Sass 3.3 features).
 
 
-## Improved parent selector (&) semantics and @at-root
+## Improved parent selector
 
 The ampersand operator has a long and celebrated past in the Sass community. It makes it possible to write code like this:
 
@@ -64,15 +64,13 @@ The ampersand operator has a long and celebrated past in the Sass community. It 
     .button.primary { background: orange; }
     .button.secondary { background: blue; }
 
-It's now possible to use it with a suffix to append to the selector. This example also uses the new `@at-root` directive to undo the nesting on the current selector:
+It's now possible to use a parent selector with a suffix to append to the selector
 
     :::scss
     // Ampersand in SassScript:
     .button {
-      @at-root {
-        &-primary { background: orange; }
-        &-secondary { background: blue; }
-      }
+      &-primary { background: orange; }
+      &-secondary { background: blue; }
     }
 
     // Ouptut:
@@ -80,6 +78,54 @@ It's now possible to use it with a suffix to append to the selector. This exampl
     .button-secondary { background: blue; }
 
 Previously, this would have caused an error in Sass, but no longer!
+
+
+## New @at-root directive
+
+A new directive has been added to Sass that allows you to "unwind" nesting and insert something at the highest level. Simply prefix a selector with the `@at-root` directive and it will ignore previous levels of nested selectors:
+
+    :::scss
+    .message {
+      @at-root .info { color: blue; }
+      @at-root .error { color: red; }
+    }
+
+Produces:
+
+    :::css
+    .info { color: blue; }
+    .error { color: red; }
+
+The `@at-root` directive can also be used with a block. This means that the previous example could have been written:
+
+    .message {
+      @at-root {
+        .info { color: blue; }
+        .error { color: red; }
+      }
+    }
+
+By default `@at-root` will only bust out nested rules, but it can also be used to remove the effects of `@media` or `@support` blocks. For instance:
+
+    @media print {
+      .page {
+        width: 8in !important;
+        @at-root (without: media) {
+          width: 960px;
+        }
+      }
+    }
+
+Would produce the following output:
+
+    @media print {
+      .page {
+        width: 8in !important;
+      }
+    }
+    .page {
+      width: 960px;
+    }
 
 
 ## Improved if() semantics
