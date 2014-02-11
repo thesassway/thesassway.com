@@ -46,15 +46,13 @@ $notification-warning: #ffc53a;                 // Yellow
 $notification-alert: rgb(172, 34, 34);          // Red
 
 %notification {
-    text-decoration: none;
-    padding: 2em 3em;
+    padding: 1em 2em;
     width: 30%;
     margin: 1em auto;
     display: block;
     text-align: center;
     font-size: 1.5em;
     font-family: sans-serif;
-    font-weight: bold;
     border-radius: 10px;
 }
 
