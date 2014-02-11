@@ -1,69 +1,80 @@
 ---
-date: 30 August 2011 14:00
-categories: news
-author: Adam Stacoviak
-summary: Twitter responses like this are awesome! We appreciate your responses and interactions with us on Twitter. Please keep it up. :)
+date: 10 January 2014 16:00
+categories: advanced
+author: Sebastian Ekström
+summary: With the help of variables, functions and mixins we can create really dynamic, automatic and clean code, which is one of the big strengths in Sass. In this article I'll show you how you can guarantee a good contrast between a text and its background dynamically with Sass and lightness().
 ---
 
 # Dynamically change text color based on its background with Sass
 
-Let’s say you have three types of buttons on your site; confirm, warning and alert. These three have different background colors, maybe green for the confirm, the warning one is orange and red for the alert button. How do you determine the text color for these buttons? If the warning button has a light shade of orange you want to use a black color on top of it. But what if that orange changes to a darker shade, or a completely different color? Then the black text color might be hard to read.
+With the help of variables, functions and mixins we can create really dynamic, automatic and clean code, which is one of the big strengths in Sass. In this article I'll show you how you can guarantee a good contrast between a text and its background dynamically with Sass and lightness().
 
-Thats why it can be smart to dynamically set the text color with the help of the Compass function lightness(). Lightness calculates a colors, you guessed it, lightness and returns a value from 0 to 100. Where 0 is the darkest, and 100 is the lightest.
-So if a color (the background of the button in this case) returns a high value, meaning it’s a lighter color, we should set the text color to something dark.
 
-## The HTML
+## The code
 
-```
-<a href="#" class="button button-confirm">Confirmation</a>
-<a href="#" class="button button-warning">Warning</a>
-<a href="#" class="button button-alert">Alert</a>
-```
-
-## The Sass
-
-There we have our three types of buttons; confirm, warning and alert. Let’s create a SASS function that receives a color and returns another one depending on it’s lightness:
+We'll use notification bars as an example of this. So lets start with some basic HTML:
 
 ```
-@function set-button-text-color($color) {
-    @if (lightness( $color ) > 40) {
-      @return #000000;
+<p class="notification notification-confirm">Confirmation</p>
+<p class="notification notification-warning">Warning</p>
+<p class="notification notification-alert">Alert</p>
+```
+
+There's our three types of notifications; confirm, warning and alert. These will have different colors, maybe green for the confirmation, yellow for the warning and red for the alert. And we want its text color to have a good contrast to the background.
+
+So let's start with creating a Sass function that receives a color value and depending on its lightness returns another color.
+
+```
+@function set-notification-text-color($color) {
+    @if (lightness( $color ) > 50) {
+      @return #000000; // Lighter color, return black
     }
     @else {
-      @return #FFFFFF;
+      @return #FFFFFF; // Darker color, return white
     }
 }
 ```
 
-Alrighty then. Let’s create the rest of the CSS and call our function.
+Lightness() is a built-in Sass function that calculates the lightness of a colors RGB value between 0% and 100%. Where 0% is the darkest and 100% the lightest.
+So in our function we receive a color, and if that colors lightness value is greater than 50%, meaning it's a lighter color, we return a dark value to ensure a good contrast.
+
+Alrighty then. Let’s create some basic styling and then call our function.
 
 ```
-%button {
+$notification-confirm: hsla(101, 72%, 37%, 1);  // Green
+$notification-warning: #ffc53a;                 // Yellow
+$notification-alert: rgb(172, 34, 34);          // Red
+
+%notification {
     text-decoration: none;
     padding: 2em 3em;
     width: 30%;
-    margin: 2% auto;
+    margin: 1em auto;
     display: block;
     text-align: center;
     font-size: 1.5em;
     font-family: sans-serif;
     font-weight: bold;
-    @include border-radius(10px);
+    border-radius: 10px;
 }
-.button {
-    @extend %button;
+
+.notification {
+    @extend %notification;
 }
-.button-confirm {
-    background: green;
-    color: set-button-text-color(green);
+.notification-confirm {
+    background: $notification-confirm;
+    color: set-notification-text-color($notification-confirm);
 }
-.button-warning {
-    background: orange;
-    color: set-button-text-color(orange);
+.notification-warning {
+    background: $notification-warning;
+    color: set-notification-text-color($notification-warning);
 }
-.button-alert {
-    background: red;
-    color: set-button-text-color(red);
+.notification-alert {
+    background: $notification-alert;
+    color: set-notification-text-color($notification-alert);
 }
 ```
-There we have it! We simply call our function with the background color of our button, and the function does the rest. This is a basic example, but we could easily extend the set-button-text-color function to adapt to more lightness values.
+
+There we have it! We call our function with the background color of our button, and the function returns the appropriate text color. As you can see, the function parameter can take a hex value, rgba, hsl or the name of the color.
+
+So if you want to change the alert notification color, you just change the value of the variable, and the text color changes automatically. This is of course a simplified example of how you can use lightness() for dynamical colors. It can be extended to detect more lightness values, used on different button states and a lot more!
