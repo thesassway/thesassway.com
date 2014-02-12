@@ -19,10 +19,16 @@
 	-moz-osx-font-smoothing: grayscale !important;
 
   &.x24 { font-size: 24px !important; vertical-align: -15%; }
-  &.x32 { font-size: 32px !important; }
-  &.x48 { font-size: 48px !important; }
+  &.x32 {
+    font-size: 32px !important;
+    &.s24 { line-height: 24px !important; vertical-align: -35%; }
+  }
+  &.x48 {
+    font-size: 48px !important;
+  }
 }
 
+.thesassway-icon:before { content: "\e644"; }
 .reply-arrow-icon:before { content: "\e061"; }
 .facebook-icon:before { content: "\e600"; }
 .twitter-icon:before { content: "\e601"; }
