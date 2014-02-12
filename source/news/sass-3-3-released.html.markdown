@@ -9,7 +9,7 @@ reversed_header: true
 
 # Sass 3.3 (Maptastic Maple)
 
-We are pleased to annouce that Sass 3.3 (aka Maptastic Maple) has been released! You can get the full scoop on what's changed in the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but here's a summary of some of the cool new features...
+We are pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! You can get the full scoop on what's changed in the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but here's a summary of some of the cool new features...
 
 
 ## New map data structure
@@ -37,8 +37,7 @@ Maps can also be used instead of keyword parameters:
     $color-1: adjust-color($color-1, $adjustments...);
     $color-2: adjust-color($color-2, $adjustments...);
 
-For more info about Sass maps see the [change log](https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
-
+For more info about Sass maps see the [changelog](https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
 
 ## Sass source maps
 
@@ -46,8 +45,7 @@ Sass source maps are a hot new feature in Sass that make it possible to view the
 
 ![Sass source maps in action!](/images/articles/sass-sources.png)
 
-I don't have time to detail how this works in this post, but read Google's documentation on *[Working with CSS processors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)* or Sam Richard's article on *[Debugging Sass source maps](http://snugug.com/musings/debugging-sass-source-maps)*. Or, if you are more visual, watch Chris Eppstein show this off in his video presentation on *[The Mind-blowing power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)* (in which he also shows off many more amazing Sass 3.3 features).
-
+I don't have time to detail how this works in this post, but read Google's documentation on *[Working with CSS Preprocessors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)* or Sam Richard's article *[Debugging Sass With Source Maps](http://snugug.com/musings/debugging-sass-source-maps)*. Or, if you are more visual, watch Chris Eppstein show this off in his talk *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)* (in which he also shows off many more amazing Sass 3.3 features).
 
 ## Improved parent selector
 
@@ -133,7 +131,7 @@ Would produce the following output:
 
 ## Improved if() semantics
 
-If you're not a heavy user of Sass you probably haven't run across the `if()` function before. Sass does have the `@if` control structure:
+If you're not a heavy user of Sass you probably haven't come across the `if()` function before. Sass does have the `@if` control structure:
 
     :::scss
     @if (condition) {
@@ -143,7 +141,7 @@ If you're not a heavy user of Sass you probably haven't run across the `if()` fu
     }
 
 Which is useful for multi-line conditionals. But it also has the `if()` function which can be used for simpler constructs:
-    
+
     :::scss
     $variable: if(condition, result-when-true, result-when-false);
 
@@ -153,7 +151,7 @@ In most cases how this function works is pretty transparent. Unfortunately, it c
     @function my-function($args...) {
       // Assign the first argument to $param-1
       $param-1: nth($args, 1);
-      
+
       // If a second argument was passed assign it to $param-2,
       // otherwise assign an empty list:
       $param-2: if(length($args) > 1, nth($args, 2), ());
@@ -203,8 +201,8 @@ Previously, this would have failed silently with no output.
 
 ## And, much, much more!
 
-These are just the highlights of what's changed in the latest version of Sass. As I said before, you'll need to read the [change log](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) to find out more!
+These are just the highlights of what's changed in the latest version of Sass. As I said before, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) to find out more!
 
-Here's Chris Eppstein presenting, *The Mind-blowing power of Sass 3.3*:
+Here's Chris Eppstein presenting, *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)*:
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/-ZJeOJGazgE" frameborder="0" allowfullscreen></iframe>
