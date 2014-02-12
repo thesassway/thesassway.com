@@ -151,6 +151,17 @@
 
     <p>Connect with Hugo on Twitter at <a href="http://twitter.com/hugogiraudel">@HugoGiraudel</a>.</p>
 -
+  name: Sebastian Ekström
+  slug: sebastian-ekstrom
+  avatar: /images/authors/sebastian-ekstrom.jpg
+  website: http://zerosixthree.se
+  twitter: seb_ekstrom
+  bio: >
+    <p>
+      <a href="http://zerosixthree.se">Sebastian Ekström</a> is a front-end developer from Sweden working at <a href="http://creuna.se">Creuna</a>. He's the creator of <a href="zerosixthree.se/labs/phone_queue_simulator">The Phone Queue Simulator</a>,
+    passionate about <a href="http://css-tricks.com/css-standards-process/">web standards</a> and is pursuing a career as a famous cruise ship magician.</p>
+    <p>Connect with Sebastian on Twitter at <a href="http://twitter.com/seb_ekstrom">@seb_ekstrom</a>.</p>
+-
   name: Frank S
   slug: frank-s
   avatar: /images/authors/frank-s.png
