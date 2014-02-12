@@ -159,7 +159,7 @@ In most cases how this function works is pretty transparent. Unfortunately, it c
       ...
     }
 
-Above, if we passed two arguments to `my-function()` the second will be assigned to `$param-2`. And if we only pass one argument to `my-function()`an empty list will be assigned to `$param-2`. Or that's our intention.
+Above, if we passed two arguments to `my-function()` the second will be assigned to `$param-2`. If we only pass one argument to `my-function()` an empty list will be assigned to `$param-2`. Or that's our intention.
 
 In previous versions of Sass, however, an error will be raised when only one argument is passed because the expression `nth($args, 2)` will be evaluated regaurdless of the conditional. And since only one argument was passed `nth($args, 2)` is trying to index a non-existant item in the `$args` list which causes an error.
 
