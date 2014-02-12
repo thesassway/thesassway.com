@@ -40,13 +40,13 @@
         <label class="navigation-button" for="navigation-state"><i class="menu-icon x48"></i><span class="sr-only">Menu</span></label>
         <input class="navigation-state" type="checkbox" id="navigation-state" />
         <ul class="navigation-menu">
-          <li class="navigation-menu-item"><a href="/" title="Home"><i class="thesassway-icon logo-icon small-hidden"></i><span class="medium-up-hidden">Home</span></a></li>
-          <li class="navigation-menu-item"><a href="/beginner">Beginner</a></li>
-          <li class="navigation-menu-item"><a href="/intermediate">Intermediate</a></li>
-          <li class="navigation-menu-item"><a href="/advanced">Advanced</a></li>
-          <li class="navigation-menu-item"><a href="/editorial">Editorial</a></li>
-          <li class="navigation-menu-item"><a href="/news">News</a></li>
-          <li class="navigation-menu-item"><a href="/projects">Projects</a></li>
+          <li class="navigation-menu-item"><a href="/" title="The Sass Way"><i class="thesassway-icon logo-icon small-hidden"></i><span class="medium-up-hidden">Home</span></a></li>
+          <li class="navigation-menu-item<%= select_if('/beginner') %>"><a href="/beginner">Beginner</a></li>
+          <li class="navigation-menu-item<%= select_if('/intermediate') %>"><a href="/intermediate">Intermediate</a></li>
+          <li class="navigation-menu-item<%= select_if('/advanced') %>"><a href="/advanced">Advanced</a></li>
+          <li class="navigation-menu-item<%= select_if('/editorial') %>"><a href="/editorial">Editorial</a></li>
+          <li class="navigation-menu-item<%= select_if('/news') %>"><a href="/news">News</a></li>
+          <li class="navigation-menu-item<%= select_if('/projects') %>"><a href="/projects">Projects</a></li>
           <li class="navigation-menu-item"><a href="http://feeds.feedburner.com/thesassway" title="Subscribe"><i class="feed-icon x24 small-hidden"></i><span class="medium-up-hidden">Subscribe</span></a></li>
         </ul>
       </nav>
