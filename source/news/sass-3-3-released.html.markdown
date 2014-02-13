@@ -87,7 +87,7 @@ It's now possible to use a parent selector with a suffix to append to the select
       &-secondary { background: blue; }
     }
 
-    // Ouptut:
+    // Output:
     .button-primary { background: orange; }
     .button-secondary { background: blue; }
 
