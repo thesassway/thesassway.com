@@ -121,25 +121,35 @@ $navigation-sidebar-width: 100%;
     padding: 10px;
     letter-spacing: 1px;
 
+    [class$="-icon"], [class*="-icon "] {
+      color: rgba(#cb6898, 0.8);
+    }
+
     &:focus, &:hover {
-      border-bottom-color: $link-color;
-      color: $text-color;
+      color: #cb6898;
+
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
 
     &:active {
       color: $link-color;
       border-bottom-color: $link-color;
-    }
 
-    &.is-selected {
-      color: $link-color;
-      border-bottom-color: $link-color;
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
 
     .reversed:not([class~=is-fixed]) & {
       color: $reversed-navigation-color;
       &:focus, &:hover, &:active, &.is-selected { border-bottom-color: $reversed-navigation-color; }
     }
+  }
+
+  .navigation-menu-item.is-selected a {
+    border-bottom-color: $link-color;
   }
 
 }
