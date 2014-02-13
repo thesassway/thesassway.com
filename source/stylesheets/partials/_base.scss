@@ -1,12 +1,16 @@
-$base-font-family: 'Lora', Times, serif;
+$serif: 'Lora', Times, serif;
+$sans-serif: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$monospace: 'Source Code Pro', 'Andale Mono', AndaleMono, monospace;
+
+$base-font-family: $serif;
 $base-font-size: 18px;
 $base-font-weight: 400;
 $base-line-height: 1.7;
 
-$heading-font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family: $sans-serif;
 $heading-font-weight: 700;
 
-$fixed-font-family: 'Source Code Pro', 'Andale Mono', AndaleMono, monospace;
+$fixed-font-family: $monospace;
 $fixed-font-size: 88.9%;
 $fixed-line-height: 1.5;
 

@@ -9,10 +9,19 @@ reversed_header: true
 
 # Sass 3.3 (Maptastic Maple)
 
-We are pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! You can get the full scoop on what's changed in the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but here's a summary of some of the cool new features...
+Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! With over 500 commits and 35+ new features it's safe to say that this is a pretty significant release. You can get the full scoop on what's changed in the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but we've summarized the major changes below.
+
+<a name="features" class="anchor"></a>Click on a feature below to learn more about it:
+
+* [New map data structure](#maps)
+* [Sass source maps](#source-maps)
+* [Parent selector suffixes](#parent-selector-suffixes)
+* [New @at-root directive](#at-root)
+* [Improved if() semantics](#if)
+* [Backwards @for loops](#backwards-for)
 
 
-## New map data structure
+## <a name="maps" class="anchor"></a>New map data structure
 
 The most significant change to the language in this update is the addition of the `Map` data structure! If you've used regular programming languages like JavaScript or Ruby you may know that a `Map` is sometimes called a `Hash`. They store a mix of key/value pairs:
 
@@ -39,7 +48,10 @@ Maps can also be used instead of keyword parameters:
 
 For more info about Sass maps see the [changelog](https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
 
-## Sass source maps
+<a class="top-link" href="#features">Back to top</a>
+
+
+## <a name="source-maps" class="anchor"></a>Sass source maps
 
 Sass source maps are a hot new feature in Sass that make it possible to view the Sass source files inside the browser instead of just the compiled CSS (currently this only works in Chrome). And with the proper configuration you can actually edit the files inside of your browser, too!
 
@@ -47,7 +59,10 @@ Sass source maps are a hot new feature in Sass that make it possible to view the
 
 I don't have time to detail how this works in this post, but read Google's documentation on *[Working with CSS Preprocessors](https://developers.google.com/chrome-developer-tools/docs/css-preprocessors)* or Sam Richard's article *[Debugging Sass With Source Maps](http://snugug.com/musings/debugging-sass-source-maps)*. Or, if you are more visual, watch Chris Eppstein show this off in his talk *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)* (in which he also shows off many more amazing Sass 3.3 features).
 
-## Improved parent selector
+<a class="top-link" href="#features">Back to top</a>
+
+
+## <a name="parent-selector-suffixes" class="anchor"></a>Parent selector suffixes
 
 The ampersand operator has a long and celebrated past in the Sass community. It makes it possible to write code like this:
 
@@ -77,8 +92,10 @@ It's now possible to use a parent selector with a suffix to append to the select
 
 Previously, this would have caused an error in Sass, but no longer!
 
+<a class="top-link" href="#features">Back to top</a>
 
-## New @at-root directive
+
+## <a name="at-root" class="anchor"></a>New @at-root directive
 
 A new directive has been added to Sass that allows you to "unwind" nesting and insert something at the highest level. Simply prefix a selector with the `@at-root` directive and it will ignore previous levels of nested selectors:
 
@@ -128,8 +145,10 @@ Would produce the following output:
       width: 960px;
     }
 
+<a class="top-link" href="#features">Back to top</a>
 
-## Improved if() semantics
+
+## <a name="if" class="anchor"></a>Improved if() semantics
 
 If you're not a heavy user of Sass you probably haven't come across the `if()` function before. Sass does have the `@if` control structure:
 
@@ -177,8 +196,10 @@ Sass 3.3 has made the `if()` function more of a language construct so that it wo
 
 For most people this won't make a lot of difference in how you write Sass, but if you are a heavy user of the `if()` function these improvements should make you quite happy and you have [Chris Eppstein](https://twitter.com/chriseppstein) to thank for his [work to make this possible](https://github.com/nex3/sass/pull/836).
 
+<a class="top-link" href="#features">Back to top</a>
 
-## Backwards for loops
+
+## <a name="backwards-for" class="anchor"></a>Backwards @for loops
 
 A significant and welcome change contibuted by [Rob Wierzbowski](https://twitter.com/robwierzbowski) is the ability to write `@for` loops that count down instead of counting up:
 
@@ -197,6 +218,8 @@ Which would output:
     .span:nth-child(5) { content: 1; }
 
 Previously, this would have failed silently with no output.
+
+<a class="top-link" href="#features">Back to top</a>
 
 
 ## And, much, much more!

@@ -69,6 +69,21 @@
   @extend .italic;
 }
 
+.anchor {
+  position: relative;
+  top: -($masthead-height + 30px);
+  display: block;
+  visibility: hidden;
+}
+
+a.top-link {
+  font-family: $sans-serif;
+  font-size: 70%;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
 .typeset {
   color: $text-color;
 
