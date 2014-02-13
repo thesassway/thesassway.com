@@ -1,5 +1,6 @@
 $navigation-color: $quiet-color;
 $reversed-navigation-color: $reversed-link-color;
+$reversed-navigation-hover-color: $reversed-link-hover-color;
 $navigation-sidebar-width: 100%;
 
 .navigation-state {
@@ -142,14 +143,36 @@ $navigation-sidebar-width: 100%;
       }
     }
 
-    .reversed:not([class~=is-fixed]) & {
+  }
+
+  .navigation-menu-item.is-selected > a {
+    border-bottom-color: $link-color;
+  }
+
+  .reversed:not([class~=is-fixed]) {
+    .navigation-menu-item > a {
       color: $reversed-navigation-color;
-      &:focus, &:hover, &:active, &.is-selected { border-bottom-color: $reversed-navigation-color; }
+
+      [class$="-icon"], [class*="-icon "] {
+        color: $reversed-navigation-color;
+      }
+
+      &:focus, &:hover {
+        color: $reversed-navigation-hover-color;
+
+        [class$="-icon"], [class*="-icon "] {
+          color: $reversed-navigation-hover-color;
+        }
+      }
+
+      &:active {
+        border-bottom-color: $reversed-navigation-color;
+      }
+    }
+    .navigation-menu-item.is-selected > a {
+      border-bottom-color: $reversed-navigation-color;
     }
   }
 
-  .navigation-menu-item.is-selected a {
-    border-bottom-color: $link-color;
-  }
 
 }
