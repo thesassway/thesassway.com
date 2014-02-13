@@ -19,6 +19,7 @@ Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been re
 * [New @at-root directive](#at-root)
 * [Improved if() semantics](#if)
 * [Backwards @for loops](#backwards-for)
+* [Multiple assignment in @each loops](#multi-each)
 
 
 ## <a name="maps" class="anchor"></a>New map data structure
@@ -218,6 +219,36 @@ Which would output:
     .span:nth-child(5) { content: 1; }
 
 Previously, this would have failed silently with no output.
+
+<a class="top-link" href="#features">Back to top</a>
+
+
+## <a name="multi-each" class="anchor"></a>Multiple assignment in @each loops
+
+One improvement that might be easy to overlook is that `@each` loops now support multiple assignment. What do I mean by that? Take a look at this example:
+
+    :::scss
+    $animals: (puma, black, default),
+              (sea-slug, blue, pointer),
+              (egret, white, move);
+
+    @each $animal, $color, $cursor in $animals {
+      .#{$animal}-icon {
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
+      }
+    }
+
+Basically, multiple assignment for `@each` is good news for when you find yourself dealing with lists of lists. `@each` can now destructure assignment based on the elements of the sub-lists.
+
+Here are the iterations for the loop in our example:
+
+1. First time through: `$animal: puma`, `$color: black`, `$cursor: default` 
+2. Second time: `$animal: sea-slug`, `$color: blue`, `$cursor: pointer` 
+2. Third time: `$animal: egret`, `$color: white`, `$cursor: move` 
+
+Check out the Sass docs on [multiple assignment with each](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-multi-assign) for more info.
 
 <a class="top-link" href="#features">Back to top</a>
 
