@@ -69,6 +69,10 @@
   @extend .italic;
 }
 
+.intro {
+  font-size: 1.25 * $base-font-size;
+}
+
 .anchor {
   position: relative;
   top: -($masthead-height + 30px);

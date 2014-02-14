@@ -9,9 +9,11 @@ reversed_header: true
 
 # Sass 3.3 (Maptastic Maple)
 
-Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! With over 500 commits and 35+ new features it's safe to say that this is a pretty significant release. You can get the full scoop on what's changed in the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html), but we've summarized the major changes below.
+<div class="intro">
+<p>Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! With over 500 commits and <a href="http://sass-lang.com/documentation/file.SASS_CHANGELOG.html">35+ new features</a> it's safe to say that this is a significant release.</p>
+</div>
 
-<a name="features" class="anchor"></a>Click on a feature below to learn more about it:
+To make it easy to understand some of the exciting new features in Sass 3.3 we've summarized them in the sections below. Click on an item in the list to jump straight to it:
 
 * [New map data structure](#maps)
 * [Sass source maps](#source-maps)
@@ -255,7 +257,7 @@ Check out the Sass docs on [multiple assignment with each](http://sass-lang.com/
 
 ## And, much, much more!
 
-These are just the highlights of what's changed in the latest version of Sass. As I said before, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) to find out more!
+These are just the highlights of some of the new features in the latest version of Sass. To get the full scoop, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) yourself!
 
 Here's Chris Eppstein presenting, *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)*:
 
