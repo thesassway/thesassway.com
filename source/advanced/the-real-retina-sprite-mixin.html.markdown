@@ -64,3 +64,5 @@ For regular sprite we want to use optimised version (smart layout). In time I'm 
 
 
 We're extending %sprite placeholder selector, because we don't want to repeat some properties every time we use sprite (background-size, background-image, background-repeat). We also added 2px on width and height of retina sprite to ensure we don't cut any sprite, because maybe when we scale down sprite image it ends up with odd number in width or height.
+
+I hope I explained this well, and that you understand advantages of this technique. My fellow [Kristijan Husak](http://www.twitter.com/kristijan_husak) helped me write this mixin.
