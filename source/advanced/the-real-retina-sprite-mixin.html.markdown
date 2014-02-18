@@ -7,13 +7,13 @@ summary: Create two sprites, one for retina and one for regular screens, and han
 
 # The real retina sprite mixin
 
-I saw menu solutions on this topic, but usually people use regular sprite, and then for retina just load picture with 50% size. That is solution, but that's not retina sprite.
+I saw menu solutions on this topic, but usually people use regular sprite, and then for retina screens just load image and scale it to 50% of size. That is solution, but that's not real usage of retina sprite.
 
-What I consider for retina sprite is to have 2 sprites and to load basic for non-retina screens, and retina for retina sprites.
+What I consider for retina sprite mixin is to have 2 sprite maps and to load basic one for non-retina screens, and retina for retina screens.
 
 ## Problem
 
-Problem is how to scale sprite, and to preserve positions which compass is calculating. But, it's quite easy. We scale down sprite image (so we scaled every image that is on sprite), and position of x and y are the regular ones divided by two.
+Problem is how to scale sprite, and to preserve positions which compass is calculating. But, it's quite easy. We scale down sprite image, so position of every image (x, y) is the regular one divided by two, because we scaled down sprite width and height by two.
 
 ![](https://31.media.tumblr.com/2fcfd6df595ce2f1fcfac4e4999a2a00/tumblr_inline_n0hx6yG8Zs1r8euj7.png)
 
@@ -63,6 +63,8 @@ For regular sprite we want to use optimised version (smart layout). In time I'm 
     }
 
 
-We're extending %sprite placeholder selector, because we don't want to repeat some properties every time we use sprite (background-size, background-image, background-repeat). We also added 2px on width and height of retina sprite to ensure we don't cut any sprite, because maybe when we scale down sprite image it ends up with odd number in width or height.
+We're extending %sprite placeholder selector, because we don't want to repeat some properties every time we use mixin (background-size, background-image, background-repeat). We also added 2px on width and height of retina sprite to ensure we don't cut any sprite, because maybe when we scale down sprite image it ends up with odd number in width or height.
+
+So we ended up with two sprites, but it's much better then loading every image separately on retina screen.
 
 I hope I explained this well, and that you understand advantages of this technique. My fellow [Kristijan Husak](http://www.twitter.com/kristijan_husak) helped me write this mixin.
