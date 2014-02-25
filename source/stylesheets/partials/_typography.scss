@@ -53,6 +53,22 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.abbreviation {
+  border-bottom: 1px dotted rgba(mix(white, $text-color), 0.5);
+}
+
+.emphasis {
+  i, em { @extend .italic; }
+  b, strong { @extend .bold; }
+}
+
+.blockquote {
+  border-left: 3px solid $border-color;
+  color: #b06;
+  padding-left: 1.5em;
+  @extend .italic;
+}
+
 .typeset {
   color: $text-color;
 
@@ -65,17 +81,19 @@
   h5, .h5 { @extend %h5; margin: 1em 0 0.5em; }
   h6, .h6 { @extend %h6; margin: 1em 0 0.5em; }
 
-  p, ul, ol { margin: 1.5em 0; }
+  p, ul, ol, blockquote { margin: 1.5em 0; }
 
   ul { list-style: disc; }
   ol { list-style: decimal; }
   li { margin-left: 2.25em; margin-bottom: 0.5em}
+  blockquote { @extend .blockquote; }
 
-  i, em { @extend .italic; }
-  b, strong { @extend .bold; }
+  @extend .emphasis;
 
   code, pre { @extend .fixed; }
   code { color: #b06; }
+
+  abbr[title] { @extend .abbreviation; }
 
   pre {
     @include border-radius(1em);

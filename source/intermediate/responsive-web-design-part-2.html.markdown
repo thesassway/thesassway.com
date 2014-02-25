@@ -5,7 +5,7 @@ author: Mason Wendell
 summary: In part one we talked about how Sass can help with fluid layouts and images. Now we'll turn our attention to the new kid in town. Media queries are the tool that takes a design from fluid to truly responsive.
 ---
 
-# Responsive Web Design in Sass Part 2: Media Queries in Sass
+# Responsive Web Design in Sass Part 2: Media queries in Sass
 
 <div class="editors-note">
 

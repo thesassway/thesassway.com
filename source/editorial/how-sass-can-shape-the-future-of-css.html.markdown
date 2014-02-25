@@ -3,9 +3,10 @@ date: 2011-11-20 20:00:00 -0600
 categories: articles
 author: Peter Gasston
 summary: The rise in popularity of CSS extensions, such as Sass, in recent years has not gone unnoticed by the people who work on proposing and standardizing modules for CSS3 (and CSS4).
+categories: editorial
 ---
 
-# How Sass Can Shape The Future of CSS
+# How Sass can shape the future of CSS
 
 The rise in popularity of CSS extensions, such as Sass, in recent years has not gone unnoticed by the people who work on proposing and standardizing modules for CSS3 (and CSS4).
 

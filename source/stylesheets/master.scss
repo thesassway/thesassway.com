@@ -13,6 +13,9 @@ body {
 
 *, *:before, *:after { @include box-sizing(border-box); }
 
+// Vendor
+@import 'vendor/jquery.qtip';
+
 // Partials
 @import 'partials/typography';
 @import 'partials/icons';
@@ -26,4 +29,5 @@ body {
 @import 'partials/articles';
 @import 'partials/social-icons';
 @import 'partials/fusion-ads';
+@import 'partials/qtip';
 @import 'partials/modifiers';

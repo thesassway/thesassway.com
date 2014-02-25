@@ -5,7 +5,7 @@ author: John W. Long
 summary: One part suggestion to the Sass community to adopt a standard way of structuring Sass modules and one part show and tell. John attempts to leverage his knowledge of large Sass projects to suggest a format for a Standard Module Definition for Sass.
 ---
 
-# A Standard Module Definition for Sass
+# A standard module definition for Sass
 
 Since becoming a fan of Sass, one thing that has bothered me is that not much has been written about best practices for structuring Sass projects. This is one of a series of articles we will be writing to talk about some of the things that folks are doing to make their projects better.
 

@@ -5,7 +5,7 @@ author: John W. Long
 summary: Most people who use Sass are familiar to some degree with the command line. While programs like Compass.app and Scout.app are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 ---
 
-# Interactive Sass: Having Fun On The Terminal
+# Interactive Sass: having fun on the terminal
 
 Most people who use Sass are familiar to some degree with the command line. While programs like [Compass.app](http://compass.handlino.com/) and [Scout.app](http://mhs.github.com/scout-app/) are making it easier to use Sass and Compass without using the command line, hidden gems await those who are willing to do so.
 

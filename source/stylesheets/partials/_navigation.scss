@@ -61,7 +61,14 @@ $navigation-sidebar-width: 100%;
 
 @media #{$medium-up} {
   .navigation {
-    position: relative;
+    background: rgba(white, 0.95);
+    white-space: nowrap;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 
     &::after {
       position: absolute;
@@ -98,24 +105,34 @@ $navigation-sidebar-width: 100%;
     font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 0 10px;
+    margin: 0 8px;
     padding: 10px;
     letter-spacing: 1px;
 
+    [class$="-icon"], [class*="-icon "] {
+      color: rgba(#cb6898, 0.8);
+    }
+
     &:focus, &:hover {
-      border-bottom-color: $link-color;
-      color: $text-color;
+      color: #cb6898;
+
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
 
     &:active {
       color: $link-color;
       border-bottom-color: $link-color;
-    }
 
-    &.is-selected {
-      color: $link-color;
-      border-bottom-color: $link-color;
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
+  }
+
+  .navigation-menu-item.is-selected a {
+    border-bottom-color: $link-color;
   }
 
 }

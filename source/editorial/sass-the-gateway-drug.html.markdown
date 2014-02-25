@@ -3,9 +3,10 @@ date: 15 August 2011
 categories: articles
 author: Adam Stacoviak
 summary: In a recent tweet exchange with fellow Sass-lover Nathan Smith, he had said "SCSS was my 'gateway drug.' I now prefer Sass to SCSS. Less typing, stricter indentation."
+categories: editorial
 ---
 
-# SCSS, the Gateway Drug to Sass
+# SCSS, the gateway drug to Sass
 
 Choose your drug wisely. Sass or SCSS? Either way, you are going to get hooked and never write another line of vanilla CSS (willingly) in your life!
 

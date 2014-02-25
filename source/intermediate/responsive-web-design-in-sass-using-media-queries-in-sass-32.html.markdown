@@ -5,7 +5,7 @@ author: Mason Wendell
 summary: Sass 3.2 is on the way, and there are many improvements to how it handles media queries. Let's get a jump start on all the new stuff and see how we can use media queries, which are now a first-class citizen, in Sass 3.2.
 ---
 
-# Responsive Web Design in Sass: Using Media Queries in Sass 3.2
+# Responsive Web Design in Sass: Using media queries in Sass 3.2
 
 In [Responsive Web Design in Sass Part 2](/intermediate/responsive-web-design-part-2) I wrote about using media queries in Sass 3.1. At the time, I was mostly limited to the (still very cool) [@media bubbling](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#media) feature. I also pointed out some of the shortcomings.
 

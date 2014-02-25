@@ -1,3 +1,5 @@
+require 'rexml/document'
+
 module CustomHelpers
 
   # Grab the page title from the first H1 if not provided in frontmatter
@@ -118,6 +120,21 @@ module CustomHelpers
   def absolute_urls(text)
     text.gsub!(/(<a href=['"])\//, '\1' + 'http://thesassway.com')
     text
+  end
+
+  def render_markdown(string, block = false)
+    html = Kramdown::Document.new(string, input: 'kramdown', remove_block_html_tags: false).to_html
+    if block
+      html
+    else
+      doc = REXML::Document.new(html)
+      doc.root.children.join
+    end
+  end
+
+  def select_if(path, exact = false)
+    regexp = exact ? /^#{ Regexp.quote path }(\/$|$)/ : /^#{ Regexp.quote path }(\/.*?$|$)/
+    ' is-selected' if regexp.match(current_page.url)
   end
 
 end

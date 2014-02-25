@@ -4,9 +4,6 @@
 
 # Change Compass configuration
 compass_config do |config|
-  config.require 'grid-coordinates'
-  config.require 'animate-sass'
-  config.require 'font-stacks'
   config.output_style = :compact
 end
 
@@ -32,7 +29,7 @@ ignore "templates/*"
 # end
 
 with_layout :article do
-  categories = %w(beginner intermediate advanced articles news projects)
+  categories = data.categories.map(&:slug)
   for category in categories
     page "/#{category}/*"
   end
