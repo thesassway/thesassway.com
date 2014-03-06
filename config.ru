@@ -32,6 +32,8 @@ require 'rack/rewrite'
 use Rack::Rewrite do
   # Articles -> Editorial
   r301 %r{^/articles(?!\.xml)(.*)$}, '/editorial$1'
+  # Remove and 301 redirect trailing slashes in URLs
+  r301 %r{^/(.*)/$}, '/$1'
 end
 
 run Middleman.server
