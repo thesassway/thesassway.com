@@ -30,13 +30,6 @@ use Rack::GoogleAnalytics, web_property_id: "UA-4556641-15"
 # URL rewriting
 require 'rack/rewrite'
 use Rack::Rewrite do
-  # Adam Stacoviak
-  # rewrite '/adamstac',  '/adam-stacoviak'
-  # r301 '/adam-stacoviak', '/adamstac'
-
-  # Mario Ricalde
-  r301 '/mario-kuroir-ricalde', '/mario-ricalde'
-
   # Articles -> Editorial
   r301 %r{^/articles(?!\.xml)(.*)$}, '/editorial$1'
 end
