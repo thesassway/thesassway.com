@@ -259,6 +259,6 @@ Check out the Sass docs on [multiple assignment with each](http://sass-lang.com/
 
 These are just the highlights of some of the new features in the latest version of Sass. To get the full scoop, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) yourself!
 
-Here's Chris Eppstein presenting, *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)*:
+Prefer video? Here's Chris Eppstein presenting, *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)*:
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/-ZJeOJGazgE" frameborder="0" allowfullscreen></iframe>
