@@ -2,18 +2,33 @@ require 'rexml/document'
 
 module CustomHelpers
 
+  TITLE_REGEXP = /<h1.*?>(.*?)<\/h1>/m
+
   # Grab the page title from the first H1 if not provided in frontmatter
   def title(page = current_page)
     page.data.title || begin
       content = page.render(layout: false)
-      match = content.match(/<h1.*?>(.*?)<\/h1>/m)
+      match = content.match(TITLE_REGEXP)
       escape_html(match[1]) if match
     end
+  end
+
+  def body_without_title(page = current_page)
+    content = page.render(layout: false)
+    content.sub(TITLE_REGEXP, '')
   end
 
   # Shortcut for current page data
   def meta(page = current_page)
     page.data
+  end
+
+  def header(page = current_page)
+    meta(page).header
+  end
+
+  def reversed_header?(page = current_page)
+    meta(page).reversed_header
   end
 
   def author(page = current_page)
