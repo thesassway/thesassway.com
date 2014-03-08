@@ -61,22 +61,21 @@
   name: Mason Wendell
   slug: mason-wendell
   avatar: /images/authors/mason-wendell.png
-  website: http://birdsandmonkeys.com
-  twitter: canarymason
+  website: http://thecodingdesigner.com
+  twitter: codingdesigner
   bio: >
     <p>Mason Wendell is a Design, CSS, HTML, and Drupal expert who has been designing and
       building websites since the early days of the web. He was an early adopter of Sass
       and Compass, and can't stop talking about it.</p>
 
-    <p>Mason is Creative Director at <a href="http://zivtech.com">Zivtech</a> where he
-      enjoys blurring the line between design and front-end development. He developed
-      <a href="https://github.com/canarymason/Survival-Kit">The Coding Designer's Survival Kit</a>
-      and hosts a video podcast about designing in the browser using Sass at
-      <a href="http://thecodingdesigner.com">TheCodingDesigner.com</a>. He blogs at
-      <a href="http://birdsandmonkeys.com">Birds and Monkeys</a> when he runs out of
-      room everywhere else.</p>
+    <p>Mason is a Coding Designer and Senior Front End Developer at NBCUniversal where he
+      enjoys blurring the line between design and front-end development. He created
+      <a href="http://github.com/Team-Sass/breakpoint">Breakpoint</a> to help you write
+      media queries in Sass. He also helped start
+      <a href="http://github.com/Team-Sass">Team Sass</a> with like-minded Sass nerds.
+      He blogs sporadically at <a href="http://thecodingdesigner.com">TheCodingDesigner.com</a></p>
 
-    <p>Follow Mason on Twitter at <a href="http://twitter.com/canarymason">@canarymason</a>.</p>
+    <p>Follow Mason on Twitter at <a href="http://twitter.com/codingdesigner">@codingdesigner</a>.</p>
 -
   name: Peter Gasston
   slug: peter-gasston
@@ -179,4 +178,4 @@
     computer science on <a href="http://www.growingwiththeweb.com/">his blog</a>.</p>
 
     <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on 
-    <a href="https://plus.google.com/+DanielImms">Google+</a>.</p>
+    <a href="https://plus.google.com/+DanielImms?rel=author">Google+</a>.</p>

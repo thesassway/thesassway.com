@@ -145,6 +145,8 @@ Even though I couldn't use the `color-diff()` function in my project, I still fo
 
 What do you think of all this? Have you found interesting ways to morph and use color in your own projects?
 
-I hope you've enjoyed this experiment! If you'd like to play with the code in this project, check out [this Sassmeister gist](http://sassmeister.com/gist/8668994). Cheers!
+I hope you've enjoyed this experiment! If you'd like to play with the code in this project, check out this CodePen. Cheers!
+
+<div data-height="268" data-theme-id="0" data-slug-hash="gHEkA" data-default-tab="css" class='codepen'><p>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/gHEkA'>Programmatically find one color from another one</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p> </div><script async src="//codepen.io/assets/embed/ei.js"></script>
 
 On a side note, Brandon Mathis has also worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for dissecting your own color schemes.
