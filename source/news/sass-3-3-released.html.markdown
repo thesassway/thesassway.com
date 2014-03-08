@@ -1,5 +1,5 @@
 ---
-date: 11 February 2014
+date: 8 March 2014
 categories: news
 author: John W. Long
 summary: It's been a long time coming, but well worth the wait! Sass 3.3 includes many long awaited features, including the new Map data structure, source maps, improved ampersand semantics, and an improved `if()` function.
@@ -10,7 +10,7 @@ reversed_header: true
 # Sass 3.3 (Maptastic Maple)
 
 <div class="intro">
-<p>Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! With over 500 commits and <a href="http://sass-lang.com/documentation/file.SASS_CHANGELOG.html">35+ new features</a> it's safe to say that this is a significant release.</p>
+<p>Today, we're pleased to announce that Sass 3.3 (aka Maptastic Maple) has been released! With over 500 commits and <a href="http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#330_7_march_2014">35+ new features</a> it's safe to say that this is a significant release.</p>
 </div>
 
 To make it easy to understand some of the exciting new features in Sass 3.3 we've summarized them in the sections below. Click on an item in the list to jump straight to it:
@@ -49,7 +49,7 @@ Maps can also be used instead of keyword parameters:
     $color-1: adjust-color($color-1, $adjustments...);
     $color-2: adjust-color($color-2, $adjustments...);
 
-For more info about Sass maps see the [changelog](https://github.com/nex3/sass/blob/master/doc-src/SASS_CHANGELOG.md) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
+For more info about Sass maps see the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#330_7_march_2014) and read Jason Garber's article, *[Sass maps are awesome](http://viget.com/extend/sass-maps-are-awesome)*. Also if you are interested in the history of the syntax, check out [this awesome issue](https://github.com/nex3/sass/issues/642) on GitHub where the syntax is proposed and discussed in detail.
 
 <a class="top-link" href="#features">Back to top</a>
 
@@ -257,7 +257,7 @@ Check out the Sass docs on [multiple assignment with each](http://sass-lang.com/
 
 ## And, much, much more!
 
-These are just the highlights of some of the new features in the latest version of Sass. To get the full scoop, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html) yourself!
+These are just the highlights of some of the new features in the latest version of Sass. To get the full scoop, you'll need to read the [changelog](http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#330_7_march_2014) yourself!
 
 Prefer video? Here's Chris Eppstein presenting, *[The Mind-blowing Power of Sass 3.3](http://www.youtube.com/watch?v=-ZJeOJGazgE)*:
 
