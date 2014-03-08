@@ -2,7 +2,7 @@
 date: 8 March 2014
 categories: news
 author: John W. Long
-summary: It's been a long time coming, but well worth the wait! Sass 3.3 includes many long awaited features, including the new Map data structure, source maps, improved ampersand semantics, and an improved `if()` function.
+summary: It's been a long time coming, but well worth the wait! Sass 3.3 includes 35+ additional features, including the new Map data structure, source maps, improved parent selector semantics, and an improved `if()` function.
 header: sass-3-3
 reversed_header: true
 ---
