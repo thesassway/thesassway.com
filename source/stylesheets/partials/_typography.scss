@@ -64,9 +64,28 @@
 
 .blockquote {
   border-left: 3px solid $border-color;
-  color: #b06;
+  color: $accent-color;
   padding-left: 1.5em;
   @extend .italic;
+}
+
+.intro {
+  font-size: 1.25 * $base-font-size;
+}
+
+.anchor {
+  position: relative;
+  top: -($masthead-height + 30px);
+  display: block;
+  visibility: hidden;
+}
+
+a.top-link {
+  font-family: $sans-serif;
+  font-size: 70%;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
 
 .typeset {
@@ -91,7 +110,7 @@
   @extend .emphasis;
 
   code, pre { @extend .fixed; }
-  code { color: #b06; }
+  code { color: $accent-color; }
 
   abbr[title] { @extend .abbreviation; }
 

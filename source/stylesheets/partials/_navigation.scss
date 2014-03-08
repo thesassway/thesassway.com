@@ -1,4 +1,6 @@
 $navigation-color: $quiet-color;
+$reversed-navigation-color: $reversed-link-color;
+$reversed-navigation-hover-color: $reversed-link-hover-color;
 $navigation-sidebar-width: 100%;
 
 .navigation-state {
@@ -61,8 +63,16 @@ $navigation-sidebar-width: 100%;
 
 @media #{$medium-up} {
   .navigation {
-    position: relative;
+    background: rgba(white, 0.95);
     white-space: nowrap;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    @include transition(background-color 200ms linear);
 
     &::after {
       position: absolute;
@@ -72,6 +82,15 @@ $navigation-sidebar-width: 100%;
       left: 0;
       right: 0;
       bottom: 0;
+    }
+
+    &.reversed:not([class~=is-fixed]) {
+      background: none;
+      &:after { background: rgba($reversed-navigation-color, 0.25); }
+    }
+
+    &.is-fixed {
+      position: fixed;
     }
   }
 
@@ -103,20 +122,57 @@ $navigation-sidebar-width: 100%;
     padding: 10px;
     letter-spacing: 1px;
 
+    [class$="-icon"], [class*="-icon "] {
+      color: rgba(#cb6898, 0.8);
+    }
+
     &:focus, &:hover {
-      border-bottom-color: $link-color;
-      color: $text-color;
+      color: #cb6898;
+
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
 
     &:active {
       color: $link-color;
       border-bottom-color: $link-color;
+
+      [class$="-icon"], [class*="-icon "] {
+        color: darken(#cb6898, 10%);
+      }
     }
 
-    &.is-selected {
-      color: $link-color;
-      border-bottom-color: $link-color;
+  }
+
+  .navigation-menu-item.is-selected > a {
+    border-bottom-color: $link-color;
+  }
+
+  .reversed:not([class~=is-fixed]) {
+    .navigation-menu-item > a {
+      color: $reversed-navigation-color;
+
+      [class$="-icon"], [class*="-icon "] {
+        color: $reversed-navigation-color;
+      }
+
+      &:focus, &:hover {
+        color: $reversed-navigation-hover-color;
+
+        [class$="-icon"], [class*="-icon "] {
+          color: $reversed-navigation-hover-color;
+        }
+      }
+
+      &:active {
+        border-bottom-color: $reversed-navigation-color;
+      }
+    }
+    .navigation-menu-item.is-selected > a {
+      border-bottom-color: $reversed-navigation-color;
     }
   }
+
 
 }
