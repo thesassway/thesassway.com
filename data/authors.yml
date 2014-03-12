@@ -171,11 +171,26 @@
   twitter: Tyriar
   github: Tyriar
   bio: >
-    <p>Daniel Imms is a software engineer from Australia, working at 
-    <a href="http://www.amazon.com/">Amazon.com</a> on Kindle's 
+    <p>Daniel Imms is a software engineer from Australia, working at
+    <a href="http://www.amazon.com/">Amazon.com</a> on Kindle's
     <a href="http://amazonsilk.wordpress.com/">Silk Browser</a>. He is passionate about performance,
-    accessibility and UX on the web. During his spare time he often writes about web development and 
+    accessibility and UX on the web. During his spare time he often writes about web development and
     computer science on <a href="http://www.growingwiththeweb.com/">his blog</a>.</p>
 
-    <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on 
+    <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on
     <a href="https://plus.google.com/+DanielImms?rel=author">Google+</a>.</p>
+-
+  name: Chris Michel
+  slug: chris-michel
+  avatar: /images/authors/chris-michel.jpeg
+  website: http://www.chrismdesign.com.com
+  twitter: hatefulcrawdad
+  github: hatefulcrawdad
+  bio: >
+    <p>Chris Michel is a Product Designer from California, working at
+    <a href="http://www.teamtreehouse.com">Treehouse</a> helping change the world of education.
+    He is passionate about writing good code and sharing with the open-source community. During his spare time he often works on side project, like
+    <a href="http://www.sache.in">Sache</a> or takes photos of his
+    <a href="http://www.500px/ChrisMichel">beautiful surroundings</a>.
+
+    <p>You can follow Daniel on Twitter at <a href="http://twitter.com/hatefulcrawdad">@hatefulcrawdad</a>.</p>
