@@ -11,6 +11,10 @@ body {
   line-height: $base-line-height;
 }
 
+img {
+    max-width: 100%;
+}
+
 *, *:before, *:after { @include box-sizing(border-box); }
 
 // Vendor
