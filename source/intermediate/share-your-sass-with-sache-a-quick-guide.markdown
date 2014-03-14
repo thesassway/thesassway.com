@@ -2,43 +2,55 @@
 date: 12 March 2014
 categories: intermediate, guides
 author: Chris Michel
-summary: Sass has come a long way over the years. I’ve been using it since the days of the `:property value` syntax. It’s always been easy to find Sass documentation on how specific functions and such work under the hood of Sass, but it’s never been easy to find out what others are building.
+summary: Have you ever created a Sass library and wanted an easy way to share it with others? Or have you ever wondered where to look to find a Sass library to do something specific? In this article Chris Michel introduces us to Sache---an easy to use directory of Sass libraries and tools---and shows us how to easily add our own projects.
 ---
 
 # Share your Sass with Sache: A quick quide
 
-Sass has come a long way over the years. I’ve been using it since the days of the `:property value` syntax. It’s always been easy to find Sass documentation on how specific functions and such work under the hood of Sass, but it’s never been easy to find out what others are building with Sass. Sure, a few tools pop out of the woodwork and get some big traction, but there are tons more out there being built by brilliant Sassophiles. That’s where [Sache](http://www.sache.in) comes in.
+Sass has really come a long way over the years! I’ve been an avid user of Sass since the days of the indented `:property value` syntax. One of the things that has always bothered me about Sass is that there has never been an easy way to find Sass libraries and extensions. Sure you can do a search on Google but there are no guarantees that you'll hit upon the right combination of keywords to reveal the right library for a particular purpose.
 
-Sache is an open-source hub for finding Sass and Compass tools for your next project. [Jared Hardy](http://www.twitter.com/jaredhardy) and I worked to make Sache as easy to use as possible for anyone wanting to share or discover tools.
+That's why [Jarod Hardy](http://www.twitter.com/jaredhardy) and I set out to create a central place to find Sass extensions and tools. We're calling it [Sache](http://sache.in). Sache is an open-source hub for finding Sass and Compass tools for your next project.
 
-## Sharing Sass Tools
 
-The simple 2-step process makes it painless to add your Extension to the mix so that people can find it and use it! There is one small caveat to Sache: you must have your code checked into a public Github repo first. If you need help creating a Github repo, check out [Set Up Git](https://help.github.com/articles/set-up-git) and [Create a Repo](https://help.github.com/articles/create-a-repo) from the Github help site.
+## Sharing Sass tools
 
-Here’s how to add your tools once its on Github:
+The simple 2-step process makes it painless to add your extension so that others can find it and use it! There is one small caveat: to add your project to Sache you must have your code checked into a public GitHub repository. Not familiar with GitHub? No problem.
 
-1) Add a `sache.json` [file](https://github.com/jhardy/Sassy-Buttons/blob/master/sache.json) to your repository that contains the following information pattern:
+If you need help creating a GitHub repository, check out these handy guides from the GitHub help site:
 
-    {
-        "name": "project-name",
-        "description": "Description of project",
-        "tags": ["ui", "buttons", "etc"]
-    }
+* [Set Up Git](https://help.github.com/articles/set-up-git) -- a guide ideal for people just getting started with Git.
+* [Create a Repo](https://help.github.com/articles/create-a-repo) -- a simple introduction to creating a repository on GitHub.
 
-2) Visit [http://www.sache.in](http://www.sache.in) and click the “Add Your Own” or “Add Extension” button and enter your Github project SSH URL, then click “Add”. If you need help finding your SSH URL, here's an [example image](http://d.pr/i/GN5).
+Here’s how to add your project to Sache once it’s on GitHub:
 
-3) Congratulations, you’re done. Your project will now appear on Sache.
+1. Add a `sache.json` to your repository that looks something the following. Be sure to customize it for your project:
 
-## Finding Sass Tools
+       :::javascript
+       {
+         "name": "project-name",
+         "description": "Description of project",
+         "tags": ["ui", "buttons", "etc"]
+       }
 
-With every Sache tools comes the data we need to let you sort by stars, title, author, etc. We’ve also added in functionality to filter results based on the tags that are submitted with each submission. If you want to filter the table results, simply click the header of the table column or the name of the tag or author.
+2. [Visit the Sache website](http://www.sache.in) and click the “Add Your Own” button at the top and enter your GitHub project SSH URL. If you need help finding your SSH URL it's in the sidebar of your GitHub project's page:
 
-You might already know exactly what type of extension you are looking for. In that case, you can use the search bar in the upper right of the page to enter keywords, author names, extension names, etc. We’ll show you what we find that matches your terms.
+    ![Where to find your SSH URL](/images/articles/ssh-url.png)
 
-Each tool inevitably links over to a Github page that the author for the tool maintains. This let’s documentation and installation instructions in the hands of the project owners since they know their tools the most. In most cases, you’ll find installation instructions in the README.md file on the Github repo.
+That's really all there is to it! Your project will now appear on Sache.
+
+
+## Finding Sass tools
+
+With every Sass tool added to Sache comes the data we need to let you sort by stars, title, author, etc. If you want to filter the results, simply click the header of the table column  you want to sort by or click on a tag or author name.
+
+You might already know exactly what type of extension you are looking for. In that case, use the search bar in the upper right of the page to enter keywords, author names, extension names, etc. We’ll show you what we find that matches your terms.
+
+Each tool inevitably links over to a GitHub page where you can find installation instructions and documentation in the README file of the repository.
 
 ## Conclusion
 
-Now that you know how to add your own tools to Sache, get out there and create an awesome Sass tools for others like you to enjoy. You’d be surprised what others find useful and what you can learn just by looking at the code from other projects.
+So what are you waiting for? Head on over to the [Sache website](http://sache.in) and share you own extension or browse through the tools other people have created. 
 
-Feel free to follow [Sache on Twitter](http://www.twitter.com/sache_in), we share [daily sass tools](https://twitter.com/search?q=%23DailySassTool&src=hash) almost every day.
+Also, feel free to follow [Sache on Twitter](http://www.twitter.com/sache_in). We share Sass tools almost every day and use the hash tag [#DailySassTool](https://twitter.com/search?q=%23DailySassTool&src=hash) to make them easy to find.
+
+Care to contribute to Sache? The source code for the Sache website is [on GitHub](https://github.com/jhardy/sache) and we do accept pull requests!
