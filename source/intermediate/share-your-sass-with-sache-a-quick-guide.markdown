@@ -9,7 +9,7 @@ summary: Have you ever created a Sass library and wanted an easy way to share it
 
 Sass has really come a long way over the years! I’ve been an avid user of Sass since the days of the indented `:property value` syntax. One of the things that has always bothered me about Sass is that there has never been an easy way to find Sass libraries and extensions. Sure you can do a search on Google but there are no guarantees that you'll hit upon the right combination of keywords to reveal the right library for a particular purpose.
 
-That's why [Jarod Hardy](http://www.twitter.com/jaredhardy) and I set out to create a central place to find Sass extensions and tools. We're calling it [Sache](http://sache.in). Sache is an open-source hub for finding Sass and Compass tools for your next project.
+That's why [Jared Hardy](http://www.twitter.com/jaredhardy) and I set out to create a central place to find Sass extensions and tools. We're calling it [Sache](http://sache.in). Sache is an open-source hub for finding Sass and Compass tools for your next project.
 
 
 ## Sharing Sass tools
