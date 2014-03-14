@@ -1,11 +1,11 @@
 ---
-date: 12 March 2014
+date: 13 March 2014
 categories: intermediate, guides
 author: Chris Michel
 summary: Have you ever created a Sass library and wanted an easy way to share it with others? Or have you ever wondered where to look to find a Sass library to do something specific? In this article Chris Michel introduces us to Sache---an easy to use directory of Sass libraries and tools---and shows us how to easily add our own projects.
 ---
 
-# Share your Sass with Sache: A quick quide
+# Share your Sass with Sache: A quick guide
 
 Sass has really come a long way over the years! I’ve been an avid user of Sass since the days of the indented `:property value` syntax. One of the things that has always bothered me about Sass is that there has never been an easy way to find Sass libraries and extensions. Sure you can do a search on Google but there are no guarantees that you'll hit upon the right combination of keywords to reveal the right library for a particular purpose.
 
