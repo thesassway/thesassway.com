@@ -65,15 +65,15 @@
 }
 
 .bubble-sort-graphic-header {
+  background-color: #5c4f49;
   @include background-image(
     linear-gradient(rgba(black, 0.5), rgba(black, 0)),
     image-url('headers/lumber-mill-in-minature.jpeg')
   );
-  background-size: cover;
+  background-size: 200% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  background-size: auto 100%;
 
   svg {
     max-width: 100%;
