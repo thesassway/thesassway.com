@@ -123,6 +123,6 @@ Hurray! It works like a charm.
 
 My first attempts to create a sorting function in Sass used a much slower algorithm. But thanks to some prompting by [Sam Richards](http://twitter.com/snugug) (he got me started with QuickSort) I eventually explored a number of different sorting algorithms. I've now implemented several of these in Sass. You can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository.
 
-<small class="footnotes">
+<div class="footnotes">
 <p><a href="http://www.flickr.com/photos/orinrobertjohn/3063218828/sizes/l/in/photostream/">&#8220;Lumber Mill in Minature&#8221;</a> image copyright <a href="http://www.flickr.com/photos/orinrobertjohn/">Orin Zebest</a> licensed under the <a href="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution 2.0</a> license.</p>
-</small>
+</div>
