@@ -1,11 +1,13 @@
 ---
-date: 1 February 2014
+date: 15 March 2014
 categories: advanced
 author: Hugo Giraudel
-summary: Until recently it was actually impossible to build a sorting function for strings and other types in Sass, but with the recent release of Sass 3.3 we now have have the features we need to do just that.
+summary: Until recently it was actually impossible to build a sorting function for strings and other types in Sass, but with the release of Sass 3.3 we now have have the features we need to do just that.
+header: bubble-sort
+reversed_header: true
 ---
 
-# Building a sorting function in Sass
+# Implementing the Bubble Sort algorithm with&nbsp;Sass
 
 Several months ago someone asked me on Twitter if it was possible to sort a list of numeric values in Sass. They were trying to derive a [modular scale](http://alistapart.com/article/more-meaningful-typography) in Sass and needed a sorting function. After a little bit of work I came up with a way to do it for numbers. However, because of limitations in Sass, there was no way to build a sorting function for other Sass types (like Strings).
 
@@ -120,3 +122,5 @@ Hurray! It works like a charm.
 ## Learning more
 
 My first attempts to create a sorting function in Sass used a much slower algorithm. But thanks to some prompting by [Sam Richards](http://twitter.com/snugug) (he got me started with QuickSort) I eventually explored a number of different sorting algorithms. I've now implemented several of these in Sass. You can find the code and tests in the [SassySort](https://github.com/HugoGiraudel/Sass-sort) repository.
+
+["Lumber Mill in Minature"](http://www.flickr.com/photos/orinrobertjohn/3063218828/sizes/l/in/photostream/) image copyright Orin Zebest licensed under the [Creative Commons Attribution 2.0](http://creativecommons.org/licenses/by/2.0/) license.

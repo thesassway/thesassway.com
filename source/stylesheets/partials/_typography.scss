@@ -116,8 +116,10 @@ a.top-link {
 
   pre {
     @include border-radius(1em);
-    margin: 2em 0;
-    padding: 2em;
+    font-size: 80%;
+    line-height: 1.6;
+    margin: 3em -3em;
+    padding: 3em;
     background: #f0f2f4;
     overflow: hidden;
   }
