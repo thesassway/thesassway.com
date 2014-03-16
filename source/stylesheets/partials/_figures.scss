@@ -1,0 +1,18 @@
+.figure {
+  background: #f0f2f4;
+  @include border-radius(1em);
+  margin: 3em -3em;
+  padding: 3em;
+  overflow: hidden;
+  text-align: center;
+}
+
+.figure-image {
+  max-width: 100%;
+}
+
+.figure-caption {
+  margin-top: 0.5em;
+  font-size: 80%;
+  font-style: italic;
+}
