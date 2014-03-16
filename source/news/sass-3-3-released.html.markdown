@@ -207,7 +207,7 @@ For most people this won't make a lot of difference in how you write Sass, but i
 A significant and welcome change contibuted by [Rob Wierzbowski](https://twitter.com/robwierzbowski) is the ability to write `@for` loops that count down instead of counting up:
 
     :::scss
-    @for $i from 5 to 1 {
+    @for $i from 5 through 1 {
       .span:nth-child(#{6-$i}) { content: $i; }
     }
 
