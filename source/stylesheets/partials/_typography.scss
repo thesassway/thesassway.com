@@ -64,9 +64,28 @@
 
 .blockquote {
   border-left: 3px solid $border-color;
-  color: #b06;
+  color: $accent-color;
   padding-left: 1.5em;
   @extend .italic;
+}
+
+.intro {
+  font-size: 1.25 * $base-font-size;
+}
+
+.anchor {
+  position: relative;
+  top: -($masthead-height + 30px);
+  display: block;
+  visibility: hidden;
+}
+
+a.top-link {
+  font-family: $sans-serif;
+  font-size: 70%;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
 }
 
 .typeset {
@@ -91,14 +110,16 @@
   @extend .emphasis;
 
   code, pre { @extend .fixed; }
-  code { color: #b06; }
+  code { color: $accent-color; }
 
   abbr[title] { @extend .abbreviation; }
 
   pre {
     @include border-radius(1em);
-    margin: 2em 0;
-    padding: 2em;
+    font-size: 80%;
+    line-height: 1.6;
+    margin: 3em -3em;
+    padding: 3em;
     background: #f0f2f4;
     overflow: hidden;
   }
@@ -115,3 +136,21 @@
 }
 .title { @extend %h1; margin: 1em 0 0.25em; text-align: center; }
 .subtitle { @extend %h5; font-weight: 300; margin: 0 0 1em; text-align: center; }
+
+.footnotes {
+  position: relative;
+  margin-top: 2em;
+  padding-top: 0.5em;
+
+  p, ul, ol { font-size: 80%; }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 8em;
+    content: "";
+    height: 0;
+    border-top: 1px solid $border-color;
+  }
+}

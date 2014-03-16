@@ -1,0 +1,87 @@
+.graphic-header {
+  color: $reversed-text-color;
+  background: $reversed-background-color;
+  padding-top: 4em;
+  padding-bottom: 3em;
+  margin-top: -$masthead-height;
+  margin-bottom: 2em;
+}
+
+.graphic-header-title {
+  @extend %h1;
+  margin-top: $masthead-height;
+}
+
+.graphic-header-subtitle {
+  @extend %h6;
+}
+
+.graphic-header-by-line {
+  text-align: center;
+  margin: 1em 0 0;
+}
+
+.graphic-header-by-line-avatar {
+  margin-right: 1em;
+}
+
+.reversed {
+  .graphic-header-title { color: white; }
+  .graphic-header-subtitle { color: white; }
+  .graphic-header-by-line { color: white; }
+}
+
+.sass-3-3-graphic-header {
+  background-color: #cb6898;
+  @include background-image(
+    linear-gradient(rgba(#610431, 0), rgba(#610431, 0.2), rgba(#610431, 0.8)),
+    image-url('headers/women-mechanics.jpeg')
+  );
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-position: 0%;
+  padding-top: 16em;
+
+  .graphic-header-title {
+    font-size: 800%;
+    text-shadow: #610431 0 0 60px;
+  }
+  .graphic-header-subtitle {
+    font-size: 200%;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: darken(#610431, 50%) 0 0 20px;
+    letter-spacing: 0.5em;
+  }
+
+  @media #{$medium-up} {
+    padding-top: 20em;
+  }
+  @media #{$large-up} {
+    background-position: center;
+  }
+}
+
+.bubble-sort-graphic-header {
+  background-color: #5c4f49;
+  @include background-image(
+    linear-gradient(rgba(black, 0.5), rgba(black, 0)),
+    image-url('headers/lumber-mill-in-minature.jpeg')
+  );
+  background-size: 200% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  svg {
+    max-width: 100%;
+    .letter-shadow { fill: lighten(#585f4e, 10%); }
+  }
+
+  @media #{$medium-up} {
+    background-size: cover;
+    padding: 6em 0;
+  }
+}
