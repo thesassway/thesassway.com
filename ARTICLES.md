@@ -3,7 +3,7 @@ Article Ideas
 
 ## Beginner
 
-* Getting started with Sass and Compass
+* Getting started with Sass and Compass (this needs to be updated)
 * Removing code duplication with @extend (we already have one on placeholder selectors, but it's an intermediate article)
 * Configuring Compass
 * Getting to know your docs
