@@ -193,4 +193,4 @@ Usage:
 
 ## Digging deeper
 
-There’s a lot more that you can do with Compass sprite sheets. More than we can cover in this simple tutorial. If you’re interested in learning more read the [official Spriting Tutorial](http://compass-style.org/help/tutorials/spriting/) and checkout [some of other docs here](http://compass-style.org/search/?q=sprites).
+Believe it or not, there’s actually a lot more that you can do with Compass sprite sheets. More than we can cover in this simple tutorial. If you’re interested in learning more read the [official Spriting Tutorial](http://compass-style.org/help/tutorials/spriting/) and checkout [some of other docs here](http://compass-style.org/search/?q=sprites).
