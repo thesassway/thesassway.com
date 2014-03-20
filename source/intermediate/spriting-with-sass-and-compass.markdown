@@ -44,6 +44,8 @@ One downside to image spriting is that sprite sheets are notoriously difficult t
 
 ## Compass to the rescue!
 
+<a href="http://compass-style.org"><img class="float-right" src="/images/articles/compass.png" alt="Compass"></a>
+
 Fortunately for us, Chris Eppstein’s [Compass](http://compass-style.org) project includes a robust suite of tools for creating and maintaining sprite sheets automatically. Compass can build your sprite sheet image, give you the coordinates of each sprite, allow you to control the layout and spacing of the sprites, and write the SCSS necessary to display each image. In short, Compass’s sprite tools will save you a ton of effort.
 
 I’m not going to go over getting started with Compass here because [we have a great tutorial on that already](http://thesassway.com/beginner/getting-started-with-sass-and-compass). If you are not familar with Compass please check out that tutorial before continuing.
