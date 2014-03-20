@@ -44,9 +44,9 @@ One downside to image spriting is that sprite sheets are notoriously difficult t
 
 ## Compass to the rescue!
 
-Fortunately for us, Chris Eppstein's [Compass](http://compass-style.org) project includes a robust suite of tools for creating and maintaining sprite sheets automatically. Compass can build your sprite sheet image, give you the coordinates of each sprite, allow you to control the layout and spacing of the sprites, and write the SCSS necessary to display each image. In short, Compass's sprite tools will save you a ton of effort.
+Fortunately for us, Chris Eppstein’s [Compass](http://compass-style.org) project includes a robust suite of tools for creating and maintaining sprite sheets automatically. Compass can build your sprite sheet image, give you the coordinates of each sprite, allow you to control the layout and spacing of the sprites, and write the SCSS necessary to display each image. In short, Compass’s sprite tools will save you a ton of effort.
 
-I'm not going to go over getting started with Compass here because [we have a great tutorial on that already](http://thesassway.com/beginner/getting-started-with-sass-and-compass). If you are not familar with Compass please check out that tutorial before continuing.
+I’m not going to go over getting started with Compass here because [we have a great tutorial on that already](http://thesassway.com/beginner/getting-started-with-sass-and-compass). If you are not familar with Compass please check out that tutorial before continuing.
 
 
 ## Folder structure
@@ -69,7 +69,7 @@ Keep in mind that you should only put images inside of your sprite sheet folder 
 
 ## The easy way
 
-The easiest way to build your sprite sheet is to use the Compass's magic import directive:
+The easiest way to build your sprite sheet is to use the Compass’s magic import directive:
 
     :::scss
     @import "images/toolbar/*.png";
@@ -106,7 +106,7 @@ Notice that Compass has built the "toolbar-s1f1c6cbfd0.png" image for us automat
 
 ## Controlling class names
 
-If you want more control over the generated output, don't use the <code>all-{FOLDER NAME}-sprites</code> mixin. Instead, Compass provides a mixin to ouput the CSS needed for one sprite:
+If you want more control over the generated output, don’t use the <code>all-{FOLDER NAME}-sprites</code> mixin. Instead, Compass provides a mixin to ouput the CSS needed for one sprite:
 
     :::scss
     @import "images/toolbar/*.png";
@@ -136,7 +136,7 @@ Notice that instead of using a sprite sheet specific mixin as we did in the clas
 
 ## Controlling spacing
 
-Sometimes it's useful to specify that sprites should be separated by a certain amount of white space.
+Sometimes it’s useful to specify that sprites should be separated by a certain amount of white space.
 
 To set spacing around each icon:
 
@@ -151,43 +151,39 @@ To set spacing around each icon:
 
 ## Controlling layout
 
-There are 4 types of layout: horizontal, vertical, diagonal and smart. To set layout of positioning icons on canvas:
+Compass supports a few different ways of laying out your sprite sheet:
+
+<figure class="figure">
+  <img class="figure-image" src="/images/articles/sprite-sheet-layout.svg" alt="A sprite sheet">
+  <figcaption class="figure-caption">There are 4 types of layout - horizontal, vertical, diagonal, and smart.</figcaption>
+</figure>
+
+To set the layout of sprites on the sprite sheet:
 
     :::scss
     // Using import...
     $toolbar-spacing: 5px;
     $toolbar-layout: 'smart';
-    @import "my-icons/*.png";
+    @import "toolbar/*.png";
 
     // Or, if you are using a sprite map...
-    $icons: sprite-map("my-icons/*.png", $spacing: 5px, $layout: diagonal);
+    $icons: sprite-map("toolbar/*.png", $spacing: 5px, $layout: diagonal);
 
-**Note:** In current version of Compass, you can't use spacing and smart layout in the same time. For all layouts check out link in last section of article about sprite layouts.
-
-
-## Position
-
-You can even set manually position of some image, if you want to repeat it, or to place it on center, or something like that. Format for that variable is `$[FOLDER NAME]-[ICON NAME]-position: [VALUE];`
-
-    :::scss
-    $toolbar-spacing: 10px;
-    $toolbar-home-position: 500px;
-    @import "my-icons/*.png";
-
-**Note:** This works only for vertical and horizontal layout. For vertical layout value is x position, and for horizontal it is y position.
+**Note:** In the current version of Compass, you can’t use spacing and smart layout in the same time. For all layouts check out link in last section of article about sprite layouts.
 
 
-## Functions and mixins
+## Additional functions and mixins
 
-Compass is providing you lot of helper mixins and functions.
+Compass also provides a number of helpful mixins and functions for working with sprite maps:
 
-* `sprite-url($icons)` - Returns a url of sprite image
-* `sprite-position($icons, camera)` - Return x and y of icon on sprite image
-* `@include sprite-dimensions($icons, camera)` - Set width and height of icon
+* `sprite-url($icons)` - Returns the URL of a sprite sheet.
+* `sprite-position($icons, bold)` - Returns the X and Y position of a sprite on the sprite sheet.
+* `@include sprite-dimensions($icons, link)` - Set width and height of a sprite based on its original dimensions.
 
 Usage:
 
     :::scss
+    $icons: sprite-map("toolbar/*.png", $spacing: 5px, $layout: diagonal);
     .bold-icon {
       background-image: sprite-url($icons);
       background-position: sprite-position($icons, bold);
@@ -195,29 +191,9 @@ Usage:
     }
 
 
-## Best practices
+## Digging deeper
 
-I found the best way using sprite is to place it inside of some pseudo element - before or after. Just create pseudo-element with width and height of icon, and place it where ever you want.
-
-    :::scss
-    .bold-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #333;
-
-      &:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        background: sprite($icons, bold);
-        @ionclude sprite-dimensions($icons, bold);
-      }
-    }
-
-
-## Useful links
-
-As you probably noted, Compass doesn't shine when it comes to documentation, so I created list of useful links for you.
+Compass actually provides a number of other tools for customizing sprite sheets further. If you’re interested in learning more have a look at some of these articles in the documentation:
 
 - [Spriting Tutorial](http://compass-style.org/help/tutorials/spriting/)
 - [Sprite maps](http://compass-style.org/reference/compass/helpers/sprites/)
