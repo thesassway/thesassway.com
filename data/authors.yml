@@ -194,3 +194,13 @@
     <a href="http://www.500px.com/ChrisMichel">beautiful surroundings</a>.
 
     <p>You can follow Chris on Twitter at <a href="http://twitter.com/hatefulcrawdad">@hatefulcrawdad</a>.</p>
+-
+  name: Aleksandar Goševski
+  slug: aleksandar-gosevski
+  avatar: /images/authors/aleksandar-gosevski.jpeg
+  website: http://www.goschevski.com/
+  twitter: goschevski
+  github: goschevski
+  bio: >
+    <p>Aleksandar Gosevski is a frontend developer based in Belgrade, Serbia. He works for <a href="http://vast.com">Vast.com</a>.</p>
+    <p>You can follow Alexandar on Twitter at <a href="http://twitter.com/goschevski">@goschevski</a>.</p>

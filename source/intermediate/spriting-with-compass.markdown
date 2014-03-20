@@ -153,6 +153,7 @@ To set spacing around each icon:
 
 There are 4 types of layout: horizontal, vertical, diagonal and smart. To set layout of positioning icons on canvas:
 
+    :::scss
     // Using import...
     $toolbar-spacing: 5px;
     $toolbar-layout: 'smart';
