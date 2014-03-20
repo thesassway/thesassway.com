@@ -74,7 +74,7 @@ The easiest way to build your sprite sheet is to use the Compass’s magic impor
     :::scss
     @import "images/toolbar/*.png";
 
-When Compass sees a "*.png" pattern in an import directive it assumes it is a folder of sprites that needs to be converted into a sprite sheet. It will then assemble a sprite sheet image for you and include a number of custom mixins to make it easy to access the sprites in your project.
+When Compass sees a “*.png” pattern in an import directive it assumes it is a folder of sprites that needs to be converted into a sprite sheet. It will then assemble a sprite sheet image for you and include a number of custom mixins to make it easy to access the sprites in your project.
 
 One of those mixins can be used to generate custom classes for all of your sprites automatically. The name of the mixin is based on the name of the folder where the sprite sheet source images are located. In our example:
 
@@ -101,7 +101,7 @@ Will output the following CSS:
       background-position: 0 -48px;
     }
 
-Notice that Compass has built the "toolbar-s1f1c6cbfd0.png" image for us automatically. This is our sprite sheet. The name of the file is the name of our sprite sheet (in this case "toolbar") plus a funny series of letters and numbers called a "hash." The hash will change whenever you update the sprite sheet so that cached CSS will know to use the updated image.
+Notice that Compass has built the “toolbar-s1f1c6cbfd0.png” image for us automatically. This is our sprite sheet. The name of the file is the name of our sprite sheet (in this case “toolbar”) plus a funny series of letters and numbers called a “hash.” The hash will change whenever you update the sprite sheet so that cached CSS will know to use the updated image.
 
 
 ## Controlling class names
