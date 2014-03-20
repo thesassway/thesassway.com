@@ -155,7 +155,7 @@ Compass supports a few different ways of laying out your sprite sheet:
 
 <figure class="figure">
   <img class="figure-image" src="/images/articles/sprite-sheet-layout.svg" alt="A sprite sheet">
-  <figcaption class="figure-caption">There are 4 types of layout - horizontal, vertical, diagonal, and smart.</figcaption>
+  <figcaption class="figure-caption">There are 4 types of layout - vertical, horizontal, diagonal, and smart.</figcaption>
 </figure>
 
 To set the layout of sprites on the sprite sheet:
