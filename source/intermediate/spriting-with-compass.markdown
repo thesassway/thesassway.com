@@ -193,11 +193,4 @@ Usage:
 
 ## Digging deeper
 
-Compass actually provides a number of other tools for customizing sprite sheets further. If you’re interested in learning more have a look at some of these articles in the documentation:
-
-- [Spriting Tutorial](http://compass-style.org/help/tutorials/spriting/)
-- [Sprite maps](http://compass-style.org/reference/compass/helpers/sprites/)
-- [Mixins](http://compass-style.org/reference/compass/utilities/sprites/base/)
-- [More mixins](http://compass-style.org/reference/compass/utilities/sprites/sprite_img/)
-- [Sprite layouts](http://compass-style.org/help/tutorials/spriting/sprite-layouts/)
-- [Sprite variables](http://compass-style.org/help/tutorials/spriting/customization-options/)
+There’s a lot more that you can do with Compass sprite sheets. More than we can cover in this simple tutorial. If you’re interested in learning more read the [official Spriting Tutorial](http://compass-style.org/help/tutorials/spriting/) and checkout [some of other docs here](http://compass-style.org/search/?q=sprites).
