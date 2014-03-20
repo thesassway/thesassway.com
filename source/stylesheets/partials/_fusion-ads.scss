@@ -3,23 +3,36 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font: 700 11px $heading-font-family;
-    text-align: right;
+    font-family: $sans-serif;
+    font-size: 11px;
+    width: 130px;
+
     img {
       display: block;
+      height: 100px;
+      width: 130px;
     }
-  }
 
-  a.fusion-backlink {
-    position: absolute;
-    top: -20px;
-    color: #939399;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+    a {
+      color: #939399;
+      text-decoration: none;
+      &:first-of-type {
+        display: block;
+      }
+    }
 
-  .fusiontext {
-    display: none;
+    a.fusion-backlink {
+      position: absolute;
+      top: -22px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    a.fusiontext {
+      display: block;
+      font-family: $serif;
+      line-height: 1.4;
+      margin-top: 7px;
+    }
   }
 }
