@@ -1,5 +1,5 @@
 ---
-date: 16 March 2014
+date: 23 March 2014
 categories: intermediate, guides
 author: Aleksandar Goševski
 summary: Learn how to use the image spriting features of Compass to improve page download time and drastically reduce the effort needed to assemble sprite sheets.
