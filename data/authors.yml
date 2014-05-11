@@ -177,8 +177,8 @@
     accessibility and UX on the web. During his spare time he often writes about web development and
     computer science on <a href="http://www.growingwiththeweb.com/">his blog</a>.</p>
 
-    <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on
-    <a href="https://plus.google.com/+DanielImms?rel=author">Google+</a>.</p>
+    <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on 
+    <a href="https://plus.google.com/+DanielImms">Google+</a>.</p>
 -
   name: Chris Michel
   slug: chris-michel
@@ -207,3 +207,15 @@
     <p>You can find him on <a href="http://github.com/goschevski">GitHub</a>,
       <a href="http://dribbble.com/goschevski">Dribbble</a>, or <a href="http://twitter.com/goschevski">Twitter</a>
       as @goschevski.</p>
+-
+  name: Sebastian Ekström
+  slug: sebastian-ekstrom
+  avatar: /images/authors/sebastian-ekstrom.jpg
+  website: http://zerosixthree.se
+  twitter: seb_ekstrom
+  bio: >
+    <p><a href="http://zerosixthree.se">Sebastian Ekström</a> is a front-end developer from Sweden working
+      at <a href="http://creuna.se">Creuna</a>. He's the creator of <a href="zerosixthree.se/labs/phone_queue_simulator">The
+      Phone Queue Simulator</a>. He is passionate about <a href="http://css-tricks.com/css-standards-process/">web
+      standards</a> and is pursuing a career as a famous cruise ship magician.</p>
+    <p>Connect with Sebastian on Twitter at <a href="http://twitter.com/seb_ekstrom">@seb_ekstrom</a>.</p>
