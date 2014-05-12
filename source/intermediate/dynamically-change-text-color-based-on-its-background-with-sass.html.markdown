@@ -1,6 +1,6 @@
 ---
 date: 11 May 2014
-categories: advanced
+categories: intermediate
 author: Sebastian Ekström
 summary: Learn how to use variables and a custom function to programmatically determine contrasting text colors for different backgrounds.
 ---
