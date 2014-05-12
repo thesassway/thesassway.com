@@ -1,80 +1,83 @@
 ---
-date: 10 January 2014 16:00
+date: 11 May 2014
 categories: advanced
 author: Sebastian Ekström
-summary: With the help of variables, functions and mixins we can create really dynamic, automatic and clean code, which is one of the big strengths in Sass. In this article I'll show you how you can guarantee a good contrast between a text and its background dynamically with Sass and lightness().
+summary: Learn how to use variables and a custom function to programmatically determine contrasting text colors for different backgrounds.
 ---
 
-# Dynamically change text color based on its background with Sass
+# How to dynamically change text color based on a background color
 
-With the help of variables, functions and mixins we can create really dynamic, automatic and clean code, which is one of the big strengths in Sass. In this article I'll show you how you can guarantee a good contrast between a text and its background dynamically with Sass and lightness().
+Designers often choose the text color of an element based on the background color. If the background is dark, light text is chosen. If the background is light, they use dark text. This is because light and dark contrast well with each other and make text easier to read.
 
+So how can we use Sass to choose the appropriate text color for a background?
 
-## How to do it
+We'll use notification messages as our example. Let's start with some basic HTML:
 
-We'll use notification bars as an example of this. So lets start with some basic HTML:
+    :::html
+    <p class="notification notification-confirm">Confirmation</p>
+    <p class="notification notification-warning">Warning</p>
+    <p class="notification notification-alert">Alert</p>
 
-```
-<p class="notification notification-confirm">Confirmation</p>
-<p class="notification notification-warning">Warning</p>
-<p class="notification notification-alert">Alert</p>
-```
+We have three types of notifications: confirm, warning, and alert. We'd like them to have different color backgrounds. Green for confirmation, yellow for warning, and red for alert. And we want the text contrast well with the background.
 
-There's our three types of notifications; confirm, warning and alert. These will have different colors, maybe green for the confirmation, yellow for the warning and red for the alert. And we want its text color to have a good contrast to the background.
+Let's create a Sass function to make our lives a little easier:
 
-So let's start with creating a Sass function that receives a color value and depending on its lightness returns another color.
-
-```
-@function set-notification-text-color($color) {
-    @if (lightness( $color ) > 50) {
-      @return #000000; // Lighter color, return black
+    :::scss
+    @function set-notification-text-color($color) {
+      @if (lightness($color) > 50) {
+        @return #000000; // Lighter backgorund, return dark color
+      } @else {
+        @return #ffffff; // Darker background, return light color
+      }
     }
-    @else {
-      @return #FFFFFF; // Darker color, return white
+
+Here we've used the Sass `lightness()` function to determine which color is more appropriate for a background. The `lightness()` function is a [built-in Sass function](http://sass-lang.com/documentation/Sass/Script/Functions.html#lightness-instance_method) that returns the lightness of a color's RGB value between 0 and 100. Where 0 is the darkest and 100 the lightest.
+
+So in our function we receive a color, and if that color's lightness value is greater than 50, meaning it's a light color, we return a dark value to ensure a good contrast. Otherwise we return a light color.
+
+Alrighty then. Let's see this in action:
+
+    :::scss
+    $notification-confirm: hsla(101, 72%, 37%, 1);  // Green
+    $notification-warning: #ffc53a;                 // Yellow
+    $notification-alert: rgb(172, 34, 34);          // Red
+
+    %notification {
+      border-radius: 10px;
+      display: block;
+      font-size: 1.5em;
+      font-family: sans-serif;
+      padding: 1em 2em;
+      margin: 1em auto;
+      width: 30%;
+      text-align: center;
     }
-}
-```
 
-Lightness() is a [built-in Sass function](http://sass-lang.com/documentation/Sass/Script/Functions.html#lightness-instance_method) that calculates the lightness of a colors RGB value between 0% and 100%. Where 0% is the darkest and 100% the lightest.
-So in our function we receive a color, and if that colors lightness value is greater than 50%, meaning it's a lighter color, we return a dark value to ensure a good contrast.
+    .notification {
+      @extend %notification;
+    }
+    .notification-confirm {
+      background: $notification-confirm;
+      color: set-notification-text-color($notification-confirm);
+    }
+    .notification-warning {
+      background: $notification-warning;
+      color: set-notification-text-color($notification-warning);
+    }
+    .notification-alert {
+      background: $notification-alert;
+      color: set-notification-text-color($notification-alert);
+    }
 
-Alrighty then. Let’s create some basic styling and then call our function.
+And there we have it! We call our function with the background color of our message and the function determines a light or dark value for us!
 
-```
-$notification-confirm: hsla(101, 72%, 37%, 1);  // Green
-$notification-warning: #ffc53a;                 // Yellow
-$notification-alert: rgb(172, 34, 34);          // Red
+Here's the final output:
 
-%notification {
-    padding: 1em 2em;
-    width: 30%;
-    margin: 1em auto;
-    display: block;
-    text-align: center;
-    font-size: 1.5em;
-    font-family: sans-serif;
-    border-radius: 10px;
-}
+<p data-height="400" data-theme-id="394" data-slug-hash="ktcqw" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/sebastianekstrom/pen/avDjh'>Dynamic text color based on the background</a> on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-.notification {
-    @extend %notification;
-}
-.notification-confirm {
-    background: $notification-confirm;
-    color: set-notification-text-color($notification-confirm);
-}
-.notification-warning {
-    background: $notification-warning;
-    color: set-notification-text-color($notification-warning);
-}
-.notification-alert {
-    background: $notification-alert;
-    color: set-notification-text-color($notification-alert);
-}
-```
+The really wonderful thing about this approach is that if we change our background color variables the text colors will update appropriately.
 
-There we have it! We call our function with the background color of our button, and the function returns the appropriate text color. As you can see, the function parameter can take a hex value, rgba, hsl or the name of the color.
+This is a simplified example of how you can use Sass to generate colors dynamically. I'm sure you can think of other ways of using this. Let me know how you are using Sass color functions in the comments below.
 
-So if you want to change the alert notification color, you just change the value of the variable, and the text color changes automatically. This is of course a simplified example of how you can use lightness() for dynamical colors. It can be extended to detect more lightness values, used on different button states and a lot more!
-
-A demo can be [viewed here](http://codepen.io/sebastianekstrom/pen/avDjh).
+For a more advanced version of this idea with a better `brightness()` function for determining the lightness of a color, see [John W. Long's gist here](https://gist.github.com/jlong/f06f5843104ee10006fe).
