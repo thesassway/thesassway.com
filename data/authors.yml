@@ -207,3 +207,15 @@
     <p>You can find him on <a href="http://github.com/goschevski">GitHub</a>,
       <a href="http://dribbble.com/goschevski">Dribbble</a>, or <a href="http://twitter.com/goschevski">Twitter</a>
       as @goschevski.</p>
+
+-
+  name: Jaime Caballero
+  slug: jaime-caballero
+  avatar: /images/authors/jaime-caballero.jpeg
+  website: http://jaicab.com
+  twitter: jaicab_
+  github: jaicab
+  bio: >
+    <p>Jaime Caballero is a self-taught front-end developer working as a freelance in Spain. He is passionate about responsive design and performance optimization.</p>
+    <p>You can find him on <a href="http://github.com/jaicab">GitHub</a> or <a href="http://twitter.com/jaicab_">Twitter</a>
+      as @jaicab_.</p>
