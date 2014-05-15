@@ -114,13 +114,15 @@ Applying all we've seen and using `@extend` to mix base objects we can get clean
 		background: #3b5998;
 	}
 
-	.btn--twitter {
-		@extend %button;
-		@extend %twitter-background;
-	}
-	.btn--twitter {
-		@extend %button;
-		@extend %facebook-background;
+	.btn {
+		&--twitter {
+			@extend %button;
+			@extend %twitter-background;
+		}
+		&--facebook {
+			@extend %button;
+			@extend %facebook-background;
+		}
 	}
 
 This produces efficient code that we can use easily in our HTML:
