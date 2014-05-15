@@ -1,5 +1,5 @@
 ---
-date: 2014-05-13 16:15:00 -0500
+date: 2014-05-14 16:15:00 -0500
 categories: intermediate, modular-css
 author: Jaime Caballero
 summary: Tired of all those meaningless classes sprinkled all over your HTML? Well, don't worry, at the end of this post you will know how to write clean, object-oriented CSS.
