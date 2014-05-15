@@ -17,7 +17,7 @@ Tired of all those meaningless classes sprinkled all over your HTML? Well, don't
 
 Abstraction is the very first thing you have to consider when buildin a CSS object. But how do we separate and organize the code? [Nicole Sullivan](https://github.com/stubbornella), who presented OOCSS back at Web Directions North in Denver, defined **two main principles**:
 
-- **Separate structure and skin**: You should keep the structure and positioning in a base object and the visual features (like background or border) in extender clases. This way you'd never have to overwrite visual properties.
+- **Separate structure and skin**: You should keep the structure and positioning in a base object and the visual features (like `background` or `border`) in extender clases. This way you'd never have to overwrite visual properties.
 - **Separate container and content**: Never rely on HTML structure to write your CSS. So don't use tags or IDs for your objects. Instead, try to create and apply a class that describes the use of the tag in question. This also assures you that any unclassed tags will look the same.
 
 ##Let's do a quick example
@@ -61,8 +61,8 @@ Now we can apply these classes to all our HTML elements, combining them to creat
 You shouldn't care about being non-semantic. I care about what it means to upkeep. For example, the previous CSS would look like this in HTML.
 
     :::html
-	<div class="box-1 box-border">foo</div>
-	<div class="box-2 box-border">foo</div>
+	<div class="box-1 box-border">Lorem ipsum</div>
+	<div class="box-2 box-border">Lorem ipsum</div>
 
 The only way to make objects in plain CSS is to define non-semantic classes. However, this comes with some problems:
 
@@ -77,7 +77,7 @@ So we code the parts in CSS and **extend** them in HTML. Could it get any better
 I'm sure you've heard about Sass' `@extend` directive and of course you know [how it works](/intermediate/understanding-placeholder-selectors).
 So, thanks to placeholder selectors we can extend in Sass, creating semantic classes in CSS, solving our problem for HTML.
 
-We must use placeholders as objects, and define classes formed only by merging them through `@extend`. This will result in an incredibly <abbr title="Don't Repeat Your">DRY</abbr> CSS code. Let's see an example applying everything we've learned from the beggining:
+We must use placeholders as objects, and define classes formed only by merging them through `@extend`. This will result in an incredibly <abbr title="Don't Repeat Your">DRY</abbr> CSS code. Let's see an example:
 
     :::scss
 	/* The bad way */
