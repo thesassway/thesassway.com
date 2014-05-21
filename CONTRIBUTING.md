@@ -10,7 +10,7 @@ below. Bug fixes and edits are also encouraged.
 To submit an article for publication on TheSassWay.com, here's the suggested
 process:
 
-1. Fork the repository
+1. [Fork the repository](https://github.com/thesassway/thesassway.com)
 2. Add a new article to the `source` directory of your fork.
 3. Commit your changes
 4. Submit a pull request
@@ -21,7 +21,8 @@ make sure that the topic you have chosen will be appropriate for our readers.
 ## News
 
 If you have news about Sass or Compass, tweet at us on Twitter (mention
-@TheSassWay) or create a new issue in our repository.
+[@TheSassWay](https://twitter.com/thesassway)) or [create a new
+issue](https://github.com/thesassway/thesassway.com/issues/new) on GitHub.
 
 If you choose to submit an issue, title the issue appropriately and include an
 140-character description so that it is easy to tweet.
