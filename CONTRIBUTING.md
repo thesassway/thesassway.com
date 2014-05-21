@@ -25,22 +25,15 @@ If you have news about Sass or Compass, tweet at us on Twitter (mention
 [@TheSassWay][3]) or [create a new issue][4] on GitHub.
 
 If you choose to submit an issue, title the issue appropriately and include an
-140-character description so that it is easy to tweet.
-
-Right now we don't post news about Sass or Compass on the website, instead we
-tweet about it as we've found that it's much easier for us to maintain.
+140-character description that is easy to tweet.
 
 Appropriate news items are:
 
-* A new library for Sass or Compass that would be of general interest to the
-  community
+* A new library or tool for Sass or Compass
 * A tutorial or story about Sass from your own blog
 * A cool Sass demo that you've built
-* Announcements about new Sass books, conferences, tools, etc...
+* Announcements about new Sass books, conferences, etc...
 
-We won't tweet every news item that is submitted. We try not to overwhelm our
-subscribers with too many tweets. We are also looking for high quality
-submissions.
 
 [1]: http://thesassway.com
 [2]: https://github.com/thesassway/thesassway.com
