@@ -7,22 +7,22 @@ below. Bug fixes and edits are also encouraged.
 
 ## Articles
 
-To submit an article for publication on TheSassWay.com, here's the suggested
+To submit an article for publication on [TheSassWay.com][1], here's the suggested
 process:
 
-1. [Fork the repository](https://github.com/thesassway/thesassway.com)
+1. [Fork the repository][2]
 2. Add a new article to the `source` directory of your fork.
 3. Commit your changes
 4. Submit a pull request
 
-We recommend that you also message @TheSassWay on Twitter before starting to
-make sure that the topic you have chosen will be appropriate for our readers.
+We recommend that you also message [@TheSassWay][3]) on Twitter before starting
+to make sure that the topic you have chosen will be appropriate for our
+readers.
 
 ## News
 
 If you have news about Sass or Compass, tweet at us on Twitter (mention
-[@TheSassWay](https://twitter.com/thesassway)) or [create a new
-issue](https://github.com/thesassway/thesassway.com/issues/new) on GitHub.
+[@TheSassWay][3]) or [create a new issue][4] on GitHub.
 
 If you choose to submit an issue, title the issue appropriately and include an
 140-character description so that it is easy to tweet.
@@ -41,3 +41,8 @@ Appropriate news items are:
 We won't tweet every news item that is submitted. We try not to overwhelm our
 subscribers with too many tweets. We are also looking for high quality
 submissions.
+
+[1]: http://thesassway.com
+[2]: https://github.com/thesassway/thesassway.com
+[3]: https://twitter.com/thesassway
+[4]: https://github.com/thesassway/thesassway.com/issues/new
