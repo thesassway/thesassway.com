@@ -1,14 +1,30 @@
 # Contributing
 
-The Sass Way is a community powered website. We rely on our readers to send us
-the latest news about Sass and Compass and look for contributions from the
-community to maintain the site and create new articles.
+The Sass Way would not be possible without the generous submissions of so many
+amazing folks from the Sass community. We welcome contributions from our
+readers! You can submit articles or news items using the process outlined
+below. Bug fixes and edits are also encouraged.
+
+## Articles
+
+To submit an article for publication on TheSassWay.com, here's the suggested
+process:
+
+1. Fork the repository
+2. Add a new article to the `source` directory of your fork.
+3. Commit your changes
+4. Submit a pull request
+
+We recommend that you also message @TheSassWay on Twitter before starting to
+make sure that the topic you have chosen will be appropriate for our readers.
 
 ## News
 
-If you have news about Sass or Compass, please create a new issue on our
-repository. Title the issue appropriately and include an 140-character
-description so that it is easy to tweet.
+If you have news about Sass or Compass, tweet at us on Twitter (mention
+@TheSassWay) or create a new issue in our repository.
+
+If you choose to submit an issue, title the issue appropriately and include an
+140-character description so that it is easy to tweet.
 
 Right now we don't post news about Sass or Compass on the website, instead we
 tweet about it as we've found that it's much easier for us to maintain.
@@ -24,17 +40,3 @@ Appropriate news items are:
 We won't tweet every news item that is submitted. We try not to overwhelm our
 subscribers with too many tweets. We are also looking for high quality
 submissions.
-
-## Articles
-
-The Sass Way would not be possible without the generous submissions of so many
-amazing folks from the Sass community. If you'd like to submit an article for
-publication on TheSassWay.com, here's the suggested process:
-
-1. Fork the repository
-2. Add a new article to the `source` directory of your fork.
-3. Commit your changes
-4. Submit a pull request
-
-We recommend that you also message @TheSassWay on Twitter before starting to make
-sure that the topic you have chosen will be appropriate for our readers.
