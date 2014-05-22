@@ -1,7 +1,7 @@
 ---
 date: 21 May 2014
 categories: advanced
-author: Anna Tudor
+author: Ana Tudor
 summary: need to write something here
 ---
 
