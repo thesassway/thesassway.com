@@ -7,48 +7,85 @@ summary: need to write something here
 
 # Inverse trigonometric functions with Sass
 
-## How it all started
+You might think that math doesn't have a lot to do with writing stylesheets, but you can actually do a number of amazing things with a little math in CSS. Math (particularly trigonometry) can help you model the real world. You'll need it if you want to do something complicated with 3D transforms. And it can be a lot of fun if you just want to impress your friends.
 
-While creating various 2D or 3D CSS demos, I found myself needing to compute the values for angles whose sine, cosine or tangent was known. Compass provides `sin()`, `cos()` or `tan()` functions, but not the inverse ones. So I had two options. The first one was to manually compute the values or simply grab them from a mathematical table. The second one was to write my own functions.
+Here's an example:
 
-How? Well, a couple of months before, I had stumbled onto [an article about writing sine and cosine functions in Sass using Taylor expansions](http://www.japborst.net/blog/sass-sines-and-cosines.html), so I thought I'd use the same method for the inverse ones. Actually, just for the arcsine, because, once I have that one function, I can use it to compute the arccosine and the arctangent.
+<p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
 
-## Maths basics
+This rotating [icosidodecahedron](http://en.wikipedia.org/wiki/Icosidodecahedron) is an advanced example of what you can do with a trigonometry in CSS. If that's over your head check out [Mason Wendell](https://twitter.com/codingdesigner)'s [*Sassy Mother Effing Text Shadow* demos](http://sassymothereffingtextshadow.com/). Mason makes great use of Compass's `sin()` and `cos()` functions to do some fun stuff with CSS shadows.
 
-Before we get into how to build this function, let's start with a short trigonometry recap.
+I'm a bit of a trigonometry nerd. (Okay, that's probably an understatement!) Sometimes the standard trig functions aren't enough for me. While working on a couple of 2D and 3D CSS demos, I found myself needing to compute the values for angles whose sine, cosine or tangent was known. I needed `asin()`, `acos()`, and `atan()`. Unfortunately, Compass doesn't provide these functions so I was left with two options:
 
-![right triangle](http://i.imgur.com/1ssIKUT.png)
+1. Manually compute the values I needed with a calculator (boring!)
+2. Write my own functions with Sass!
 
-In the right triangle above, we have that `α + β = π/2` (`π/2` is the radian value for `90°`).
+Naturally, I chose number two!
 
-Pythagora's theorem tells us that <code>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></code>.
+Fortunately for me, I stumbled across [an article about writing sine and cosine functions in Sass using Taylor expansions](http://www.japborst.net/blog/sass-sines-and-cosines.html). It occured to me that I could adapt the same method to create the functions I needed.
 
-We also have that: 
+**Disclaimer:** This is about to get super Math heavy. If you just want to see how the final implementation, skip ahead and look at this [codepen](http://codepen.io/thebabydino/pen/KHpys/).
 
-    sin(α) = a/c
-    cos(α) = b/c
-    tan(α) = a/b
-    sin(β) = b/c
-    cos(β) = a/c
-    tan(β) = b/a
 
-We notice a few things from these formulas:
+## Trigonometry 101
 
-<code>sin<sup>2</sup>(α) + cos<sup>2</sup>(α) = (a/c)<sup>2</sup> + (b/c)<sup>2</sup> = (a<sup>2</sup> + b<sup>2</sup>)/c<sup>2</sup> = 1</code>
+Before we get too far let's go back and review some basic high school math. 
 
-`sin(α)/cos(α) = (a/c)/(b/c) = a/b = tan(α)`
+<figure class="figure">
+<img class="figure-image" src="/images/articles/basic-trigonometry.svg" alt="right triangle">
+<figcaption class="figure-caption">A right triangle</figcaption>
+</figure>
 
-`sin(α) = cos(β) = cos(π/2 - α)`.
+This diagram should look somewhat familiar. (If it doesn't check out MathBFF's video on YouTube: [*Basic Trigonometry: Sin, Cos, Tan*](http://www.youtube.com/watch?v=X5uFqpypDy4).)
+
+Let's review a couple of formulas. In the right triangle diagram above:
+
+> α + β = 90°
+
+In radians, that's:
+
+> α + β = π/2
+
+Most people will also remember that the [Pythagorean theorem](http://en.wikipedia.org/wiki/Pythagorean_theorem) tells us:
+
+> a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
+
+Our basic trigonometry functions are defined as follows:
+
+> sin(α) = a/c  
+> cos(α) = b/c  
+> tan(α) = a/b  
+> sin(β) = b/c  
+> cos(β) = a/c  
+> tan(β) = b/a
+
+Knowing this, we can derive a few additional formulas:
+
+> sin<sup>2</sup>(α) + cos<sup>2</sup>(α) = (a/c)<sup>2</sup> + (b/c)<sup>2</sup> = (a<sup>2</sup> + b<sup>2</sup>)/c<sup>2</sup> = 1  
+> sin(α)/cos(α) = (a/c)/(b/c) = a/b = tan(α)  
+> sin(α) = cos(β) = cos(π/2 - α)
+
+Head spinning yet? It gets worse...
+
 
 ## The arcsine function
 
-But what's with the arcsine function? Well, if we have `sin(α) = z`, then `α = asin(z)`. If we have `cos(α) = z`, then `α = acos(z)` and if we have `tan(α) = z`, then `α = atan(z)`.
+So what is an arcsine? Well, if:
 
-The `asin()` function is the one that we're going to build using its series expansion - which looks something like this:
+> sin(α) = z
+
+Then the arcsine is the inverse of this:
+
+> asin(z) = α 
+
+In other words, given an angle's sine, the `asin()` function can tell you the angle. Arccosine and arctangent are similar in that they give you the angle based on a cosine or tangent (`acos()` and `atan()`).
+
+The `asin()` function is the one that we're going to build using series expansion. Taylor series expansion is complicated if you are not a math wiz. I'll do my best to explain. For arcsine it looks something like this:
 
 ![arcsine expansion](http://i.imgur.com/RnX5sTf.png)
 
-I know it looks ugly and scary, but let's deconstruct it. `z` is the value of the sine of the `α` angle we want to get and the entire sum is the radian value of `α`. `z` should be a value in the `[-1, 1]` interval, while the sum is going to be in the `[-π/2, π/2]` interval.
+Don't freak out on me just yet. Let's deconstruct this. Now, *z* is the value of the sine of the *α* angle we want to get. The entire sum is the radian value of *α*. *z* should be a value in the *[-1, 1]* interval, while the sum is going to be in the *[-π/2, π/2]* interval.
 
 Every term - including the first one, which you can also write as `(1)*z` - is made up out of two parts: the first one is the part inside the paranthesis and the second one is the part outside the paranthesis.
 
@@ -218,8 +255,8 @@ We start by creating a table of conversion factors from the unitless radian valu
     :::scss
     $factors: (
       rad: 1rad,
-      deg: 180deg/pi(), 
-      turn: .5turn/pi(), 
+      deg: 180deg/pi(),
+      turn: .5turn/pi(),
       grad: 200grad/pi()
     );
 
@@ -229,8 +266,8 @@ Then we only need to multiply our initial unitless radian value to the appropria
     @function convert-angle($value, $unit-name) {
       $factors: (
         rad: 1rad,
-        deg: 180deg/pi(), 
-        turn: .5turn/pi(), 
+        deg: 180deg/pi(),
+        turn: .5turn/pi(),
         grad: 200grad/pi()
       );
 
@@ -242,17 +279,17 @@ This fails if `$unit-name` isn't a key of the `$factors` map and isn't valid in 
     :::scss
     @function convert-angle($value, $unit-name) {
       $factors: (
-        rad: 1rad, 
-        deg: 180deg/pi(), 
-        grad: 200grad/pi(), 
+        rad: 1rad,
+        deg: 180deg/pi(),
+        grad: 200grad/pi(),
         turn: .5turn/pi()
       );
-      
+
       @if not unitless($value) {
         @warn '`#{$value}` should be unitless';
         @return false;
       }
-      
+
       @if not map-has-key($factors, $unit-name) {
         @warn 'unit `#{$unit-name}` is not a valid unit - please make sure it is either `deg`, `rad`, `grad` or `turn`';
         @return false;
