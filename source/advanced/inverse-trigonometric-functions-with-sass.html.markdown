@@ -265,7 +265,7 @@ This fails if `$unit-name` isn't a key of the `$factors` map and isn't valid in 
 
 Now we just need to change our inverse trigonometric functions to take care of unit conversion as well:
 
-    ::scss
+    :::scss
     @function asin($z, $unit-name: deg, $threshold: $default-threshold) {
       // same as before, nothing changes here
 
