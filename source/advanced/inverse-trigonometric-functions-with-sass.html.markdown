@@ -11,7 +11,7 @@ You might think that math doesn't have a lot to do with writing stylesheets, but
 
 Here's an example:
 
-<p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="css" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 This rotating [icosidodecahedron](http://en.wikipedia.org/wiki/Icosidodecahedron) is an advanced example of what you can do with a trigonometry in CSS. If that's over your head check out [Mason Wendell](https://twitter.com/codingdesigner)'s [*Sassy Mother Effing Text Shadow* demos](http://sassymothereffingtextshadow.com/). Mason makes great use of Compass's `sin()` and `cos()` functions to do some fun stuff with CSS shadows.
@@ -230,7 +230,7 @@ At this point, unless the starting value for `$term` happens to be smaller than 
 
 And this is it! We now have a working `asin()` function in Sass!
 
-One thing more we could do to improve this is to check whether `abs($z) <= 1` and throw an error if it returns false because, in such a case, our `$term` won't get under the `$threshold` value and we'll have an infinite loop. But I'll leave that as an excercise for the reader!
+One thing more we could do to improve this is to check whether `abs($z) <= 1` and throw an error if it returns false because, in such a case, our `$term` won't get under the `$threshold` value and we'll have an infinite loop.
 
 
 ## Coding the `acos()` function
@@ -356,7 +356,7 @@ I've chosen to use degrees as the default because that's probably the one most p
 
 Well, you've been a real trooper if you've made it this far! The complete functions can be found in this pen:
 
-<p data-height="544" data-theme-id="394" data-slug-hash="KHpys" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/KHpys'>Inverse trigonometric functions</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="544" data-theme-id="394" data-slug-hash="KHpys" data-default-tab="css" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/KHpys'>Inverse trigonometric functions</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 I'll leave you with two additional CodePen demos to inspire you:
