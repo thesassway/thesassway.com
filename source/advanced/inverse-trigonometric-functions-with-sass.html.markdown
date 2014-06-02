@@ -140,7 +140,7 @@ Then we start to write our function:
       @return $sum;
     }
 
-We set the sum to be initially `0` and make sure we'll compute the complement if our angle in absolute value is greater than `π/4`. But after that, how do we know we've computed the complement in order to switch to our initial angle?
+We set the sum to be initially `0` and make sure we'll compute the complement if our angle in absolute value is greater than `pi()/4`. But after that, how do we know we've computed the complement in order to switch to our initial angle?
 
 In order to keep track of that, we introduce a boolean variable, `$complement`, which is initially `false`, but gets switched to `true` inside the `@if` block. Also, before returning `$sum`, we check if the `$complement` variable is `true` and, if it is, we return `pi()/2 - $sum`.
 
