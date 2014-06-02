@@ -235,7 +235,7 @@ One thing more we could do to improve this is to check whether `abs($z) <= 1` an
 
 ## Coding the `acos()` function
 
-Now that we have a function to calculate the arcsine, it's actually pretty easy to code an `acos()` function. We can  use the fact that, in the case of an angle =$\alpha$= in the =$[0, \pi]$= interval, =$\cos(\alpha) = \sin(\pi/2 - \alpha)$=. If we know =$\cos(\alpha) = z$=, then =$\arcsin(z) = \pi/2 - \alpha$=, which gives us that =$\alpha = \pi/2 - z$=.
+Now that we have a function to calculate the arcsine, it's actually pretty easy to code an `acos()` function. We can  use the fact that, in the case of an angle =$\alpha$= in the =$[0, \pi]$= interval, =$\cos(\alpha) = \sin(\pi/2 - \alpha)$=. If we know =$\cos(\alpha) = z$=, then =$\arcsin(z) = \pi/2 - \alpha$=, which gives us that =$\alpha = \pi/2 - \arcsin(z)$=.
 
     :::scss
     @function acos($z, $threshold: $default-threshold) {
