@@ -87,7 +87,7 @@ $$ \arcsin(z) = \alpha $$
 
 In other words, given an angle's sine, arcsine can tell you the angle. Arccosine and arctangent are similar in that they give you the angle based on a cosine or tangent.
 
-We are going to build an `asin` function in Sass to give us the arcsine. And we're going to do it using series expansion. Taylor series expansion is complicated if you are not a math wiz. I'll do my best to explain. For arcsine it looks something like this:
+We are going to build an `asin()` function in Sass to give us the arcsine. And we're going to do it using series expansion. Taylor series expansion is complicated if you are not a math wiz. I'll do my best to explain. For arcsine it looks something like this:
 
 $$ z + \left(\frac{1}{2}\right)\frac{z^3}{3} + \left(\frac{1\cdot3}{2\cdot4}\right)\frac{z^5}{5} + \left(\frac{1\cdot3\cdot5}{2\cdot4\cdot6}\right)\frac{z^7}{7} + \cdots $$
 
@@ -361,7 +361,7 @@ Well, you've been a real trooper if you've made it this far! The complete functi
 
 I'll leave you with two additional CodePen demos to inspire you:
 
-* [A regular dodecahedron expanding into an icosidodecahedron and then collapsing into an icosahedron](http://codepen.io/thebabydino/pen/qDziw))
+* [A regular dodecahedron expanding into an icosidodecahedron and then collapsing into an icosahedron](http://codepen.io/thebabydino/pen/qDziw)
 * [A stretchy graphical mesh](http://codepen.io/thebabydino/pen/dlGJI)
 
 More can be found on [my CodePen page](http://codepen.io/thebabydino/).
