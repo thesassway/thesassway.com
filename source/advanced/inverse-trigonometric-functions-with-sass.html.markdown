@@ -2,7 +2,7 @@
 date: 21 May 2014
 categories: advanced
 author: Ana Tudor
-summary: need to write something here
+summary: Ana Tudor kicks off her first article for The Sass Way with some crazy CSS demos and a lot of advanced math. Learn how to create `asin()`, `acos()`, and `atan()` functions in pure Sass.
 ---
 
 # Inverse trigonometric functions with Sass
