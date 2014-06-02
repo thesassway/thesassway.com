@@ -11,7 +11,7 @@ You might think that math doesn't have a lot to do with writing stylesheets, but
 
 Here's an example:
 
-<p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="css" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 This rotating [icosidodecahedron](http://en.wikipedia.org/wiki/Icosidodecahedron) is an advanced example of what you can do with a trigonometry in CSS. If that's over your head check out [Mason Wendell](https://twitter.com/codingdesigner)'s [*Sassy Mother Effing Text Shadow* demos](http://sassymothereffingtextshadow.com/). Mason makes great use of Compass's `sin()` and `cos()` functions to do some fun stuff with CSS shadows.
