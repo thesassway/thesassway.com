@@ -25,7 +25,7 @@ Naturally, I chose number two!
 
 Fortunately for me, I stumbled across [an article about writing sine and cosine functions in Sass using Taylor expansions](http://www.japborst.net/blog/sass-sines-and-cosines.html). It occured to me that I could adapt the same method to create the functions I needed.
 
-**Disclaimer:** This is about to get super Math heavy. If you just want to see how the final implementation, skip ahead and look at this [codepen](http://codepen.io/thebabydino/pen/KHpys/).
+**Disclaimer:** This is about to get super Math heavy. If you just want to see how the final implementation, skip ahead and look at this [pen](http://codepen.io/thebabydino/pen/KHpys/).
 
 
 ## Trigonometry 101
@@ -93,7 +93,7 @@ $$ z + \left(\frac{1}{2}\right)\frac{z^3}{3} + \left(\frac{1\cdot3}{2\cdot4}\rig
 
 Now don't freak out on me. Let's deconstruct this: =$z$= is the value of the sine of the =$\alpha$= angle we want to get. The entire sum is the radian value of =$\alpha$=. =$z$= should be a value in the =$[-1, 1]$= interval, while the sum is going to be in the =$[-\pi/2, \pi/2]$= interval.
 
-Every term - including the first one, which you can also write as =$(1)*z$= - is made up out of two parts: the first one is the part inside the paranthesis and the second one is the part outside the paranthesis.
+Every term - including the first one, which you can also write as =$(1) \cdot z$= - is made up out of two parts: the first one is the part inside the paranthesis and the second one is the part outside the paranthesis.
 
 For every =$i$=-th term but the first one, the first part is the first part of the previous term multiplied with =$(2i - 1)/(2i)$=. The numerator of the second part is =$z$= raised to the power =$2i + 1$=, while the denominator is =$2i + 1$=.
 
@@ -354,4 +354,14 @@ I've chosen to use degrees as the default because that's probably the one most p
 
 ## Final words
 
-All of these functions can be found in [this pen](http://codepen.io/thebabydino/pen/KHpys/) and I've used them in order to create various pure CSS shapes (for example, [this regular dodecahedron expanding into an icosidodecahedron and then collapsing into an icosahedron](http://codepen.io/thebabydino/pen/qDziw)) or graphical function representations (for example, [this stretchy mesh](http://codepen.io/thebabydino/pen/dlGJI)).
+Well, you've been a real trooper if you've made it this far! The complete functions can be found in this pen:
+
+<p data-height="544" data-theme-id="394" data-slug-hash="KHpys" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/KHpys'>Inverse trigonometric functions</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
+
+I'll leave you with two additional CodePen demos to inspire you:
+
+* [A regular dodecahedron expanding into an icosidodecahedron and then collapsing into an icosahedron](http://codepen.io/thebabydino/pen/qDziw))
+* [A stretchy graphical mesh](http://codepen.io/thebabydino/pen/dlGJI)
+
+More can be found on [my CodePen page](http://codepen.io/thebabydino/).
