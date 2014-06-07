@@ -14,16 +14,16 @@ Here's an example:
 <p data-height="544" data-theme-id="394" data-slug-hash="kpCyx" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/thebabydino/pen/kpCyx'>Pure CSS 3D animated icosidodecahedron (pentagonal gyrobirotunda)</a> by Ana Tudor (<a href='http://codepen.io/thebabydino'>@thebabydino</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-This rotating [icosidodecahedron](http://en.wikipedia.org/wiki/Icosidodecahedron) is an advanced example of what you can do with a trigonometry in CSS. If that's over your head check out [Mason Wendell](https://twitter.com/codingdesigner)'s [*Sassy Mother Effing Text Shadow* demos](http://sassymothereffingtextshadow.com/). Mason makes great use of Compass's `sin()` and `cos()` functions to do some fun stuff with CSS shadows.
+This rotating [icosidodecahedron](http://en.wikipedia.org/wiki/Icosidodecahedron) is an advanced example of what you can do with trigonometry in CSS. If that's over your head, check out [Mason Wendell](https://twitter.com/codingdesigner)'s [*Sassy Mother Effing Text Shadow* demos](http://sassymothereffingtextshadow.com/). Mason makes great use of Compass's `sin()` and `cos()` functions to do some fun stuff with CSS shadows.
 
 I'm a bit of a trigonometry nerd. (Okay, that's probably an understatement!) Sometimes the standard trig functions aren't enough for me. While working on a couple of 2D and 3D CSS demos, I found myself needing to compute the values for angles whose sine, cosine, or tangent was known. I needed `asin()`, `acos()`, and `atan()`. Unfortunately, Compass doesn't provide these functions so I was left with two options:
 
 1. Manually compute the values I needed with a calculator (boring!)
 2. Write my own functions with Sass!
 
-Naturally, I chose number two!
+Naturally, I chose the second option!
 
-Fortunately for me, I stumbled across [an article about writing sine and cosine functions in Sass using Taylor expansions](http://www.japborst.net/blog/sass-sines-and-cosines.html). It occured to me that I could adapt the same method to create the functions I needed.
+Fortunately for me, I stumbled across [an article about writing sine and cosine functions in Sass using Taylor expansions](http://www.japborst.net/blog/sass-sines-and-cosines.html). It occurred to me that I could adapt the same method to create the functions I needed.
 
 **Disclaimer:** This is about to get super Math heavy. If you just want to see how the final implementation, skip ahead and look at this [pen](http://codepen.io/thebabydino/pen/KHpys/).
 
@@ -72,7 +72,7 @@ $$ \frac{\sin(\alpha)}{\cos(\alpha)} = \frac{(a/c)}{(b/c)} = \frac{a}{b} = \tan(
 
 $$ \sin(\alpha) = \cos(\beta) = \cos\left(\frac{\pi}{2} - \alpha\right) $$
 
-Head spinning yet? Hold on to your horses...
+Head spinning yet? Hold on to your hats...
 
 
 ## The arcsine function
@@ -93,11 +93,11 @@ $$ z + \left(\frac{1}{2}\right)\frac{z^3}{3} + \left(\frac{1\cdot3}{2\cdot4}\rig
 
 Now don't freak out on me. Let's deconstruct this: =$z$= is the value of the sine of the =$\alpha$= angle we want to get. The entire sum is the radian value of =$\alpha$=. =$z$= should be a value in the =$[-1, 1]$= interval, while the sum is going to be in the =$[-\pi/2, \pi/2]$= interval.
 
-Every term - including the first one, which you can also write as =$(1) \cdot z$= - is made up out of two parts: the first one is the part inside the paranthesis and the second one is the part outside the paranthesis.
+Every term - including the first one, which you can also write as =$(1) \cdot z$= - is made up out of two parts: the first one is the part inside the parentheses and the second one is the part outside the parentheses.
 
 For every =$i$=-th term but the first one, the first part is the first part of the previous term multiplied with =$(2i - 1)/(2i)$=. The numerator of the second part is =$z$= raised to the power =$2i + 1$=, while the denominator is =$2i + 1$=.
 
-This may be an infinite sum, but once we get to a certain term, the values for the terms after it become so small they are really negligible which (for our purposes) means we can safetly ignore them.
+This may be an infinite sum, but once we get to a certain term, the values for the terms after it become so small they are really negligible which (for our purposes) means we can safely ignore them.
 
 But where do we stop? Let's say at a tenth of a degree. The value of one degree in radians is =$\pi/180 \approx 3.14/180 \approx .0175$=. So a tenth of that is =$.00175$=. So when we get to a term that's smaller than =$.00175$=, we stop and whatever value we got up to that point is good enough.
 
@@ -113,7 +113,7 @@ $$ 1 + .167 + .075 + .045 + .030 + .022 + .017 + .014 = 1.496 $$
 
 This radian value translates into =$85°$=. Not worlds apart from the correct value, which is =$90°$=, but now it's starting to be increasingly harder to get closer. This leads to too much looping and a slower function. It's one problem that, although to a lesser extent than in this particular case, we have in every situation where the result in absolute value should be in the upper half of the =$[0, π/2]$= interval.
 
-What can do to solve it is first check if the resulting angle in absolute value is over =$\pi/4$= and, if it is, we compute its complement (the =$\pi/2 - \|\alpha\|$=) using this method. Since the sine function is a [monotonically increasing function](http://en.wikipedia.org/wiki/Monotonic_function) over the =$[0, \pi/2]$= interval, what we actually check is whether the absolute value of =$z$= is greater than =$\sin(\pi/4)$=.
+What we can do to solve it is first check if the resulting angle in absolute value is over =$\pi/4$= and, if it is, we compute its complement (the =$\pi/2 - \|\alpha\|$=) using this method. Since the sine function is a [monotonically increasing function](http://en.wikipedia.org/wiki/Monotonic_function) over the =$[0, \pi/2]$= interval, what we actually check is whether the absolute value of =$z$= is greater than =$\sin(\pi/4)$=.
 
 But how do we know the sine of the complement of our =$α$= in absolute value? Well, it's equal to the cosine of =$\alpha$= in absolute value: =$\sin(\pi/2 - \|\alpha\|) = \cos(\|\alpha\|)$=. And since =$\sin^2(\|\alpha\|) + \cos^2(\|\alpha\|) = 1$=, we get that =$\cos^2(\|\alpha\|) = 1 - \sin^2(\|\alpha\|) = 1 - z^2$=.
 
@@ -197,7 +197,7 @@ Now let's start to actually add up terms to the sum and set the condition that w
       @return $sign * (if($complement, pi()/2 - $sum, $sum));
     }
 
-At this point, unless the starting value for `$term` happens to be smaller than `$threshold`, our `@while` loop is an infinite one because we're not changing `$term` inside. So let's compute a new one with each iteration. In order to do that, we initialize two more variables before the loop. One is `$i`, the current term's index, while the second one is `$k`, the part inside the paranthesis for the previous term. After that, inside the loop, we keep incrementing `$i` and recomputing `$k` and `$term`.
+At this point, unless the starting value for `$term` happens to be smaller than `$threshold`, our `@while` loop is an infinite one because we're not changing `$term` inside. So let's compute a new one with each iteration. In order to do that, we initialize two more variables before the loop. One is `$i`, the current term's index, while the second one is `$k`, the part inside the parentheses for the previous term. After that, inside the loop, we keep incrementing `$i` and recomputing `$k` and `$term`.
 
     :::scss
     @function asin($z, $threshold: $default-threshold) {
@@ -230,7 +230,7 @@ At this point, unless the starting value for `$term` happens to be smaller than 
 
 And this is it! We now have a working `asin()` function in Sass!
 
-One thing more we could do to improve this is to check whether `abs($z) <= 1` and throw an error if it returns false because, in such a case, our `$term` won't get under the `$threshold` value and we'll have an infinite loop.
+One thing more we could do to improve this is to check whether `abs($z) <= 1` and throw an error if it returns false because, in such a case, our `$term` won't get under the `$threshold` value and, we'll have an infinite loop.
 
 
 ## Coding the `acos()` function
