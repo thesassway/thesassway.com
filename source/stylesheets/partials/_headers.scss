@@ -4,13 +4,31 @@
   padding-top: 4em;
   padding-bottom: 3em;
   margin-top: -$masthead-height;
+  margin-bottom: 2em;
 }
-.graphic-header-title { @extend %h1; margin-top: $masthead-height; }
-.graphic-header-subtitle { @extend %h6; }
+
+.graphic-header-title {
+  @extend %h1;
+  margin-top: $masthead-height;
+}
+
+.graphic-header-subtitle {
+  @extend %h6;
+}
+
+.graphic-header-by-line {
+  text-align: center;
+  margin: 1em 0 0;
+}
+
+.graphic-header-by-line-avatar {
+  margin-right: 1em;
+}
 
 .reversed {
   .graphic-header-title { color: white; }
   .graphic-header-subtitle { color: white; }
+  .graphic-header-by-line { color: white; }
 }
 
 .sass-3-3-graphic-header {
@@ -46,4 +64,24 @@
   }
 }
 
+.bubble-sort-graphic-header {
+  background-color: #5c4f49;
+  @include background-image(
+    linear-gradient(rgba(black, 0.5), rgba(black, 0)),
+    image-url('headers/lumber-mill-in-minature.jpeg')
+  );
+  background-size: 200% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
+  svg {
+    max-width: 100%;
+    .letter-shadow { fill: lighten(#585f4e, 10%); }
+  }
+
+  @media #{$medium-up} {
+    background-size: cover;
+    padding: 6em 0;
+  }
+}

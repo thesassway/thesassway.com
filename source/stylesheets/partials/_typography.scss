@@ -116,11 +116,21 @@ a.top-link {
 
   pre {
     @include border-radius(1em);
+    font-size: 80%;
+    line-height: 1.6;
     margin: 2em 0;
-    padding: 2em;
+    padding: 2.5em;
     background: #f0f2f4;
     overflow: hidden;
   }
+
+  sup, sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+  sup { top: -0.5em; }
+  sub { bottom: -0.25em; }
 
   .reversed & {
     color: $reversed-text-color;
@@ -134,3 +144,21 @@ a.top-link {
 }
 .title { @extend %h1; margin: 1em 0 0.25em; text-align: center; }
 .subtitle { @extend %h5; font-weight: 300; margin: 0 0 1em; text-align: center; }
+
+.footnotes {
+  position: relative;
+  margin-top: 2em;
+  padding-top: 0.5em;
+
+  p, ul, ol { font-size: 80%; }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 8em;
+    content: "";
+    height: 0;
+    border-top: 1px solid $border-color;
+  }
+}
