@@ -7,15 +7,15 @@ summary: Tem Hettler shows us how to use source maps to make debugging easier wi
 
 # Using source maps with Sass 3.3
 
-Even though some of us have been kicking the tires with pre-release versions of Sass 3.3 for some time, now that [it's officially released](http://thesassway.com/news/sass-3-3-released) we can start diving into the new features it offers. One new feature that every Sass developer should take advantage of is source maps.
+One of the exciting new features in [Sass 3.3](http://thesassway.com/news/sass-3-3-released) that every developer should take advantage of is source maps.
 
-As CSS pre-processors, minifiers, and [JavaScript transpilers](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS) become mainstream it has become increasingly difficult to debug the code running in the browser because of the differences with the original source code.
+As CSS pre-processors, minifiers, and [JavaScript transpilers](https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS) have become mainstream it is increasingly difficult to debug the code running in the browser because of differences with the original source code.
 
-For example, if you use [CoffeeScript](http://coffeescript.org/) (which compiles to JavaScript) you won't see CoffeeScript while debugging in the browser. Instead, you'll see the compiled JavaScript files. The same problem exists for Sass which compiles down to CSS.
+For example, if you use [CoffeeScript](http://coffeescript.org/) (which compiles to JavaScript) you won't see CoffeeScript while debugging in the browser. Instead, you'll see compiled JavaScript. The same problem exists for Sass which compiles down to CSS.
 
 Source maps seek to bridge the gap between higher-level languages like CoffeeScript and Sass and the lower-level languages they compile down to (JavaScript and CSS). Source maps allow you to see the original source (the CoffeeScript or Sass) instead of the compiled JavaScript or CSS while debugging.
 
-In practice, this means that when you inspect an element with developer tools, rather than seeing the CSS styles associated with that element, you see the code we *really* care about: the pre-compiled Sass.
+In practice, for Sass users, this means that when you inspect an element with developer tools, rather than seeing the CSS styles associated with that element, you can see the code we *really* care about: the pre-compiled Sass.
 
 
 ## Generating source maps for Sass
