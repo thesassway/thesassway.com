@@ -47,7 +47,7 @@ If you're using Chrome, source maps are now part of the core feature set, so you
 
 ### Firefox
 
-For Firefox users, source maps are only available in [Aurora](https://www.mozilla.org/en-US/firefox/aurora/), the pre-Beta build of Firefox. To enable source maps, right-click anywhere on the inspector's rule view or in the Style Editor to get a context menu, then select the `Show original sources` option. (More info is available at the [Mozilla blog](https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/).)
+For Firefox users, source maps are in version 29. You can enable them in the `Toolbox Options` menu (the gear icon) or by right-clicking anywhere in the Style Inspector's rule view and selecting the `Show original sources` option. (More info is available at the [Mozilla blog](https://hacks.mozilla.org/2014/02/live-editing-sass-and-less-in-the-firefox-developer-tools/).)
 
 ### Safari
 
