@@ -240,3 +240,13 @@
   bio: >
     <p><a href="http://www.timhettler.com">Tim Hettler</a> is a web developer based in New York City. He's passionate about creating forward-compatible, standards-compliant, and accessible websites with HTML, CSS, and JavaScript. He is currently employed at <a href="http://www.rga.com/">R/GA</a> and is also available for freelance work.</p>
     <p>Connect with Tim on twitter at <a href="http://twitter.com/timhettler" rel="me">@timhettler</a>.</p>
+-
+  name: Alexander Futekov
+  slug: alexander-futekov
+  avatar: /images/authors/alexander-futekov.jpeg
+  website: http://futekov.com/alexander
+  twitter: futekov
+  bio: >
+    <p>Alex is a Front-End developerm currently working at <a href="http://telerik.com/">Telerik</a>, he loves experimenting with new technologies and sometimes gets <a href="http://css-tricks.com/3d-button-parallax/">wacky ideas for articles</a>. He is the creator of <a href="http://csspre.com/">csspre.com</a>.</p>
+    <p>The few years he spent studying anthropology and working in the usability domain help him not to forget that code should be written first for people, and then for machines.</p>
+    <p>You can always contact him via twitter at <a href="http://twitter.com/futekov">@futekov</a> or his <a href="https://plus.google.com/103815255084056663758?rel=author">Google profile</a>.</p>
