@@ -3,7 +3,7 @@
 %link {
   color: $link-color;
   text-decoration: underline;
-  
+
   &:visited { color: $link-visited-color; }
   &:hover, &:visited:hover { color: $link-hover-color; text-decoration: none; }
 
@@ -121,7 +121,7 @@ a.top-link {
     margin: 2em 0;
     padding: 2.5em;
     background: #f0f2f4;
-    overflow: hidden;
+    overflow: auto;
   }
 
   sup, sub {
