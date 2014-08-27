@@ -3,7 +3,7 @@
 %link {
   color: $link-color;
   text-decoration: underline;
-  
+
   &:visited { color: $link-visited-color; }
   &:hover, &:visited:hover { color: $link-hover-color; text-decoration: none; }
 
@@ -121,8 +121,16 @@ a.top-link {
     margin: 2em 0;
     padding: 2.5em;
     background: #f0f2f4;
-    overflow: hidden;
+    overflow: auto;
   }
+
+  sup, sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+  sup { top: -0.5em; }
+  sub { bottom: -0.25em; }
 
   .reversed & {
     color: $reversed-text-color;

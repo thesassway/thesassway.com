@@ -90,7 +90,7 @@ module CustomHelpers
 
   def articles(drafts = false)
     pages = []
-    for category in content_directories
+    content_directories.each do |category|
       page = sitemap.find_resource_by_path("#{category}/index.html")
       pages += children(page, drafts)
     end

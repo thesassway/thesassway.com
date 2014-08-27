@@ -1,8 +1,13 @@
+#fusion_ad {
+  display: none;
+}
+
 @media #{$large-up} {
   #fusion_ad {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    display: block;
     font-family: $sans-serif;
     font-size: 11px;
     width: 130px;

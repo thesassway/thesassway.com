@@ -105,10 +105,9 @@
   twitter: roy
   github: roytomeij
   bio: >
-    <p><a href="http://roytomeij.com/">Roy Tomeij</a> is co-founder of <a href="http://www.80beans.com/">80beans</a>
-      and <a href="http://www.slicecraft.nl/">SliceCraft</a> in Amsterdam (The Netherlands), where
-      he takes care of front-end architecture and business development using an agile approach. He
-      loves front-end meta languages like Haml, Sass &amp; CoffeeScript.</p>
+    <p><a href="http://roytomeij.com/">Roy Tomeij</a> is a front-end architect,
+    <a href="http://lanyrd.com/profile/roy/">speaker</a>, trainer and author of
+    <a href="http://advancedsass.com/">Advanced Sass</a>.</p>
 
     <p>Contact Roy on Twitter at <a href="http://twitter.com/roy">@roy</a> or read
       <a href="http://roytomeij.com/">his blog</a>.</p>
@@ -178,7 +177,7 @@
     computer science on <a href="http://www.growingwiththeweb.com/">his blog</a>.</p>
 
     <p>You can follow Daniel on Twitter at <a href="http://twitter.com/Tyriar">@Tyriar</a> and on
-    <a href="https://plus.google.com/+DanielImms?rel=author">Google+</a>.</p>
+    <a href="https://plus.google.com/+DanielImms">Google+</a>.</p>
 -
   name: Chris Michel
   slug: chris-michel
@@ -207,7 +206,40 @@
     <p>You can find him on <a href="http://github.com/goschevski">GitHub</a>,
       <a href="http://dribbble.com/goschevski">Dribbble</a>, or <a href="http://twitter.com/goschevski">Twitter</a>
       as @goschevski.</p>
-
+-
+  name: Sebastian Ekström
+  slug: sebastian-ekstrom
+  avatar: /images/authors/sebastian-ekstrom.jpg
+  website: http://zerosixthree.se
+  twitter: seb_ekstrom
+  bio: >
+    <p><a href="http://zerosixthree.se">Sebastian Ekström</a> is a front-end developer from Sweden working
+      at <a href="http://creuna.se">Creuna</a>. He's the creator of <a href="zerosixthree.se/labs/phone_queue_simulator">The
+      Phone Queue Simulator</a>. He is passionate about <a href="http://css-tricks.com/css-standards-process/">web
+      standards</a> and is pursuing a career as a famous cruise ship magician.</p>
+    <p>Connect with Sebastian on Twitter at <a href="http://twitter.com/seb_ekstrom">@seb_ekstrom</a>.</p>
+-
+  name: Ana Tudor
+  slug: ana-tudor
+  avatar: /images/authors/ana-tudor.jpeg
+  website: http://about.me/thebabydino
+  twitter: thebabydino
+  bio: >
+    <p>Loves maths, especially geometry. Enjoys playing with code. Passionate about experimenting and
+      learning new things. Fascinated by astrophysics and science in general. Huge fan of technological
+      advance and its applications in all fields. Shows an interest in motor sports, drawing, classic
+      cartoons, rock music, cuddling toys and animals with sharp claws and big teeth. Dreams about
+      owning a real tiger.</p>
+    <p>Can be found on Twitter at <a href="http://twitter.com/thebabydino">@thebabydino</a>.</p>
+-
+  name: Tim Hettler
+  slug: tim-hettler
+  avatar: /images/authors/tim-hettler.jpeg
+  website: http://www.timhettler.com
+  twitter: timhettler
+  bio: >
+    <p><a href="http://www.timhettler.com">Tim Hettler</a> is a web developer based in New York City. He's passionate about creating forward-compatible, standards-compliant, and accessible websites with HTML, CSS, and JavaScript. He is currently employed at <a href="http://www.rga.com/">R/GA</a> and is also available for freelance work.</p>
+    <p>Connect with Tim on twitter at <a href="http://twitter.com/timhettler" rel="me">@timhettler</a>.</p>
 -
   name: Jaime Caballero
   slug: jaime-caballero

@@ -9,6 +9,8 @@ summary: WordPress is a great tool for building a fully customizable blog. Now y
 
 WordPress is a great tool for building a fully customizable blog. With custom themes, you gain full control over almost all aspects of your blog, including your markup and styles. Wouldn't it be great if you could use Sass and Compass as well?
 
+**This article is very much outdated by now (June, 2014). It remains online for reference, but you're encouraged to not use this technique anymore.**
+
 <a href="https://github.com/roytomeij/sass-for-wordpress/"><img src="/attachments/sass-plus-wordpress.png" class="full" /></a>
 
 ## Sass for WordPress
@@ -33,7 +35,7 @@ Link to your stylesheet with this code.
 The `sass()` function takes care of everything from here, including returning the complete path to the compiled CSS. The only parameter it takes is the path to your Sass file, in this case it will look for `style.scss`. To use the original Sass syntax replace `style.scss` with `style.sass`.
 
 ### The WordPress Theme Stylesheet
-    
+
 WordPress requires a file named `style.css`, aka the [theme stylesheet](http://codex.wordpress.org/Theme_Development#Theme_Stylesheet), located at the root of your theme used to identify your theme. You're going to want to keep that. :)
 
 ### Sample Sass structure in WordPress
