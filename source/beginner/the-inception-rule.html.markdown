@@ -51,16 +51,16 @@ Let's look at an example of nesting selectors in Sass.
     .post {
       border-radius: 3px;
       background: #FFF8FF;
-      border: 1px solid $border;
+      border: $border;
       padding: 15px;
       color: #333333;
       .title {
         color: #000000;
-        font-size:20px;
+        font-size: 20px;
       }
       .alt-title {
         @extend .title;
-        border-bottom:1px solid $border;
+        border-bottom: $border;
       }
     }
 
@@ -72,7 +72,7 @@ Here's the output of the above Sass just so you can see how this translates to C
     .post {
       border-radius: 3px;
       background: #FFF8FF;
-      border: 1px solid 1px solid #efc6f3;
+      border: 1px solid #efc6f3;
       padding: 15px;
       color: #333333;
     }
@@ -81,7 +81,7 @@ Here's the output of the above Sass just so you can see how this translates to C
       font-size: 20px;
     }
     .post .alt-title {
-      border-bottom: 1px solid 1px solid #efc6f3;
+      border-bottom: 1px solid #efc6f3;
     }
 
 And so, like a child with a new toy, we begin to use this feature in *-what we think-* is its "max potential". But actually what's taking happening is some may call, a "CSS Selector Nightmare."
