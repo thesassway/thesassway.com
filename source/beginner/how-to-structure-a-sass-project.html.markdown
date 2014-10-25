@@ -106,7 +106,7 @@ It might look something like this:
 
     @import "modules/all";
 
-The base stylesheet sets a couple of global variables and loads up all of my Sass modules. Again modules are not allowed to contain anything that would cause CSS output when importing. Tying all of my varibles and modules up into a base partial gives me access to my entire Sass environment whenever I'm setting up a new stylesheet with a single import statement. This allows me to build multiple stylesheets by importing different partials. Multiple stylesheets are handy once a project grows to a certain size.
+The base stylesheet sets a couple of global variables and loads up all of my Sass modules. Again modules are not allowed to contain anything that would cause CSS output when importing. Tying all of my variables and modules up into a base partial gives me access to my entire Sass environment whenever I'm setting up a new stylesheet with a single import statement. This allows me to build multiple stylesheets by importing different partials. Multiple stylesheets are handy once a project grows to a certain size.
 
 
 ## One step further
