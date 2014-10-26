@@ -1,6 +1,6 @@
 ---
 date: 2014-08-26
-categories: intermediate, modular-css
+categories: intermediate
 author: Jaime Caballero
 summary: Jaime Caballero shows us how to use Object-Oriented CSS to cleanup our stylesheets. He even throws in a bit of a Sass twist.
 ---
@@ -9,9 +9,9 @@ summary: Jaime Caballero shows us how to use Object-Oriented CSS to cleanup our 
 
 Nicole Sullivan first introduced the world to [Object-Oriented CSS](http://www.slideshare.net/stubbornella/object-oriented-css) (OOCSS) at Web Directions North in 2008. Since then it has emerged as one of the leading modular systems for organizing your CSS.
 
-<abbr title="Object Oriented CSS">OOCSS</abbr> is not that different from other CSS methodologies like [SMACSS](http://smacss.com/) or [BEM](http://bem.info/). All of them aim to separate content from structure by placing CSS styles in reusable modular blocks of code. In fact, I usually mix SMACSS with OOCSS.
+<abbr title="Object Oriented CSS">OOCSS</abbr> is not that different from other CSS methodologies like [SMACSS](http://smacss.com/) or [BEM](http://bem.info/). All of them aim to separate content from structure by placing CSS styles in reusable modular blocks of code. In fact, I usually mix SMACSS with OOCSS. (Editors note: We've also written extensivily about Modular CSS [here on The Sass Way](http://thesassway.com/modular-css).)
 
-Today I'm going to teach you the basic principles of Object-Oriented CSS. I'll even throw in a bit of advice about how to do this in the most efficient way with Sass.
+Today, I'm going to teach you the basic principles of Object-Oriented CSS. I'll even throw in a bit of advice about how to do this in the most efficient way with Sass.
 
 
 ## What is an object?
