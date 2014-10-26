@@ -31,9 +31,16 @@ module CustomHelpers
     meta(page).reversed_header
   end
 
-  def author(page = current_page)
-    name = meta(page).author
-    data.authors.find { |a| name === a.name }
+  def author(page = current_page, plural = false)
+    names = (meta(page).author || '').split(/\s*,\s*/)
+    if plural
+      names.map do |name| 
+        data.authors.find { |a| name === a.name }
+      end
+    else
+      name = names.first
+      data.authors.find { |a| name === a.name }
+    end
   end
 
   def authors(inactive = false)
