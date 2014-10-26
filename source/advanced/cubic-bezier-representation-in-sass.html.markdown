@@ -68,25 +68,25 @@ A Bézier of three points is called a Quadratic Bézier.
 
 We can do this for four points as well which requires a third iteration:
 
-      :::sass
-      p0 = (0,   0)
-      p1 = (0.3, 0)
-      p2 = (0.6, 0.8)
-      p3 = (1,   1)
+    :::sass
+    p0 = (0,   0)
+    p1 = (0.3, 0)
+    p2 = (0.6, 0.8)
+    p3 = (1,   1)
 
-      t = 0.6
+    t = 0.6
 
-      // First iteration
-      i00 = lerp(p0, p1, t)
-      i01 = lerp(p1, p2, t)
-      i02 = lerp(p2, p3, t)
+    // First iteration
+    i00 = lerp(p0, p1, t)
+    i01 = lerp(p1, p2, t)
+    i02 = lerp(p2, p3, t)
 
-      // Second iteration
-      i10 = lerp(i00, i01, t)
-      i11 = lerp(i01, i02, t)
+    // Second iteration
+    i10 = lerp(i00, i01, t)
+    i11 = lerp(i01, i02, t)
 
-      // Third, final iteration
-      p = lerp(i10, i11)
+    // Third, final iteration
+    p = lerp(i10, i11)
 
 A curve of four points is called a Cubic Bézier.
 
