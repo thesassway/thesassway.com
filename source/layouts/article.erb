@@ -20,9 +20,8 @@
                   c = category(slug)
                   %{<a href="/#{c.slug}">#{c.name}</a>}
                 }.join(', ')
-              %><% if author %>,
-                <a href="/<%= author.slug %>"><%= author.name %></a>
-              <% end %>
+                %><% if author %><% author(current_page, true).each do |person| %>,
+                <a href="/<%= person.slug %>"><%= person.name %></a><% end %><% end %>
             </p>
           </div>
         <% end %>
@@ -34,15 +33,17 @@
     </div>
 
     <% if author %>
+      <% author(current_page, true).each do |person| %>
       <div class="row article-author">
         <div class="small-2 large-offset-1 columns">
-          <img class="avatar full-width" src="<%= author.avatar %>">
+          <img class="avatar full-width" src="<%= person.avatar %>">
         </div>
         <div class="small-8 columns typeset ">
-          <h2 class="mt0">The Author, <%= author.name %></h2>
-          <div class="fine-print"><%= author.bio %></div>
+          <h2 class="mt0"><%= person.name %></h2>
+          <div class="fine-print"><%= person.bio %></div>
         </div>
       </div>
+      <% end %>
     <% end %>
 
     <div class="row article-comments">
