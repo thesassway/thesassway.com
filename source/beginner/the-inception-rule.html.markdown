@@ -239,7 +239,7 @@ An object is an element, alone or with children, that is identified by a `class`
 Here's a list of elements commonly styled as objects.
 
     :::text
-    #sideabr
+    #sidebar
     #content
     #footer
     .blog-post
