@@ -1,5 +1,5 @@
 ---
-date: 2014-08-26
+date: 2014-10-26
 categories: intermediate
 author: Jaime Caballero
 summary: Jaime Caballero shows us how to use Object-Oriented CSS to cleanup our stylesheets. He even throws in a bit of a Sass twist.
