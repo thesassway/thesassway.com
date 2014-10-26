@@ -282,19 +282,19 @@ If the `informations` key from options map is truthy, it means we have to displa
 
 Then, it calls `draw-curve` mixin.
 
-      :::scss
-      @mixin draw-curve($conf) {
-        // Print the wrapper
-        @include draw-curve-wrapper($conf);
+    :::scss
+    @mixin draw-curve($conf) {
+      // Print the wrapper
+      @include draw-curve-wrapper($conf);
 
-        // Print the dots
-        @include draw-dots($conf);
+      // Print the dots
+      @include draw-dots($conf);
 
-        // Print the control-points
-        @if map-get($conf, 'control-points') {
-          @include draw-control-points($conf);
-        }
+      // Print the control-points
+      @if map-get($conf, 'control-points') {
+        @include draw-control-points($conf);
       }
+    }
 
 We'll skip `draw-curve-wrapper` since it does nothing more than a couple of boring CSS lines. Moving on to `draw-dots`. This is where Tim's work and mine meet.
 
