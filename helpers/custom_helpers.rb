@@ -82,7 +82,10 @@ module CustomHelpers
   end
 
   def articles_by_author(author, drafts = false)
-    articles(drafts).reject { |a| a.data.author != author.name }
+    articles(drafts).select do |a|
+      names = (a.data.author || '').split(/\s*,\s*/)
+      names.any? { |n| n === author.name }
+    end
   end
 
   def sort_by_date(pages)
