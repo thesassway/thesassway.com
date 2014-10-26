@@ -143,9 +143,10 @@
   dribbble: hugogiraudel
   bio: >
     <p><a href="http://hugogiraudel.com">Hugo Giraudel</a> is a front-end developer and celebrated
-      blogger from France. He's written articles for <a href="http://css-tricks.com">CSS-Tricks.com</a>,
-      <a href="http://tympanus.net/codrops/">Codrops</a>, and now The Sass Way.
-      He's also the curator of <a href="http://browserhacks.com/">BrowserHacks.com</a>.</p>
+      blogger from France. He has written articles for <a href="http://www.sitepoint.com/author/hgiraudel/">SitePoint</a>, 
+      <a href="http://tutsplus.com/authors/hugo-giraudel">Tuts+</a>, <a href="http://css-tricks.com">CSS-Tricks.com</a>,
+      <a href="http://tympanus.net/codrops/author/hugogiraudel">Codrops</a> and <a href="http://thesassway.com/hugo-giraudel">The Sass Way</a>.
+      He's also the author of <a href="http://sassdoc.com">SassDoc</a> and curator of <a href="http://browserhacks.com/">BrowserHacks.com</a>.</p>
 
     <p>Connect with Hugo on Twitter at <a href="http://twitter.com/hugogiraudel">@HugoGiraudel</a>.</p>
 -
