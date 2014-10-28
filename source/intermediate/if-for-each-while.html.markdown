@@ -188,7 +188,7 @@ Which emits this CSS:
       width: 21px;
     }
 
-## Conclussion
+## Conclusion
 
 As you can see, Sass control directives will super-charge your mixins and functions to give you all the tools you need to make decisions, loop through and to, and provide the flow and control required to create awesome libraries.
 
