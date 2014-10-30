@@ -9,8 +9,6 @@ summary: Zocial Buttons is a CSS3 buttons Sass framework that makes adding "Foll
 
 Zocial Buttons is a CSS3 buttons Sass framework that makes adding "Follow me on Twitter", "Find us on Facebook" and "Fork this on GitHub" buttons to your site TOO EASY.
 
-<a href="http://zocialbuttons.com/"><img src="http://zocialbuttons.com/images/zocial-lite-preview.jpg" class="full"/></a>
-
 ## Credits
 
 HUGE thanks to [Sam Collins](http://twitter.com/smcllns) for all his hard work on the original CSS3 button set and the Zocial icons font! Without his work, this project would not exist. This free and open source version includes a now free subset of the font sold [here](http://zocial.smcllns.com/).
@@ -47,5 +45,4 @@ For full installation and usage details, please see [the project's readme](https
 ## Links
 
 * [Source on GitHub](https://github.com/adamstac/zocial)
-* [Homepage](http://zocialbuttons.com/)
 * [Buy the full Zocial font](http://zocial.smcllns.com/)
