@@ -1,11 +1,11 @@
 ---
-date: 2015-05-15 02:00:00 -0600
+date: 2015-05-15
 categories: projects
 author: John W. Long
 summary: If you like animation and are looking for a way to spice up your latest project, you might want to grab a spinner from the CSS Spinners project. It's an open source effort by myself to create a common set of pure CSS spinners.
 ---
 
-# Pure CSS Spinners
+# Pure CSS spinners
 
 If you like animation and are looking for a way to spice up your latest project, you might want to grab a spinner from the [CSS Spinners](http://css-spinners.com) project. It's an open source effort by myself to create a common set of pure CSS spinners. That's right! No images to download!
 
