@@ -27,7 +27,7 @@ Given the image above, we could write the following styles for the media icon:
 
     .media-icon {
       background-image: $icons;
-      background-position: -($icon-width * 5) -($icon-width * 1);
+      background-position: -($icon-width * 5) -($icon-height * 1);
       width: $icon-width;
       height: $icon-height;
     }
