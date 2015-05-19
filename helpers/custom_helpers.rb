@@ -107,6 +107,14 @@ module CustomHelpers
     sort_by_date(pages).reverse
   end
 
+  def homepage_articles(drafts = false)
+    pages = articles(drafts).reject do |article|
+      homepage = meta(article).homepage
+      (!homepage.nil?) && homepage === false
+    end
+    pages[0..8]
+  end
+
   def articles_for(categories, drafts = false)
     categories = [*categories]
     pages = articles(drafts).select do |article|

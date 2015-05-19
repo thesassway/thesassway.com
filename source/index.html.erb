@@ -7,4 +7,4 @@ layout: layout
   <h1 class="small-centered small-10 medium-6 columns"><%= image_tag "thesassway.svg", class: "site-logo text-middle", alt: "The Sass Way", width: 503, height: 247 %></h1>
 </div>
 
-<%= partial 'layouts/summaries', :locals => { pages: articles[0..8], avatars: true } %>
+<%= partial 'layouts/summaries', :locals => { pages: homepage_articles, avatars: true } %>
