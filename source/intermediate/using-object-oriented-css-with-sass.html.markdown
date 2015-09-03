@@ -21,7 +21,7 @@ Today, I'm going to teach you the basic principles of Object-Oriented CSS. I'll 
 Abstraction is the very first thing you have to consider when buildin a CSS object. What is the best way to separate out and organize the code? [Nicole Sullivan](https://github.com/stubbornella) (who created OOCSS) defined **two main principles**:
 
 - **Separate structure and skin**: You should keep the structure and positioning in a base object and the visual features (like `background` or `border`) in extender clases. This way you'd never have to overwrite visual properties.
-- **Separate container and content**: Never mimic the structure of your HTML in CSS. In other words, don't refer to tags or IDs in your stylesheets. Instead, try to create and apply a classes that describe the use of the tag in question. And keep nested classes to a bare minimum.
+- **Separate container and content**: Never mimic the structure of your HTML in CSS. In other words, don't refer to tags or IDs in your stylesheets. Instead, try to create and apply classes that describe the use of the tag in question. And keep nested classes to a bare minimum.
 
 
 ## Let's do a quick example
@@ -76,7 +76,7 @@ You shouldn't care about being non-semantic. I care about what it means to upkee
 
 The only way to make objects in plain CSS is to define non-semantic classes. However, this comes with some problems:
 
-- We have to change our HTML almost every time we need to changes styles.
+- We have to change our HTML almost every time we need to change styles.
 - There's not a safe way to access some of the DOM elements.
 
 Besides the unmaintainable HTML, everything else about OOCSS is just great. Our CSS code is scalable and easy to mantain and reusing our abstract classes makes it easy to style new content.
@@ -108,7 +108,7 @@ We must use placeholders as objects, and define classes formed only by merging t
       color: #fff;
     }
 
-Applying all we've seen and using `@extend` to mix base objects we can get clean object-oriented CSS which is very easy to mantain and we don't have to change the HTML all the time.
+Applying all we've seen and using `@extend` to mix base objects we can get clean object-oriented CSS which is very easy to maintain and we don't have to change the HTML all the time.
 
     :::scss
     /* The best way */
@@ -143,6 +143,6 @@ This produces efficient code that we can use easily in our HTML:
     <a href="#" class="btn--twitter">Twitter</a>
     <a href="#" class="btn--facebook">Facebook</a>
 
-Pretty semantic, right? Sass has solved our problem. Remember: extend and collect non-semantic parts on Sass if you want to keep a semantic, easy to mantain HTML.
+Pretty semantic, right? Sass has solved our problem. Remember: extend and collect non-semantic parts on Sass if you want to keep a semantic, easy to maintain HTML.
 
 I like to call this **OOSass**, because it's a mixture between OOCSS and Sass and the objects are built on the Sass side. But of course, you don't have to use it. You can stick with regular OOCSS if you don't mind non-semantic HTML code. To each his own. How do you structure your CSS nowadays?
