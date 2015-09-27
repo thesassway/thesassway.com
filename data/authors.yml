@@ -200,14 +200,10 @@
   slug: aleksandar-gosevski
   avatar: /images/authors/aleksandar-gosevski.jpeg
   website: http://www.goschevski.com/
-  twitter: goschevski
   github: goschevski
   bio: >
-    <p>Aleksandar Goševski is front-end developer based in Belgrade, Serbia. He works at
-      <a href="http://vast.com">Vast.com</a> as JavaScript developer, but he is secretly in love in Sass.</p>
-    <p>You can find him on <a href="http://github.com/goschevski">GitHub</a>,
-      <a href="http://dribbble.com/goschevski">Dribbble</a>, or <a href="http://twitter.com/goschevski">Twitter</a>
-      as @goschevski.</p>
+    <p>Aleksandar Goševski is front-end developer based in Belgrade, Serbia. He works as JavaScript developer, but he is secretly in love in CSS.</p>
+    <p>You can find him on <a href="http://github.com/goschevski">GitHub</a>.</p>
 -
   name: Sebastian Ekström
   slug: sebastian-ekstrom
