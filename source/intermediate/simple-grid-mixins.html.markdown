@@ -96,7 +96,7 @@ Our final step is to make the column mixin responsive:
       }
     }
 
-Now, on screens less than 768 pixels wide (mobile devices) elements that use the column mixin will be as wide as their parent element, however on screens greater than 768px wide (like desktop computers) cells will display at their appropriate widths.
+Now, on screens less than 768 pixels wide (mobile devices) elements that use the column mixin will be as wide as their parent element, however on screens greater than 768 pixels wide (like desktop computers) cells will display at their appropriate widths.
 
 ## Conclusion
 
