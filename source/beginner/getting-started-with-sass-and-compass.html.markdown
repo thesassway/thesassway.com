@@ -110,7 +110,7 @@ Sass is like CSS. Ok, that's misleading. Sass CAN BE like CSS.  I mentioned that
 
 Now that we've covered a bit of the history of Sass and the fact that it has two syntaxes, I believe we are ready to write some code. Or should I say SCSS &ndash; because the SCSS syntax is like CSS and was designed to be a superset of CSS3's syntax. This means that every valid CSS3 stylesheet is valid SCSS. In fact, you can copy the contents of a CSS file and paste it into a SCSS file and Sass will compile it to clean CSS.
 
-Let's test out this "theory" and copy the contents of [our css file](http://thesassway.com/css/master.css) from this blog and paste it into [screen.scss](https://github.com/thesassway/sass-test/blob/scss-is-like-css/sass/screen.scss) in our test project and run `compass compile`. Take a look at [screen.css](https://github.com/thesassway/sass-test/blob/scss-is-like-css/stylesheets/screen.css) now and you'll see that Sass and Compass have compiled that compressed un-readable CSS to readable, perfectly indented CSS along with comments of where the code came from for debugging purposes.
+Let's test out this "theory" and copy the contents of [an example css file](/attachments/example.css) and paste it into [screen.scss](https://github.com/thesassway/sass-test/blob/scss-is-like-css/sass/screen.scss) in our test project and run `compass compile`. Take a look at the generated screen.css now and you'll see that Sass and Compass have compiled that compressed un-readable CSS to readable, perfectly indented CSS along with comments of where the code came from for debugging purposes.
 
 ## Conclusion and next steps
 

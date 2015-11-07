@@ -1,0 +1,41 @@
+/* Example CSS file */
+
+body {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.4;
+  color: gray;
+}
+
+.monospace {
+  font-family: Monaco, monospace;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: black;
+}
+
+.superscript { top: -0.5em; }
+.subscript { bottom: -0.25em; }
+
+.block-margins {
+  margin: 0.5rem 0 1rem;
+}
+
+.blockquote {
+  border-left: 3px solid silver;
+  color: DeepPink;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+.large-blockquote {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin: 2rem 0;
+}
