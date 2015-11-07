@@ -16,7 +16,7 @@ Mixins are the Sass equivalent of macros in other programming languages. If you'
 
 ## How Mixins Work
 
-The [Compass project](http://compass-style.org/) is chock full of [mixins](https://github.com/chriseppstein/compass/tree/stable/frameworks/compass/stylesheets/compass) to make your life easier. From [CSS3](https://github.com/chriseppstein/compass/tree/stable/frameworks/compass/stylesheets/compass/css3), to [typography](https://github.com/chriseppstein/compass/tree/stable/frameworks/compass/stylesheets/compass/typography), to [layout](https://github.com/chriseppstein/compass/tree/stable/frameworks/compass/stylesheets/compass/layout), to [image manipulation](https://github.com/chriseppstein/compass/tree/stable/frameworks/compass/stylesheets/compass/utilities/sprites), Compass makes it easy to write bullet-proof CSS that works across browsers. We like to think of Compass as the standard library for Sass.
+The [Compass project](http://compass-style.org/) is chock full of [mixins](https://github.com/Compass/compass/tree/stable/core/stylesheets/compass) to make your life easier. From [CSS3](https://github.com/Compass/compass/blob/stable/core/stylesheets/compass/css3), to [typography](https://github.com/Compass/compass/tree/stable/core/stylesheets/compass/typography), to [layout](https://github.com/Compass/compass/tree/stable/core/stylesheets/compass/layout), to [image manipulation](https://github.com/Compass/compass/tree/stable/core/stylesheets/compass/utilities/sprites), Compass makes it easy to write bullet-proof CSS that works across browsers. We like to think of Compass as the standard library for Sass.
 
 The CSS3 support in Compass is perhaps the most rocking aspect of the project. Compass provides an assortment of CSS3 mixins that make it easy to take advantage of these new features in a way that works across browsers.
 
@@ -52,7 +52,7 @@ Above, I used the `@include` directive to tell Sass that I wanted to call out to
 
 ## Writing Your Own
 
-Let's look at the source for the border-radius mixin above. For the purpose of illustration I'm going to show you a simplified version of the mixin. [The actual version from Compass](https://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/css3/_border-radius.scss) is a bit more complicated, but this will give you a good idea of how to write your own:
+Let's look at the source for the border-radius mixin above. For the purpose of illustration I'm going to show you a simplified version of the mixin. [The actual version from Compass](https://github.com/Compass/compass/blob/stable/core/stylesheets/compass/css3/_border-radius.scss) is a bit more complicated, but this will give you a good idea of how to write your own:
 
     :::scss
     @mixin border-radius($radius) {
@@ -129,4 +129,4 @@ With keyword arguments, you don't even have to call out to the mixin with the ar
 
 ## Conclusion
 
-That about wraps up this overview of Sass mixins. To get a better idea of how you can use them in your code, I recommend taking a look at the source code for a mature Sass project like [Compass](https://github.com/chriseppstein/compass) which includes over 200 mixins you can use to learn a lot of great techniques from. Also, [the Compass docs](http://compass-style.org/reference/compass/) actually include "View Source" links that make it easy to check out the code for any mixin to see what it does. You can start by checking out [the actual implementation of border-radius](http://compass-style.org/reference/compass/css3/border_radius/#mixin-border-radius-source).
+That about wraps up this overview of Sass mixins. To get a better idea of how you can use them in your code, I recommend taking a look at the source code for a mature Sass project like [Compass](https://github.com/Compass/compass) which includes over 200 mixins you can use to learn a lot of great techniques from. Also, [the Compass docs](http://compass-style.org/reference/compass/) actually include "View Source" links that make it easy to check out the code for any mixin to see what it does. You can start by checking out [the actual implementation of border-radius](http://compass-style.org/reference/compass/css3/border_radius/#mixin-border-radius-source).
