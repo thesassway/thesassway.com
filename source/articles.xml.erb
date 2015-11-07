@@ -9,7 +9,7 @@ layout: false
   <id>tag:thesassway.com,2009:/</id>
   <link href="http://thesassway.com/articles.xml" rel="self"></link>
   <link href="http://thesassway.com" rel="alternate"></link>
-  <% if articles.first %><updated><%= published_date(articles.first).xmlschema %></updated><% end %>
+  <% if articles.first %><updated><%= published_date(articles.first).rfc3339 %></updated><% end %>
   <% for article in articles[0..25] %>
     <entry>
       <title type="html"><![CDATA[<%= title(article) %>]]></title>
@@ -21,8 +21,8 @@ layout: false
 <%= absolute_urls(article.render(layout: false)) %>
         ]]>
       </content>
-      <published><%= published_date(article).xmlschema %></published>
-      <updated><%= published_date(article).xmlschema %></updated>
+      <published><%= published_date(article).rfc3339 %></published>
+      <updated><%= published_date(article).rfc3339 %></updated>
     </entry>
   <% end %>
 </feed>
