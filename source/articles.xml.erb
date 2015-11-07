@@ -13,12 +13,13 @@ layout: false
   <% for article in articles[0..25] %>
     <entry>
       <title type="html"><![CDATA[<%= title(article) %>]]></title>
-      <link href="http://thesassway.com/<%= article.url %>" rel="alternate" type="text/html"></link>
+      <link href="http://thesassway.com<%= article.url %>" rel="alternate" type="text/html"></link>
       <id><%= atom_id(article) %></id>
       <author><name><%= author(article).name %></name></author>
       <content type="html">
         <![CDATA[
-<%= absolute_urls(article.render(layout: false)) %>
+<p><%= absolute_urls(render_markdown(article.data.summary.strip)) %></p>
+<p><a href="http://thesassway.com<%= article.url %>">Read more&#8230;</a>
         ]]>
       </content>
       <published><%= published_date(article).rfc3339 %></published>

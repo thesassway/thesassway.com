@@ -165,6 +165,7 @@ module CustomHelpers
     end
   end
 
+
   def select_if(path, exact = false)
     regexp = exact ? /^#{ Regexp.quote path }(\/$|$)/ : /^#{ Regexp.quote path }(\/.*?$|$)/
     ' is-selected' if regexp.match(current_page.url)
