@@ -102,7 +102,7 @@ Now, on screens less than 768 pixels wide (mobile devices) elements that use the
 
 Okay, so with just a few lines of Sass we've created a grid system that:
 
-- Can acommodate cells of any width
+- Can accommodate cells of any width
 - Can display optional gaps between cells
 - Handles gaps correctly for first and last columns
 - Has cells snap to the full-width of the container on mobile devices
