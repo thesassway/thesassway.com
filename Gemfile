@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.2.3'
 
 # Rake
 gem 'rake'
@@ -10,16 +10,16 @@ gem 'rack-rewrite'
 gem 'rack-google_analytics'
 
 # Middleman
-gem 'middleman', '~> 3.2.1'
-gem "middleman-livereload", "~> 3.1.0"
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw] # Faster file watcher updates on Windows
+gem 'middleman', '~> 3.4.0'
+gem 'middleman-livereload', '~> 3.4.0'
+gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw] # Faster file watcher updates on Windows
 
 # Sass and Compass
 gem 'compass'
 
 # Code highlighting
-gem "pygments.rb"
-gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
+gem 'pygments.rb'
+gem 'rack-codehighlighter', :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 
 
 # Puma

@@ -36,4 +36,5 @@ use Rack::Rewrite do
   r301 %r{^/(.*)/$}, '/$1'
 end
 
+require 'middleman/rack'
 run Middleman.server
