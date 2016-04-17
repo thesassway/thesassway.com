@@ -13,13 +13,13 @@ minimum contrast](https://www.w3.org/TR/WCAG20/#visual-audio-contrast).
 
 In this article I want to explain some details about color contrast and propose
 a new algorithm that supports transparency and can be implemented in existing
-libraries without loosing backwards compatibility. I will also discuss the
+libraries without losing backwards compatibility. I will also discuss the
 current state of implementation in CSS preprocessors such as
-[Less](http://lesscss.org/) or [Sass](http://sass-lang.com/). I personally
-prefer Sass, so all examples are written in that language.
+[Less](http://lesscss.org/) or [Sass](http://sass-lang.com/). Out of these, I
+personally prefer Sass, so all examples are written in that language.
 
-I assume that you have a basic understanding of working with colors, especially
-in CSS.
+One final note: I assume that you have a basic understanding of working with
+colors, especially in CSS.
 
 ## Solid colors
 
@@ -27,23 +27,23 @@ in CSS.
 
 So what is color contrast? There are [many
 definitions](https://en.wikipedia.org/wiki/Color_contrast), but the W3C chose
-one. As a first step, it decided that there are so many different color
-deficiencies that it would not make sense to factor in hue or saturation. So
-the contrast formula is purely based on *luma*.
+one. As a first step, they decided that contrast should not factor in hue or
+saturation in order to make it meaningful for people with different kinds of
+color deficiencies. So their contrast formula is purely based on *luma*.
 
-So what is luma? Especially: What is the difference between luma and the
+So what is luma? More precisely: What is the difference between luma and the
 related concepts *brightness* and *luminance*?
 
 Brightness is simply the average of the red, green and blue channels. Luma and
 luminance on the other hand factor in the fact that humans perceive some colors
-as brighter than others. Compare for example yellow and blue. This is done by
-using the [following
+as brighter than others. Compare for example yellow and blue. This can be done
+by using the [following
 formula](https://www.w3.org/TR/WCAG20/#relativeluminancedef):
 
     :::sass
     $l = 0.2126 * $r + 0.7152 * $g + 0.0722 * $b
 
-This formular, as well as everything that follows, assumes that the RGBA values
+This formula, as well as everything that follows, assumes that the RGBA values
 are in the range from 0 to 1.
 
 The difference between luminance and luma is that the former is based on raw
@@ -51,9 +51,10 @@ RGB values; the latter factors in [*gamma
 correction*](https://en.wikipedia.org/wiki/Gamma_correction).
 
 Humans are better at distinguishing dark colors than bright colors. Gamma
-correction is a method to take advantage of that. The gamma correction usually
-used on the web is taken from the [sRGB](https://en.wikipedia.org/wiki/Srgb)
-standard and can be calculated like this:
+correction is a method that takes advantage of that. The gamma correction
+usually used on the web is taken from the
+[sRGB](https://en.wikipedia.org/wiki/Srgb) standard and can be calculated like
+this:
 
     :::sass
     @function srgb($channel) {
@@ -64,7 +65,7 @@ standard and can be calculated like this:
         }
     }
 
-Putting this together we get this code for calculating the luma:
+Putting both formulas together we get this code for calculating the luma:
 
     :::sass
     @function luma($color) {
@@ -89,26 +90,26 @@ rationale for the 0.05 is. It prevents the formula from going to infinity
 for near-black colors, but I find that it still produces overly high results
 for those.
 
-### Implementation
+### Implementations
 
 I have seen three types of functions that you may wish to have in your CSS
 preprocessing code:
 
 -   A function that calculates the contrast
 -   A function that warns you if the contrast is below a certain threshold
--   A function that, given a base color, picks the one with the best contrast
-    out of a list of alternatives.
+-   A function that picks the color with the best contrast to a base color out
+    of a list of alternatives
 
-Less contains a function to calculate
-[luma](http://lesscss.org/functions/#color-channel-luma).  It also contains a
-function of the third type, called
+Less contains a [function to calculate
+luma](http://lesscss.org/functions/#color-channel-luma).  It also contains a
+function of the third type called
 [`contrast()`](http://lesscss.org/functions/#color-operations-contrast). This
 function is not based on the W3C definition of contrast, but there is a [pull
 request](https://github.com/less/less.js/pull/2754) to fix that.
 
-Sass itself does not contain any of it. It even lacks a `pow()` function needed
-to calculate gamma correction. Compass (a popular Sass library) has a function
-of the third type called
+Sass, on the other hand, does not contain any of these functions. It even lacks
+a `pow()` function needed to calculate gamma correction. However, compass (a
+popular Sass library) has a function of the third type called
 [`contrast-color()`](http://compass-style.org/reference/compass/utilities/color/contrast/)
 that is not based on the W3C definition. There is also a more specialised
 library called [sass-a11y](https://github.com/at-import/sass-a11y) which
@@ -117,13 +118,14 @@ to be correct.
 
 ## Transparent colors
 
-So now that we know how to calculate color contrast of solid colors, lets turn
-to transparent colors. This topic has been raised (and answered) by [Lea
-Verou](http://lea.verou.me/2012/10/easy-color-contrast-ratios/) in 2012. The
-standard does not mention transparent colors and most tools are not capable of
-working with them, but generally they work the same.
+So now that we know how to calculate color contrast of solid colors, let's turn
+to transparent colors. This topic has been raised by [Lea
+Verou](http://lea.verou.me/2012/10/easy-color-contrast-ratios/) in 2012. She
+also suggested an algorithm that I will discuss in this article. The standard
+does not mention transparent colors and most tools are not capable of working
+with them, but in theory they work a lot like solid colors.
 
-The additional step you have to do is [*alpha
+The one additional step you have to do is [*alpha
 blending*](https://en.wikipedia.org/wiki/RGBA), i.e. combine the transparent
 color with its background color to get the combination:
 
@@ -168,9 +170,10 @@ approaches I could think of:
     backdrop.
 
 -   **Calculate the minimum or maximum possible contrast or some combination of
-    them.** This is what Lea does. It seems to be a bit opinionated for or
-    against transparency, and there are so many possible ways to combine them
-    that it is not clear which one to choose.
+    them.** This is what Lea does. The difficulty with this approach is that
+    using minimum or maximum seems to be a bit biased against or in favour of
+    transparency.  And there are so many possible ways to combine them that it
+    is not clear which one to choose.
 
 -   **Calculate the expected value.** This might be the proper approach from a
     purely theoretical perspective. It basically means that we choose some
@@ -181,8 +184,8 @@ approaches I could think of:
     sounds like overkill.
 
 Taking into account that the backdrop is most likely not a single color but an
-image, I think the most sensible approach is to use the minimum. So how is it
-calculated?
+image, I think the most sensible approach out of these is to use the minimum
+possible contrast.  So how is it calculated?
 
 The luma is strictly increasing in relation to every color channel. So the
 minimum luma can be achieved by using black as a backdrop color, while the
@@ -243,7 +246,7 @@ contrast and its swapped version, I think it is a sensible approach to use a
         @return ($c1 + $c2) / 2;
     }
 
-### Implementation
+### Implementations
 
 -   Lea Verou created a [tool](https://leaverou.github.io/contrast-ratio/)
     written in JavaScript that reports a range of possible contrasts for
@@ -261,7 +264,7 @@ significant amount of math.
 
 We discussed ways to ensure a minimum color contrast. Note, however, that this
 may not be sufficient to ensure good legibility: Typography and font size are
-other key factors. Olso note that too much contrast can be hard on the eyes,
+other key factors. Also note that too much contrast can be hard on the eyes,
 especially very bright colors on dark background.
 
 While writing this I created several bug reports and pull requests.
