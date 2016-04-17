@@ -252,7 +252,9 @@ contrast and its swapped version, I think it is a sensible approach to use a
     written in JavaScript that reports a range of possible contrasts for
     transparent background colors. It requires you to know which of the colors
     will be the fore-/background.
--   Less ignores the alpha channel completely in its `contrast()` function.
+-   Less ignores the alpha channel completely in its `contrast()` function and
+    they are [not going to change
+    that](https://github.com/less/less.js/pull/2843).
 -   Compass also ignores the alpha channel in its `contrast-color()` function.
 -   sass-a11y implements the algorithm proposed by Lea.
 
