@@ -120,10 +120,9 @@ to be correct.
 
 So now that we know how to calculate color contrast of solid colors, let's turn
 to transparent colors. This topic has been raised by [Lea
-Verou](http://lea.verou.me/2012/10/easy-color-contrast-ratios/) in 2012. She
-also suggested an algorithm that I will discuss in this article. The standard
-does not mention transparent colors and most tools are not capable of working
-with them, but in theory they work a lot like solid colors.
+Verou](http://lea.verou.me/2012/10/easy-color-contrast-ratios/) in 2012. The
+standard does not mention transparent colors, but in theory they work a lot
+like solid colors.
 
 The one additional step you have to do is [*alpha
 blending*](https://en.wikipedia.org/wiki/RGBA), i.e. combine the transparent
@@ -143,11 +142,20 @@ color with its background color to get the combination:
 So we can simply apply alpha blending, then calculate the contrast and we are
 done, right? Unfortunately, there are two major issues with this:
 
+-   If the background color is transparent itself we need to know (or guess) a
+    third color (called backdrop) that it will be blended on.
 -   In order to apply alpha blending, we need to know which color is in the
     foreground and which one is in the background. This did not make any
     difference before.
--   If the background color is transparent itself we need to know (or guess) a
-    third color (called backdrop) that it will be blended on.
+
+Lea got around these issues because she wrote a new library from scratch. Her
+function takes foreground and background colors in a specific order and
+returns two values: A minimum and a maximum possible contrast resulting from
+different backdrops.
+
+I wanted to come up with an algorithm that could easily be implemented in
+existing libraries, so breaking the API was undesirable. So the final sections
+of this article will describe the approach I took.
 
 ### Transparent backgrounds
 
@@ -170,10 +178,10 @@ approaches I could think of:
     backdrop.
 
 -   **Calculate the minimum or maximum possible contrast or some combination of
-    them.** This is what Lea does. The difficulty with this approach is that
-    using minimum or maximum seems to be a bit biased against or in favour of
-    transparency.  And there are so many possible ways to combine them that it
-    is not clear which one to choose.
+    them.** The difficulty with this approach is that using minimum or maximum
+    seems to be a bit biased against or in favour of transparency.  And there
+    are so many possible ways to combine them that it is not clear which one to
+    choose.
 
 -   **Calculate the expected value.** This might be the proper approach from a
     purely theoretical perspective. It basically means that we choose some
@@ -249,27 +257,33 @@ contrast and its swapped version, I think it is a sensible approach to use a
 ### Implementations
 
 -   Lea Verou created a [tool](https://leaverou.github.io/contrast-ratio/)
-    written in JavaScript that reports a range of possible contrasts for
-    transparent background colors. It requires you to know which of the colors
-    will be the fore-/background.
+    written in JavaScript that reports minimum and maximum possible contrasts
+    for transparent background colors. It requires you to know which of the
+    colors will be the fore-/background.
 -   Less ignores the alpha channel completely in its `contrast()` function and
     they are [not going to change
     that](https://github.com/less/less.js/pull/2843).
 -   Compass also ignores the alpha channel in its `contrast-color()` function.
 -   sass-a11y implements the algorithm proposed by Lea.
+-   I created a Sass library called
+    [sass-planifolia](https://github.com/xi/sass-planifolia) which implements
+    the symmetric minimal contrast algorithm.
 
 ## Conclusion
 
-This whole topic turned out to be surprisingly complicated, touching topics
-such as psycho-visual effects, maintaining backwards compatibility, and a
-significant amount of math.
+This article covered many details about color contrast as well as a new
+algorithm that supports transparency and can be implemented in existing
+libraries without losing backwards compatibility.
 
 We discussed ways to ensure a minimum color contrast. Note, however, that this
 may not be sufficient to ensure good legibility: Typography and font size are
 other key factors. Also note that too much contrast can be hard on the eyes,
 especially very bright colors on dark background.
 
+This whole topic turned out to be surprisingly complicated, touching topics
+such as psycho-visual effects, maintaining backwards compatibility, and a
+significant amount of math.
+
 While writing this I created several bug reports and pull requests.
 Unfortunately, some projects mentioned are no longer maintained, e.g. Compass
-and sass-a11y. The symmetric minimal contrast algorithm is now available in a
-Sass library called [sass-planifolia](https://github.com/xi/sass-planifolia).
+and sass-a11y.
