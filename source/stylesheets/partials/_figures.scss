@@ -1,6 +1,6 @@
 .figure {
   background: #f0f2f4;
-  @include border-radius(1em);
+  border-radius: 1em;
   margin: 2em 0;
   padding: 2.5em;
   overflow: hidden;

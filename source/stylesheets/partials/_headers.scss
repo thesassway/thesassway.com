@@ -33,10 +33,9 @@
 
 .sass-3-3-graphic-header {
   background-color: #cb6898;
-  @include background-image(
+  background-image:
     linear-gradient(rgba(#610431, 0), rgba(#610431, 0.2), rgba(#610431, 0.8)),
-    image-url('headers/women-mechanics.jpeg')
-  );
+    image-url('headers/women-mechanics.jpeg');
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -66,10 +65,9 @@
 
 .bubble-sort-graphic-header {
   background-color: #5c4f49;
-  @include background-image(
+  background-image:
     linear-gradient(rgba(black, 0.5), rgba(black, 0)),
-    image-url('headers/lumber-mill-in-minature.jpeg')
-  );
+    image-url('headers/lumber-mill-in-minature.jpeg');
   background-size: 200% auto;
   background-position: center top;
   background-repeat: no-repeat;

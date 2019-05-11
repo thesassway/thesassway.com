@@ -101,8 +101,10 @@ module CustomHelpers
   def articles(drafts = false)
     pages = []
     content_directories.each do |category|
-      page = sitemap.find_resource_by_path("#{category}/index.html")
-      pages += children(page, drafts)
+      children = sitemap.resources.select { |r| r.path =~ %r{^#{category}/} }
+      children = sort_by_date(children)
+      children.reject! { |c| draft? c } unless drafts
+      pages += children
     end
     sort_by_date(pages).reverse
   end

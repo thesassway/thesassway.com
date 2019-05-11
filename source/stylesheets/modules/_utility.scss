@@ -11,3 +11,8 @@
   }
   @return nth($range, 2);
 }
+
+@mixin clearfix {
+  overflow: auto;
+  *zoom: 1;
+}

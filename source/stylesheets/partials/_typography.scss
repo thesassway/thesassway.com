@@ -1,5 +1,3 @@
-@import 'compass';
-
 %link {
   color: $link-color;
   text-decoration: underline;
@@ -115,7 +113,7 @@ a.top-link {
   abbr[title] { @extend .abbreviation; }
 
   pre {
-    @include border-radius(1em);
+    border-radius: 1em;
     font-size: 80%;
     line-height: 1.6;
     margin: 2em 0;

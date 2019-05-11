@@ -1,0 +1,18 @@
+---
+layout: layout
+---
+
+<div class="row title-avatar">
+  <div class="small-4 medium-3 large-2 small-centered columns">
+    <img class="avatar full-width" src="<%= person.avatar %>" alt="<%= person.title %>">
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-8 large-offset-2 columns">
+    <h1 class="title"><%= person.name %></h1>
+    <h2 class="subtitle"><%= person.title %></h2>
+  </div>
+</div>
+
+<%= partial 'layouts/summaries', :locals => { pages: articles_by_author(person) } %>

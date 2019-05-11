@@ -10,7 +10,7 @@ $navigation-sidebar-width: 100%;
 
 @media #{$small-only} {
   .navigation-button {
-    @include appearance(none);
+    appearance: none;
     color: rgba(mix($text-color, white), 0.5);
     background: none;
     border: none;
@@ -37,7 +37,7 @@ $navigation-sidebar-width: 100%;
     right: -$navigation-sidebar-width - 10%;
     bottom: 0;
     background-color: $reversed-background-color;
-    @include transition(all 200ms ease-in-out);
+    transition: all 200ms ease-in-out;
     width: $navigation-sidebar-width;
     z-index: 1;
 
@@ -72,7 +72,7 @@ $navigation-sidebar-width: 100%;
     right: 0;
     z-index: 1;
 
-    @include transition(background-color 200ms linear);
+    transition: background-color 200ms linear;
 
     &::after {
       position: absolute;

@@ -1,5 +1,5 @@
 .avatar {
-  @include border-radius(100%);
+  border-radius: 100%;
 
   &.x32 { line-height: 32px; vertical-align: -30%; width: 32px; height: 32px; }
   &.full-width { width: 100%; }
