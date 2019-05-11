@@ -1,7 +1,6 @@
 @import 'partials/base';
 
-// Reset
-@include global-reset;
+@import 'partials/reset';
 
 body {
   color: $text-color;
@@ -12,10 +11,8 @@ body {
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
-
-*, *:before, *:after { @include box-sizing(border-box); }
 
 // Vendor
 @import 'vendor/jquery.qtip';

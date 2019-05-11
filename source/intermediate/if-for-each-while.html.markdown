@@ -3,7 +3,6 @@ date: 31 August 2011
 categories: intermediate, guides
 author: Adam Stacoviak
 summary: Sass control directives are the cornerstone of creating libraries for reuse and distribution, and need to be among the very first items on your list of things to learn when taking your Sass skills to the next level. They provide flow and logic and give you a finite level of decision making required by mixins and functions.
-about_author: adam_stacoviak
 ---
 
 # Sass control directives: @if, @for, @each and @while

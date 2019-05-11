@@ -1,0 +1,31 @@
+// Modified Meyer reset
+
+// Universal selector works great!
+// See: http://blogs.telerik.com/kendoui/posts/12-09-28/css_tip_star_selector_not_that_bad
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: 100%;
+  font: inherit;
+  list-style: none;
+  outline: none;
+  quotes: none;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+// New HTML 5 elements
+footer, header, hgroup, menu, nav, section, small {
+  display: block;
+}
+
+// Ah, yes. Quote me bro.
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}

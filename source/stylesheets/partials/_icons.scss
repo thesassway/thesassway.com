@@ -1,9 +1,13 @@
-@include font-face(
-  $name: 'thesassway-icons',
-  $weight: normal,
-  $style: normal,
-  $font-files: inline-font-files('thesassway-icons.woff', woff)
-);
+@font-face {
+  font-family: 'thesassway-icons';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/thesassway-icons.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/thesassway-icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/fonts/thesassway-icons.woff') format('woff'), /* Pretty Modern Browsers */
+    url('/fonts/thesassway-icons.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('/fonts/thesassway-icons.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 [class$="-icon"], [class*="-icon "] {
 	font-family: 'thesassway-icons' !important;

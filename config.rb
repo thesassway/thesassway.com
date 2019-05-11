@@ -1,14 +1,4 @@
 ###
-# Compass
-###
-
-# Change Compass configuration
-compass_config do |config|
-  config.output_style = :compact
-end
-
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -22,32 +12,31 @@ ignore "templates/*"
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
 
-with_layout :article do
-  categories = data.categories.map(&:slug)
-  for category in categories
-    page "/#{category}/*"
-  end
+categories = data.categories.map(&:slug)
+for category in categories
+  page "/#{category}/*", layout: "article"
 end
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+data.authors.each do |author|
+  proxy "/#{author.slug}/index.html", "templates/author.html", locals: { person: author }
+end
+
+data.categories.each do |category|
+  proxy "/#{category.slug}/index.html", "templates/category.html", locals: { item: category }
+end
+
 ready do
   data.authors.each do |author|
-    proxy "/#{author.slug}.html", "templates/author.html", locals: { author: author }
     resource = sitemap.find_resource_by_path "/#{author.slug}.html"
     resource.add_metadata page: { title: "#{author.name}, #{author.title}" }
   end
 
   data.categories.each do |category|
-    proxy "/#{category.slug}/index.html", "templates/category.html", locals: { category: category }
     resource = sitemap.find_resource_by_path "/#{category.slug}/index.html"
     resource.add_metadata page: { title: category.name }
   end
@@ -77,6 +66,15 @@ set :disqus_short_name, 'thesassway'
 #   end
 # end
 
+
+###
+# Plugins
+###
+
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
+end
+
 # Directories
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -86,7 +84,11 @@ set :images_dir, 'images'
 activate :directory_indexes
 set :trailing_slash, false
 
+
+##
 # Build-specific configuration
+##
+
 configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css

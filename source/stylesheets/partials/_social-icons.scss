@@ -7,7 +7,7 @@
 }
 a.social-icon-button {
   background: $reversed-text-color;
-  @include border-radius(100%);
+  border-radius: 100%;
   color: #36363d;
   display: inline-block;
   text-decoration: none;

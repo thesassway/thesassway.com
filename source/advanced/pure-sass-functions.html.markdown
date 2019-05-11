@@ -2,7 +2,6 @@
 date: 22 August 2011
 categories: advanced, guides
 author: Mason Wendell
-about_author: mason_wendell
 summary: Sass gladly lets you add calculations and logic in a way that CSS would never abide. But does that mean you should go around adding and dividing just anywhere? Find out how you can use pure Sass functions to make reusable logic more useful and your working Sass file more readable.
 ---
 
