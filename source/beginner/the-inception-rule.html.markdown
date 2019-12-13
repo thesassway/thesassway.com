@@ -84,7 +84,7 @@ Here's the output of the above Sass just so you can see how this translates to C
       border-bottom: 1px solid #efc6f3;
     }
 
-And so, like a child with a new toy, we begin to use this feature in *-what we think-* is its "max potential". But actually what's taking happening is some may call, a "CSS Selector Nightmare."
+And so, like a child with a new toy, we begin to use this feature in *-what we think-* is its "max potential". But actually what's happening is what some may call, a "CSS Selector Nightmare."
 
 ## CSS Selector Nightmare
 
