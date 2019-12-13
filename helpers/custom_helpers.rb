@@ -55,8 +55,9 @@ module CustomHelpers
   end
 
   def published?(page = current_page)
+    should_publish = !page.data.draft
     date = published_date(page)
-    date <= Date.today if date
+    date <= Date.today if should_publish && date
   end
 
   def draft?(page = current_page)

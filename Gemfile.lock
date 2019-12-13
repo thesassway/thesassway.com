@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/wbzyl/rack-codehighlighter.git
+  remote: https://github.com/wbzyl/rack-codehighlighter.git
   revision: c700f1fa677e7de8d2733594ccf99a4a958f28f4
   specs:
     rack-codehighlighter (0.6.0)
@@ -92,7 +92,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     multi_json (1.13.1)
-    nokogiri (1.10.3)
+    nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     padrino-helpers (0.13.3.4)
       i18n (~> 0.6, >= 0.6.7)
@@ -154,4 +154,4 @@ RUBY VERSION
    ruby 2.3.7p456
 
 BUNDLED WITH
-   2.0.1
+   2.0.2

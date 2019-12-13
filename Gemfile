@@ -17,7 +17,7 @@ gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw] # Faster file watcher upda
 
 # Code highlighting
 gem 'pygments.rb'
-gem 'rack-codehighlighter', :git => "git://github.com/wbzyl/rack-codehighlighter.git"
+gem 'rack-codehighlighter', :git => "https://github.com/wbzyl/rack-codehighlighter.git"
 
 
 # Puma

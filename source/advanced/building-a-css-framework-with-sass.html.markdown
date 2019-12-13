@@ -1,8 +1,9 @@
 ---
-date: 2019-10-03 21:27:07 -0500
+date: 2100-10-03
 categories: advanced, guides
 author: Scott Kellum
 summary: If you're a fan of the classic Penner equations by Robert Penner, made famous by Flash and jQuery. You are going to love Compass Ceaser Easing by Jared Hardy, also known for his Sassy Buttons project.
+draft: true
 ---
 
 # Building a CSS framework with Sass

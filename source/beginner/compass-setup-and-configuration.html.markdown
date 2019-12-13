@@ -1,8 +1,9 @@
 ---
-date: 31 August 2019
+date: 31 August 2100
 categories: beginner, guides
 author: Adam Stacoviak
 summary: ...
+draft: true
 ---
 
 # Compass setup and configuration
