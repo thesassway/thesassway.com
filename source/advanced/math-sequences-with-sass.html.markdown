@@ -1,8 +1,8 @@
 ---
 date: 12 October 2013
 categories: advanced, guides
-author: Hugo Giraudel
-summary: A fun experiment by Hugo Giraudel that demonstrates advanced usage of functions. Learn about the fibonacci sequence in Sass and more!
+author: Kitty Giraudel
+summary: A fun experiment by Kitty Giraudel that demonstrates advanced usage of functions. Learn about the fibonacci sequence in Sass and more!
 ---
 
 # Math sequences with Sass
@@ -11,7 +11,7 @@ A couple of weeks ago, I've been playing around math sequences in Sass, especial
 
 Even if there is no practical application for such things, those were definitely fun Sass experiments and people seemed to be interested on Twitter so here is the how-to.
 
-If you're not interested in learning how I did it and just want to see the code, you can play around those pens: [Fibonacci number](http://codepen.io/HugoGiraudel/pen/krAes), [Juggler sequence](http://codepen.io/HugoGiraudel/pen/GnzfB), [Look-and-say sequence](http://codepen.io/HugoGiraudel/pen/tBhzs).
+If you're not interested in learning how I did it and just want to see the code, you can play around those pens: [Fibonacci number](https://codepen.io/KittyGiraudel/pen/krAes), [Juggler sequence](https://codepen.io/KittyGiraudel/pen/GnzfB), [Look-and-say sequence](https://codepen.io/KittyGiraudel/pen/tBhzs).
 
 ## Fibonacci number
 
@@ -131,7 +131,7 @@ You can even start the sequence with another digit than 1. For any digit from 0 
 
 ### Look-and-say in Sass
 
-To build this sequence with Sass, I got inspired by [an old pen of mine](http://codepen.io/HugoGiraudel/pen/wDkvc) where I attempted to do the sequence in JavaScript. The code is dirty as hell and definitely waaaay too heavy for such a thing, but it works.
+To build this sequence with Sass, I got inspired by [an old pen of mine](https://codepen.io/KittyGiraudel/pen/wDkvc) where I attempted to do the sequence in JavaScript. The code is dirty as hell and definitely waaaay too heavy for such a thing, but it works.
 
 Since Sass isn't as powerful as JavaScript (no regular expression, no replace...), I don't think there are many ways to go. If anyone has a better idea, I'd be glad to hear it! :)
 
@@ -272,7 +272,7 @@ First things first: to display textual content without any markup, I used a pseu
 
 Now to display it with line-breaks, I had to get tricky! The main idea is to convert the list into a string and to join elements with a line-break character.
 
-Thankfully, I recently wrote an article about [advanced Sass list functions](http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/), and one of those is `to-string()`.
+Thankfully, I recently wrote an article about [advanced Sass list functions](https://kittygiraudel.com/2013/08/08/advanced-sass-list-functions/), and one of those is `to-string()`.
 
 I think you can see where this is going now: to display the Fibonacci number line by line, I simply did this:
 
@@ -290,7 +290,7 @@ Here is what we do (from middle to edges):
 
 There you have it: displaying a whole list of data with line-breaks all through CSS. Pretty neat, isn't it?
 
-Note: for the Look-and-say sequence, it takes one extra step to convert nested lists into strings first. You check how I did it directly on [the pen](http://codepen.io/HugoGiraudel/pen/tBhzs).
+Note: for the Look-and-say sequence, it takes one extra step to convert nested lists into strings first. You check how I did it directly on [the pen](https://codepen.io/KittyGiraudel/pen/tBhzs).
 
 ## Final words
 

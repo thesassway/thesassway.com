@@ -1,7 +1,7 @@
 ---
 date: 30 January 2014
 categories: advanced, guides
-author: Hugo Giraudel
+author: Kitty Giraudel
 summary: Have you ever wanted to know how to programmatically jump from one color to another? In this article, I'll show you how to find the color operations that are required to go from the color to another. To do this, we'll use a couple of Sass 3.3 features, including maps and the handy `call` function.
 ---
 
@@ -18,7 +18,7 @@ This got me thinking! What if we could calculate the mathematical relationship b
 
 ## Understanding colors
 
-Before we go too far, perhaps it would be a good idea to review how colors actually work in CSS. I've got an older article on my own website that gives a good overview of [Colors in CSS](http://hugogiraudel.com/2012/11/27/css-colors/). Go on. Have a look! I can wait.
+Before we go too far, perhaps it would be a good idea to review how colors actually work in CSS. I've got an older article on my own website that gives a good overview of [Colors in CSS](https://kittygiraudel.com/2012/11/27/css-colors/). Go on. Have a look! I can wait.
 
 Okay, ready now? So you've probably figured out that colors can be written using an HSL representation. HSL stands for *Hue Saturation Lightness*, the three main components of a color. According to Wikipedia:
 
@@ -147,6 +147,6 @@ What do you think of all this? Have you found interesting ways to morph and use 
 
 I hope you've enjoyed this experiment! If you'd like to play with the code in this project, check out this CodePen. Cheers!
 
-<div data-height="268" data-theme-id="0" data-slug-hash="gHEkA" data-default-tab="css" class='codepen'><p>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/gHEkA'>Programmatically find one color from another one</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p> </div><script async src="//codepen.io/assets/embed/ei.js"></script>
+<div data-height="268" data-theme-id="0" data-slug-hash="gHEkA" data-default-tab="css" class='codepen'><p>See the Pen <a href='https://codepen.io/KittyGiraudel/pen/gHEkA'>Programmatically find one color from another one</a> by Kitty Giraudel (<a href='https://codepen.io/KittyGiraudel'>@KittyGiraudel</a>) on <a href='https://codepen.io'>CodePen</a>.</p> </div><script async src="//codepen.io/assets/embed/ei.js"></script>
 
 On a side note, Brandon Mathis has also worked on [Color Hacker](https://github.com/imathis/color-hacker), a Compass extension providing some advanced color functions for dissecting your own color schemes.

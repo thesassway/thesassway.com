@@ -1,8 +1,8 @@
 ---
 date: 26 October 2014
 categories: advanced
-author: Tim Severien, Hugo Giraudel
-summary: In this more advanced article, Tim Severien and Hugo Giraudel show us how they built a tool in Sass to visualize cubic Bézier functions.
+author: Tim Severien, Kitty Giraudel
+summary: In this more advanced article, Tim Severien and Kitty Giraudel show us how they built a tool in Sass to visualize cubic Bézier functions.
 ---
 
 # Cubic Bézier representation in Sass
@@ -11,7 +11,7 @@ It all started when [Tim Severien](https://twitter.com/timseverien) showed me a 
 
 But before we get too far, let me turn it over to Tim to catch us up on some basic knowledge regarding Bezier functions. Tim, please.
 
-(Note: if you're only interested in the code, please head straight to [CodePen](http://codepen.io/HugoGiraudel/pen/eqCvo?editors=010).)
+(Note: if you're only interested in the code, please head straight to [CodePen](https://codepen.io/KittyGiraudel/pen/eqCvo?editors=010).)
 
 ## What is a Bézier curve?
 
@@ -331,5 +331,5 @@ If you need to create your own cubic-bezier animation function,[this tool](http:
 
 I hope you enjoyed this experiment. You can play with the code on CodePen:
 
-<p data-height="380" data-theme-id="0" data-slug-hash="eqCvo" data-default-tab="result" data-user="HugoGiraudel" class='codepen'>See the Pen <a href='http://codepen.io/HugoGiraudel/pen/eqCvo/'>Cubic Bezier functions visualize</a> by Hugo Giraudel (<a href='http://codepen.io/HugoGiraudel'>@HugoGiraudel</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="380" data-theme-id="0" data-slug-hash="eqCvo" data-default-tab="result" data-user="KittyGiraudel" class='codepen'>See the Pen <a href='https://codepen.io/KittyGiraudel/pen/eqCvo/'>Cubic Bezier functions visualize</a> by Kitty Giraudel (<a href='https://codepen.io/KittyGiraudel'>@KittyGiraudel</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
