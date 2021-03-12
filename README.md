@@ -1,10 +1,13 @@
 # The Sass Way
 
-This is the main repository for The Sass Way! Your source for the latest tips,
-tricks, and news about Sass and Compass.
+This is the main repository for The Sass Way! ~Your source for the latest tips,
+tricks, and news about Sass and Compass.~
 
-Interested in submitting an article or news item? We welcome contributions! To
-get started read our [contributing guidelines][1].
+We had a good run, but after years of inactivity we are retiring the site.
+Authors are welcome to republish the content on their own sites.
+
+For the moment, articles can be viewed here: http://thesassway.herokuapp.com/
+
 
 ## Getting started
 
